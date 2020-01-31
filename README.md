@@ -1,1 +1,1 @@
-# website
+# SEED Platform Documentation Website

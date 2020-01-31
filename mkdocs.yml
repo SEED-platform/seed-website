@@ -1,0 +1,32 @@
+site_name: SEED Platform Documentation
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'indigo'
+    accent: 'blue'
+  logo: 'images/icon-city.svg'  
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  language: 'en'
+  favicon: 'images/favicon.ico'
+  # feature:
+  #   tabs: true
+
+extra_css:
+  - 'stylesheets/extra.css'
+
+nav:
+  - Home: 'index.md'
+  - Getting Started: 'getting_started'
+  - User Documentation: 'documentation.md'
+  - Developer Documentation:
+    - Resources: 'developer_resources.md'
+    - Hosting: 'hosting.md'
+  - SEED Technical Allies: 
+    - Technical Allies: 'technical_ally.md'
+    - Hosting Requirements: 'ally/hosting_requirements.md'
+    - App Developer Requirements: 'ally/app_developer_requirements.md'
+  - LBNL SEED Platform Instance: 'lbnl.md'
+  
