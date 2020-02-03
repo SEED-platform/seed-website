@@ -1,4 +1,4 @@
-site_name: SEED Platform Documentation
+site_name: SEED Platform&trade; Documentation
 
 theme:
   name: 'material'
@@ -19,14 +19,11 @@ extra_css:
 
 nav:
   - Home: 'index.md'
-  - Getting Started: 'getting_started'
+  - About:
+    - FAQ: 'faq.md'
+    - References: 'references.md'
+    - SEED Technical Allies: 'technical_ally.md'
+  - Getting Started: 'getting_started.md'
   - User Documentation: 'documentation.md'
-  - Developer Documentation:
-    - Resources: 'developer_resources.md'
-    - Hosting: 'hosting.md'
-  - SEED Technical Allies: 
-    - Technical Allies: 'technical_ally.md'
-    - Hosting Requirements: 'ally/hosting_requirements.md'
-    - App Developer Requirements: 'ally/app_developer_requirements.md'
-  - LBNL SEED Platform Instance: 'lbnl.md'
+  - Developer Documentation: 'developer_resources.md'
   
