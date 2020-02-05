@@ -46,3 +46,47 @@ background-color: #2e3842;
 .column {
   flex: 50%;
 }
+
+/* Normal white Button as seen on Google.com*/
+button {
+    color: #444444;
+    background: #F3F3F3;
+    border: 1px #DADADA solid;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: inherit;
+    outline: none;
+}
+
+button:hover {
+    border: 1px #C6C6C6 solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #333333;
+    background: #F7F7F7;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 1px #005191; 
+}
+
+button.blue {
+    color: white;
+    background: #3BA6DD;
+    border: 1px #3BA6DD; solid;
+    box-shadow: inset 0 1px 0 #3BA6DD;
+}
+
+button.blue:hover {
+    border: 1px #005191; solid;
+    box-shadow: 0 1px 1px #005191;, inset 0 1px 0 #005191;
+    background: #005191;
+}
+
+button.blue:active {
+    box-shadow: inset 0 2px 5px #005191;   
+}
+
+[data-md-color-primary=indigo] .md-typeset a.button {
+	color: white;
+}
