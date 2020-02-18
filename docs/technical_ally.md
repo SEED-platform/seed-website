@@ -5,7 +5,7 @@ SEED Platform Technical Allies are private companies and other entities that are
 ## Hosting Providers
 
 These Technical Allies offer the core functionality of the SEED Platform as a hosted service to end-users.
-Please see the [Hosting Provider Requirements](http://seedinfo.lbl.gov/SEED-Technical-Allies/hosting-provider-requirements) for more information about becoming an approved Hosting Provider.
+Please see the [Hosting Provider Requirements](hosting_requirements.md) for more information about becoming an approved Hosting Provider.
 
 <div class="row">
   <div class="column">

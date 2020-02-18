@@ -5,7 +5,8 @@ The SEED Platform&trade; is an open-source project. The source code and document
 ## Source Code Documentation
 
 - [General Source Code Documentation](http://seed-platform.readthedocs.org/en/stable/index.html)
-- [API Documentation](https://seed-platform.readthedocs.io/en/stable/api.html)
+- [Developer Resources](https://seed-platform.readthedocs.io/en/stable/developer_resources.html)
+- [API Documentation](https://seed-platform.org/api/swagger/)
 
 ## Release Notes
 
@@ -13,8 +14,8 @@ The SEED Platform&trade; is an open-source project. The source code and document
 
 ## Known Issues
 
-List of [Known issues](http://seedinfo.lbl.gov/KB/seed-1-1-known-issues)
+Visit the [Known Issues](known_issues.md) page for a list of SEED Platform issues.
 
 ## Developer Forum
 
-There is a [Google Group](seed-platform-dev@googlegroups.com) for developers to discuss the SEED Platform project. The LBNL team monitors that forum and will respond to inquiries there.
+There is a [Google Group](https://groups.google.com/forum/?hl=en#!forum/seed-platform-dev) for developers to discuss the SEED Platform project. The LBNL team monitors that forum and will respond to inquiries there.

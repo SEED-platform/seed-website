@@ -5,7 +5,7 @@
 ### Importing Meter Data
 SEED 2.6.0 incorporates the ability to import interval meter data. The document linked below explains how to import meter data from ENERGY STAR Portfolio Manager and Green Button files
 
-- [Meter Data (PDF)](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OmRhYzU5NTY2ODNjMTBkZQ)
+- [Meter Data (PDF)](resources/SEED Platform V2_6_ Meter Data.pdf)
 
 ## Field Mappings
 
@@ -13,16 +13,16 @@ List of SEED field names for Mapping data
 
 - [Field Mappings (Google Doc)](https://docs.google.com/a/lbl.gov/document/d/1i9yV5v__BQwIL7q2LhDr220iEdOarhn5SD0AuhvPRl8/edit?usp=sharing)
 
-- [Field Mappings (PDF)](https://drive.google.com/open?id=0B3fTKpZ9Dx7LVTVhdUFnR2xBaW8)
+- [Field Mappings (PDF)](resources/MappingFieldstotheSEEDdatabase.pdf)
 
 ## Data Cleansing Rules
 List of currently implemented data cleansing rules
 
-- [Cleansing Rules (PDF)](https://drive.google.com/open?id=0B3fTKpZ9Dx7LQmpEcktEcVlqOGs)
+- [Cleansing Rules (PDF)](resources/DataCleansing.pdf)
 
 ## Filtering
 
-- [SEED Filtering in Lists (PDF)](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjNmNjI4ZmYxOTg3MTM4ZTE)
+- [SEED Filtering in Lists (PDF)](resources/SEED Filtering.pdf)
 
 - [Data Quality Checks with Filters-Labels (Video)](http://seedinfo.lbl.gov/detailed-support/Data%20Quality%20Checking%20with%20Filters-Labels.swf?attredirects=0)
 

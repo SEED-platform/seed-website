@@ -19,11 +19,12 @@ extra_css:
 
 nav:
   - Home: 'index.md'
-  - About:
-    - FAQ: 'faq.md'
-    - References: 'references.md'
-    - SEED Technical Allies: 'technical_ally.md'
   - Getting Started: 'getting_started.md'
+  - FAQ: 'faq.md'
   - User Documentation: 'documentation.md'
   - Developer Documentation: 'developer_resources.md'
+  - Known Issues: 'known_issues.md'
+  - References: 'references.md'
+  - SEED Technical Allies: 'technical_ally.md'
+
   
