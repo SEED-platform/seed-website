@@ -11,8 +11,6 @@ SEED 2.6.0 incorporates the ability to import interval meter data. The document 
 
 List of SEED field names for Mapping data
 
-- [Field Mappings (Google Doc)](https://docs.google.com/a/lbl.gov/document/d/1i9yV5v__BQwIL7q2LhDr220iEdOarhn5SD0AuhvPRl8/edit?usp=sharing)
-
 - [Field Mappings (PDF)](resources/MappingFieldstotheSEEDdatabase.pdf)
 
 ## Data Cleansing Rules
@@ -24,12 +22,12 @@ List of currently implemented data cleansing rules
 
 - [SEED Filtering in Lists (PDF)](resources/SEED Filtering.pdf)
 
-- [Data Quality Checks with Filters-Labels (Video)](http://seedinfo.lbl.gov/detailed-support/Data%20Quality%20Checking%20with%20Filters-Labels.swf?attredirects=0)
+- [Data Quality Checks with Filters-Labels (Video)](resources/Data Quality Checking with Filters-Labels.swf)
 
 ## GIS Features
 SEED v2.5.0 and above incorporates some GIS functionality
 
-- [GIS Features (PDF)](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjZmMjJkYjc4ZDJkMmE4MjQ)
+- [GIS Features (PDF)](resources/SEED Platform V2_5_ GIS Features.pdf)
 
 ## Excel&trade; Files
 
