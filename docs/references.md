@@ -11,6 +11,9 @@
 
 * Alschuler, A., Antonoff, J., Brown, R., and Cheifetz, M. ["Planting SEEDs: Implementation of a Common Platform for Building Performance Disclosure Program Data Management"](http://aceee.org/files/proceedings/2014/data/papers/4-274.pdf), In 2014 ACEEE Summer Study on Energy Efficiency in Buildings, pp. 274–284. Pacific Grove, CA.
 
+## SEED-Adjacent Publications
+
+* DeGraw, Jason, Kristin Field-Macumber, Nicholas Long, and Supriya Goel. 2018. [“BuildingSync® in Action : Example Implementations.”](https://buildingsync.net/documents/DeGraw-ACEEE-BuildingSync-in-Action.pdf) In 2018 ACEEE Summer Study on Energy Efficiency in Buildings, 1–12. Pacific Grove, CA.
 
 ## Presentations
 
