@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-## How can I get information on capabilities, summary of features, and current development of SEED?
+## Howt can I get information on capabilities, summary of features, and current development of SEED?
 
 * For a list of new features and fixed capabilities, visit the [SEED Platform GitHub Releases](https://github.com/SEED-platform/seed/releases) page.
 
