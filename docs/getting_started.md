@@ -24,7 +24,6 @@ The following guides detail the SEED import process and supported data types:
 
 | Version | Date | Description |
 |---------|------|-------------|
-<!-- | [2.7.0](https://docs.google.com/presentation/d/1xvO2ejXAMpuCZtOiSwN_WCs_u0vzKquD4DyXsZtOuLE/edit#slide=id.g28f3b3f443_0_252) | 3/1/2020 | SEED Updates |   -->
 | [2.6.1](../resources/SEED Platform V2_6_1 Patch_ Mapping and Merging.pdf) | 01/16/2020 | Mapping and merging data overview | 
 | [2.6.0](../resources/SEED Platform V2_6_ Meter Data.pdf) | 08/09/2019 | Overview of the new Meter Data features added to SEED release 2.6.0 |
 | [2.5.1](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjZmMjJkYjc4ZDJkMmE4MjQ) | 08/26/2019 | Overview of the GIS functionality available in SEED | 
