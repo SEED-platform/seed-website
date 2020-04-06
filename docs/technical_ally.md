@@ -39,7 +39,7 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
   <div class="column">
   	<center>
   	<img src="../images/ClearlyEnergy.png" /><br/><br/>
-  	<img src="../images/maalka_logo.jpg" /><br/><br/>
+  	<img src="../images/maalka_logo.png" /><br/><br/>
   	<img src="../images/logo_nrel_c.jpg" /><br/><br/>
   	<img src="../images/psd-logo1.png" /><br/>
   	</center>
