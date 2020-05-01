@@ -24,3 +24,7 @@
 * [SEED Platform Overview](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjNhYzRkMWE2NDVmYTgyZjA)
 
 * [Importing Meter Data into SEED](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjJiZjVmMTliYjg1YTc2YzE)
+
+* [Introduction to SEED presentation](resources/Introduction to SEED.pdf)
+
+* [Introduction to SEED Webinar](https://attendee.gotowebinar.com/recording/186075157390880270)

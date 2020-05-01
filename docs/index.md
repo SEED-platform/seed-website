@@ -4,6 +4,6 @@ The Standard Energy Efficiency Data Platform (SEED) Platform is an open-source s
 
 Browse the <button class="blue"><a class="button" href="faq/">Frequently Asked Questions</a></button> page to learn more.  
 
-View the <button class="blue"><a class="button" href="getting_started/">Getting Started</a></button> page to begin using SEED. 
+View the [Introduction to SEED Presentation](resources/Introduction to SEED.pdf) for an overview of the SEED platform. Visit the <button class="blue"><a class="button" href="getting_started/">Getting Started</a></button> page to begin using SEED. 
 
 SEED is funded by the United States Department of Energy. Visit the [DOE Office of Energy Efficiency and Renewable Energy (EERE) SEED Platform website](http://energy.gov/eere/buildings/standard-energy-efficiency-data-platform) for more general project information. 
