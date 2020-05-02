@@ -17,14 +17,15 @@
 
 ## Presentations
 
+* [Introduction to SEED presentation](resources/Introduction to SEED.pdf)
+
+* [Introduction to SEED Webinar](https://attendee.gotowebinar.com/recording/186075157390880270)
+
+* [Importing Meter Data into SEED](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjJiZjVmMTliYjg1YTc2YzE)
+
+* [SEED Platform Overview](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjNhYzRkMWE2NDVmYTgyZjA)
+
 * [SEED for Cities](https://www.energy.gov/sites/prod/files/2016/06/f32/SEED_Factsheet_City.pdf) Factsheet.
 
 * [SEED: Why Open Source?](https://www.energy.gov/sites/prod/files/2015/04/f21/SEED_Overview_OpenSource_0.pdf) Factsheet.
 
-* [SEED Platform Overview](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjNhYzRkMWE2NDVmYTgyZjA)
-
-* [Importing Meter Data into SEED](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjJiZjVmMTliYjg1YTc2YzE)
-
-* [Introduction to SEED presentation](resources/Introduction to SEED.pdf)
-
-* [Introduction to SEED Webinar](https://attendee.gotowebinar.com/recording/186075157390880270)
