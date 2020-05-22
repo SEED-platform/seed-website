@@ -17,15 +17,17 @@
 
 ## Presentations
 
-* [Introduction to SEED presentation](resources/Introduction to SEED.pdf)
+* [SEED Advanced Features webinar](https://nrel-seed.s3.amazonaws.com/resources/2020-05-19%20-%20SEED%20Advanced%20Features%20Webinar.mp4) and [sample files](https://nrel-seed.s3.amazonaws.com/resources/2020-05-19 - SEED Sample Files.zip)
 
-* [Introduction to SEED Webinar](https://attendee.gotowebinar.com/recording/186075157390880270)
+* [Introduction to SEED presentation](https://nrel-seed.s3.amazonaws.com/resources/Introduction%20to%20SEED.pdf)
 
-* [Importing Meter Data into SEED](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjJiZjVmMTliYjg1YTc2YzE)
+* [Introduction to SEED webinar](https://nrel-seed.s3.amazonaws.com/resources/2020-04-29%20-%20Introduction%20to%20SEED%20Webinar.mp4)
 
-* [SEED Platform Overview](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjNhYzRkMWE2NDVmYTgyZjA)
+* [Importing Meter Data into SEED](https://nrel-seed.s3.amazonaws.com/resources/SEED%20Platform%20V2_6_%20Meter%20Data.pdf)
 
-* [SEED for Cities](https://www.energy.gov/sites/prod/files/2016/06/f32/SEED_Factsheet_City.pdf) Factsheet.
+* [SEED Platform Overview](https://nrel-seed.s3.amazonaws.com/resources/SEED%20Platform%20V2_4%20Getting%20Started%20Guide.pdf)
 
-* [SEED: Why Open Source?](https://www.energy.gov/sites/prod/files/2015/04/f21/SEED_Overview_OpenSource_0.pdf) Factsheet.
+* [SEED for Cities](https://nrel-seed.s3.amazonaws.com/resources/SEED_Factsheet_City.pdf) Factsheet.
+
+* [SEED: Why Open Source?](https://nrel-seed.s3.amazonaws.com/resources/SEED_Overview_OpenSource_0.pdf) Factsheet.
 
