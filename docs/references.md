@@ -17,15 +17,15 @@
 
 ## Presentations
 
-* [SEED Advanced Features webinar](https://nrel-seed.s3.amazonaws.com/resources/2020-05-19%20-%20SEED%20Advanced%20Features%20Webinar.mp4) and [sample files](https://nrel-seed.s3.amazonaws.com/resources/2020-05-19 - SEED Sample Files.zip)
+* 05/19/2020. NREL. [SEED Advanced Features webinar](https://nrel-seed.s3.amazonaws.com/resources/2020-05-19%20-%20SEED%20Advanced%20Features%20Webinar.mp4) and [sample files](https://nrel-seed.s3.amazonaws.com/resources/2020-05-19 - SEED Sample Files.zip)
 
-* [Introduction to SEED presentation](https://nrel-seed.s3.amazonaws.com/resources/Introduction%20to%20SEED.pdf)
+* 04/20/2020. [Introduction to SEED presentation](https://nrel-seed.s3.amazonaws.com/resources/Introduction%20to%20SEED.pdf)
 
-* [Introduction to SEED webinar](https://nrel-seed.s3.amazonaws.com/resources/2020-04-29%20-%20Introduction%20to%20SEED%20Webinar.mp4)
+* 04/20/2020. LBNL. [Introduction to SEED webinar](https://nrel-seed.s3.amazonaws.com/resources/2020-04-29%20-%20Introduction%20to%20SEED%20Webinar.mp4)
 
-* [Importing Meter Data into SEED](https://nrel-seed.s3.amazonaws.com/resources/SEED%20Platform%20V2_6_%20Meter%20Data.pdf)
+* 08/05/2019. [Importing Meter Data into SEED](https://nrel-seed.s3.amazonaws.com/resources/SEED%20Platform%20V2_6_%20Meter%20Data.pdf)
 
-* [SEED Platform Overview](https://nrel-seed.s3.amazonaws.com/resources/SEED%20Platform%20V2_4%20Getting%20Started%20Guide.pdf)
+* 11/05/2018. LBNL. [SEED Platform Overview](https://nrel-seed.s3.amazonaws.com/resources/SEED%20Platform%20V2_4%20Getting%20Started%20Guide.pdf)
 
 * [SEED for Cities](https://nrel-seed.s3.amazonaws.com/resources/SEED_Factsheet_City.pdf) Factsheet.
 
