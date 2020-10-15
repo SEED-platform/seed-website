@@ -12,10 +12,10 @@ SEED will make this attempt in the following cases:
 
 * During the file import process, after you've mapped columns, SEED will automatically attempt geocoding on records.
 
-* On either the properties page or the tax lots page, you can select records and "Geocode Selected".
+* On either the properties page or the tax lots page, you can select records and use the "Geocode Selected" button under the Actions menu.
 
-Note: Valid UBID (properties) or ULID (tax lots) values provide a latitude and longitude, and these can be used to provide latitude and longitude values. On import, UBID/ULID is used instead of MapQuest if available. On the inventory pages, there's a separate button to Decode UBID/ULID for Selected.
+Note: Valid UBID (properties) or ULID (tax lots) values can be parsed to provide a latitude and longitude value. On import, UBID/ULID is used instead of MapQuest if available. On the inventory pages, there's a separate Action menu button to "Decode UBID/ULID for Selected".
 
 ## I just geocoded my data using SEED. How do I review and verify the results?
 
-There are multiple ways to do this. The most obvious way is to verify that latitude and longitude fields are populated. Additionally, SEED provides a field called "Geocoding Confidence". This field can provide evidence of how the geocoding went for that record - a value starting with "Low..." indicates that geocoding failed for a record because the address values didn't yield reliable results. Finally, SEED provides an inventory map page that allows you to view where the points are located on a map.
+There are multiple ways of verifying geocoding results. The most obvious way is to verify that latitude and longitude fields are populated. Additionally, SEED provides a field called "Geocoding Confidence". This field can provide evidence of how the geocoding went for that record - a value starting with "Low..." indicates that geocoding failed for a record because the address values didn't yield reliable results. Finally, SEED provides an inventory map page that allows you to view where the points are located on a map.
