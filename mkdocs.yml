@@ -5,7 +5,7 @@ theme:
   palette:
     primary: 'indigo'
     accent: 'blue'
-  logo: 'images/icon-city.svg'  
+  logo: 'images/icon-city.svg'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
@@ -20,13 +20,18 @@ extra_css:
 nav:
   - Home: 'index.md'
   - Getting Started: 'getting_started.md'
-  - FAQ: 'faq.md'
+  - FAQ:
+    - 'Features':
+      - 'Geocoding': 'faq/features/geocoding.md'
+      - 'Inventory Management': 'faq/features/inventory_management.md'
+      - 'Miscellaneous': 'faq/features/misc.md'
+    - 'Getting Help': 'faq/getting_help.md'
+    - 'Hosting': 'faq/hosting.md'
+    - 'Industry Involvement': 'faq/industry_involvement.md'
+    - 'Security': 'faq/security.md'
   - User Documentation: 'documentation.md'
   - Developer Documentation: 'developer_resources.md'
   - Known Issues: 'known_issues.md'
   - References: 'references.md'
   - Release Notes: 'release_notes.md'
   - SEED Technical Allies: 'technical_ally.md'
-
-
-  
