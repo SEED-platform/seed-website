@@ -20,7 +20,7 @@ Note: Each page on the [website](https://seed-platform.org/) corresponds to a fi
 
 * Use `mkdocs.yml` as a guide for both identifying which file to update if updating existing documentation or to create new pages by adding new entries.
 * If updating existing documentation, open the corresponding file in the GitHub interface and click on the pencil icon towards the top right of the file.
-* If creating a new page,  after you've created a new entry within `mkdocs.yml`, navigate to the appropriate directory within the `docs` subdirectory, click "Add file" at the top right to "Create new file".
+* If creating a new page, after you've created a new entry within `mkdocs.yml`, navigate to the appropriate directory within the `docs` subdirectory, click "Add file" at the top right to "Create new file".
 * Whether you're creating a new file or editing an existing one, the current page should allow you to edit the file contents and preview your changes.
 * Once changes are made as desired, add a commit message and optional description, choose "Commit directly to `<your-branch-name>` branch", and click "Commit changes".
 * Repeat this for desired files. Reminder that adding new pages will likely require that the `mkdocks.yml` is updated to include a new entry pointing to a newly created `.md` file in the `docs` directory.
