@@ -29,6 +29,6 @@ Note: Each page on the [website](https://seed-platform.org/) corresponds to a fi
 
 For any issues, please reach out to Katherine Fleming.
 
-## Releasting New Documentation
+## Releasing New Documentation
 * Create a pull request into the master branch
 * Deploy using `mkdocs gh-deploy`
