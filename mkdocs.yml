@@ -22,6 +22,7 @@ nav:
   - Getting Started: 'getting_started.md'
   - FAQ:
     - 'Features':
+      - 'Analysis': 'faq/features/analysis.md'
       - 'Geocoding': 'faq/features/geocoding.md'
       - 'Inventory Management': 'faq/features/inventory_management.md'
       - 'Miscellaneous': 'faq/features/misc.md'
