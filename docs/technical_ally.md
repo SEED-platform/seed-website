@@ -60,6 +60,16 @@ Please see the [App Developer Requirements](app_developer_requirements.md) for m
 
 There are currently no officially approved App Developers for the SEED Platform, but the SEED Team is working on approving several applications.
 
-<center>
-	<img src="../images/ClearlyEnergy.png" /><br/>
-</center>
+<div class="row">
+  <div class="column">
+    <center>
+    <br/><img src="../images/ClearlyEnergy.png" alt="clearly energy logo"/><br/>
+    </center>
+  </div>
+  <div class="column">
+    <center>
+    <img src="../images/beam_logo.png" width="80%" alt="beam logo" /><br/>
+  </div>
+</div>
+
+

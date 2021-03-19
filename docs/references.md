@@ -13,6 +13,8 @@
 
 * Alschuler, A., Antonoff, J., Brown, R., and Cheifetz, M. ["Planting SEEDs: Implementation of a Common Platform for Building Performance Disclosure Program Data Management"](http://aceee.org/files/proceedings/2014/data/papers/4-274.pdf), In 2014 ACEEE Summer Study on Energy Efficiency in Buildings, pp. 274–284. Pacific Grove, CA.
 
+* Taylor, C., Mathew, P., Hernandez, G., & Mercado, A. (2012). [Standard Energy Efficiency Data ( SEED ) Platform : A Tool to Track and Transact Energy Data.](https://www.aceee.org/files/proceedings/2012/data/papers/0193-000384.pdf) 2012 ACEEE Summer Study on Energy Efficiency in Buildings, 289–297.
+
 ## SEED-Adjacent Publications
 
 * DeGraw, Jason, Kristin Field-Macumber, Nicholas Long, and Supriya Goel. 2018. [“BuildingSync® in Action : Example Implementations.”](https://buildingsync.net/documents/DeGraw-ACEEE-BuildingSync-in-Action.pdf) In 2018 ACEEE Summer Study on Energy Efficiency in Buildings, 1–12. Pacific Grove, CA.
