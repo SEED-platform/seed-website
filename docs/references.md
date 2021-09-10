@@ -3,7 +3,7 @@
 
 ## Publications
 
-* Long, N., Swindler, A., Bergmann, H., Reagon, A., Held, A., & Longley, J. (2020). ["Standardizing City Benchmarking and Reporting: Use Cases in Consolidating Building Data with SEED"](./resources/Long-2020-Standardizing_City_Benchmarking.pdf), 2020 ACEEE Summer Study on Energy Efficiency in Buildings.
+* Long, N., Swindler, A., Bergmann, H., Reagan, A., Held, A., & Longley, J. (2020). ["Standardizing City Benchmarking and Reporting: Use Cases in Consolidating Building Data with SEED"](./resources/Long-2020-Standardizing_City_Benchmarking.pdf), 2020 ACEEE Summer Study on Energy Efficiency in Buildings.
 
 * Taylor, C., Costa, M., Long, N. and Antonoff, J. ["A National Framework for Energy Audit Ordinances"](https://aceee.org/files/proceedings/2016/data/papers/9_448.pdf), In 2016 ACEEE Summer Study on Energy Efficiency in Buildings, pp. 448–459. Pacific Grove, CA.
 
