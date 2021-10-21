@@ -29,6 +29,12 @@ SEED v2.5.0 and above incorporates some GIS functionality
 
 - [GIS Features (PDF)](resources/SEED Platform V2_5_ GIS Features.pdf)
 
+## Analyses Documentation
+Major changes and enhancements to the SEED Analyses were made for the upgrade from version 2.6 to version 2.12.
+
+- [SEED Analyses (PDF)](resources/SEED Platform V2_12_Analyses.pdf)
+
+
 ## Excel&trade; Files
 
 ### Multi-Tab Files
