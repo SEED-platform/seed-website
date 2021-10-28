@@ -24,11 +24,11 @@ The following guides detail the SEED import process and supported data types:
 
 | Version | Date | Description |
 |---------|------|-------------|
-| [2.12.0](../resources/SEED Platform V2_12_Analyses.pdf) | 10/18/2021 | Analyses Documentation |
-| [2.6.1](../resources/SEED Platform V2_6_1 Patch_ Mapping and Merging.pdf) | 01/16/2020 | Mapping and merging data overview | 
-| [2.6.0](../resources/SEED Platform V2_6_ Meter Data.pdf) | 08/09/2019 | Overview of the new Meter Data features added to SEED release 2.6.0 |
+| [2.12.0](resources/SEED Platform V2_12_Analyses.pdf) | 10/18/2021 | Analyses Documentation |
+| [2.6.1](resources/SEED Platform V2_6_1 Patch_ Mapping and Merging.pdf) | 01/16/2020 | Mapping and merging data overview | 
+| [2.6.0](resources/SEED Platform V2_6_ Meter Data.pdf) | 08/09/2019 | Overview of the new Meter Data features added to SEED release 2.6.0 |
 | [2.5.1](https://docs.google.com/a/lbl.gov/viewer?a=v&pid=sites&srcid=bGJsLmdvdnxzZWVkfGd4OjZmMjJkYjc4ZDJkMmE4MjQ) | 08/26/2019 | Overview of the GIS functionality available in SEED | 
-| [2.4.0](../resources/SEED Platform V2_4 Getting Started Guide.pdf) | 10/05/2018 | Overview of the main features in the program, with the basic steps to get started |
+| [2.4.0](resources/SEED Platform V2_4 Getting Started Guide.pdf) | 10/05/2018 | Overview of the main features in the program, with the basic steps to get started |
 
 ## Sample Data
 
