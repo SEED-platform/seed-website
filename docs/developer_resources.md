@@ -6,7 +6,6 @@ The SEED Platform&trade; is an open-source project. The source code and document
 
 - [General Source Code Documentation](http://seed-platform.readthedocs.org/en/stable/index.html)
 - [Developer Resources](https://seed-platform.readthedocs.io/en/stable/developer_resources.html)
-- [API Documentation](https://seed-platform.org/api/swagger/)
 
 ## Release Notes
 

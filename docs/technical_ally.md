@@ -12,7 +12,7 @@ Please see the [Hosting Provider Requirements](hosting_requirements.md) for more
   	<img src="../images/EA-Logo-Color-400x98.png" /><br/>
   	<center>
 	  	Earth Advantage <br/>
-		<a href="earthadvantage.org">earthadvantage.org</a><br/><br/>
+		  <a href="https://www.earthadvantage.org/">earthadvantage.org</a><br/><br/>
 
 		Contact: Erik Cathcart <br/>
 		<a href="mailto:ecathcart@earthadvantage.org">ecathcart@earthadvantage.org</a>
@@ -22,7 +22,7 @@ Please see the [Hosting Provider Requirements](hosting_requirements.md) for more
   	<img src="../images/ClearlyEnergy.png" /><br/>
   	<center>
   		Clearly Energy <br/>
-		<a href="www.clearlyenergy.com">www.clearlyenergy.com</a><br/><br/>
+		<a href="https://www.clearlyenergy.com/">www.clearlyenergy.com</a><br/><br/>
 
 		Contact: Veronique Bugnion <br/>
 		<a href="mailto:vbugnion@clearlyenergy.com">vbugnion@clearlyenergy.com</a>
