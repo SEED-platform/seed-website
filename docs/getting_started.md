@@ -24,6 +24,7 @@ The following guides detail the SEED import process and supported data types:
 
 | Version | Date | Description |
 |---------|------|-------------|
+| [2.13.0](resources/SEED Platform V2_13 Getting Started Guide.pdf) | 02/01/2022 | Getting Started Guide |
 | [2.12.0](resources/SEED Platform V2_12_Analyses.pdf) | 10/18/2021 | Analyses Documentation |
 | [2.6.1](resources/SEED Platform V2_6_1 Patch_ Mapping and Merging.pdf) | 01/16/2020 | Mapping and merging data overview | 
 | [2.6.0](resources/SEED Platform V2_6_ Meter Data.pdf) | 08/09/2019 | Overview of the new Meter Data features added to SEED release 2.6.0 |
