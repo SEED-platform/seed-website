@@ -21,6 +21,9 @@
 
 ## Presentations
 
+* 11/05/2021. NREL. [SEED Analysis: BETTER, Carbon Metrics,
+and EUI Calculations](resources/SEED and BETTER Functionality 2021-11-05.pdf)
+
 * 05/19/2020. NREL. [SEED Advanced Features webinar](https://nrel-seed.s3.amazonaws.com/resources/2020-05-19%20-%20SEED%20Advanced%20Features%20Webinar.mp4) and [sample files](https://nrel-seed.s3.amazonaws.com/resources/2020-05-19 - SEED Sample Files.zip)
 
 * 04/20/2020. [Introduction to SEED presentation](https://nrel-seed.s3.amazonaws.com/resources/Introduction%20to%20SEED.pdf)
