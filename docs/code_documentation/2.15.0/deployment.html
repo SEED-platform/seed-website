@@ -229,14 +229,27 @@
 your local_untracked.py files after setting up your Sentry account on sentry.io.</p>
 <p>The RAVEN_CONFIG is used for the backend and the SENTRY_JS_DSN is used for the frontend. At the moment,
 it is recommended to setup two sentry projects, one for backend and one for frontend.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">raven</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sentry_sdk</span>
+<span class="kn">from</span> <span class="nn">sentry_sdk.integrations.django</span> <span class="kn">import</span> <span class="n">DjangoIntegration</span>
+<span class="kn">from</span> <span class="nn">sentry_sdk.integrations.celery</span> <span class="kn">import</span> <span class="n">CeleryIntegration</span>
 
-<span class="n">RAVEN_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="s1">&#39;dsn&#39;</span><span class="p">:</span> <span class="s1">&#39;https://&lt;user&gt;:&lt;key&gt;@sentry.io/&lt;job_id&gt;&#39;</span><span class="p">,</span>
-   <span class="c1"># If you are using git, you can also automatically configure the</span>
-   <span class="c1"># release based on the git info.</span>
-   <span class="s1">&#39;release&#39;</span><span class="p">:</span> <span class="n">raven</span><span class="o">.</span><span class="n">fetch_git_sha</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)),</span>
-<span class="p">}</span>
+<span class="n">sentry_sdk</span><span class="o">.</span><span class="n">init</span><span class="p">(</span>
+    <span class="n">dsn</span><span class="o">=</span><span class="s2">&quot;https://&lt;user&gt;@&lt;key&gt;.ingest.sentry.io/&lt;job&gt;&quot;</span><span class="p">,</span>
+    <span class="n">integrations</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">DjangoIntegration</span><span class="p">(),</span>
+        <span class="n">CeleryIntegration</span><span class="p">(),</span>
+    <span class="p">],</span>
+
+    <span class="c1"># Set traces_sample_rate to 1.0 to capture 100%</span>
+    <span class="c1"># of transactions for performance monitoring.</span>
+    <span class="c1"># We recommend adjusting this value in production.</span>
+    <span class="n">traces_sample_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+
+    <span class="c1"># If you wish to associate users to errors (assuming you are using</span>
+    <span class="c1"># django.contrib.auth) you may enable sending PII data.</span>
+    <span class="n">send_default_pii</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
 <span class="n">SENTRY_JS_DSN</span> <span class="o">=</span> <span class="s1">&#39;https://&lt;key&gt;@sentry.io/&lt;job_id&gt;&#39;</span>
 </pre></div>
 </div>
