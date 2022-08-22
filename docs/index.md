@@ -4,7 +4,7 @@
 		<img src="images/DOE-SEED-Logo_v7.png" alt= "SEED Logo">
 	</div>
 	<div class="column15">
-		<a href="https://www.rdworldonline.com/rd-100-winners-for-2022-are-announced/" target="_blank" style="padding-top:2.5em;"><img src="images/rd100-winner.png" alt="2022 R&D 100 Winner Logo" style="padding-top:2.5em;" ></a>
+		<a href="https://www.rdworldonline.com/rd-100-2022-winner/the-seed-platform-decarbonizing-cities-through-robust-data-management/" target="_blank" style="padding-top:2.5em;"><img src="images/rd100-winner.png" alt="2022 R&D 100 Winner Logo" style="padding-top:2.5em;" ></a>
 	</div>
 </div>
 
