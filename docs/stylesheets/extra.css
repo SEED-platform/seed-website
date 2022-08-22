@@ -51,6 +51,14 @@ background-color: #2e3842;
   flex: 50%;
 }
 
+.column85 {
+  flex: 85%;
+}
+
+.column15 {
+  flex: 15%;
+}
+
 /* Normal white Button as seen on Google.com*/
 button {
     color: #444444;
