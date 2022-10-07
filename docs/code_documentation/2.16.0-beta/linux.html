@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>General Linux Setup &mdash; SEED Platform 2.16.0-beta documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Docker Deployment on AWS" href="docker.html" />
+    <link rel="prev" title="AWS Setup" href="aws.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SEED Platform
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.16.0-beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="deployment.html">Deployment Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="aws.html">AWS Setup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">General Linux Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-postgresql">Configure PostgreSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-dependencies">Python Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#javascript-dependencies">JavaScript Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#django-database-configuration">Django Database Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cache-and-message-broker">Cache and Message Broker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-initial-user">Creating the initial user</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-celery-the-background-task-worker">Running celery the background task worker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-development-web-server">Running the development web server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-a-production-web-server">Running a production web server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environment-variables">Environment Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mail-services">Mail Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#aws-ses-service">AWS SES Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#smtp-service">SMTP service</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#local-untracked-py">local_untracked.py</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker Deployment on AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes_deployment.html">Kubernetes Deployment Guide with Helm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#migrations">Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="deployment.html">Deployment Guide</a> &raquo;</li>
+        
+      <li>General Linux Setup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="general-linux-setup">
+<h1>General Linux Setup<a class="headerlink" href="#general-linux-setup" title="Permalink to this headline">¶</a></h1>
+<p>While Amazon Web Services (<a class="reference external" href="http://aws.amazon.com/">AWS</a>) provides the preferred hosting for SEED,
+running on a bare-bones Linux server follows a similar setup, replacing the
+AWS services with their Linux package counterparts, namely: PostgreSQL and
+Redis.</p>
+<p><strong>SEED</strong> is a <a class="reference external" href="https://www.djangoproject.com/">Django project</a> and Django’s documentation
+is an excellent place to general understanding of this project’s layout.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Ubuntu server/desktop 16.04 or newer (18.04 recommended)</p>
+<p>Install the following base packages to run SEED:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo add-apt-repository ppa:timescale/timescaledb-ppa</span>
+<span class="go">sudo apt update</span>
+<span class="go">sudo apt upgrade</span>
+<span class="go">sudo apt install libpq-dev python3-dev python3-pip libatlas-base-dev \</span>
+<span class="go">gfortran build-essential nodejs npm libxml2-dev libxslt1-dev git \</span>
+<span class="go">libssl-dev libffi-dev curl uwsgi-core uwsgi-plugin-python mercurial</span>
+<span class="go">sudo apt install gdal-bin postgis</span>
+<span class="go">sudo apt install redis-server</span>
+<span class="go">sudo apt install timescaledb-postgresql-10 postgresql-contrib</span>
+
+<span class="gp"># </span>For running selenium/protractor
+<span class="go">sudo apt install default-jre</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>postgresql <code class="docutils literal notranslate"><span class="pre">&gt;=9.3</span></code> is required to support <a class="reference external" href="http://www.postgresql.org/docs/9.3/static/datatype-json.html">JSON Type</a></p>
+</div>
+</section>
+<section id="configure-postgresql">
+<h2>Configure PostgreSQL<a class="headerlink" href="#configure-postgresql" title="Permalink to this headline">¶</a></h2>
+<p>Replace ‘seeddb’, ‘seeduser’ with desired db/user. By
+default use password <cite>seedpass</cite> when prompted</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo timescaledb-tune
+<span class="gp">$ </span>sudo service postgresql restart
+<span class="gp">$ </span>sudo su - postgres
+<span class="gp">$ </span>createuser -P <span class="s2">&quot;seeduser&quot;</span>
+<span class="gp">$ </span>createdb <span class="s2">&quot;seeddb&quot;</span> --owner<span class="o">=</span><span class="s2">&quot;seeduser&quot;</span>
+<span class="gp">$ </span>psql
+<span class="go">postgres=# GRANT ALL PRIVILEGES ON DATABASE &quot;seeddb&quot; TO &quot;seeduser&quot;;</span>
+<span class="go">postgres=# ALTER USER &quot;seeduser&quot; CREATEDB CREATEROLE SUPERUSER;</span>
+<span class="go">postgres=# \q</span>
+<span class="gp">$ </span><span class="nb">exit</span>
+</pre></div>
+</div>
+</section>
+<section id="python-dependencies">
+<h2>Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>clone the <strong>seed</strong> repository from <strong>github</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git clone git@github.com:SEED-platform/seed.git
+</pre></div>
+</div>
+<p>enter the repo and install the python dependencies from <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/requirements/local.txt">requirements</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> seed
+<span class="gp">$ </span>pip3 install -r requirements/local.txt
+</pre></div>
+</div>
+</section>
+<section id="javascript-dependencies">
+<h2>JavaScript Dependencies<a class="headerlink" href="#javascript-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>npm install
+</pre></div>
+</div>
+</section>
+<section id="django-database-configuration">
+<h2>Django Database Configuration<a class="headerlink" href="#django-database-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Copy the <code class="docutils literal notranslate"><span class="pre">local_untracked.py.dist</span></code> file in the <code class="docutils literal notranslate"><span class="pre">config/settings</span></code> directory to
+<code class="docutils literal notranslate"><span class="pre">config/settings/local_untracked.py</span></code>, and add a <code class="docutils literal notranslate"><span class="pre">DATABASES</span></code> configuration with your database username, password,
+host, and port. Your database configuration can point to an AWS RDS instance or a PostgreSQL 9.4 database instance
+you have manually installed within your infrastructure.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Database</span>
+<span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.contrib.gis.db.backends.postgis&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;seeddb&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;seeduser&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;PASSWORD&gt;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other databases could be used such as MySQL, but are not supported
+due to the postgres-specific <a class="reference external" href="http://www.postgresql.org/docs/9.3/static/datatype-json.html">JSON Type</a></p>
+</div>
+<p>In in the above database configuration, <code class="docutils literal notranslate"><span class="pre">seed</span></code> is the database name, this is arbitrary and any valid name can be
+used as long as the database exists. Enter the database name, user, password you set above.</p>
+<p>The database settings can be tested using the Django management command, <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">manage.py</span> <span class="pre">dbshell</span></code> to connect to the
+configured database.</p>
+<p>create the database tables and migrations:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 manage.py migrate
+</pre></div>
+</div>
+</section>
+<section id="cache-and-message-broker">
+<h2>Cache and Message Broker<a class="headerlink" href="#cache-and-message-broker" title="Permalink to this headline">¶</a></h2>
+<p>The SEED project relies on <a class="reference external" href="http://redis.io/">redis</a> for both cache and message brokering, and
+is available as an AWS <a class="reference external" href="https://aws.amazon.com/elasticache/">ElastiCache</a> service or with the <code class="docutils literal notranslate"><span class="pre">redis-server</span></code>
+Linux package. (<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">redis-server</span></code>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">local_untracked.py</span></code> should be updated with the <code class="docutils literal notranslate"><span class="pre">CACHES</span></code> and <code class="docutils literal notranslate"><span class="pre">CELERY_BROKER_URL</span></code>
+settings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;redis_cache.cache.RedisCache&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1:6379&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;DB&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+        <span class="s1">&#39;TIMEOUT&#39;</span><span class="p">:</span> <span class="mi">300</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://127.0.0.1:6379/1&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-the-initial-user">
+<h2>Creating the initial user<a class="headerlink" href="#creating-the-initial-user" title="Permalink to this headline">¶</a></h2>
+<p>create a superuser to access the system</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 manage.py create_default_user --username<span class="o">=</span>admin@my.org --organization<span class="o">=</span>lbnl --password<span class="o">=</span>badpass
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Of course, you need to save this user/password somewhere, since this is what
+you will use to login to the SEED website.</p>
+<p>Every user must be tied to an organization, visit <code class="docutils literal notranslate"><span class="pre">/app/#/profile/admin</span></code>
+as the superuser to create parent organizations and add users to them.</p>
+</div>
+</section>
+<section id="running-celery-the-background-task-worker">
+<h2>Running celery the background task worker<a class="headerlink" href="#running-celery-the-background-task-worker" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.celeryproject.org/">Celery</a> is used for background tasks (saving data, matching, creating
+projects, etc) and must be connected to the message broker queue. From the
+project directory, <code class="docutils literal notranslate"><span class="pre">celery</span></code> can be started:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">DJANGO_SETTINGS_MODULE=config.settings.dev celery -A seed worker -l info -c 2 -B --events --max-tasks-per-child=1000</span>
+</pre></div>
+</div>
+</section>
+<section id="running-the-development-web-server">
+<h2>Running the development web server<a class="headerlink" href="#running-the-development-web-server" title="Permalink to this headline">¶</a></h2>
+<p>The Django dev server (not for production use) can be a quick and easy way to
+get an instance up and running. The dev server runs by default on port 8000
+and can be run on any port. See Django’s <a class="reference external" href="https://docs.djangoproject.com/en/1.6/ref/django-admin/#django-admin-runserver">runserver documentation</a> for more
+options.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 manage.py runserver --settings<span class="o">=</span>config.settings.dev
+</pre></div>
+</div>
+</section>
+<section id="running-a-production-web-server">
+<h2>Running a production web server<a class="headerlink" href="#running-a-production-web-server" title="Permalink to this headline">¶</a></h2>
+<p>Our recommended web server is uwsgi sitting behind nginx. The python package <code class="docutils literal notranslate"><span class="pre">uwsgi</span></code> is needed for this, and
+should install to <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/uwsgi</span></code> We recommend using <code class="docutils literal notranslate"><span class="pre">dj-static</span></code> to load static files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The use of the <code class="docutils literal notranslate"><span class="pre">dev</span></code> settings file is production ready, and should be
+used for non-AWS installs with <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> set to <code class="docutils literal notranslate"><span class="pre">False</span></code> for production use.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip3 install uwsgi dj-static
+</pre></div>
+</div>
+<p>Generate static files:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 manage.py collectstatic --settings<span class="o">=</span>config.settings.prod -i package.json -i npm-shrinkwrap.json -i node_modules/openlayers-ext/index.html
+</pre></div>
+</div>
+<p>Update <code class="docutils literal notranslate"><span class="pre">config/settings/local_untracked.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># static files</span>
+<span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="s1">&#39;collected_static&#39;</span>
+<span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">&#39;/static/&#39;</span>
+</pre></div>
+</div>
+<p>Start the web server (this also starts celery):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./bin/start-seed
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that uwsgi has port set to <code class="docutils literal notranslate"><span class="pre">80</span></code>. In a production setting, a dedicated web server such as NGINX would be
+receiving requests on port 80 and passing requests to uwsgi running on a different port, e.g 8000.</p>
+</div>
+</section>
+<section id="environment-variables">
+<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>The following environment variables can be set within the <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file to
+override default Django settings.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">SENTRY_DSN</span><span class="o">=</span>https://xyz@app.getsentry.com/123
+<span class="nb">export</span> <span class="nv">DEBUG</span><span class="o">=</span>False
+<span class="nb">export</span> <span class="nv">ONLY_HTTPS</span><span class="o">=</span>True
+</pre></div>
+</div>
+</section>
+<section id="mail-services">
+<h2>Mail Services<a class="headerlink" href="#mail-services" title="Permalink to this headline">¶</a></h2>
+<section id="aws-ses-service">
+<h3>AWS SES Service<a class="headerlink" href="#aws-ses-service" title="Permalink to this headline">¶</a></h3>
+<p>In the AWS setup, we can use SES to provide an email service for Django. The service is
+configured in the config/settings/local_untracked.py:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">EMAIL_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;django_ses.SESBackend&#39;</span>
+</pre></div>
+</div>
+<p>In general, the following steps are needed to configure SES:</p>
+<ol class="arabic simple">
+<li><p>Access Amazon SES Console  - <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quick-start.html">Quickstart</a></p></li>
+<li><p>Login to Amazon SES Console. Verify which region we are using (e.g., us-east-1)</p></li>
+<li><p>Decide on email address that will be sending the emails and add them to the <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html">SES Verified Emails</a>.</p></li>
+<li><p>Test that SES works as expected (while in the SES sandbox). Note that you will need to add the sender and recipient emails to the verified emails while in the sandbox.</p></li>
+<li><p>Update the local_untracked.py file or set the environment variables for the docker file.</p></li>
+<li><p>Once ready, move the SES instance out of the sandbox. Following instructions <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html">here</a></p></li>
+<li><p>(Optional) Set up Amazon Simple Notification Service (Amazon SNS) to notify you of bounced emails and other issues.</p></li>
+<li><p>(Optional) Use the AWS Management Console to set up Easy DKIM, which is a way to authenticate your emails. Amazon SES console will have the values for SPF and DKIM that you need to put into your DNS.</p></li>
+</ol>
+</section>
+<section id="smtp-service">
+<h3>SMTP service<a class="headerlink" href="#smtp-service" title="Permalink to this headline">¶</a></h3>
+<p>Many options for setting up your own <a class="reference external" href="https://docs.djangoproject.com/en/2.0/ref/settings/#email-backend">SMTP</a> service/server or using other SMTP
+third party services are available and compatible including <a class="reference external" href="http://stackoverflow.com/questions/19264907/python-django-gmail-smtp-setup">gmail</a>. SMTP is not configured for working within Docker at the moment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">EMAIL_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;django.core.mail.backends.smtp.EmailBackend&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="local-untracked-py">
+<h2>local_untracked.py<a class="headerlink" href="#local-untracked-py" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PostgreSQL DB config</span>
+<span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;seed&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;your-username&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;your-password&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;your-host&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;your-port&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># config for local storage backend</span>
+<span class="n">DOMAIN_URLCONFS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="s1">&#39;config.urls&#39;</span><span class="p">}</span>
+
+<span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;redis_cache.cache.RedisCache&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1:6379&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;DB&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+        <span class="s1">&#39;TIMEOUT&#39;</span><span class="p">:</span> <span class="mi">300</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://127.0.0.1:6379/1&#39;</span>
+
+<span class="c1"># SMTP config</span>
+<span class="n">EMAIL_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;django.core.mail.backends.smtp.EmailBackend&#39;</span>
+
+<span class="c1"># static files</span>
+<span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="s1">&#39;collected_static&#39;</span>
+<span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">&#39;/static/&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docker.html" class="btn btn-neutral float-right" title="Docker Deployment on AWS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aws.html" class="btn btn-neutral float-left" title="AWS Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

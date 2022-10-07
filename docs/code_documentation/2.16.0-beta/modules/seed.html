@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SEED Package &mdash; SEED Platform 2.16.0-beta documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Management Package" href="seed.management.html" />
+    <link rel="prev" title="Public Package" href="seed.public.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.16.0-beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data.html">Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data_importer.html">Data Importer Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.landing.html">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.html">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.managers.html">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.public.html">Public Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SEED Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.management.html">Management Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.templatetags.html">Templatetags Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#inheritance">Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.decorators">Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.search">Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.tasks">Tasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.token_generators">Token Generator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.urls">URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.utils">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.serializers.html">Serializers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.urls.html">URLs Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.utils.html">Utilities Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.views.html">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../modules.html">Modules</a> &raquo;</li>
+        
+      <li>SEED Package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="seed-package">
+<h1>SEED Package<a class="headerlink" href="#seed-package" title="Permalink to this headline">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="seed.features.html">Features Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.management.html">Management Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.management.html#subpackages">Subpackages</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.management.html#module-seed.management">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.mappings.html">Mapping Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html#seed-mappings-mapper-module">seed.mappings.mapper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html#seed-mappings-seed-mappings-module">seed.mappings.seed_mappings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.templatetags.html">Templatetags Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.templatetags.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.templatetags.html#module-seed.templatetags.breadcrumbs">Breadcrumbs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.test_helpers.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.test_helpers.factory.html">Test Helper Factor Package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.factory.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="seed.test_helpers.factory.lib.html">Test Helper Factory Lib Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.lib.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.lib.html#chomsky">Chomsky</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.factory.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.factory.html#module-seed.test_helpers.factory.helpers">Helpers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.test_helpers.html#module-seed.test_helpers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.tests.html">Tests Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="seed.test_helpers.factory.html">Test Helper Factor Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="seed.test_helpers.factory.lib.html">Test Helper Factory Lib Package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="seed.test_helpers.factory.lib.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="seed.test_helpers.factory.lib.html#chomsky">Chomsky</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.html#module-seed.test_helpers.factory.helpers">Helpers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html#module-seed.test_helpers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.test_admin_views">Admin Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.test_decorators">Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#exporters">Exporters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.test_tasks">Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.test_views">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.tests">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.util">Utils</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="inheritance">
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.decorators">
+<span id="decorators"></span><h2>Decorators<a class="headerlink" href="#module-seed.decorators" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.DecoratorMixin">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">DecoratorMixin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decorator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.DecoratorMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a decorator written for a function view into a mixin for a class-based view.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LoginRequiredMixin</span> <span class="o">=</span> <span class="n">DecoratorMixin</span><span class="p">(</span><span class="n">login_required</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">MyView</span><span class="p">(</span><span class="n">LoginRequiredMixin</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">SomeView</span><span class="p">(</span><span class="n">DecoratorMixin</span><span class="p">(</span><span class="n">some_decorator</span><span class="p">),</span> <span class="n">DecoratorMixin</span><span class="p">(</span><span class="n">something_else</span><span class="p">)):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.ajax_request">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">ajax_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.ajax_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copied from django-annoying, with a small modification. Now we also check for ‘status’ or
+‘success’ keys and slash return correct status codes</p>
+<p>If view returned serializable dict, returns response in a format requested
+by HTTP_ACCEPT header. Defaults to JSON if none requested or match.</p>
+<p>Currently supports JSON or YAML (if installed), but can easily be extended.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@ajax_request</span>
+<span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">news</span> <span class="o">=</span> <span class="n">News</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">news_titles</span> <span class="o">=</span> <span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">title</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">news</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="s1">&#39;news_titles&#39;</span><span class="p">:</span> <span class="n">news_titles</span> <span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.ajax_request_class">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">ajax_request_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.ajax_request_class" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Copied from django-annoying, with a small modification. Now we also check for ‘status’ or</p></li>
+</ul>
+<p>‘success’ keys and return correct status codes</p>
+<p>If view returned serializable dict, returns response in a format requested
+by HTTP_ACCEPT header. Defaults to JSON if none requested or match.</p>
+<p>Currently supports JSON or YAML (if installed), but can easily be extended.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@ajax_request</span>
+<span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+    <span class="n">news</span> <span class="o">=</span> <span class="n">News</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">news_titles</span> <span class="o">=</span> <span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">title</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">news</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="s1">&#39;news_titles&#39;</span><span class="p">:</span> <span class="n">news_titles</span> <span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.get_prog_key">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">get_prog_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">import_file_pk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.get_prog_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the progress key for the cache</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.lock_and_track">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">lock_and_track</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.lock_and_track" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator to lock tasks to single executor and provide progress url.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.require_organization_id">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">require_organization_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.require_organization_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate that organization_id is in the GET params and it’s an int.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.require_organization_id_class">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">require_organization_id_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.require_organization_id_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate that organization_id is in the GET params and it’s an int.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.require_organization_membership">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">require_organization_membership</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.require_organization_membership" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate that the organization_id passed in GET is valid for request user.</p>
+</dd></dl>
+
+</section>
+<section id="factory">
+<h2>Factory<a class="headerlink" href="#factory" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-seed.models" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+</section>
+<section id="module-seed.search">
+<span id="search"></span><h2>Search<a class="headerlink" href="#module-seed.search" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<p>Search methods pertaining to buildings.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.build_shared_buildings_orgs">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">build_shared_buildings_orgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orgs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.build_shared_buildings_orgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a list of sibling and parent orgs</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.create_inventory_queryset">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">create_inventory_queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orgs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_orgs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.create_inventory_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>creates a queryset of properties or taxlots within orgs.
+If <code class="docutils literal notranslate"><span class="pre">other_orgs</span></code>, properties/taxlots in both orgs and other_orgs
+will be represented in the queryset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inventory_type</strong> – property or taxlot.</p></li>
+<li><p><strong>orgs</strong> – queryset of Organization inst.</p></li>
+<li><p><strong>exclude</strong> – django query exclude dict.</p></li>
+<li><p><strong>order_by</strong> – django query order_by str.</p></li>
+<li><p><strong>other_orgs</strong> – list of other orgs to <code class="docutils literal notranslate"><span class="pre">or</span></code> the query</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.get_inventory_fieldnames">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">get_inventory_fieldnames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.get_inventory_fieldnames" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a list of field names that will be searched against</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.get_orgs_w_public_fields">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">get_orgs_w_public_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.get_orgs_w_public_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a list of orgs that have publicly shared fields</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.inventory_search_filter_sort">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">inventory_search_filter_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.inventory_search_filter_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a parsed set of params, perform the search, filter, and sort for
+Properties or Taxlots</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.parse_body">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">parse_body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.parse_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>parses the request body for search params, q, etc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> – django wsgi request object</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;exclude&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">exclude</span> <span class="nb">dict</span> <span class="k">for</span> <span class="n">django</span> <span class="n">queryset</span>
+    <span class="s1">&#39;order_by&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">query</span> <span class="n">order_by</span><span class="p">,</span> <span class="n">defaults</span> <span class="n">to</span> <span class="s1">&#39;tax_lot_id&#39;</span>
+    <span class="s1">&#39;sort_reverse&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">ASC</span><span class="p">,</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">DSC</span>
+    <span class="s1">&#39;page&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">pagination</span> <span class="n">page</span>
+    <span class="s1">&#39;number_per_page&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number</span> <span class="n">per</span> <span class="n">pagination</span> <span class="n">page</span>
+    <span class="s1">&#39;show_shared_buildings&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">whether</span> <span class="n">to</span> <span class="n">search</span> <span class="n">across</span> <span class="nb">all</span> <span class="n">user</span><span class="s1">&#39;s orgs</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="k">global</span> <span class="n">search</span> <span class="n">param</span>
+    <span class="s1">&#39;other_search_params&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">filter</span> <span class="n">params</span>
+    <span class="s1">&#39;project_id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">project</span> <span class="nb">id</span> <span class="k">if</span> <span class="n">exists</span> <span class="ow">in</span> <span class="n">body</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.process_search_params">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">process_search_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_api_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.process_search_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a python representation of a search query, process it into the
+internal format that is used for searching, filtering, sorting, and pagination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> – a python object representing the search query</p></li>
+<li><p><strong>user</strong> – the user this search is for</p></li>
+<li><p><strong>is_api_request</strong> – bool, boolean whether this search is being done as an api request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;exclude&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">exclude</span> <span class="nb">dict</span> <span class="k">for</span> <span class="n">django</span> <span class="n">queryset</span>
+    <span class="s1">&#39;order_by&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">query</span> <span class="n">order_by</span><span class="p">,</span> <span class="n">defaults</span> <span class="n">to</span> <span class="s1">&#39;tax_lot_id&#39;</span>
+    <span class="s1">&#39;sort_reverse&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">ASC</span><span class="p">,</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">DSC</span>
+    <span class="s1">&#39;page&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">pagination</span> <span class="n">page</span>
+    <span class="s1">&#39;number_per_page&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number</span> <span class="n">per</span> <span class="n">pagination</span> <span class="n">page</span>
+    <span class="s1">&#39;show_shared_buildings&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">whether</span> <span class="n">to</span> <span class="n">search</span> <span class="n">across</span> <span class="nb">all</span> <span class="n">user</span><span class="s1">&#39;s orgs</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="k">global</span> <span class="n">search</span> <span class="n">param</span>
+    <span class="s1">&#39;other_search_params&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">filter</span> <span class="n">params</span>
+    <span class="s1">&#39;project_id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">project</span> <span class="nb">id</span> <span class="k">if</span> <span class="n">exists</span> <span class="ow">in</span> <span class="n">body</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.search_inventory">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">search_inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.search_inventory" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a queryset for matching Taxlot(View)/Property(View)
+:param str or unicode q: search string
+:param list fieldnames: list of  model fieldnames
+:param queryset: optional queryset to filter from
+:returns: :queryset: queryset of matching buildings</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.search_properties">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">search_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.search_properties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.search_taxlots">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">search_taxlots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.search_taxlots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-seed.tasks">
+<span id="tasks"></span><h2>Tasks<a class="headerlink" href="#module-seed.tasks" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.tasks.delete_organization">
+<span class="sig-prename descclassname"><span class="pre">seed.tasks.</span></span><span class="sig-name descname"><span class="pre">delete_organization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_pk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tasks.delete_organization" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete_organization_buildings</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.tasks.invite_new_user_to_seed">
+<span class="sig-prename descclassname"><span class="pre">seed.tasks.</span></span><span class="sig-name descname"><span class="pre">invite_new_user_to_seed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_pk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tasks.invite_new_user_to_seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send invitation email to newly created user from the landing page.
+NOTE: this function is only used on the landing page because the user has not been assigned an organization
+domain – The domain name of the running seed instance
+email_address – The address to send the invitation to
+token – generated by Django’s default_token_generator
+user_pk – primary key for this user record
+first_name – First name of the new user
+new_user</p>
+<p>Returns: nothing</p>
+</dd></dl>
+
+</section>
+<section id="module-seed.token_generators">
+<span id="token-generator"></span><h2>Token Generator<a class="headerlink" href="#module-seed.token_generators" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author: Aleck Landgraf</p>
+<p>token_generator.py - taken from django core master branch</p>
+<p>needed a token check that would not expire after three days for sending a
+signup email</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.token_generators.SignupTokenGenerator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.token_generators.</span></span><span class="sig-name descname"><span class="pre">SignupTokenGenerator</span></span><a class="headerlink" href="#seed.token_generators.SignupTokenGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Strategy object used to generate and check tokens for the password
+reset mechanism.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.token_generators.SignupTokenGenerator.check_token">
+<span class="sig-name descname"><span class="pre">check_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_expires</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.token_generators.SignupTokenGenerator.check_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that a password reset token is correct for a given user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.token_generators.SignupTokenGenerator.make_token">
+<span class="sig-name descname"><span class="pre">make_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.token_generators.SignupTokenGenerator.make_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a token that can be used once to do a password reset
+for the given user.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-seed.urls">
+<span id="urls"></span><h2>URLs<a class="headerlink" href="#module-seed.urls" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+</section>
+<section id="module-seed.utils">
+<span id="utils"></span><h2>Utils<a class="headerlink" href="#module-seed.utils" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+</section>
+<section id="module-seed.views">
+<span id="views"></span><h2>Views<a class="headerlink" href="#module-seed.views" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+</section>
+<section id="module-seed">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seed" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="seed.management.html" class="btn btn-neutral float-right" title="Management Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="seed.public.html" class="btn btn-neutral float-left" title="Public Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
