@@ -10,8 +10,8 @@ documentation of classes and methods. General developer resources are found in t
 
 | Release Date | Version | Documentation Link                               |
 |--------------|---------|--------------------------------------------------|
-| 09/30/2022   |  2.16.0-beta | [link](./code_documentation/2.16.0-beta/index.html)   |
-| 09/08/2022   |  latest stable  (2.15.2) | [link](./code_documentation/latest/index.html)   |
+| 12/05/2022   |  latest stable  (2.16.0) | [link](./code_documentation/latest/index.html)   |
+| 09/30/2022   |  2.16.0 | [link](./code_documentation/2.16.0/index.html)   |
 | 09/08/2022   |  2.15.2 | [link](./code_documentation/2.15.2/index.html)   |
 | 07/19/2022   |  2.15.1 | [link](./code_documentation/2.15.1/index.html)   |
 | 07/16/2022   |  2.15.0 | [link](./code_documentation/2.15.0/index.html)   |
