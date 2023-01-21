@@ -28,7 +28,7 @@ App developer Technical Allies must meet these requirements annually:
 To be approved as a SEED-Platform Technical Ally, software contributors must follow this process:
 
 - Develop a stand-alone web or mobile application using the existing SEED Platform API endpoints,
-- Contact the [SEED Development team](https://docs.google.com/forms/d/1dqwGF38yPLWIT5zZgjiin38Eo_25SraaWGewIpHPhWo/viewform?usp=send_form) to express interest in becoming a Technical Ally,
+- Contact the SEED Development team using one of the methods on the [contact page](contact.md) to express interest in becoming a Technical Ally or hosting provider,
 - Demonstrate your application's functionality to the SEED Development team,
 - Documentation must include:
 	- Screenshots of app
