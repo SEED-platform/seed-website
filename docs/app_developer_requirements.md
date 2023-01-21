@@ -21,7 +21,7 @@ App developer Technical Allies must meet these requirements annually:
 - Demonstrate an application built using the SEED Platform API either by:
 	- (a) calling the APIs of the LBNL-hosted instance of SEED, or 
 	- (b) sending the SHA of the SEED version they are using and server logs verifying the API calls.
-- Execute a SEED Platform trademark [sublicense](http://seedinfo.lbl.gov/SEED_LBNL_sample_license.pdf) with LBNL.
+- Execute a SEED Platform trademark [sublicense](resources/SEED_LBNL_sample_license.pdf) with LBNL.
 
 ## Approval Process
 
