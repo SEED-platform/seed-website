@@ -1,6 +1,6 @@
 # Technical Allies
 
-SEED Platform Technical Allies are private companies and other entities that are officially recognized for their significant contributions to the [SEED Platform Collaborative](http://energy.gov/eere/buildings/seed-platform-collaborative). The Technical Ally categories are: Hosting Provider, Software Contributor, and App Developer. More information about these categories and the current qualifying Technical Allies are provided below. Note that Technical Allies must meet the approval criteria annually and execute the SEED Platform trademark [sublicense](http://seedinfo.lbl.gov/SEED_LBNL_sample_license.pdf) in order to maintain their official SEED Platform Technical Ally status. The Technical Allies listed below have met all the approval criteria within the last year; click on their logo to find out more about the services they offer.
+SEED Platform Technical Allies are private companies and other entities that are officially recognized for their significant contributions to the [SEED Platform Collaborative](http://energy.gov/eere/buildings/seed-platform-collaborative). The Technical Ally categories are: Hosting Provider, Software Contributor, and App Developer. More information about these categories and the current qualifying Technical Allies are provided below. Note that Technical Allies must meet the approval criteria annually and execute the SEED Platform trademark [sublicense](resources/SEED_LBNL_sample_license.pdf) in order to maintain their official SEED Platform Technical Ally status. The Technical Allies listed below have met all the approval criteria within the last year; click on their logo to find out more about the services they offer.
 
 ## Hosting Providers
 
@@ -57,8 +57,6 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
 
 These Technical Allies use the SEED Platform application programming interface (API) to offer value-added services using data hosted in SEED Platform.
 Please see the [App Developer Requirements](app_developer_requirements.md) for more information about becoming an approved App Developer.
-
-There are currently no officially approved App Developers for the SEED Platform, but the SEED Team is working on approving several applications.
 
 <div class="row">
   <div class="column">

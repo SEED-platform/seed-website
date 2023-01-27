@@ -45,6 +45,6 @@ documentation of classes and methods. General developer resources are found in t
 
 Visit the [Known Issues](known_issues.md) page for a list of SEED Platform issues.
 
-## Developer Forum
+## Futher information
 
-There is a [Google Group](https://groups.google.com/forum/?hl=en#!forum/seed-platform-dev) for developers to discuss the SEED Platform project. The LBNL team monitors that forum and will respond to inquiries there.
+There is a developer and a user forum available to receive announcements and discuss features and issues. See the information on the [contact page](contact.md). The development team actively monitors the forums and will respond to inquiries there.

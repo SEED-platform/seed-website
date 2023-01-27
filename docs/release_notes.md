@@ -7,7 +7,7 @@ In addition to the [GitHub release notes](https://github.com/SEED-platform/seed/
 - [Release Notes v2.0.0](release_notes.md#version-200)
 - [Release Notes v1.5.0](release_notes.md#version-150)
 
-If you have any questions about releases or changes to the program, please email seed-support@lbl.gov
+If you have any questions about releases or changes to the program, please contact us using one of the methods on the [contacts page](contact.md).
 
 ## Version 2.5.0
 
