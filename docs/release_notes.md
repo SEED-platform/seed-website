@@ -2,6 +2,7 @@
 
 In addition to the [GitHub release notes](https://github.com/SEED-platform/seed/releases) page, this page provides more details on the changes made in each version of SEED-Platform by version number.
 
+- [Release Notes v2.17.2](resources/SEED Platform V2_17_2 Release Notes.pdf)
 - [Release Notes v2.5.0](release_notes.md#version-250)
 - [Release Notes v2.4.0](release_notes.md#version-240)
 - [Release Notes v2.0.0](release_notes.md#version-200)
