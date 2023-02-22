@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Utilities Package &mdash; SEED Platform 2.17.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Views Package" href="seed.views.html" />
+    <link rel="prev" title="URLs Package" href="seed.urls.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.17.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data.html">Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data_importer.html">Data Importer Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.landing.html">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.html">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.managers.html">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.public.html">Public Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.html">SEED Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.serializers.html">Serializers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.urls.html">URLs Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Utilities Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.utils.api">APIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.utils.buildings">Buildings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants">Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mappings">Mappings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.utils.organizations">Organizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projects">Projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.utils.time">Time</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.views.html">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../modules.html">Modules</a> &raquo;</li>
+        
+      <li>Utilities Package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="utilities-package">
+<h1>Utilities Package<a class="headerlink" href="#utilities-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.utils.api">
+<span id="apis"></span><h2>APIs<a class="headerlink" href="#module-seed.utils.api" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California,
+through Lawrence Berkeley National Laboratory (subject to receipt of any
+required approvals from the U.S. Department of Energy) and contributors.
+All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.APIBypassCSRFMiddleware">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">APIBypassCSRFMiddleware</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">get_response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.APIBypassCSRFMiddleware" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This middleware turns off CSRF protection for API clients.</p>
+<p>It must come before CsrfViewMiddleware in settings.MIDDLEWARE.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.OrgCreateMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">OrgCreateMixin</span></span><a class="headerlink" href="#seed.utils.api.OrgCreateMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seed.utils.api.OrgMixin" title="seed.utils.api.OrgMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.utils.api.OrgMixin</span></code></a></p>
+<p>Mixin to add organization when creating model instance</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.utils.api.OrgCreateMixin.perform_create">
+<span class="sig-name descname"><span class="pre">perform_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serializer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.OrgCreateMixin.perform_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to add org</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.OrgCreateUpdateMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">OrgCreateUpdateMixin</span></span><a class="headerlink" href="#seed.utils.api.OrgCreateUpdateMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seed.utils.api.OrgCreateMixin" title="seed.utils.api.OrgCreateMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.utils.api.OrgCreateMixin</span></code></a>, <a class="reference internal" href="#seed.utils.api.OrgUpdateMixin" title="seed.utils.api.OrgUpdateMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.utils.api.OrgUpdateMixin</span></code></a></p>
+<p>Mixin to add organization when creating/updating model instance</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.OrgMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">OrgMixin</span></span><a class="headerlink" href="#seed.utils.api.OrgMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides get_organization and get_parent_org method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.utils.api.OrgMixin.get_organization">
+<span class="sig-name descname"><span class="pre">get_organization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.OrgMixin.get_organization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get org from query param or request.user.
+:param request: request object.
+:param return_obj: bool. Set to True if obj vs pk is desired.
+:return: int representing a valid organization pk or</p>
+<blockquote>
+<div><p>organization object.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.utils.api.OrgMixin.get_parent_org">
+<span class="sig-name descname"><span class="pre">get_parent_org</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.OrgMixin.get_parent_org" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets parent organization of org from query param or request.
+:param request: Request object.
+:return: organization object.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.OrgQuerySetMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">OrgQuerySetMixin</span></span><a class="headerlink" href="#seed.utils.api.OrgQuerySetMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seed.utils.api.OrgMixin" title="seed.utils.api.OrgMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.utils.api.OrgMixin</span></code></a></p>
+<p>Mixin proving a get_queryset method that filters on organization.</p>
+<p>In order to use this mixin you must specify the model attributes on the
+View[Set] class. By default it assumes there is an organization field
+on the model. You can override this by setting the orgfilter attribute
+to the appropriate fieldname. This also allows nested fields e.g.
+foreign_key.organization
+By default this retrieves organization from query string param OR the
+default_organization or first returned organization of the logged in user.
+You can force it to return the appropriate “parent” organization by setting
+the force_parent attribute to True.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.utils.api.OrgQuerySetMixin.get_queryset">
+<span class="sig-name descname"><span class="pre">get_queryset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.OrgQuerySetMixin.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>“get_queryset filtered on organization</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.OrgUpdateMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">OrgUpdateMixin</span></span><a class="headerlink" href="#seed.utils.api.OrgUpdateMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seed.utils.api.OrgMixin" title="seed.utils.api.OrgMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.utils.api.OrgMixin</span></code></a></p>
+<p>Mixin to add organization when updating model instance</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.utils.api.OrgUpdateMixin.perform_update">
+<span class="sig-name descname"><span class="pre">perform_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serializer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.OrgUpdateMixin.perform_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to add org</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.OrgValidateMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">OrgValidateMixin</span></span><a class="headerlink" href="#seed.utils.api.OrgValidateMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Mixin to provide a validate() method organization to ensure users belongs
+to the same org as the instance referenced by a foreign key..</p>
+<p>You must set org_validators on the Serializer that uses this Mixin.
+This is a list of OrgValidator named tuples (where key is the key
+on request data representing the foreign key,  and field the foreign key
+that represents the organization on the corresponding model.</p>
+<p>my_validator = OrgValidator(key=’foreign_key, field=’organization_id’)</p>
+<p>..example:</p>
+<blockquote>
+<div><dl>
+<dt>class MySerializer(OrgValidateMixin, serializers.ModelSerializer):</dt><dd><dl class="simple">
+<dt>foreign_key= serializers.PrimaryKeyRelatedField(</dt><dd><p>query_set=MyModel.objects.all()</p>
+</dd>
+</dl>
+<p>)
+org_validators = [my_validator]</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>This ensures request.user belongs to the org MyModel.organization</p>
+<p>You can traverse foreign key relationships by using a double underscore
+in validator.field</p>
+<p>In the example above setting validator field to be ‘property__org_id’
+is equivalent to MyModel.property.org_id</p>
+<p>If you use this Mixin and write a validate method, you must call super
+to ensure validation takes place.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.utils.api.OrgValidateMixin.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.OrgValidateMixin.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object level validation.
+Checks for self.org_validators on Serializers and
+ensures users belongs to org corresponding to the foreign key
+being set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.utils.api.OrgValidateMixin.validate_org">
+<span class="sig-name descname"><span class="pre">validate_org</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.OrgValidateMixin.validate_org" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise error if orgs do not match.
+:param instance: value in request.data.get(key) to check against
+:type instance: model instance
+:param: org_id of user, from get_org_id(request)
+:type org_id:  int
+:param validator: validator to user
+:type: OrgValidator named tuple</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.OrgValidator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">OrgValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.OrgValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.utils.api.OrgValidator.field">
+<span class="sig-name descname"><span class="pre">field</span></span><a class="headerlink" href="#seed.utils.api.OrgValidator.field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.utils.api.OrgValidator.key">
+<span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#seed.utils.api.OrgValidator.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.utils.api.ProfileIdMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">ProfileIdMixin</span></span><a class="headerlink" href="#seed.utils.api.ProfileIdMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides methods to get the columns to show based on a profile ID</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.utils.api.ProfileIdMixin.get_show_columns">
+<span class="sig-name descname"><span class="pre">get_show_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.ProfileIdMixin.get_show_columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of columns from the profile_id. The result will be in the form of</p>
+<dl class="simple">
+<dt>show_columns = {</dt><dd><p>‘fields’: [‘field_1’, ‘field_2’, …]
+‘extra_data’: [‘extra_data_field_1’, ‘extra_data_field_2’, …]</p>
+</dd>
+</dl>
+<p>}</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>org_id</strong> – str, id of organization</p></li>
+<li><p><strong>profile_id</strong> – str, id of profile to retrieve</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dist of lists</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.api_endpoint">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">api_endpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.api_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator function to mark a view as allowed to authenticate via API key.</p>
+<p>Decorator must be used before login_required or has_perm to set
+request.user for those decorators.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.api_endpoint_class">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">api_endpoint_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.api_endpoint_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator function to mark a view as allowed to authenticate via API key.</p>
+<p>Decorator must be used before login_required or has_perm to set
+request.user for those decorators.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.clean_api_regex">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">clean_api_regex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.clean_api_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a django-style url regex pattern, strip it down to a human-readable
+url.</p>
+<p>TODO: If pks ever appear in the url, this will need to account for that.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.drf_api_endpoint">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">drf_api_endpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.drf_api_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator to register a Django Rest Framework view with the list of API
+endpoints.  Marks it with <cite>is_api_endpoint = True</cite> as well as appending it
+to the global <cite>endpoints</cite> list.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.format_api_docstring">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">format_api_docstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docstring</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.format_api_docstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans up a python method docstring for human consumption.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.get_all_urls">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">get_all_urls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">urllist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.get_all_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursive generator that traverses entire tree of URLs, starting with
+urllist, yielding a tuple of (url_pattern, view_function) for each
+one.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.get_api_endpoints">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">get_api_endpoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.get_api_endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Examines all views and returns those with is_api_endpoint set
+to true (done by the &#64;api_endpoint decorator).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.get_api_request_user">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">get_api_request_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.get_api_request_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if this is an API request and returns the corresponding user if so.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.get_org_id_from_validator">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">get_org_id_from_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.get_org_id_from_validator" title="Permalink to this definition">¶</a></dt>
+<dd><p>For querysets Django enables you to do things like:</p>
+<p>note double underscore. However you can’t do:</p>
+<p>This presents an issue as getattr only works 1 level deep:</p>
+<blockquote>
+<div><p>getattr(obj, ‘org.id’) does not work either.</p>
+</div></blockquote>
+<p>This can be worked around using rgetattr (above).
+This functions mimics getattr(obj, ‘org__id’) by
+splitting field on __ and calling rgetattr on the result.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.api.rgetattr">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.api.</span></span><span class="sig-name descname"><span class="pre">rgetattr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.api.rgetattr" title="Permalink to this definition">¶</a></dt>
+<dd><p>This enables recursive getattr look ups.
+given obj, [‘a’, ‘b’, ‘c’] as params it will look up:
+obj.a, a.b, b.c returning b.c unless one of the previous
+values was None, in which case it returns None immediately.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>object</em>) – initial object to examine</p></li>
+<li><p><strong>lst</strong> (<em>list</em>) – list of successive attributes to look up</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-seed.utils.buildings">
+<span id="buildings"></span><h2>Buildings<a class="headerlink" href="#module-seed.utils.buildings" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.buildings.get_source_type">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.buildings.</span></span><span class="sig-name descname"><span class="pre">get_source_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">import_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.buildings.get_source_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for converting ImportFile source_type into an int.</p>
+</dd></dl>
+
+</section>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="mappings">
+<h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.utils.organizations">
+<span id="organizations"></span><h2>Organizations<a class="headerlink" href="#module-seed.utils.organizations" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.organizations.create_organization">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.organizations.</span></span><span class="sig-name descname"><span class="pre">create_organization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">org_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.organizations.create_organization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper script to create a user/org relationship from scratch. This is heavily used and
+creates the default labels, columns, and data quality rules when a new organization is created</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> – user inst.</p></li>
+<li><p><strong>org_name</strong> – str, name of Organization we’d like to create.</p></li>
+<li><p><strong>kwargs</strong> (<em>(</em><em>optional</em><em>)</em>) – ‘role’, int; ‘status’, str.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.organizations.create_suborganization">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.organizations.</span></span><span class="sig-name descname"><span class="pre">create_suborganization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_org</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suborg_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_role</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.organizations.create_suborganization" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.organizations.default_pm_mappings">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.organizations.</span></span><span class="sig-name descname"><span class="pre">default_pm_mappings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.organizations.default_pm_mappings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="projects">
+<h2>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.utils.time">
+<span id="time"></span><h2>Time<a class="headerlink" href="#module-seed.utils.time" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.time.convert_datestr">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.time.</span></span><span class="sig-name descname"><span class="pre">convert_datestr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datestr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_tz_aware</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.time.convert_datestr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts dates like <cite>12/31/2010</cite> into datetime objects. Dates are returned in UTC time</p>
+<p>TODO: reconcile this with seed/lib/mcm/cleaners.py#L85-L85</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datestr</strong> – string, value to convert</p></li>
+<li><p><strong>make_tz_aware</strong> – bool, if set to true, then will convert the timezone into UTC time</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>datetime or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.time.convert_to_js_timestamp">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.time.</span></span><span class="sig-name descname"><span class="pre">convert_to_js_timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.time.convert_to_js_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a django/python datetime object to milliseconds since epoch</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.utils.time.parse_datetime">
+<span class="sig-prename descclassname"><span class="pre">seed.utils.time.</span></span><span class="sig-name descname"><span class="pre">parse_datetime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maybe_datetime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.utils.time.parse_datetime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process a datetime value that may be None, timestamp, strftime.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="seed.views.html" class="btn btn-neutral float-right" title="Views Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="seed.urls.html" class="btn btn-neutral float-left" title="URLs Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
