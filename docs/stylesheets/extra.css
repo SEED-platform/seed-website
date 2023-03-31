@@ -3,7 +3,7 @@
 }*/
 
 .md-typeset table:not([class]) th {
-	background-color: #3BA6DD;
+    background-color: #3BA6DD;
 }
 
 
@@ -12,27 +12,27 @@
 }
 
 [data-md-color-primary=indigo] .md-typeset a {
-	color: #005191;
+    color: #005191;
 }
 
 [data-md-color-primary=indigo] .md-nav__link:active, [data-md-color-primary=indigo] .md-nav__link:hover {
-	color: #3BA6DD;
+    color: #3BA6DD;
 }
 
 [data-md-color-primary=indigo] .md-typeset a:hover {
-	color: #3BA6DD;
+    color: #3BA6DD;
 }
 
 /*  */
 
 .md-typeset h1 {
-	color: #005191;
-	text-transform: uppercase;
-	font-weight: 400;
+    color: #005191;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 .md-typeset h2 {
-	color: #005191;
+    color: #005191;
 }
 
 .md-typeset h3 {
@@ -44,19 +44,19 @@ background-color: #2e3842;
 }*/
 
 .row {
-  display: flex;
+    display: flex;
 }
 
 .column {
-  flex: 50%;
+    flex: 50%;
 }
 
 .column85 {
-  flex: 85%;
+    flex: 85%;
 }
 
 .column15 {
-  flex: 15%;
+    flex: 15%;
 }
 
 /* Normal white Button as seen on Google.com*/
@@ -79,26 +79,37 @@ button:hover {
 }
 
 button:active {
-    box-shadow: inset 1px 1px 1px #005191; 
+    box-shadow: inset 1px 1px 1px #005191;
 }
 
 button.blue {
     color: white;
     background: #3BA6DD;
-    border: 1px #3BA6DD; solid;
+    border: 1px #3BA6DD solid;
     box-shadow: inset 0 1px 0 #3BA6DD;
 }
 
 button.blue:hover {
-    border: 1px #005191; solid;
-    box-shadow: 0 1px 1px #005191;, inset 0 1px 0 #005191;
+    border: 1px #005191 solid;
+    box-shadow: 0 1px 1px #005191;
     background: #005191;
 }
 
 button.blue:active {
-    box-shadow: inset 0 2px 5px #005191;   
+    box-shadow: inset 0 2px 5px #005191;
 }
 
 [data-md-color-primary=indigo] .md-typeset a.button {
-	color: white;
+    color: white;
+}
+
+.video {
+    aspect-ratio: 16 / 9;
+    line-height: 0;
+}
+
+.video iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
 }
