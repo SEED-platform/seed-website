@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Kubernetes Deployment Guide with Helm &mdash; SEED Platform 2.20.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="Docker Deployment on AWS" href="docker.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SEED Platform
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.20.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="deployment.html">Deployment Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="aws.html">AWS Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">General Linux Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker Deployment on AWS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Kubernetes Deployment Guide with Helm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cluster">Cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kubectl">Kubectl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#helm">Helm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eks-control-aws-specific">EKS Control (AWS Specific)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#charts">Charts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deployment">Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-existing-clusters">Managing Existing Clusters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#upgrade-redeploy-the-helm-stack">Upgrade/Redeploy the Helm Stack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#managing-the-kubernetes-cluster-aws-specific">Managing the Kubernetes Cluster (AWS Specific)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logging-in">Logging In</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-web-and-web-celery">Update web and web-celery</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#other-resources">Other Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#migrations">Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matching.html">Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="deployment.html">Deployment Guide</a> &raquo;</li>
+        
+      <li>Kubernetes Deployment Guide with Helm</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="kubernetes-deployment-guide-with-helm">
+<h1>Kubernetes Deployment Guide with Helm<a class="headerlink" href="#kubernetes-deployment-guide-with-helm" title="Permalink to this headline">¶</a></h1>
+<p>Kubernetes is a robust container orchestration system for easy application deployment and management.  Helm takes that a step further with by packaging up required helm “charts” into one deployment command.</p>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<section id="cluster">
+<h3>Cluster<a class="headerlink" href="#cluster" title="Permalink to this headline">¶</a></h3>
+<p>In order to deploy the SEED platform on a Kubernetes you will need “cluster” which will be configured by your cloud service of choice.  Each installation will be slightly different depending on the service.
+Below are links to quick-start guides for provisioning a cluster and connecting. These instructions are specifically for AWS, but after the Kubernetes cluster is launched, the helm commands can be used in
+the same way.</p>
+<ul class="simple">
+<li><p>Amazon Web Services (<a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html">AWS</a>)</p></li>
+<li><p>Google Cloud Platform (<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/quickstart">GCP</a>)</p></li>
+<li><p>Azure (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough#connect-to-the-cluster">AKS</a>)</p></li>
+</ul>
+<section id="aws-cli-configuration">
+<h4>AWS CLI Configuration<a class="headerlink" href="#aws-cli-configuration" title="Permalink to this headline">¶</a></h4>
+<p>Download and configure the AWS CLI with instructions: <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html">https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">aws configure</span>
+<span class="go">AWS Access Key ID [None]: &lt;insert key&gt; (from account)</span>
+<span class="go">AWS Secret Access Key [None]: &lt;insert secret key&gt; (from account)</span>
+<span class="go">Default region name [None]: us-east-1</span>
+<span class="go">Default output format [None]: json</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="kubectl">
+<h3>Kubectl<a class="headerlink" href="#kubectl" title="Permalink to this headline">¶</a></h3>
+<p>Download and install Kubectl:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows">Windows</a></p></li>
+<li><dl class="simple">
+<dt>Mac (with Homebrew) <code class="code docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">kubectl</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">brew</span> <span class="pre">install</span> <span class="pre">kubectl</span>
+<span class="pre">`</span></code></p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Kubectl is the main function in which you will be interfacing with your deployed application on your cluster.  This CLI is what connects you to your cluster that you have just provisioned.
+If your cloud service did not have you configure kubectl in your cluster setup, you can download it <a class="reference external" href="https://kubernetes.io/docs/tasks/tools/">here</a>.  Once kubectl is installed and configured to your cluster
+you can run some simple commands to ensure its working properly:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>View<span class="w"> </span>the<span class="w"> </span>cluster
+<span class="go">kubectl cluster-info</span>
+
+<span class="gp">#</span>View<span class="w"> </span>pods,<span class="w"> </span>services<span class="w"> </span>and<span class="w"> </span>replicasets<span class="w"> </span><span class="o">(</span>will<span class="w"> </span>be<span class="w"> </span>empty<span class="w"> </span><span class="k">until</span><span class="w"> </span>deploying<span class="w"> </span>an<span class="w"> </span>app<span class="o">)</span>
+<span class="go">kubectl get all</span>
+</pre></div>
+</div>
+<p>All of the common kubectl commands can be found in these <a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">docs</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For those unfamiliar with CLIs, there are a number of GUI applications that are able to deploy on your stack with ease.  One of which is Kubernetes native application called <a class="reference external" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/">Dashboard UI</a> or a third-party application called Octant <code class="code docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">octant</span></code>.</p>
+</div>
+</section>
+<section id="helm">
+<h3>Helm<a class="headerlink" href="#helm" title="Permalink to this headline">¶</a></h3>
+<p>Helm organizes all of your Kubernetes deployment, service, and volume yml files into “charts” that can be deployed, managed, and published with simple commands.
+To install Helm:</p>
+<ul class="simple">
+<li><p><a href="#id3"><span class="problematic" id="id4">`Windows eksctl https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows`_</span></a></p></li>
+<li><p>Mac (with Homebrew) <code class="code docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">helm</span></code></p></li>
+</ul>
+</section>
+<section id="eks-control-aws-specific">
+<h3>EKS Control (AWS Specific)<a class="headerlink" href="#eks-control-aws-specific" title="Permalink to this headline">¶</a></h3>
+<p>EKSCtl is a command line tool to manage Elastic Kubernetes clusters on AWS. If not using AWS, then disregard this section.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.stacksimplify.com/aws-eks/eks-cluster/install-aws-eksctl-kubectl-cli/#step-02-02-windows-10-install-and-configure-kubectl">Windows</a></p></li>
+<li><p>Mac (with Homebrew) <code class="code docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">eksctl</span></code></p></li>
+</ul>
+<p>To launch a cluster on using EKSCts, run the following command in the terminal (assuming adequate permissions for the user). Also make sure to replace items in the <cite>&lt;&gt;</cite> brackets.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">eksctl create cluster \</span>
+<span class="l l-Scalar l-Scalar-Plain">--name &lt;cluster-name&gt; \</span>
+<span class="l l-Scalar l-Scalar-Plain">--version 1.21 \</span>
+<span class="l l-Scalar l-Scalar-Plain">--region us-east-1 \</span>
+<span class="l l-Scalar l-Scalar-Plain">--node-type m5.large \</span>
+<span class="l l-Scalar l-Scalar-Plain">--nodes 1 \</span>
+<span class="l l-Scalar l-Scalar-Plain">--nodes-min 1 \</span>
+<span class="l l-Scalar l-Scalar-Plain">--nodes-max 1 \</span>
+<span class="l l-Scalar l-Scalar-Plain">--managed \</span>
+<span class="l l-Scalar l-Scalar-Plain">--tags environment=&lt;env-type, e.g., dev, prod&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="charts">
+<h3>Charts<a class="headerlink" href="#charts" title="Permalink to this headline">¶</a></h3>
+<p>SEED stores its charts in the <a class="reference external" href="https://github.com/SEED-platform/seed/tree/develop/charts">charts directory</a> of the Github Repo.  There are two main charts that are deployed when starting SEED on Kubernetes.</p>
+<ul class="simple">
+<li><p>persistentvolumes - these are the volumes to store SEED media data and SEED Postgres data</p></li>
+<li><p>seed - this stores all of the other deployment and service files for the application</p></li>
+</ul>
+<p>Unlike persistentvolumes, the seed charts must be modified with user environment variables that will be forwarded to the docker container for deployment.
+Before deployment, the user <strong>MUST</strong> set these variables to their desired values.</p>
+<p>This chart contains the deployment specification for the SEED web container.  Replace all the values in &lt;&gt;.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Environment variables for the web container</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># AWS Email service variables to send emails to new users - can be removed if not using this functionality.</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_ACCESS_KEY_ID</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;access_key_id&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_SECRET_ACCESS_KEY</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;secret_access_key&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_SES_REGION_NAME</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">us-west-2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWS_SES_REGION_ENDPOINT</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email.us-west-2.amazonaws.com</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SERVER_EMAIL</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">info@seed-platform.org</span>
+<span class="w">    </span><span class="c1"># Django Variables</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DJANGO_SETTINGS_MODULE</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">config.settings.docker</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECRET_KEY</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;replace-secret-key&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SEED_ADMIN_ORG</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SEED_ADMIN_PASSWORD</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;super-secret-password&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SEED_ADMIN_USER</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;user@seed-platform.org&gt;</span>
+<span class="w">    </span><span class="c1"># Postgres variables</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_DB</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seed</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;super-secret-password&gt;</span><span class="w"> </span><span class="c1"># must match db-postgres-deployment.yaml and web-celery-deployment.yaml</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PORT</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5432&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seeduser</span>
+<span class="w">    </span><span class="c1"># Bsyncr analysis variables</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BSYNCR_SERVER_PORT</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5000&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BSYNCR_SERVER_HOST</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bsyncr</span>
+<span class="w">    </span><span class="c1"># Sentry monitoring - remove if not applicable</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SENTRY_JS_DSN</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;enter-dsn&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SENTRY_RAVEN_DSN</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;enter-dsn&gt;</span>
+<span class="w">    </span><span class="c1"># Google self registration security - remove if not applicable</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOOGLE_RECAPTCHA_SITE_KEY</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;reCAPTCHA-site-key&gt;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOOGLE_RECAPTCHA_SECRET_KEY</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;reCAPTCHA-key&gt;</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seedplatform/seed:&lt;insert deployment image version&gt;</span>
+<span class="w">    </span><span class="c1">#versions can be found here https://github.com/SEED-platform/seed/releases/tag/v2.9.3</span>
+</pre></div>
+</div>
+<p>This chart contains the deployment specification for the Celery container to connect to Postgres.  Replace the Postgres password to match web-deployment.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD</span>
+<span class="w">  </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;super-secret-password&gt;</span><span class="w">  </span><span class="c1"># must match db-postgres-deployment.yaml and web-celery-deployment.yaml</span>
+</pre></div>
+</div>
+<p>This chart contains the deployment specification for the bsyncr analysis server.  Request a NOAA token from <a class="reference external" href="https://www.ncdc.noaa.gov/cdo-web/token">this website</a>.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOAA_TOKEN</span>
+<span class="w">  </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;token&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>Once you are connected to your cluster and have your settings configured with the environment variables of you choice in the charts, you are ready to deploy the app.
+First, make sure that the correct context is selected which is needed if there is more than one cluster:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>config<span class="w"> </span>get-contexts
+kubectl<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>&lt;context-name&gt;
+</pre></div>
+</div>
+<p>Deploy the site using the helm commands in the root of the charts directory.</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">helm</span> <span class="pre">install</span> <span class="pre">--generate-name</span> <span class="pre">persistentvolumes</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">helm</span> <span class="pre">install</span> <span class="pre">--generate-name</span> <span class="pre">seed</span></code></p></li>
+</ul>
+<p>You will be able to see SEED coming online with statuses like container creating, and running with:</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">get</span> <span class="pre">all</span></code></p></li>
+</ul>
+<p>Once all of the pods are running you will be able to hit the external ingress through the URL listed in the web service information. It should look something like</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>service/web<span class="w">           </span>LoadBalancer<span class="w">   </span><span class="m">10</span>.100.154.227<span class="w">   </span>&lt;my-unique-url&gt;<span class="w">   </span><span class="m">80</span>:32291/TCP
+</pre></div>
+</div>
+</section>
+<section id="managing-existing-clusters">
+<h2>Managing Existing Clusters<a class="headerlink" href="#managing-existing-clusters" title="Permalink to this headline">¶</a></h2>
+<section id="upgrade-redeploy-the-helm-stack">
+<h3>Upgrade/Redeploy the Helm Stack<a class="headerlink" href="#upgrade-redeploy-the-helm-stack" title="Permalink to this headline">¶</a></h3>
+<p>To upgrade or dedeploy a helm chart, first find the helm release that you want to upgrade, then run the upgrade with the selected chart.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>list
+helm<span class="w"> </span>upgrade<span class="w"> </span>&lt;cluster-name&gt;<span class="w"> </span>./seed
+</pre></div>
+</div>
+</section>
+<section id="managing-the-kubernetes-cluster-aws-specific">
+<h3>Managing the Kubernetes Cluster (AWS Specific)<a class="headerlink" href="#managing-the-kubernetes-cluster-aws-specific" title="Permalink to this headline">¶</a></h3>
+<p>Enable kubectl to talk to one of the created clusters by running the following command in the terminal after configuring the AWS credentials and cli.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>aws<span class="w"> </span>eks<span class="w"> </span>--region<span class="w"> </span>&lt;aws-region&gt;<span class="w"> </span>update-kubeconfig<span class="w"> </span>--name<span class="w"> </span>&lt;cluster-name&gt;
+</pre></div>
+</div>
+</section>
+<section id="logging-in">
+<h3>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h3>
+<p>After a successful deployment in order to login you will need to create yourself as a user in the web container.  To do this, we will exec into the container and run some Django commands.
+* View all deployments and services, <code class="code docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">get</span> <span class="pre">all</span></code>
+* <code class="code docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">get</span> <span class="pre">pods</span></code>
+* <code class="code docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">exec</span> <span class="pre">-it</span> <span class="pre">&lt;pod-id&gt;</span> <span class="pre">--</span> <span class="pre">bash</span></code></p>
+<p>Now that we are in the container, we can make a user.
+.. code-block:: bash</p>
+<blockquote>
+<div><p>./manage.py create_default_user <a class="reference external" href="mailto:--username=admin&#37;&#52;&#48;my&#46;org">–username=admin<span>&#64;</span>my<span>&#46;</span>org</a> –organization=seedorg –password=badpass</p>
+</div></blockquote>
+<p>You can now use these credentials to log in to the SEED website.</p>
+</section>
+<section id="update-web-and-web-celery">
+<h3>Update web and web-celery<a class="headerlink" href="#update-web-and-web-celery" title="Permalink to this headline">¶</a></h3>
+<p>The command below will restart the pods and re-pull the docker images.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>deployment<span class="w"> </span>web<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>deployment<span class="w"> </span>web-celery
+</pre></div>
+</div>
+</section>
+</section>
+<section id="other-resources">
+<h2>Other Resources<a class="headerlink" href="#other-resources" title="Permalink to this headline">¶</a></h2>
+<p>Common kubectl actions can be found <a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">here</a></p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="docker.html" class="btn btn-neutral float-left" title="Docker Deployment on AWS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, 2023, Alliance for Sustainable Energy, LLC, and other contributors.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
