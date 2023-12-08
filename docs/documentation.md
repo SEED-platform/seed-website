@@ -43,3 +43,12 @@ Multi-tab Microsoft Excel&trade; files are only partially supported by SEED. It 
 
 ### Date Fields in Excel&trade; Files
 If you are importing an Excel&trade; file (XLS, XLXS) into SEED, make sure that any field defined with a "date" format in Excel&trade; actually has data in it that is a date. If a field has non-date data (such as an integer) in a date-formatted field, SEED will not import that record.  
+
+
+## Benchmarking and Building Performance Standard (BPS) Programs
+
+The SEED platform can be used to implement and track a benchmarking or building performance standard program. More information about these programs can be found below.
+
+- [Quick Guide - Considerations for Creating a Covered Buildings List for a Building Performance Standard (BPS) or Benchmarking Program (PDF)](resources/DOE Covered Buildings List Guide.pdf)
+
+- [Building Energy Codes Program - BPS Library](https://www.energycodes.gov/BPS/Resources)
