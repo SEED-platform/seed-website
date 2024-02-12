@@ -22,7 +22,9 @@ nav:
   - Getting Started: 'getting_started.md'
   - Documentation:
       - Release Notes: 'release_notes.md'
-      - User Documentation: 'documentation.md'
+      - User Documentation:
+        - Overview: 'user_doc_overview.md'
+        - Data Import: 'user_doc_data_import.md'
       - Developer Documentation: 'developer_resources.md'
       - Known Issues: 'known_issues.md'
   - News: 'news.md'

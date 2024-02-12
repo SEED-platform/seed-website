@@ -47,4 +47,4 @@ All sample data should work with all versions of SEED, although the newer datase
 | 2.6.1 | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/portfolio-manager-sample.csv) | 
 
 
-See the [user documentation](documentation.md) page for more information on importing data.
+See the [user documentation](user_doc_overview.md) page for more information on importing data.
