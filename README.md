@@ -33,3 +33,13 @@ For any issues, please reach out to Katherine Fleming.
 * Create a pull request into the `main` branch
 * The PR will automatically deploy when merging to `main`. 
     * If a manual deploy is needed then run `mkdocs gh-deploy`
+
+## Markdown Examples
+
+### Collapsible Sections
+To make a section collapsible, you have to remove the `#`s before the section name and replace them with three `?`s. Additionally, you have to add the word `note` and put quotation marks around the section title. For example, change `### Collapsible Sections` to `??? note "Collapsible Sections"`. Finally, the remaining content in that section needs to be indented. See below for an example block of markdown.
+
+```markdown
+??? note "Collapsible Sections"
+    This is the content that is inside the collapsible section.
+```

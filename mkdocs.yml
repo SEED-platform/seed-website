@@ -1,4 +1,5 @@
 site_name: SEED Platform&trade; Documentation
+repo_url: https://github.com/SEED-platform/seed
 
 theme:
   name: 'material'
@@ -11,8 +12,32 @@ theme:
     code: 'Roboto Mono'
   language: 'en'
   favicon: 'images/favicon.ico'
-  # feature:
-  #   tabs: true
+  icon:
+    admonition:
+      note: material/border-none-variant
+    repo: fontawesome/brands/github
+  feature:
+    # tabs: true
+    - content.code.copy
+    - content.code.view
+    - content.code.highlight
+    - content.code.select
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+      toc_depth: 3
+      title: On this page
 
 extra_css:
   - 'stylesheets/extra.css'
@@ -24,6 +49,7 @@ nav:
       - Release Notes: 'release_notes.md'
       - User Documentation:
         - Overview: 'user_doc_overview.md'
+        - Getting Started: 'user_doc_getting_started.md'
         - Data Import: 'user_doc_data_import.md'
       - Developer Documentation: 'developer_resources.md'
       - Known Issues: 'known_issues.md'
@@ -48,4 +74,5 @@ plugins:
   - redirects:
       redirect_maps:
         'lbnl.md': 'test_instance_request.md'
+  - search
             
