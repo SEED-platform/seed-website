@@ -1,4 +1,5 @@
 site_name: SEED Platform&trade; Documentation
+repo_url: https://github.com/SEED-platform/seed
 
 theme:
   name: 'material'
@@ -13,14 +14,30 @@ theme:
   favicon: 'images/favicon.ico'
   icon:
     admonition:
-      default: material/plus-box
-  # feature:
-  #   tabs: true
+      note: material/border-none-variant
+    repo: fontawesome/brands/github
+  feature:
+    # tabs: true
+    - content.code.copy
+    - content.code.view
+    - content.code.highlight
+    - content.code.select
+    - content.code.annotate
 
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences
+  - toc:
+      permalink: true
+      toc_depth: 3
+      title: On this page
 
 extra_css:
   - 'stylesheets/extra.css'
@@ -57,4 +74,5 @@ plugins:
   - redirects:
       redirect_maps:
         'lbnl.md': 'test_instance_request.md'
+  - search
             

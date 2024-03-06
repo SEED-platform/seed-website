@@ -1,4 +1,4 @@
-# Getting Started {#getting-started .unnumbered}
+## Getting Started
 
 Main screen
 
@@ -6,43 +6,41 @@ When you first open SEED you will see the main screen
 
 ![](images/image30.png)
 
-## Main Navigation {#main-navigation .unnumbered}
+## Main Navigation 
 
 The primary navigation options in SEED are shown on the left hand side
 of every screen, as shown below.
 
 ![](images/image31.png)
 
-##  {#section .unnumbered}
+??? note "Inventory"
 
-## Inventory {#inventory .unnumbered}
+    ![](images/image23.png)
 
-![](images/image23.png)
+    After building data is imported into SEED, it can be accessed from the
+    Inventory navigation button. The data can be viewed by cycle, as well as
+    by Property and Tax Lot.
 
-After building data is imported into SEED, it can be accessed from the
-Inventory navigation button. The data can be viewed by cycle, as well as
-by Property and Tax Lot.
+    ![](images/image32.png)
 
-![](images/image32.png)
+    The links at the top of the page allow different views of the data, as
+    follows:
 
-The links at the top of the page allow different views of the data, as
-follows:
+    * **Properties List:** Displays the latest version of the Properties List view
 
-#### **Properties List:** Displays the latest version of the Properties List view
+    * **Properties List (legacy):** Displays the previous version of the Properties List view which will be deprecated at some point
 
-#### **Properties List (legacy):** Displays the previous version of the Properties List view which will be deprecated at some point
+    * **Column List Profiles:** Allows creation of multiple field lists with different fields selected
 
-#### **Column List Profiles:** Allows creation of multiple field lists with different fields selected
+    * **Cross-Cycles:** Allows viewing data across multiple cycles
 
-#### **Cross-Cycles:** Allows viewing data across multiple cycles
+    * **Map:** If the properties have been correctly geocoded, they will be displayed on a map based on those locations
 
-#### **Map:** If the properties have been correctly geocoded, they will be displayed on a map based on those locations
+    * **Data:** Links to Insights 
 
-#### **Data:** Links to Insights 
+    * **Summary (Beta):** Displays summary information about the records and fields by cycle
 
-#### **Summary (Beta):** Displays summary information about the records and fields by cycle
-
-## Data {#data .unnumbered}
+## Data 
 
 ![](images/image14.png)
 
@@ -75,87 +73,85 @@ There are several types of data that can be imported, including
 
 ![](images/image5.png)
 
-##   {#section-1 .unnumbered}
+??? note "Organizations"
 
-## Organizations {#organizations .unnumbered}
+    ![](images/image25.png)
 
-![](images/image25.png)
+    The Organizations navigation button is used to view many of the options
+    for setting up the data import and data management.
 
-The Organizations navigation button is used to view many of the options
-for setting up the data import and data management.
+    The links at the top of the Organizations page are the following
 
-The links at the top of the Organizations page are the following
+    -   **Column Mappings:** manage the field names that are mapped on
+        import, creating Column Mapping Profiles for different file types
 
--   **Column Mappings:** manage the field names that are mapped on
-    import, creating Column Mapping Profiles for different file types
+    > ![](images/image12.png)
 
-> ![](images/image12.png)
+    -   **Column Settings:** manage various settings for the mapped fields,
+        including:
 
--   **Column Settings:** manage various settings for the mapped fields,
-    including:
+        -   display name
 
-    -   display name
+        -   column description
 
-    -   column description
+        -   geocoding fields
 
-    -   geocoding fields
+        -   data type
 
-    -   data type
+        -   matching field definition
 
-    -   matching field definition
+    > ![](images/image8.png)
 
-> ![](images/image8.png)
+    -   **Cycles:** manage cycle definitions, including creating new cycles,
+        editing existing cycles (both names and dates), and deleting
+        existing cycles
 
--   **Cycles:** manage cycle definitions, including creating new cycles,
-    editing existing cycles (both names and dates), and deleting
-    existing cycles
+    > ![](images/image20.png)
 
-> ![](images/image20.png)
+    -   **Data Quality:** manage data quality rules, including defining new
+        rules and adding labels to them, editing and deleting existing rules
 
--   **Data Quality:** manage data quality rules, including defining new
-    rules and adding labels to them, editing and deleting existing rules
+    > ![](images/image7.png)
 
-> ![](images/image7.png)
+    -   **Derived Columns:** manage derived columns (fields calculated from
+        other fields), including creating new fields, editing and deleting
+        existing fields
 
--   **Derived Columns:** manage derived columns (fields calculated from
-    other fields), including creating new fields, editing and deleting
-    existing fields
+    > ![](images/image9.png)
 
-> ![](images/image9.png)
+    -   **Email Templates:** manage email templates, which can be used to
+        send "bulk" emails to contacts for SEED records, including creating
+        new templates, editing and deleting existing templates
 
--   **Email Templates:** manage email templates, which can be used to
-    send "bulk" emails to contacts for SEED records, including creating
-    new templates, editing and deleting existing templates
+    -   **Labels:** manage labels, which can be added to Inventory records
+        (property and tax lots), including creating new labels, editing and
+        deleting existing labels
 
--   **Labels:** manage labels, which can be added to Inventory records
-    (property and tax lots), including creating new labels, editing and
-    deleting existing labels
+    > ![](images/image29.png)
 
-> ![](images/image29.png)
+    -   **Members:** manage access to seed by adding, editing or deleting
+        members, including setting permissions (options are Owner, Member or
+        Viewer)
 
--   **Members:** manage access to seed by adding, editing or deleting
-    members, including setting permissions (options are Owner, Member or
-    Viewer)
+    > ![](images/image11.png)
 
-> ![](images/image11.png)
+    -   **Program Setup:** create new settings, and edit existing settings,
+        for Insights
 
--   **Program Setup:** create new settings, and edit existing settings,
-    for Insights
+    -   **Settings:** manage many different settings, including API keys
+        (for geospatial definitions, Audit Template import, and BETTER
+        analyses), default display fields, Salesforce connections, UBID
+        matching, and units for numeric fields.
 
--   **Settings:** manage many different settings, including API keys
-    (for geospatial definitions, Audit Template import, and BETTER
-    analyses), default display fields, Salesforce connections, UBID
-    matching, and units for numeric fields.
+    > ![](images/image1.png)
+    > 
 
-> ![](images/image1.png)
-> 
+    -   **Sharing:** manage what fields are shared
 
--   **Sharing:** manage what fields are shared
+    -   **Sub-Organization:** manage sub-organizations, if any, to the main
+        organization
 
--   **Sub-Organization:** manage sub-organizations, if any, to the main
-    organization
-
-## Insights {#insights .unnumbered}
+## Insights 
 
 ![](images/image26.png)
 
@@ -184,14 +180,14 @@ over time in a graph
 
 ![](images/image15.png)
 
-## Analyses {#analyses .unnumbered}
+## Analyses 
 
 ![](images/image19.png)
 
 The Analyses feature has many different analysis options, including the
 following:
 
-## API Documentation {#api-documentation .unnumbered}
+## API Documentation 
 
 ![](images/image6.png)
 
@@ -200,7 +196,7 @@ calls that are available to access data in SEED.
 
 ![](images/image10.png)
 
-## Contact {#contact .unnumbered}
+## Contact 
 
 ![](images/image13.png)
 
@@ -210,7 +206,7 @@ SEED, as well as a link to the SEED Github open source repository.
 ![](images/image24.png)
 
 
-## About {#about .unnumbered}
+## About 
 
 ![](images/image21.png)
 
@@ -220,7 +216,7 @@ version number of the program release being used.
 ![](images/image16.png)
 
 
-## Documentation  {#documentation .unnumbered}
+## Documentation  
 
 ![](images/image27.png)
 
@@ -230,7 +226,7 @@ The Documentation page has a series of Frequently Asked Questions
 ![](images/image28.png)
 
 
-## Logout {#logout .unnumbered}
+## Logout 
 
 ![](images/image17.png)
 
