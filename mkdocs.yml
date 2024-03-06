@@ -11,8 +11,16 @@ theme:
     code: 'Roboto Mono'
   language: 'en'
   favicon: 'images/favicon.ico'
+  icon:
+    admonition:
+      default: material/plus-box
   # feature:
   #   tabs: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 extra_css:
   - 'stylesheets/extra.css'
@@ -24,6 +32,7 @@ nav:
       - Release Notes: 'release_notes.md'
       - User Documentation:
         - Overview: 'user_doc_overview.md'
+        - Getting Started: 'user_doc_getting_started.md'
         - Data Import: 'user_doc_data_import.md'
       - Developer Documentation: 'developer_resources.md'
       - Known Issues: 'known_issues.md'
