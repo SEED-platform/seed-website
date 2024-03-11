@@ -47,7 +47,7 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
   	<center>
   	<img src="images/Earth Advantage HZ_logo-small.png" /><br/><br/>
   	<img src="images/mcq_int_logo.png" /><br/><br/>
-  	<img src="images/OPEN-sm.png" /><br/>
+  	<img src="images/OPEN-sm-small300.png" /><br/>
   	</center>
   </div>
 </div>
