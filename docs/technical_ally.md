@@ -9,7 +9,7 @@ Please see the [Hosting Provider Requirements](hosting_requirements.md) for more
 
 <div class="row">
   <div class="column">
-  	<img src="images/Earth Advantage HZ_logo.png" /><br/>
+  	<img src="images/Earth Advantage HZ_logo-small.png" /><br/>
   	<center>
 	  	Earth Advantage <br/>
 		  <a href="https://www.earthadvantage.org/">earthadvantage.org</a><br/><br/>
@@ -45,7 +45,7 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
   </div>
   <div class="column">
   	<center>
-  	<img src="images/Earth Advantage HZ_logo.png" /><br/><br/>
+  	<img src="images/Earth Advantage HZ_logo-small.png" /><br/><br/>
   	<img src="images/mcq_int_logo.png" /><br/><br/>
   	<img src="images/OPEN-sm.png" /><br/>
   	</center>
