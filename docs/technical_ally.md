@@ -9,7 +9,7 @@ Please see the [Hosting Provider Requirements](hosting_requirements.md) for more
 
 <div class="row">
   <div class="column">
-  	<img src="../images/EA-Logo-Color-400x98.png" /><br/>
+  	<img src="../images/Earth Advantage HZ_logo.png" /><br/>
   	<center>
 	  	Earth Advantage <br/>
 		  <a href="https://www.earthadvantage.org/">earthadvantage.org</a><br/><br/>
@@ -39,16 +39,15 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
   <div class="column">
   	<center>
   	<img src="../images/ClearlyEnergy.png" /><br/><br/>
-  	<img src="../images/maalka_logo.png" /><br/><br/>
   	<img src="../images/logo_nrel_c.jpg" /><br/><br/>
   	<img src="../images/psd-logo1.png" /><br/>
   	</center>
   </div>
   <div class="column">
   	<center>
-  	<img src="../images/EA-Logo-Color-400x98.png" /><br/><br/>
-  	<img src="../images/mi_logo.png" /><br/><br/>
-  	<img src="../images/ogbs-logo-rough.png" /><br/>
+  	<img src="../images/Earth Advantage HZ_logo.png" /><br/><br/>
+  	<img src="../images/mcq_int_logo.png" /><br/><br/>
+  	<img src="../images/OPEN-sm.png" /><br/>
   	</center>
   </div>
 </div>
