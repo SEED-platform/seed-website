@@ -65,8 +65,7 @@ Please see the [App Developer Requirements](app_developer_requirements.md) for m
   </div>
   <div class="column">
     <center>
-    <img src="images/beam_logo-small300.png" width="80%" alt="beam logo" /><br/>
-    <img src="images/beam_logo.png" width="60%" alt="beam logo" /><br/>
+    <img src="images/beam_logo.png" width="30%" alt="beam logo" /><br/>
   </div>
 </div>
 
