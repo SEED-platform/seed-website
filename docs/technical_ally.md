@@ -47,7 +47,7 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
   	<center>
   	<img src="images/Earth Advantage HZ_logo-small.png" /><br/><br/>
   	<img src="images/mcq_int_logo.png" /><br/><br/>
-  	<img src="images/OPEN-sm-small300.png" /><br/>
+  	<img src="images/OPEN-sm-small200.png" /><br/>
   	</center>
   </div>
 </div>
@@ -65,7 +65,8 @@ Please see the [App Developer Requirements](app_developer_requirements.md) for m
   </div>
   <div class="column">
     <center>
-    <img src="images/beam_logo.png" width="80%" alt="beam logo" /><br/>
+    <img src="images/beam_logo-small300.png" width="80%" alt="beam logo" /><br/>
+    <img src="images/beam_logo.png" width="60%" alt="beam logo" /><br/>
   </div>
 </div>
 
