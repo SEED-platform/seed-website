@@ -2,6 +2,10 @@
 	background-color: #fff;
 }*/
 
+/* Maximum space for text block */
+.md-grid {
+    max-width: 100%; /* or 100%, if you want to stretch to full-width */
+}
 .md-typeset table:not([class]) th {
     background-color: #3BA6DD;
 }

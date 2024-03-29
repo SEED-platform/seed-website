@@ -9,7 +9,7 @@ Please see the [Hosting Provider Requirements](hosting_requirements.md) for more
 
 <div class="row">
   <div class="column">
-  	<img src="images/Earth Advantage HZ_logo-small.png" /><br/>
+  	<img src="../images/Earth Advantage HZ_logo-small.png" /><br/>
   	<center>
 	  	Earth Advantage <br/>
 		  <a href="https://www.earthadvantage.org/">earthadvantage.org</a><br/><br/>
@@ -19,7 +19,7 @@ Please see the [Hosting Provider Requirements](hosting_requirements.md) for more
 	</center>
   </div>
   <div class="column">
-  	<img src="images/ClearlyEnergy.png" /><br/>
+  	<img src="../images/ClearlyEnergy.png" /><br/>
   	<center>
   		Clearly Energy <br/>
 		<a href="https://www.clearlyenergy.com/">www.clearlyenergy.com</a><br/><br/>
@@ -38,16 +38,16 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
 <div class="row">
   <div class="column">
   	<center>
-  	<img src="images/ClearlyEnergy.png" /><br/><br/>
-  	<img src="images/logo_nrel_c.jpg" /><br/><br/>
-  	<img src="images/psd-logo1.png" /><br/>
+  	<img src="../images/ClearlyEnergy.png" /><br/><br/>
+  	<img src="../images/logo_nrel_c.jpg" /><br/><br/>
+  	<img src="../images/psd-logo1.png" /><br/>
   	</center>
   </div>
   <div class="column">
   	<center>
-  	<img src="images/Earth Advantage HZ_logo-small.png" /><br/><br/>
-  	<img src="images/mcq_int_logo.png" /><br/><br/>
-  	<img src="images/OPEN-sm-small200.png" /><br/>
+  	<img src="../images/Earth Advantage HZ_logo-small.png" /><br/><br/>
+  	<img src="../images/mcq_int_logo.png" /><br/><br/>
+  	<img src="../images/OPEN-sm-small200.png" /><br/>
   	</center>
   </div>
 </div>
@@ -60,12 +60,12 @@ Please see the [App Developer Requirements](app_developer_requirements.md) for m
 <div class="row">
   <div class="column">
     <center>
-    <br/><img src="images/ClearlyEnergy.png" alt="clearly energy logo"/><br/>
+    <br/><img src="../images/ClearlyEnergy.png" alt="clearly energy logo"/><br/>
     </center>
   </div>
   <div class="column">
     <center>
-    <img src="images/beam_logo.png" width="30%" alt="beam logo" /><br/>
+    <img src="../images/beam_logo.png" width="30%" alt="beam logo" /><br/>
   </div>
 </div>
 

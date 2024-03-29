@@ -36,8 +36,7 @@ markdown_extensions:
   - pymdownx.superfences
   - toc:
       permalink: true
-      toc_depth: 3
-      title: On this page
+      toc_depth: 0
 
 extra_css:
   - 'stylesheets/extra.css'
