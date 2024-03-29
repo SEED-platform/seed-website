@@ -1,5 +1,3 @@
-## Getting Started
-
 To get started with SEED, you need to log in with you account credentials, and then the main screen will be displayed.
 
 ??? note "Getting Started"
@@ -8,28 +6,26 @@ To get started with SEED, you need to log in with you account credentials, and t
 
     The first thing to do is to log in to SEED with your user email and password. These are assigned to you by the SEED administrator. 
 
-    ![](images/login_logout_withoutTerms.png)
-
     To see the NREL Data Terms for SEED, click the "View/Hide Terms" link
 
     ![](images/login_withTerms.png)
 
     ### Main screen
 
-    When you first open SEED you will see the main screen
+    After logging in to SEED, you will see the main screen
 
     ![](images/main_screen.png)
 
 ## Main Navigation 
 
 The primary navigation options in SEED are shown on the left hand side
-of every screen, as shown below.
+of every screen, and they can be expanded to show full titles or collapsed to just show icons.
 
-![](images/navigation_bar.png)
+??? note "Main Navigation"
+
+    ![](images/navigation_bar.png)
 
 ## Inventory
-
-![](images/navButton_inventory.png)
 
 The Inventory screen displays the buildings that have been imported into SEED.
 
@@ -57,8 +53,6 @@ The Inventory screen displays the buildings that have been imported into SEED.
     * **Summary (Beta):** Displays summary information about the records and fields by cycle
 
 ## Data 
-
-![](images/navButton_data.png)
 
 The Data navigation tab will take you to the Data Sets view, where Data
 Sets (groups of imported files) can be created, and files imported. For
@@ -95,15 +89,13 @@ data imports.
 
 ## Organizations 
 
-![](images/navButton_organizations.png)
-
 The Organizations navigation button is used to view many of the options for setting up the data import and data management.
 
 ![](images/org_links.png)
 
 ??? note "Organizations"
 
-        The links at the top of the Organizations page are the following
+    The links at the top of the Organizations page are the following
 
     -   **Access Level Tree:** manage the heirarchy of user permissions and levels of access to the data
         ![](images/org_accessLevelTree.png)
@@ -152,9 +144,10 @@ The Organizations navigation button is used to view many of the options for sett
         (property and tax lots), including creating new labels, editing and
         deleting existing labels
 
-    -   **Members:** manage access to seed by adding, editing or deleting
-        members, including setting permissions (options are Owner, Member or
-        Viewer)
+        ![](images/labels_create.png)
+
+    -   **Members:** manage access to SEED by adding, editing or deleting
+        members, including setting permissions such as Access Levels and Roles (Owner, Member or Viewer)
 
         ![](images/org_members.png)
 
@@ -172,38 +165,31 @@ The Organizations navigation button is used to view many of the options for sett
 
 ## Insights 
 
-![](images/navButton_insights.png)
-
-The Insights feature in SEED allows analysis of benchmarking or Building
+The Insights feature in SEED allows analysis of building energy benchmarking or Building
 Performance Standards compliance over time based on setting performance
 targets into the future and showing how buildings are meeting those
 targets, both individually and as a group, over specific time periods.
 
 ??? note "Insights"
 
-    The image below shows the compliance of a portfolio of buildings over a
-    5 year time period, 2019 - 2023, with the compliance of the buildings
-    increasing during that period.
+    **Program Overview** shows the compliance of a portfolio of buildings over time. In the example below, compliance is shown over a 5 year time period, 2019 - 2023, with the compliance of the buildings increasing during that period. The red column areas show non-compliance and the blue column areas show compliance.
 
     ![](images/insights_programOverview.png)
 
-    It is also possible to view the compliance of individual buildings for a
-    particular period of time (cycle), on the Property Insights page, where
-    the blue dots indicate buildings that have met their compliance targets,
-    and the red triangles indicating buildings that have not met their
+    **Property Insights** shows compliance of individual buildings for a
+    particular period of time (cycle), where the blue dots indicate buildings that have met their compliance targets,
+    and the red triangles indicate buildings that have not met their
     targets, with the "whisker line" showing the distance from compliance
     for those buildings.
 
     ![](images/insights_propertyInsights.png)
 
-    It is also possible to see the compliance trend compared to a target
+    **Custom Reports** shows compliance trends, compared to a target,
     over time in a graph
 
-    ![](images/org_insightsGraph.png)
+    ![](images/insights_customReport.png)
 
 ## Analyses 
-
-![](images/navButton_analyses.png)
 
 The Analyses feature has many different analysis options, including the
 following:
@@ -220,8 +206,6 @@ following:
 
 ## API Documentation 
 
-![](images/navButton_apiDocumentation.png)
-
 The API Documentation page uses Swagger to document, in detail, the API
 calls that are available to access data in SEED.
 
@@ -230,8 +214,6 @@ calls that are available to access data in SEED.
     ![](images/api_docExample.png)
 
 ## Contact 
-
-![](images/navButton_contact.png)
 
 The Contact page has information and links to various websites about
 SEED, as well as a link to the SEED Github open source repository.
@@ -242,8 +224,6 @@ SEED, as well as a link to the SEED Github open source repository.
 
 ## About 
 
-![](images/navButton_about.png)
-
 The about page has information about the development team as well as the
 version number of the program release being used.
 
@@ -253,8 +233,6 @@ version number of the program release being used.
 
 ## Documentation  
 
-![](images/navButton_documentation.png)
-
 The Documentation page has a series of Frequently Asked Questions.
 
 ??? note "Documentation"
@@ -262,8 +240,6 @@ The Documentation page has a series of Frequently Asked Questions.
     ![](images/documentation_faq.png)
 
 ## Logout 
-
-![](images/navButton_logout.png)
 
 Clicking the Logout navigation button will log the user out of the
 current session, and allow the user to log in again.
