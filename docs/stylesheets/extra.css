@@ -117,3 +117,11 @@ button.blue:active {
     height: 100%;
     width: 100%;
 }
+
+.md-typeset .admonition-title:before, .md-typeset summary:before {
+    content:  unset !important;
+}
+
+[dir=ltr] .md-typeset .admonition-title, [dir=ltr] .md-typeset summary {
+    padding-left:  1rem;
+}
