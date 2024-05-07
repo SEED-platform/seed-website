@@ -91,11 +91,13 @@ data imports.
 
 The Organizations navigation button is used to view many of the options for setting up the data import and data management.
 
-![](images/org_links.png)
-
 ??? note "Organizations"
 
-    The links at the top of the Organizations page are the following
+    The links across the screen under "Organizations" allow setting up various options for the entire SEED organization. 
+
+    ![](images/org_links.png)
+
+    Those links are the following
 
     -   **Access Level Tree:** manage the heirarchy of user permissions and levels of access to the data
         ![](images/org_accessLevelTree.png)
