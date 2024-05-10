@@ -49,7 +49,8 @@ nav:
       - User Documentation:
         - Overview: 'user_doc_overview.md'
         - Getting Started: 'user_doc_getting_started.md'
-        - Data Import: 'user_doc_data_import.md'
+        - Importing Data: 'user_doc_data_import.md'
+        - View Building Inventory: 'user_doc_inventory.md'
       - Developer Documentation: 'developer_resources.md'
       - Known Issues: 'known_issues.md'
   - News: 'news.md'
