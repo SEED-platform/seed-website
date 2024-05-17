@@ -287,7 +287,7 @@ The first few steps for importing Property and Tax Parcel data are the same
 
     ![alt_text](images/Tax Lot Mapping Review.png "Tax Lot Mapping Review")
 
-??? note "**Save field mappings and view the results in the Inventory List View **"
+??? note "**Save field mappings and view the results in the Inventory List View**"
     Click the Save Mappings button to complete the data upload process; a
     confirmation screen will be displayed. Click the Confirm mappings
 

@@ -3,6 +3,9 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ![alt_text](images/navButton_inventory.png "Inventory Navigation button")
 
+![alt_text](images/inventory_property-800.png "Inventory Navigation button")
+
+
 ??? note "**Inventory List View**"
 
     ## xxx

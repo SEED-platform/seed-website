@@ -45,8 +45,9 @@ nav:
   - Home: 'index.md'
   - Getting Started: 'getting_started.md'
   - Documentation:
-      - Release Notes: 'release_notes.md'
+      
       - User Documentation:
+        - Release Notes: 'release_notes.md'
         - Overview: 'user_doc_overview.md'
         - Getting Started: 'user_doc_getting_started.md'
         - Importing Data: 'user_doc_data_import.md'
