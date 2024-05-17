@@ -8,6 +8,125 @@ If you have any questions about releases or changes to the program, please conta
 
 	- [Release Notes v2.20.1](resources/SEED Platform V2_20_1 Release Notes.pdf)
 
+	## Version 2.20.1
+
+	The full release history can be found on the SEED Github Repository
+
+	- [https://github.com/SEED-platform/seed/releases/tag/v2.20.0](https://github.com/SEED-platform/seed/releases/tag/v2.20.0)
+
+	- [https://github.com/SEED-platform/seed/releases/tag/v2.20.1 (patch release)](https://github.com/SEED-platform/seed/releases/tag/v2.20.1)
+
+	## Updates
+
+	### Inventory
+
+	- **Property Detail** 
+		
+		**Audit Template:** It is now possible to upload and download a BuidlingSync or Audit Tempate file
+
+		![](images/inventory_property_auditTemplate.png)
+	
+	### Data 
+
+	- A change was made to that now **it is not possible to delete matching field criteria after importing data, so the matching fields must be set in Column Settings before importing data**
+		- New matching fields can be ADDED, but existing matching fields can not be DELETED.
+	- **Address line 1** is no longer a default matching field
+
+	###Analyses
+
+	- **Property Detail:** Analyses can now be run from the Property Detail page, using the Anlyses link
+
+		![](images/analyses_propDetail.png)
+
+	- **Property List:** Analyses are now associated with the cycles they were simulated in, so the results can be viewed by cycle
+
+	- **BETTER:** it is now possible to specify what meter data to be used in the analyses
+	
+		- **A specific cycle**
+
+		![](images/BETTER_cycle.png)
+
+		- **A range of dates**
+
+		![](images/BETTER_cycle_dateRange.png)
+
+		- **All the meter data**
+
+		![](images/BETTER_cycle_allMeterData.png)
+
+	## New Features
+
+	### Analyses
+
+	#### EEEJ -- Energy Equity and Environmental Justice
+
+	SEED now has an Analyses feature that will show buildings that are in disadvantaged communities using data from: 
+
+	- US Census Bureau census tract data
+	- [Climate and economic Justice Screening Tool](https://screeningtool.geoplatform.gov/en#3/33.47/-97.5)
+
+		![](images/EEEJ_climateJusticeScreeningTool.png)
+
+	To run an EEEJ analysis, do the following:
+
+	- **Property List view**
+
+		- **Select the properties for the analysis**
+		- **Actions pulldown list**
+			- Give the analysis a name and select the “Energy Equity & Environmental Justice (EEEJ) option
+
+		![](images/EEEJ_runAnalyses.png)
+
+	To view the results:
+		
+	- **Analyses**
+
+		- The results will be be displayed in the Analyses screen
+
+		![](images/EEEJ_analyses_results.png)
+
+		- Click on the Run ID in the analysis list to see individual buidling results
+
+		![](images/EEEJ_analyses_results_bldg.png)
+
+	- **Inventory**
+
+		- **Property List and Detail veiw:** Results are displayed in the Inventory Property List and Detail view in these fields
+
+			![](images/EEEJ_inventory_prop_results.png)
+
+		- **Property List View:** Results are also displayed on the Inevntory List Map
+
+		![](images/EEEJ_inventory_prop_map.png)
+
+		- **Property Detail:** 
+
+			- Results are displayed in the Property Detail view in "card" format
+			- It is also possible to run Analysis for a specific property from the Property Detail view
+
+			![](images/EEEJ_inventory_prop_detail.png)
+
+	### Data
+
+	#### Batch Import of Audit Template Files
+
+	It is now possible to import properties directly from an Audit Template record
+
+	- **Organization / Settings:**
+
+		- Input the information about the Audit Template account under the Audit Template option in Organizations/Settings
+		- The Audit Template Documentation, linked from that Organizations/Settings screen, will explain how to get the Organiztion Token.
+
+		![](images/AT_import_org_settings.png)
+
+	- **Data**
+
+		- When adding data, there is an option to "Import Audit Template Buildings"
+		- Based on the values input in Organization/Settings for Audit Template, the appropriate buildings will be displayed and can be selected for import
+
+		![](images/AT_import_data.png)
+
+
 ??? note "**Version 2.19.0**"
 
 	- [Release Notes v2.19.0](resources/SEED Platform V2_19_0 Release Notes.pdf)
