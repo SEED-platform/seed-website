@@ -6,8 +6,6 @@ If you have any questions about releases or changes to the program, please conta
 
 ??? note "**Version 2.20.1**"
 
-	- [Release Notes v2.20.1](resources/SEED Platform V2_20_1 Release Notes.pdf)
-
 	## Version 2.20.1
 
 	The full release history can be found on the SEED Github Repository
@@ -20,9 +18,9 @@ If you have any questions about releases or changes to the program, please conta
 
 	### Inventory
 
-	- **Property Detail** 
+	**Property Detail** 
 		
-		**Audit Template:** It is now possible to upload and download a BuidlingSync or Audit Tempate file
+	- **Audit Template:** It is now possible to upload and download a BuidlingSync or Audit Tempate file
 
 		![](images/inventory_property_auditTemplate.png)
 	
@@ -34,23 +32,23 @@ If you have any questions about releases or changes to the program, please conta
 
 	###Analyses
 
-	- **Property Detail:** Analyses can now be run from the Property Detail page, using the Anlyses link
+	**Property Detail:** Analyses can now be run from the Property Detail page, using the Anlyses link
 
-		![](images/analyses_propDetail.png)
+	![](images/analyses_propDetail.png)
 
-	- **Property List:** Analyses are now associated with the cycles they were simulated in, so the results can be viewed by cycle
+	**Property List:** Analyses are now associated with the cycles they were simulated in, so the results can be viewed by cycle
 
-	- **BETTER:** it is now possible to specify what meter data to be used in the analyses
+	**BETTER:** it is now possible to specify what meter data to be used in the analyses
 	
-		- **A specific cycle**
+	- **A specific cycle**
 
 		![](images/BETTER_cycle.png)
 
-		- **A range of dates**
+	- **A range of dates**
 
 		![](images/BETTER_cycle_dateRange.png)
 
-		- **All the meter data**
+	- **All the meter data**
 
 		![](images/BETTER_cycle_allMeterData.png)
 
@@ -129,11 +127,210 @@ If you have any questions about releases or changes to the program, please conta
 
 ??? note "**Version 2.19.0**"
 
-	- [Release Notes v2.19.0](resources/SEED Platform V2_19_0 Release Notes.pdf)
+	## Version 2.19.0
+
+	## Updates
+
+	### Insights
+
+	**Default Reports** 
+		
+	- The reports that used to be accessed from the Inventory List view are now in Insights
+		
+		![](images/insights_default_reports-1000.png)
+
+	- The export from those reports now includes the matching fields
+
+		![](images/insights_default_reports_export.png)
+
+	**Program Overview** 
+		
+	- Clicking on the Program Overview column goes to the Property Insights graphs
+	- Percentages are displayed for Copmliant and Non-Compliant sections of the graphs
+
+		![](images/insights_overview2insights.png)
+
+	**Property Insights** 
+		
+	- A column for the X and Y axis have been added in the table below the graph that lists all the properties
+
+		![](images/insights_propertyInsights_XY.png)
+
+
+	### Salesforce
+
+	**Scheduled Daily Update:** The "Sync Salesforce" button that used to be in the Organizations/Salesforce setup has been removed because of timeout issues.
+
+	![](images/org_settings_Salesforce_syncbutton.png)
+
+	## New Features
+
+	### About / Terms of Service
+
+	The About screen now has a link to a "Terms of Service"
+
+	![](images/about_termsOfService.png)
+
+	### Data Import
+
+	**Multiple Cycle Upload:** 
+
+	The Data Import dialog box now has an option for importing data across multiple cycles
+	
+	- **Year Ending:** SEED uses the **Year Ending** field to determine the cycle that the record belongs to
+		- If any record does not have a **Year Ending** field, SEED will automatically assign it to the "Default Cycle" specified int he data import dialog box
+	- **Cycles:** Cycles for the **Yearing Ending** definitions need to be pre-defined
+
+	![](images/data_import_multiCycle.png)
+
+	Once the data is imported, **Cross Cycles** (Inventory List view) will show how the records were assigned to different cycles
+
+	![](images/inventory_property_crossCycle.png)
+
+	The Inventory List view Cross Cycle results show for each property, which cycle the property was imported into.
+
+	- **Property ID 2045373:** Based on the Year Ending field, there is one record for this building in all four cycles
+	- **Property ID 2045374:** This record did not have data in the Year Ending field so it was imported into the Default Cycle of 2021 Calendar Year
+
+		![](images/inventory_property_crossCycle_results.png)
+
+	### Inventory
+
+	**UBID Support:** 
+
+	It is now possible to have multiple UBID values defined for a property, and to select the one that most accurately represents the building footprint
+
+	![](images/inventory_property_detail_UBID-1.png)
+
+	The UBID marked "Preferred" will be displayed with the SEED Map as an underlay. 
+
+	![](images/inventory_property_detail_UBID-2.png)
+
+	The UBID centroid and bounding box for the "Preferred" UBID will also be displayed in the Inventory List Map view
+
+	![](images/inventory_property_detail_UBID-3.png)
+
+	**Geocoding Fields Added:** 
+
+	If a property is geocoded, the new Geocoding fields are now added to the Property
+
+	![](images/inventory_property_geocoding_fields.png)
+
 
 ??? note "**Version 2.18.0**"
 
 	- [Release Notes v2.18.0](resources/SEED Platform V2_18_0 Release Notes.pdf)
+	
+	## Version 2.18.0
+
+	## Updates
+
+	### Inventory
+
+	**Analyses / EUI:** It is now possible to select all the meter data, a date range, or a cycle for this anaylsis
+
+	![](images/EUI_meterdata_options.png)
+
+	### Insights
+
+	**Program Setup:** Select Cycles instead of start and end dates
+
+	![](images/insights_program_setup_cycles.png)
+
+	## Known Issues
+
+	### Inventory
+
+	**List View:** In the Property tab, it is not possible to sort on Tax Lot fields, and vice versa
+
+	![](images/inventory_property_noTaxLotSort.png)
+
+	## New Features
+
+	### Inventory
+
+	**List View** 
+	
+	- **Salesforce:** It is now possible to run Salesforce from the Actions menu on selected properties
+
+		![](images/inventory_property_list_Salesforce.png)
+
+	- **Export GeoJSON:** Meter data has been added to the GeoJSON file that is exported from SEED
+
+		![](images/inventory_property_export_geoJSON_meters.png)
+
+	**Detail View** 
+	
+	- **Salesforce:** It is now possible to run Salesforce on individual properties from the Inventory Property Detail view
+
+		![](images/inventory_property_detail_Salesforce.png)
+
+	- **Timeline:** This feature allows viewing actions, such as importing Audit Template records, over time
+
+		![](images/inventory_property_detail_timeline-1.png)
+
+		There is a row in the Timeline for ever event
+		Events added to the Timeline are
+
+		- New Notes (added manually)
+		- New Analyses
+		- New Audit Template or BuildingSync file upload
+		
+		Clicking the Timeline link for a property will show all the actions across cycles
+		
+		![](images/inventory_property_detail_timeline-1.png)
+
+		Click the Expand All button to see the details of each event
+
+		![](images/inventory_property_detail_timeline-2.png)
+		![](images/inventory_property_detail_timeline-3.png)
+		![](images/inventory_property_detail_timeline-4.png)
+		![](images/inventory_property_detail_timeline-5.png)
+
+		**Audit Template Import:** Audit Template and BuildingSync files can be imported in the Inventory Property Detail view
+
+		![](images/inventory_property_detail_auditTemplateImport.png)
+
+		**Audit Template Delete Scenarios:** Audit Template Scenarios can be deleted in the Inventory Property Detail view
+
+		![](images/inventory_property_detail_auditTemplate_delete_scenario.png)
+
+	### Insights
+
+	**Property Insights** 
+	
+	Labels can now be added to properties displayed in Property Insights
+
+	![](images/insights_propertyInsights_add_labels.png)
+
+	### Organizations / Settings
+
+	**Salesforce** 
+	
+	Salesforce can now be configured within SEED in Organizations / Settings / Salesforce
+
+	![](images/org_settings_Salesforce-1.png)
+	![](images/org_settings_Salesforce-2.png)
+	![](images/org_settings_Salesforce-3.png)
+	![](images/org_settings_Salesforce-4.png)
+	![](images/org_settings_Salesforce-5.png)
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
 
 ??? note "**Version 2.17.2**"
 
