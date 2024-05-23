@@ -3,6 +3,8 @@
 
 ## Publications
 
+* Long, N., Fleming, K., Langlois-Romero, I., Henze, G. P., Applegate, S. (2024). ["Equitable Energy Metrics for Integration into Building Performance Standard Tracking Platforms."](./resources/SimBuild2024_SEED_EEEJ.pdf). In IBPSA-USA SimBuild 2024. Denver, CO.
+
 * Bugnion, V., Long, N., Mitchell, R., Bergmann, H., Swindler, A., Beers, E. (2022). ["Building Performance Standards to Drive Market Transformation"](./resources/Bugnion-2022-aceee.pdf). 2022 ACEEE Summer Study on Energy Efficiency in Buildings.
 
 * Long, N., Swindler, A., Bergmann, H., Reagan, A., Held, A., & Longley, J. (2020). ["Standardizing City Benchmarking and Reporting: Use Cases in Consolidating Building Data with SEED"](./resources/Long-2020-Standardizing_City_Benchmarking.pdf), 2020 ACEEE Summer Study on Energy Efficiency in Buildings.
