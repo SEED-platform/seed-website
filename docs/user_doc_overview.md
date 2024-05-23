@@ -76,3 +76,16 @@
 
 
     ![alt_text](images/ThirdPartyContributors.png "Third Party Contributors"){:.seed-img}
+
+    ## 
+??? note "Data Guides"
+
+    The following guides detail the SEED import process and supported data types:
+
+    | Version | Date | Description |
+    |---------|------|-------------|
+    | [2.18.0](resources/SEED Platform V2_18_0 Getting Started Guide.pdf) | 05/01/2023 | Getting Started Guide |
+    | [2.12.0](resources/SEED Platform V2_12_Analyses.pdf) | 10/18/2021 | Analyses Documentation |
+    | [2.6.1](resources/SEED Platform V2_6_1 Patch_ Mapping and Merging.pdf) | 01/16/2020 | Mapping and merging data overview | 
+    | [2.6.0](resources/SEED Platform V2_6_ Meter Data.pdf) | 08/09/2019 | Overview of the new Meter Data features added to SEED release 2.6.0 |
+    | [2.5.1](resources/SEED%20Platform%20V2_5_%20GIS%20Features.pdf) | 08/26/2019 | Overview of the GIS functionality available in SEED | 

@@ -18,6 +18,48 @@ To get started with SEED, you need to log in with you account credentials, and t
     ![](images/main_screen.png){:.seed-img}
 
 
+    ### Sample Data
+
+    The SEED Sample Data collection includes two files and can be downloaded from the table below:
+
+    - **covered-buildings-sample.csv**&mdash;sample tax assessor data with 512 building records
+    - **portfolio-manager-sample.csv**&mdash;sample Energy Star Portfolio Manager data with 512 records which match the data in covered-buildings-sample.csv based on the Address field
+
+    Note that this represents an ideal case, but it can be used to confirm proper program performance.
+
+    All sample data should work with all versions of SEED, although the newer datasets may contain fields that do not exist in earlier versions. 
+
+        
+    | Version | Files |
+    |---------|-------|
+    | 2.7.0-Beta | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.7.0-Beta/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.7.0-Beta/seed/tests/data/portfolio-manager-sample.csv) | 
+    | 2.6.1 | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/portfolio-manager-sample.csv) | 
+
+
+    See the [Importing Data](user_doc_data_import.md) page for more information on importing data.
+
+
+    ### Sample Data
+
+    The SEED Sample Data collection includes two files and can be downloaded from the table below:
+
+    - **covered-buildings-sample.csv**&mdash;sample tax assessor data with 512 building records
+    - **portfolio-manager-sample.csv**&mdash;sample Energy Star Portfolio Manager data with 512 records which match the data in covered-buildings-sample.csv based on the Address field
+
+    Note that this represents an ideal case, but it can be used to confirm proper program performance.
+
+    All sample data should work with all versions of SEED, although the newer datasets may contain fields that do not exist in earlier versions. 
+
+        
+    | Version | Files |
+    |---------|-------|
+    | 2.7.0-Beta | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.7.0-Beta/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.7.0-Beta/seed/tests/data/portfolio-manager-sample.csv) | 
+    | 2.6.1 | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/portfolio-manager-sample.csv) | 
+
+
+    See the [Importing Data](user_doc_data_import.md) page for more information on importing data.
+
+
 ## Main Navigation 
 
 The primary navigation options in SEED are shown on the left hand side
@@ -103,7 +145,11 @@ The Organizations navigation button is used to view many of the options for sett
 
 ??? note "Organizations"
 
-    The links at the top of the Organizations page are the following
+    The links across the screen under "Organizations" allow setting up various options for the entire SEED organization. 
+
+    ![](images/org_links.png)
+
+    Those links are the following
 
     -   **Access Level Tree:** manage the heirarchy of user permissions and levels of access to the data
         ![Access Level Tree](images/org_accessLevelTree.png){:.seed-img}
