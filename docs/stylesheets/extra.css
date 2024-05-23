@@ -125,3 +125,10 @@ button.blue:active {
 [dir=ltr] .md-typeset .admonition-title, [dir=ltr] .md-typeset summary {
     padding-left:  1rem;
 }
+
+.seed-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}

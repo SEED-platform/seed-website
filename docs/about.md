@@ -1,6 +1,6 @@
-# Getting Started
+# About 
 
-## Installation
+## Hosting Options
 
 SEED is a web-based database tool, and therefore must be "hosted" on a web server. It is not designed to be installed on an end-user's desktop computer. There are several options for how SEED can be hosted. The following information will help you select an appropriate type of SEED instance.
 

@@ -6,7 +6,7 @@
 
 
 
-    ![alt_text](images/Current-Known-Adoption-2024-02-07.png "Current-Known-Adoption-SEED")
+    ![alt_text](images/Current-Known-Adoption-2024-02-07.png "Current-Known-Adoption-SEED"){:.seed-img}
 
 
     Many communities, jurisdictions and cities are managing their data for these ordinances using spreadsheets. This is a strategy that has many drawbacks including:
@@ -46,7 +46,8 @@
 
 
 
-    ![alt_text](images/SEED-Tools-Interaction-Diagram.png "image_tooltip")
+    ![alt_text](images/SEED-Tools-Interaction-Diagram.png "image_tooltip"){:.seed-img}
+
 
 
     Once the data is imported into SEED it is possible to:
@@ -62,7 +63,8 @@
 
 
 
-    ![alt_text](images/Current-Known-Adoption-2024-02-07.png "Current Known Adoption SEED")
+    ![alt_text](images/Current-Known-Adoption-2024-02-07.png "Current Known Adoption SEED"){:.seed-img}
+
 
 
 
@@ -73,4 +75,4 @@
     SEED is funded by the U.S. Department of Energy and supported by the National Renewable Energy Laboratory (NREL), Lawrence Berkeley National Laboratory (LBNL), and the third party software contributors shown below.
 
 
-    ![alt_text](images/ThirdPartyContributors.png "Third Party Contributors")
+    ![alt_text](images/ThirdPartyContributors.png "Third Party Contributors"){:.seed-img}

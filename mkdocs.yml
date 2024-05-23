@@ -26,6 +26,7 @@ theme:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
@@ -43,7 +44,7 @@ extra_css:
 
 nav:
   - Home: 'index.md'
-  - Getting Started: 'getting_started.md'
+  - About: 'about.md'
   - Documentation:
       - Release Notes: 'release_notes.md'
       - User Documentation:
