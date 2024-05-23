@@ -25,6 +25,8 @@
 
 ## Presentations
 
+* 04/24/2023, NREL/LBNL. [SEED Platform Peer Review Slides](https://www.energy.gov/sites/default/files/2023-05/bto-peer-2023-25204-seed-nrel-long.pdf).
+
 * 11/05/2021. NREL. [SEED Analysis: BETTER, Carbon Metrics,
 and EUI Calculations](resources/SEED and BETTER Functionality 2021-11-05.pdf)
 
