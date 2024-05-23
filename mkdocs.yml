@@ -26,6 +26,7 @@ theme:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
@@ -43,7 +44,7 @@ extra_css:
 
 nav:
   - Home: 'index.md'
-  - Getting Started: 'getting_started.md'
+  - About: 'about.md'
   - Documentation:
       
       - User Documentation:
@@ -52,6 +53,7 @@ nav:
         - Getting Started: 'user_doc_getting_started.md'
         - Importing Data: 'user_doc_data_import.md'
         - View Building Inventory: 'user_doc_inventory.md'
+        - Feature Documentation: 'user_doc_features.md'
       - Developer Documentation: 'developer_resources.md'
       - Known Issues: 'known_issues.md'
   - News: 'news.md'
