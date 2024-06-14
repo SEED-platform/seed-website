@@ -43,3 +43,18 @@ To make a section collapsible, you have to remove the `#`s before the section na
 ??? note "Collapsible Sections"
     This is the content that is inside the collapsible section.
 ```
+
+### Image Optimization
+Install [pngquant ](https://lib.rs/install/pngquant). Once installed run the following commands (these were tested on MacOS):
+
+```BASH
+pngquant docs/images/*.png --ext=.png --force
+```
+
+```BASH
+pngquant docs/images/new/*.png --ext=.png --force
+```
+
+```BASH
+pngquant docs/images/release_notes/*.png --ext=.png --force
+```
