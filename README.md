@@ -45,7 +45,7 @@ To make a section collapsible, you have to remove the `#`s before the section na
 ```
 
 ### Image Optimization
-Install [pngquant ](https://lib.rs/install/pngquant). Once installed run the following commands (these were tested on MacOS):
+Install [pngquant](https://lib.rs/install/pngquant). Once installed run the following commands (these were tested on MacOS):
 
 ```BASH
 pngquant docs/images/*.png --ext=.png --force
