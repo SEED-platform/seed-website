@@ -45,17 +45,14 @@ extra_css:
 nav:
   - Home: 'index.md'
   - About: 'about.md'
-  - Documentation:
-      
-      - User Documentation:
-        - Release Notes: 'release_notes.md'
-        - Overview: 'user_doc_overview.md'
-        - Getting Started: 'user_doc_getting_started.md'
-        - Importing Data: 'user_doc_data_import.md'
-        - View Building Inventory: 'user_doc_inventory.md'
-        - Feature Documentation: 'user_doc_features.md'
-      - Developer Documentation: 'developer_resources.md'
-      - Known Issues: 'known_issues.md'
+  - User Documentation:
+    - Overview: 'user_doc_overview.md'
+    - Getting Started: 'user_doc_getting_started.md'
+    - Importing Data: 'user_doc_data_import.md'
+    - View Building Inventory: 'user_doc_inventory.md'
+    - Feature Documentation: 'user_doc_features.md'
+    - Release Notes: 'release_notes.md'
+    - Known Issues: 'known_issues.md'
   - News: 'news.md'
   - Hosting:
       - Requesting Test Instance: 'test_instance_request.md'
@@ -72,6 +69,7 @@ nav:
       - 'Hosting': 'faq/hosting.md'
       - 'Industry Involvement': 'faq/industry_involvement.md'
       - 'Security': 'faq/security.md'
+  - Developer Documentation: 'developer_resources.md'
 
 plugins:
   - redirects:
