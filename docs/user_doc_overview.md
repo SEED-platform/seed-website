@@ -1,23 +1,20 @@
+The Standard Energy Efficiency Data Platform (SEED) Platform is an open-source software application designed to manage building performance data, such as energy consumption and carbon emissions (as required by a benchmarking ordinance or Building Performance Standard), which can be costly and time consuming for states, local governments and other organizations. SEED is a flexible and cost-effective platform to improve the quality and availability of data to demonstrate the economic and environmental benefits of building energy efficiency, to implement programs, and to target investment activity. SEED helps users combine data from multiple sources, clean and validate it, and generate queries and reports. SEED can be used directly as a web platform, but it can also be used as a backend to other solutions. 
+
+As of December 2023, these are the cities who either have benchmarking or Building Performance Standards that are also using SEED to help with those ordinances
+
+![alt_text](images/Current-Known-Adoption-2024-02-07.png "Current-Known-Adoption-SEED"){:.seed-img}
+
+Many communities, jurisdictions and cities are managing their data for these ordinances using spreadsheets. This is a strategy that has many drawbacks including:
+
+* Difficulty in managing and tracking hundreds of building records
+* Limited simultaneous access
+* Limited data protection and user access controls
+* Loss of functional knowledge upon staff turnover
+* Lack of ability to easily integrate with other solutions
+
 ??? note "Standard Energy Efficiency Data Platform (SEED)"
 
-    The Standard Energy Efficiency Data Platform (SEED) Platform is an open-source software application designed to manage building performance data, such as energy consumption and carbon emissions (as required by a benchmarking ordinance or Building Performance Standard), which can be costly and time consuming for states, local governments and other organizations. SEED is a flexible and cost-effective platform to improve the quality and availability of data to demonstrate the economic and environmental benefits of building energy efficiency, to implement programs, and to target investment activity. SEED helps users combine data from multiple sources, clean and validate it, and generate queries and reports. SEED can be used directly as a web platform, but it can also be used as a backend to other solutions. 
-
-    As of December 2023, these are the cities who either have benchmarking or Building Performance Standards that are also using SEED to help with those ordinances
-
-
-
-    ![alt_text](images/Current-Known-Adoption-2024-02-07.png "Current-Known-Adoption-SEED"){:.seed-img}
-
-
-    Many communities, jurisdictions and cities are managing their data for these ordinances using spreadsheets. This is a strategy that has many drawbacks including:
-
-
-
-    * Difficulty in managing and tracking hundreds of building records
-    * Limited simultaneous access
-    * Limited data protection and user access controls
-    * Loss of functional knowledge upon staff turnover
-    * Lack of ability to easily integrate with other solutions
+    
 
 ??? note "Features"
 

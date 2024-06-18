@@ -219,8 +219,6 @@ If you have any questions about releases or changes to the program, please conta
 
 ??? note "**Version 2.18.0**"
 
-	- [Release Notes v2.18.0](resources/SEED Platform V2_18_0 Release Notes.pdf)
-	
 	## Version 2.18.0
 
 	## Updates
@@ -316,25 +314,15 @@ If you have any questions about releases or changes to the program, please conta
 	![](images/org_settings_Salesforce-5.png)
 
 
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
 ??? note "**Version 2.17.2**"
 
 	- [Release Notes v2.17.2](resources/SEED Platform V2_17_2 Release Notes.pdf)
+
+	## Version 2.17.2
+
+	## Updates
+
+	### Inventory
 
 ??? note "**Version 2.5.0**"
 
