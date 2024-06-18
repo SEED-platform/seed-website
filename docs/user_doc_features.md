@@ -7,12 +7,12 @@ Expand the following sections to find out more about the functionality available
 
 	The Public Feed functionality can be enabled from the organization settings page. From this same page you can choose to expose the labels applied in the public feed.
 
-	![Enable the Public Feed Functionality](images/new/publicfeed_enable.jpg){:.seed-img}
+	![Enable the Public Feed Functionality](images/new/publicfeed_enable.png){:.seed-img}
 
 
 	Once the functionality is enabled, navigate to the Organization Sharing page. From this page, you can set up which fields should be shared by checking the checkbox next to each field.  Both property and tax lot fields will be listed, and you can use the filters on the top of the table to refine your search.
 
-	![Configure the Public Feed](images/new/publicfeed_configure.jpg){:.seed-img}
+	![Configure the Public Feed](images/new/publicfeed_configure.png){:.seed-img}
 
 
 	The Public Feed is available at the following URL:
@@ -21,7 +21,7 @@ Expand the following sections to find out more about the functionality available
 
 	The Public Feed page will load a JSON view of the data that you have configured to share publicly, organized by cycle. The ‘id’ key shown here corresponds to a ‘property view’ in SEED, which represents the building data in a specific cycle. The ‘pagination’ section provides statistics on the number of properties available, the ‘query_params’ section returns the filters that were applied to generate this list, and the list of buildings can be found in the ‘data’ section.
 
-	![JSON Public Feed](images/new/publicfeed_json.jpg){:.seed-img}
+	![JSON Public Feed](images/new/publicfeed_json.png){:.seed-img}
 
 
 	### Public Feed Filtering Details
