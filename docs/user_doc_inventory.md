@@ -101,26 +101,80 @@ After the building data has been imported into SEED, it can be viewed from the I
     ![alt_text](images/cross_cycle_results.png "Cross-Cycles")
 
 
-
-    
-
-
-
 ??? note "**Map**"
+
+    SEED will display the buildings on a map view if there is enough information to locate them geospatially. The buidlings need to have good address information (including street address, city and postal code) in order to display them on the map. 
+
+    If that data has been provided on import, SEED can display the locations when the Map link is clicked. 
+
+    ![alt_text](images/map_01.png)
+        
+    Zoom in on the map using the mouse to see the details of building in the census tracts designated as **Disadvantaged Communities (DAC)**
+
+    ![alt_text](images/map_DAC.png)
+
+
 
 ??? note "**Data**"
 
+    The Data link goes to the Custom Reports view where different data across cycles can be plotted.
+
+    ![alt_text](images/inventory_property_data.png)
+
 ??? note "**Summary**"
+
+    The Summary link shows a list of all the fields in the selected cycle, with the number of records that have data for that field.
+
+    ![alt_text](images/inventory_property_summary.png)
+
 
 ## **Inventory Detail View**
 
 ??? note "**Inventory Detail Overview**"
 
-    ## xxx
+    The **Inventory Detail** view shows details about individual buildings, including a history of all the files that have been imported and added data to this building record. 
 
-    x
+    The links at the top of the Detail view are the following:
 
-    ![alt_text](images/Cycle create 01.png "Create Cycle Step 1")
+    ![alt_text](images/inventory_property_detail_links.png)
+
+    * **Property Detail:** This is the default view when coming from the List view
+    * **Meters:** The meter data imported with this propery, if relevant
+    * **Sensors:** The sensor data imported with this property, if relevant
+    * **Notes:** Access any notes already associated with this property, or add new ones
+    * **Column List Profiles:** The defined column list profiles, which determine the fieilds that are displayed as well as there order. New column list profiles can be defined here. 
+    * **Cross-Cycles:** Compare the data for this property across cycles.
+    * **Analyses:** 
+    * **Timeline:**
+    * **UBID:** 
+
+    This view is accessed by clicking on the small "i" icon to the right of the building in the Inventory List view. 
+
+??? note "**Property Detail**"
+
+    The Property Detail view is the default view that is displayed when clicking the "information" icon in the List view. 
+
+    * **Actions:** The actions pulldown list has many options, which can be selected to perform those actions on the property currently being viewed. One of the more useful options to select after importing data is the last option "Only Show Populated Columns". This will cause only those fields with data in them to be displayed and the selected Column Profile List will be udpated with this information. 
+    
+    * **Cycle:** This view is organized by **Cycle**, which can be selected from the Cycle pulldown list. 
+
+    * **Labels:** This view also shows the labels associated with this building.
+    
+    * **Access Level Instance Information:** if the Access Level Heirarchy is used, the appropriate information will be displayed here.
+
+    * **Column List Profile:** The defined column list profiles, which control the fields displayed and their order, can be selected from the pulldown list.
+
+    The table shown in the main section of the Detail view has the following columns:
+
+    * **Field:** Shows each field in the database for this record
+    * **Main:** This is the merged data based on the history of data imported, shown in the columns to the right of the Main column
+    * **History of imported files:** The columns to the right of Main show all the files that have been imported that added data to this property. The order of import is from left to right, so the latest imprted data will be the first column to the right of Main, and the first import will be the far right column. There is a scroll bar to scroll to the right if there have been many imports. 
+    * **Highlighted lines:** The lines that have different data in them from previous imports, and that have been merged into Main, will be highlighted in yellow
+
+    ![alt_text](images/inventory_property_detail.png)
+
+
+
 
 
 ## **xx**
