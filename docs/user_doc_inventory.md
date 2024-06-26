@@ -89,6 +89,22 @@ After the building data has been imported into SEED, it can be viewed from the I
     ![alt_text](images/column_list_profiles_03.png "Column List Profiles")
 
 ??? note "**Cross-Cycles**"
+    
+    It is possible to building data over time using the Cross-Cycles functionality. If there are multiple years of data imported into SEED in time-based cycles, that data can be compared across those cycles.
+
+    In the Property List view, click on the Cross-Cycles link and select the cycles to be compared.
+
+    ![alt_text](images/cross_cycle_01.png "Cross-Cycles")
+
+    After checking the cycles to display, click the main webpage and the data for the selected cycles will be displayed. It is then possible to compare the data across the cycles, for example to see if the **Weather Normalized Site EUI** values have come down for a specific property over time.
+
+    ![alt_text](images/cross_cycle_results.png "Cross-Cycles")
+
+
+
+    
+
+
 
 ??? note "**Map**"
 
