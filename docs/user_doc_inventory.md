@@ -157,11 +157,8 @@ After the building data has been imported into SEED, it can be viewed from the I
     * **Actions:** The actions pulldown list has many options, which can be selected to perform those actions on the property currently being viewed. One of the more useful options to select after importing data is the last option "Only Show Populated Columns". This will cause only those fields with data in them to be displayed and the selected Column Profile List will be udpated with this information. 
     
     * **Cycle:** This view is organized by **Cycle**, which can be selected from the Cycle pulldown list. 
-
-    * **Labels:** This view also shows the labels associated with this building.
-    
+    * **Labels:** This view also shows the labels associated with this building.    
     * **Access Level Instance Information:** if the Access Level Heirarchy is used, the appropriate information will be displayed here.
-
     * **Column List Profile:** The defined column list profiles, which control the fields displayed and their order, can be selected from the pulldown list.
 
     The table shown in the main section of the Detail view has the following columns:
@@ -172,6 +169,67 @@ After the building data has been imported into SEED, it can be viewed from the I
     * **Highlighted lines:** The lines that have different data in them from previous imports, and that have been merged into Main, will be highlighted in yellow
 
     ![alt_text](images/inventory_property_detail.png)
+
+??? note "**Meters**"
+
+    When meter data is imported for a property, it can be viewed either from:
+    
+    * **Inventory List:** view by clicking on the Meter icon to the left of the property record
+    
+    ![alt_text](images/inventory_property_list_meters.png)
+    
+    * **Inventory Detail:** view from the Meter link
+    
+    ![alt_text](images/inventory_property_detail_meters.png)
+
+    The meter data can be aggregated by using the Interval pulldown list
+
+    ![alt_text](images/inventory_property_detail_meters_agg.png)
+    ![alt_text](images/inventory_property_detail_meters_agg_02.png)
+
+??? note "**Sensors**"
+
+??? note "**Notes**"
+
+    Notes can be added to a property either manually by clicking on Notes and typing a note. They are also added automatically by the program when data is changed. 
+    
+    ![alt_text](images/inventory_property_detail_notes.png)
+
+
+??? note "**Column List Profiles**"
+
+    Column List Profiles control what fields are displayed and in what order. It is possible to create as many Column List Profiles as needed to have different views of the data. 
+
+    In a similar manner to the List view Column List Profiles, new profiles can be created, and existing profiles can be edited. 
+
+    ![alt_text](images/inventory_property_detail_columnlist_01.png)
+
+
+??? note "**Cross-Cycles**"
+
+??? note "**Analyses**"
+
+??? note "**Timeline**"
+
+    Clicking the Timeline link for a property will show all the actions across cycles.
+
+    ![alt_text](images/inventory_property_detail_timeline_01.png)
+
+    Click the arrows to expand and collapse the details of each action.
+
+    ![alt_text](images/inventory_property_detail_timeline_02.png)
+
+    If Audit Template information has been imported, click on the arrow to expand the details to see the scenarios.
+
+    ![alt_text](images/inventory_property_detail_timeline_03.png)
+
+    Within the Audit Template scenarios, click on the down arrow to see in individual measures in each scenario.
+
+    ![alt_text](images/inventory_property_detail_timeline_04.png)
+
+??? note "**UBIDS**"
+
+
 
 
 
