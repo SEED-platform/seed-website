@@ -73,6 +73,60 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     ![alt_text](images/inventory_list_02.png "Inventory List options")
 
+??? note "**Data Management**" 
+    
+    The grid used in the Inventory List view has many features (explained in detail in the following sections)
+
+    * **Filter:** enter filter criteria in the blank box under the column name
+    * **Sort:** click in the middle of the column header to see the small up and down arrows to sort ascending and descending; alternatively select the right menu arrow in the column to see the Sort Ascending, Sort Descending and Remove Sort options
+    * **Hide fields:** click on the right menu arrow in an individual field to Hide a field that is displayed. More control over what fields are displayed and their order is controlled with the Column List Profiles.
+    * **Field order by dragging columns:** click in the middle of a column header, hold the left mouse button down, and drag it right or left to place it the desired order 
+    * **Pin columns:** click on the right menu arrow in an individual column to see the Pin Left, Pin Right and Unpin options for that column
+    * **Resize columns:** click on the right hand side of the column header, hold the left mouse button down, and drag the column edge right and left to the desired width 
+    * **Fixed column headers:** the column headers are fixed, so scrolling down keeps the column headers visible. 
+    * **Pagination:** The records are displayed 100 records per page. 
+
+    ## Filter
+
+    There are many filter options, such as numeric or text filtering on columns, as well as filtering by labels and making filter groups which allows naming a set of filter choices.
+
+    ![alt_text](images/inventory_property_list_filter_01.png)
+
+    **Filtering on individual fields follows the following format.**
+
+    ![alt_text](images/inventory_property_list_filter_02.png)
+
+    **Most of the lists in SEED (Mapping, Matching, Inventory) allow you to sort and filter on the data in the columns by entering the filter values in the input box below the field (column name)**
+
+    ![alt_text](images/inventory_property_list_filter_03.png)
+
+    ![alt_text](images/inventory_property_list_filter_04.png)
+
+    **Filter Groups**
+
+    Filter Groups can be defined to save all the filtering and sorting options selected. 
+
+    To create a filter group, filter the data as needed, using field filter inputs and/or labels and then click the "New Filter Group" icon to name that combination of filters. 
+
+    ![alt_text](images/inventory_property_list_filtergroup.png)
+
+    ## Sort
+
+    It is possible to control sorting in two different ways:
+
+    **Up/down arrow**
+    **Column pulldown list**
+
+    ![alt_text](images/inventory_property_list_sort.png)
+
+    ## Pin Columns
+
+    Columns (one or more) can be pinned on the left and the right
+
+    ![alt_text](images/inventory_property_list_pin.png)
+
+
+
 
 ??? note "**Column List Profiles**"
 
@@ -207,7 +261,17 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ??? note "**Cross-Cycles**"
 
+    The Cross-Cycle view allows comparison of each field across the cycles, for example to show trends in Site EUI or emissions.
+
+    ![alt_text](images/inventory_property_detail_crosscycles.png)
+
+
 ??? note "**Analyses**"
+
+    The Analyses view shows the results from all the analyses completed for this property. It is also possible to run a new analysis from this view.
+
+    ![alt_text](images/inventory_property_detail_analyses.png)
+
 
 ??? note "**Timeline**"
 
