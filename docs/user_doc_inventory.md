@@ -86,7 +86,7 @@ After the building data has been imported into SEED, it can be viewed from the I
     * **Fixed column headers:** the column headers are fixed, so scrolling down keeps the column headers visible. 
     * **Pagination:** The records are displayed 100 records per page. 
 
-    ## Filter
+    ### Filter
 
     There are many filter options, such as numeric or text filtering on columns, as well as filtering by labels and making filter groups which allows naming a set of filter choices.
 
@@ -110,7 +110,7 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     ![alt_text](images/inventory_property_list_filtergroup.png)
 
-    ## Sort
+    ### Sort
 
     It is possible to control sorting in two different ways:
 
@@ -119,13 +119,43 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     ![alt_text](images/inventory_property_list_sort.png)
 
-    ## Pin Columns
+    ### Pin Columns
 
     Columns (one or more) can be pinned on the left and the right
 
     ![alt_text](images/inventory_property_list_pin.png)
 
+    ### Actions
 
+    The Actions pulldown list has many options for managing the data in the Inventory List view.
+
+    ![alt_text](images/inventory_property_list_actions.png)
+
+    The options available are:
+
+    * **Select All:**
+    * **Select None:**
+    
+    For the selected properties (based on filters or above options)
+
+    * **Merge:** Merge the selected records
+    * **Delete:** Delete the selected records
+    * **Export:** Export the selected records
+    * **Export to Audit Template:**
+    * **Add/Remove Labels:** Add or remove records to/from the selected records
+    * **Data Quality Check:** Run the Data Quality checks on the selected records
+    * **Email:** Send emails (from the email template) to the selected records
+    * **Run Analysis:** Run an analysis on the selected records
+    * **Set Update Time to Now:**
+    * **Geocode:** Geocode the selected records. This requires having complete address information defined for each record, and will result in latitude and longitude values being generated for the selected records
+    * **Decode UBID:**
+    * **Compare UBIDs:**
+    * **Add/Update UBID:**
+    * **Update Salesforce:**
+
+    Options
+
+    * **Only Show Populated Columns:** This will cause the Inventory list to be refreshed to display on the fields that have data in them. This can be a useful first step after importing data. The resulting field display definition will be saved to the current Column List Profile (if one doesn't exist, the program will ask for a name for a new Column List Profile)
 
 
 ??? note "**Column List Profiles**"
@@ -243,6 +273,15 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ??? note "**Sensors**"
 
+     Sensor data that has been collected on a time interval from a data logger can be imported into SEED for individual properties. In the example below, air quality data was collected in school classrooms, and then imported into SEED.
+
+     ![alt_text](images/inventory_property_detail_sensors_01.png)
+     
+     When sensor data is imported for a property, it can be viewed from the Sensor link in the Inventory Detail view
+
+     ![alt_text](images/inventory_property_detail_sensors_02.png)
+
+
 ??? note "**Notes**"
 
     Notes can be added to a property either manually by clicking on Notes and typing a note. They are also added automatically by the program when data is changed. 
@@ -293,60 +332,6 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ??? note "**UBIDS**"
 
+    Clicking the UBID link for a property will show all the UBIDs that have been associated with that property. Because a property can have more than one UBID value, it is necessary to set one of them to "Preferred", which can be done by clicking the Edit icon. UBIDs can also be deleted by clicking the Delete icon. And UBIDs can be added by clicking the Create UBID button. 
 
-
-
-
-
-
-## **xx**
-x 
-??? note "**xx**" 
-
-    x
-
-
-??? note "**xxx**"
-
-   x
-
-
-??? Note "**xxx**"
-
-    x
-
-    
-## **xxx**
-
-??? Note "**xx**"
-
-    x
-
-??? Note "**xxx**"
-
-    x
-
-??? note "**xxx**"
-
-    x
-
-??? note "**xxx**"
-    x
-
-## **xxx**
-
-??? note "**xxx**"
-    x
-
-
-??? note "**xx**"
-
-    x
-
-??? note "**xxxx**"
-
-    x
-
-??? note "**xx**"
-    x
-
+    ![alt_text](images/inventory_property_detail_UBIDs.png)
