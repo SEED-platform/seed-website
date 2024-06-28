@@ -133,8 +133,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     The options available are:
 
-    * **Select All:**
-    * **Select None:**
+    * **Select All:** This will cause all the records in the cycle to be selected
+    * **Select None:** This will cause all the records that might have been previously selected to become "unselected". 
     
     For the selected properties (based on filters or above options)
 
