@@ -50,7 +50,7 @@ nav:
     - Getting Started: 'user_doc_getting_started.md'
     - Importing Data: 'user_doc_data_import.md'
     - View Building Inventory: 'user_doc_inventory.md'
-    - Feature Documentation: 'user_doc_features.md'
+    #- Feature Documentation: 'user_doc_features.md'
     - Release Notes: 'release_notes.md'
     - Known Issues: 'known_issues.md'
   - News: 'news.md'

@@ -35,7 +35,7 @@ Many communities, jurisdictions and cities are managing their data for these ord
 
     * Spreadsheets of jurisdiction tax records or other property data, which can be imported in a way that defines the relationship between tax parcels and buildings
     * Building utility data 
-    * Building performance data from ENERGY STAR Portfolio Manager
+    * Building performance data from ENERGY STAR&reg; Portfolio Manager&reg;
     * Building asset data from DOE tools such as Audit Template and BuildingSync
     * Spatial data such as GeoJSON
 

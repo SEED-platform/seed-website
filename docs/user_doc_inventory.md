@@ -17,7 +17,7 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     ![alt_text](images/inventory_list_prop_taxlot_tabs.png "Inventory List view")
 
-    If the Property tab is selected, the Properites links will displayed at the top of the page, which allow navigation to the pages related to the Property inventory. 
+    If the Property tab is selected, the Properties links will displayed at the top of the page, which allow navigation to the pages related to the Property inventory. 
 
     ![alt_text](images/inventory_list_property_links.png "Inventory List view")
 
@@ -31,7 +31,7 @@ After the building data has been imported into SEED, it can be viewed from the I
     * **Column List Profiles:** The defined column list profiles, which determine the fields that are displayed as well as their order -- there are separate Column List Profiles for the Property and Tax Lot tabs
     * **Cross-Cycles:** Compare the same records across multiple cycles
     * **Map:** Shows the data spatially on a map, if the data has enough information to map it
-    * **Data:** Accesses the Custom Report definitions under Inisghts
+    * **Data:** Accesses the Custom Report definitions under Insights
     * **Summary:** Lists the fields in the inventory, with the count of records with populated data in those fields
     
 ??? note "**Property / Tax Lot Relationship**" 
@@ -48,7 +48,7 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ??? note "**Property or Tax Lot List View - General**" 
     
-    Both the Property and Tax Lot tab have identical funcionality, but applied to either the Property or the Tax Lot records, depending on the tab selected. The screenshots are shown for the Property tab, but the Tax Lot tab will have identical features.
+    Both the Property and Tax Lot tab have identical functionality, but applied to either the Property or the Tax Lot records, depending on the tab selected. The screenshots are shown for the Property tab, but the Tax Lot tab will have identical features.
 
     For either the Property or the Tax Lot tab, to view the desired data do the following:
 
@@ -149,9 +149,9 @@ After the building data has been imported into SEED, it can be viewed from the I
     * **Set Update Time to Now:**
     * **Geocode:** Geocode the selected records. This requires having complete address information defined for each record, and will result in latitude and longitude values being generated for the selected records
     * **Decode UBID:**
-    * **Compare UBIDs:**
-    * **Add/Update UBID:**
-    * **Update Salesforce:**
+    * **Compare UBIDs:** Compare the UBIDs of two or more records based on the Jaccard index set for the organization
+    * **Add/Update UBID:** Edit the UBID(s) associated with the selected record (this option is only available when a single record is selected)
+    * **Update Salesforce:** Sync information from the selected records with the connected Salesforce instance
 
     Options
 
@@ -187,7 +187,7 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ??? note "**Map**"
 
-    SEED will display the buildings on a map view if there is enough information to locate them geospatially. The buidlings need to have good address information (including street address, city and postal code) in order to display them on the map. 
+    SEED will display the buildings on a map view if there is enough information to locate them geospatially. The buildings need to have good address information (including street address, city and postal code) in order to display them on the map. 
 
     If that data has been provided on import, SEED can display the locations when the Map link is clicked. 
 
@@ -223,14 +223,14 @@ After the building data has been imported into SEED, it can be viewed from the I
     ![alt_text](images/inventory_property_detail_links.png)
 
     * **Property Detail:** This is the default view when coming from the List view
-    * **Meters:** The meter data imported with this propery, if relevant
+    * **Meters:** The meter data imported with this property, if relevant
     * **Sensors:** The sensor data imported with this property, if relevant
     * **Notes:** Access any notes already associated with this property, or add new ones
-    * **Column List Profiles:** The defined column list profiles, which determine the fieilds that are displayed as well as there order. New column list profiles can be defined here. 
+    * **Column List Profiles:** The defined column list profiles, which determine the fields that are displayed as well as there order. New column list profiles can be defined here. 
     * **Cross-Cycles:** Compare the data for this property across cycles.
-    * **Analyses:** 
-    * **Timeline:**
-    * **UBID:** 
+    * **Analyses:** View the analyses associated with the property, organized by cycle
+    * **Timeline:** View a timeline of events that have occurred on a property. Events currently include analyses run, measures and scenarios uploaded via BuildingSync, and notes added to a property.
+    * **UBID:** View, add, and modify the UBID(s) associated with the property.
 
     This view is accessed by clicking on the small "i" icon to the right of the building in the Inventory List view. 
 
@@ -238,18 +238,18 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     The Property Detail view is the default view that is displayed when clicking the "information" icon in the List view. 
 
-    * **Actions:** The actions pulldown list has many options, which can be selected to perform those actions on the property currently being viewed. One of the more useful options to select after importing data is the last option "Only Show Populated Columns". This will cause only those fields with data in them to be displayed and the selected Column Profile List will be udpated with this information. 
+    * **Actions:** The actions pulldown list has many options, which can be selected to perform those actions on the property currently being viewed. One of the more useful options to select after importing data is the last option "Only Show Populated Columns". This will cause only those fields with data in them to be displayed and the selected Column Profile List will be updated with this information. 
     
     * **Cycle:** This view is organized by **Cycle**, which can be selected from the Cycle pulldown list. 
     * **Labels:** This view also shows the labels associated with this building.    
-    * **Access Level Instance Information:** if the Access Level Heirarchy is used, the appropriate information will be displayed here.
+    * **Access Level Instance Information:** if the Access Level Hierarchy is used, the appropriate information will be displayed here.
     * **Column List Profile:** The defined column list profiles, which control the fields displayed and their order, can be selected from the pulldown list.
 
     The table shown in the main section of the Detail view has the following columns:
 
     * **Field:** Shows each field in the database for this record
     * **Main:** This is the merged data based on the history of data imported, shown in the columns to the right of the Main column
-    * **History of imported files:** The columns to the right of Main show all the files that have been imported that added data to this property. The order of import is from left to right, so the latest imprted data will be the first column to the right of Main, and the first import will be the far right column. There is a scroll bar to scroll to the right if there have been many imports. 
+    * **History of imported files:** The columns to the right of Main show all the files that have been imported that added data to this property. The order of import is from left to right, so the latest imported data will be the first column to the right of Main, and the first import will be the far right column. There is a scroll bar to scroll to the right if there have been many imports. 
     * **Highlighted lines:** The lines that have different data in them from previous imports, and that have been merged into Main, will be highlighted in yellow
 
     ![alt_text](images/inventory_property_detail.png)

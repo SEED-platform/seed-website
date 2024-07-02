@@ -21,7 +21,7 @@ a critical component to understand.
 
     One of the primary sources of building information for benchmarking and
     Building Performance Standards (BPS) ordinances is data entered by
-    building owners into ENERGY STAR Portfolio Manager which is then shared
+    building owners into ENERGY STAR&reg; Portfolio Manager&reg; which is then shared
     with jurisdictions who are determining compliance with the ordinances.
 
     SEED can import data from spreadsheets downloaded from ENERGY STAR
@@ -124,7 +124,7 @@ order to have a smooth process.
     example, if there is data from 2019, 2020 and 2021 in one file, and that
     data is to be associated with the cycle for each year, a cycle for each
     of those years needs to be defined. SEED uses a field called "Year
-    Ending". This is a default field that is in ENERGY STAR Portfolio
+    Ending" to determined the cycle. This is a default field that is in ENERGY STAR Portfolio
     Manager data, but could be added to other data if needed.
 
     ![alt_text](images/Multi cycle upload 01.png "Multi Cycle Upload Step 1")
@@ -161,6 +161,8 @@ order to have a smooth process.
     Default matching fields for **Tax Lots** include:
 
     - Jurisdiction Tax Lot ID
+
+    **Although additional matching fields can be selected, note that matching fields cannot be unselected once data is imported. Therefore, it is important to review your matching field criteria prior to importing data for the first time.** The addition of a matching field will trigger a round of matching and merging of records, similar to the process that occurs during data import.
 
     ![alt_text](images/Column Settings Matching Fields.png "Column Settings Matching Fields")
 
@@ -310,7 +312,7 @@ The first few steps for importing Property and Tax Parcel data are the same
     To see the Tax Lot data, click on the Tax Lot tab
     ![alt_text](images/Tax Lot Inventory List Tab.png "Tax Lot Inventory List Tab")
 
-## **Import ENERGY STAR Portfolio Manager Data**
+## **Import ENERGY STAR&reg; Portfolio Manager&reg; Data**
 
 ??? note "**Import Options**"
     There are two methods for importing ENERGY STAR Portfolio Manager Data
@@ -341,7 +343,7 @@ The first few steps for importing Property and Tax Parcel data are the same
 
 ??? note "**Option 2: Import ENERGY STAR Portfolio Manager Building Data**"
 
-    It is possible to log directly into an ENERGY START Portfolio Manager account and specify the Custom Report Template to import. With this option, SEED will automatically regenerate the Custom Report Template in the ENERGY STAR Portfolio Manager account, and then download the data to SEED.
+    It is possible to log directly into an ENERGY STAR Portfolio Manager account and specify the Custom Report Template to import. With this option, SEED will automatically regenerate the Custom Report Template in the ENERGY STAR Portfolio Manager account, and then download the data to SEED.
 
     -   Make sure to select the correct Cycle   
     -   Click the "Import Portfolio Manager Data" from the Import screen
@@ -402,7 +404,7 @@ Meter data associated with a building, both monthly and other time intervals, ca
     - **Green Button XML Interval Data**
         - Imported in the Property Detail Meter page
     
-    Multiple meters per buidling
+    Multiple meters per building
 
     - A building can have multiple meters from different sources and fuel types, which will be imported as separate meters into SEED if the data if formatted properly
 
@@ -421,8 +423,8 @@ Meter data associated with a building, both monthly and other time intervals, ca
 
     There are **two** tabs:
 
-    - **Information and Metrics:** The first tab has basic property information, including the Portfolio Manager Propery ID (mapped to **PM Property ID** in SEED)
-    - **Monthly Usage:** The second tab contains the monthly meter data, with a column for the Portfolio Manager Property ID (so that the meter can be matched to the property in the first tab), the month, and then a column for each of the meter data types, which are generally Natuarl Gas and Electricity, but can be other types depending on what was entered into ENERGY STAR Portfolio Manager for the building.
+    - **Information and Metrics:** The first tab has basic property information, including the Portfolio Manager Property ID (mapped to **PM Property ID** in SEED)
+    - **Monthly Usage:** The second tab contains the monthly meter data, with a column for the Portfolio Manager Property ID (so that the meter can be matched to the property in the first tab), the month, and then a column for each of the meter data types, which are generally Natural Gas and Electricity, but can be other types depending on what was entered into ENERGY STAR Portfolio Manager for the building.
 
     ![alt_text](images/data_meter_ESPM_column.png "ESPM Monthly Meter Data in Columns")
 
@@ -432,7 +434,7 @@ Meter data associated with a building, both monthly and other time intervals, ca
 
     There are **three** tabs:
 
-    - **Properties:** The first tab has basic property information, including the Portfolio Manager Propery ID (mapped to **PM Property ID** in SEED)
+    - **Properties:** The first tab has basic property information, including the Portfolio Manager Property ID (mapped to **PM Property ID** in SEED)
     - **Meters:** The second tab contains a row for each meter; in the example below, there are two meters, one for Natural Gas and one for Electricity from the grid, each with it's own unique ID to tie it to the monthly data in the **Meter Entries** tab.
     - **Meter Entries:** The third tab has a row for each month of data for each meter, with a field for **PM Property ID" to tie the row back to the building, and a field for ** Portfolio Manager Meter ID" to tie the row back to the meter entry in the second tab.
 
@@ -483,7 +485,7 @@ Meter data associated with a building, both monthly and other time intervals, ca
     
     **Interval Setting:** SEED will show all the data if the **Interval** is set to **Exact**. 
 
-    The **Interval** options allow vieweing the data exactly as imported, as well as aggregated by **month** or **year**.
+    The **Interval** options allow viewing the data exactly as imported, as well as aggregated by **month** or **year**.
     
     ![alt_text](images/data_meter_ESPM_view-03.png "ESPM Monthly Meter Data View 3")
 
