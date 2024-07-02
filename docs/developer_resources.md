@@ -55,6 +55,6 @@ documentation of classes and methods. General developer resources are found in t
 
 Visit the [Known Issues](known_issues.md) page for a list of SEED Platform issues.
 
-## Futher information
+## Further information
 
 There is a developer and a user forum available to receive announcements and discuss features and issues. See the information on the [contact page](contact.md). The development team actively monitors the forums and will respond to inquiries there.

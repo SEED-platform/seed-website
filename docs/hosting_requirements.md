@@ -2,7 +2,7 @@
 
 ## Description
 
-Hosting providers offer the core open-source functionality of the SEED Platform&trade; as a hosted service to end-users. The current hosting providers are listed on the [techical ally](technical_ally.md) page.
+Hosting providers offer the core open-source functionality of the SEED Platform&trade; as a hosted service to end-users. The current hosting providers are listed on the [technical ally](technical_ally.md) page.
 
 The purpose of approving hosting providers is to ensure that the SEED Platform trademark is being properly used, and end-users who use a SEED-branded service get the experience and core functionality they expect from the SEED Platform application. The operating principle is that modifications to the core open-source code are not allowed, other than minor modifications needed to register plug-ins or make cosmetic changes for purposes of branding the provider’s service offering.
 

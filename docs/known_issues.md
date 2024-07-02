@@ -26,5 +26,5 @@
 
 - <h3>Number of matches records reported after record matching step is not always accurate</h3>
 
-	- Using the sample data (see Knowledge Base for link to a zip file of sample data), after uploading, mapping and matching the two files (tax assessor building list and Energy Star Portfolio Manager data), the program should find 512 matches (the records in both files should have a 100% match). The program should report this value. However, sometimes the program reports a wrong value, but when viewing the matched records in the next step, the correct number of matches will be displayed
+	- Using the sample data (see Knowledge Base for link to a zip file of sample data), after uploading, mapping and matching the two files (tax assessor building list and Energy Star&reg; Portfolio Manager&reg; data), the program should find 512 matches (the records in both files should have a 100% match). The program should report this value. However, sometimes the program reports a wrong value, but when viewing the matched records in the next step, the correct number of matches will be displayed
 	![Screenshot of building matches](images/512Matches.png)
