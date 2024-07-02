@@ -148,7 +148,7 @@ After the building data has been imported into SEED, it can be viewed from the I
     * **Run Analysis:** Run an analysis on the selected records
     * **Set Update Time to Now:**
     * **Geocode:** Geocode the selected records. This requires having complete address information defined for each record, and will result in latitude and longitude values being generated for the selected records
-    * **Decode UBID:**
+    * **Decode UBID:** Extract lat/lng information from the property's UBID and store in the Latitude and Longitude columns.  Use with caution: this process will overwrite what is currently stored in the property's latitude and longitude columns.
     * **Compare UBIDs:** Compare the UBIDs of two or more records based on the Jaccard index set for the organization
     * **Add/Update UBID:** Edit the UBID(s) associated with the selected record (this option is only available when a single record is selected)
     * **Update Salesforce:** Sync information from the selected records with the connected Salesforce instance
