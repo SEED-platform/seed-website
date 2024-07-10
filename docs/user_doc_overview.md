@@ -12,15 +12,9 @@ Many communities, jurisdictions and cities are managing their data for these ord
 * Loss of functional knowledge upon staff turnover
 * Lack of ability to easily integrate with other solutions
 
-??? note "Standard Energy Efficiency Data Platform (SEED)"
-
-    
-
 ??? note "Features"
 
     The core functionality of SEED includes the ability to
-
-
 
     * Handle the complicated nature of building data, such as the relationship between parcel / tax lot data and buildings
     * Import data from many sources and map to standardized fields
@@ -31,8 +25,6 @@ Many communities, jurisdictions and cities are managing their data for these ord
 
     One of the most powerful aspects of SEED is the ability to import data from many different sources for a set of buildings, such as 
 
-
-
     * Spreadsheets of jurisdiction tax records or other property data, which can be imported in a way that defines the relationship between tax parcels and buildings
     * Building utility data 
     * Building performance data from ENERGY STAR&reg; Portfolio Manager&reg;
@@ -41,15 +33,9 @@ Many communities, jurisdictions and cities are managing their data for these ord
 
     It is also possible to dynamically connect the records in SEED to other applications such as Salesforce.
 
-
-
     ![alt_text](images/SEED-Tools-Interaction-Diagram.png "image_tooltip"){:.seed-img}
 
-
-
     Once the data is imported into SEED it is possible to:
-
-
 
     * Check the data quality based on used defined rules
     * Sort, filter and label building records
@@ -58,19 +44,13 @@ Many communities, jurisdictions and cities are managing their data for these ord
     * View the progress reaching those targets, either at the building level or the portfolio level
     * View a map of the building locations
 
-
-
     ![alt_text](images/Current-Known-Adoption-2024-02-07.png "Current Known Adoption SEED"){:.seed-img}
-
-
-
 
 ??? note "Web-based Platform"
 
     SEED is an [open source web based platform](https://github.com/SEED-platform/seed) that can be deployed as is, or it can be used as the base for additional functionality. SEED provides both a browser-based interface for users to upload and manage their building data, as well as a full set of APIs that app developers can use to access these same data management functions. 
 
     SEED is funded by the U.S. Department of Energy and supported by the National Renewable Energy Laboratory (NREL), Lawrence Berkeley National Laboratory (LBNL), and the third party software contributors shown below.
-
 
     ![alt_text](images/ThirdPartyContributors.png "Third Party Contributors"){:.seed-img}
 
