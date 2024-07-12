@@ -58,6 +58,7 @@ nav:
       - Requesting Test Instance: 'test_instance_request.md'
       - SEED Technical Allies: 'technical_ally.md'
       - Hosting Provider Process: 'hosting_requirements.md'
+      - Self-Hosting: 'self_hosting.md'
       - App Developers: 'app_developer_requirements.md'
   - Contact: 'contact.md'
   - References: 'references.md'
