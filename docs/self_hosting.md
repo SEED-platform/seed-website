@@ -1,6 +1,6 @@
 # Self-Hosting
 
-The SEED Platform™ is a server-based web application designed for end-user access through a web browser. SEED Platform was developed using the Django Python web framework and requires a relational database and several other services (listed below). The only database currently supported is PostgreSQL. SEED Platform is not a desktop-based application that can be installed by the end-user; see the [SEED Technical Allies](technical_ally.md) and [Requesting Test Instance](test_instance_request.md) pages for information about options to access SEED Platform as an end-user.
+The SEED Platform™ is a server-based web application designed for end-user access through a web browser. SEED Platform was developed using the Django Python web framework and requires a relational database and several other services (listed below). The only database currently supported is PostgreSQL. SEED Platform is not a desktop-based application that can be installed by the end-user; see [SEED Technical Allies](technical_ally.md) and [DOE/National Lab Hosted SEED Instance](about.md#doenational-lab-hosted-instance) for information about options to access SEED Platform as an end-user.
 
 If you are interested in hosting the SEED Platform yourself on your own servers, you can review the documentation below to get started. 
 

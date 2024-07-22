@@ -44,7 +44,6 @@ extra_css:
 
 nav:
   - Home: 'index.md'
-  - About: 'about.md'
   - User Documentation:
     - Overview: 'user_doc_overview.md'
     - Getting Started: 'user_doc_getting_started.md'
@@ -53,13 +52,13 @@ nav:
     #- Feature Documentation: 'user_doc_features.md'
     - Release Notes: 'release_notes.md'
     - Known Issues: 'known_issues.md'
-  - News: 'news.md'
   - Hosting:
-      - Requesting Test Instance: 'test_instance_request.md'
+      - About: 'about.md'
       - SEED Technical Allies: 'technical_ally.md'
       - Hosting Provider Process: 'hosting_requirements.md'
       - Self-Hosting: 'self_hosting.md'
       - App Developers: 'app_developer_requirements.md'
+  - News: 'news.md'
   - Contact: 'contact.md'
   - References: 'references.md'
   - FAQ:
@@ -67,7 +66,6 @@ nav:
           - 'Geocoding': 'faq/features/geocoding.md'
           - 'Inventory Management': 'faq/features/inventory_management.md'
           - 'Miscellaneous': 'faq/features/misc.md'
-      - 'Hosting': 'faq/hosting.md'
       - 'Industry Involvement': 'faq/industry_involvement.md'
       - 'Security': 'faq/security.md'
   - Developer Documentation: 'developer_resources.md'
@@ -75,6 +73,6 @@ nav:
 plugins:
   - redirects:
       redirect_maps:
-        'lbnl.md': 'test_instance_request.md'
+        'lbnl.md': 'about.md'
   - search
             
