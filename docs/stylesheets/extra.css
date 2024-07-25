@@ -2,6 +2,10 @@
 	background-color: #fff;
 }*/
 
+/* Maximum space for text block */
+.md-grid {
+    max-width: 100%; /* or 100%, if you want to stretch to full-width */
+}
 .md-typeset table:not([class]) th {
     background-color: #3BA6DD;
 }
@@ -112,4 +116,19 @@ button.blue:active {
     border: 0;
     height: 100%;
     width: 100%;
+}
+
+.md-typeset .admonition-title:before, .md-typeset summary:before {
+    content:  unset !important;
+}
+
+[dir=ltr] .md-typeset .admonition-title, [dir=ltr] .md-typeset summary {
+    padding-left:  1rem;
+}
+
+.seed-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }

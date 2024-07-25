@@ -3,6 +3,8 @@
 
 ## Publications
 
+* Long, N., Fleming, K., Langlois-Romero, I., Henze, G. P., Applegate, S. (2024). ["Equitable Energy Metrics for Integration into Building Performance Standard Tracking Platforms."](./resources/SimBuild2024_SEED_EEEJ.pdf). In IBPSA-USA SimBuild 2024. Denver, CO.
+
 * Bugnion, V., Long, N., Mitchell, R., Bergmann, H., Swindler, A., Beers, E. (2022). ["Building Performance Standards to Drive Market Transformation"](./resources/Bugnion-2022-aceee.pdf). 2022 ACEEE Summer Study on Energy Efficiency in Buildings.
 
 * Long, N., Swindler, A., Bergmann, H., Reagan, A., Held, A., & Longley, J. (2020). ["Standardizing City Benchmarking and Reporting: Use Cases in Consolidating Building Data with SEED"](./resources/Long-2020-Standardizing_City_Benchmarking.pdf), 2020 ACEEE Summer Study on Energy Efficiency in Buildings.
@@ -22,6 +24,8 @@
 * DeGraw, Jason, Kristin Field-Macumber, Nicholas Long, and Supriya Goel. 2018. [“BuildingSync® in Action : Example Implementations.”](https://buildingsync.net/documents/DeGraw-ACEEE-BuildingSync-in-Action.pdf) In 2018 ACEEE Summer Study on Energy Efficiency in Buildings, 1–12. Pacific Grove, CA.
 
 ## Presentations
+
+* 04/24/2023, NREL/LBNL. [SEED Platform Peer Review Slides](https://www.energy.gov/sites/default/files/2023-05/bto-peer-2023-25204-seed-nrel-long.pdf).
 
 * 11/05/2021. NREL. [SEED Analysis: BETTER, Carbon Metrics,
 and EUI Calculations](resources/SEED and BETTER Functionality 2021-11-05.pdf)

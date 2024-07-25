@@ -1,5 +1,5 @@
-mkdocs==1.2.3
-mkdocs-material==4.6.3
+mkdocs==1.5.3
+mkdocs-material==9.2.8
 mkdocs-redirects==1.2.0
 # Specify version of jinja to prevent contextfilter error
 jinja2==3.1.3
