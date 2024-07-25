@@ -85,6 +85,7 @@ There are three hosting options:
 	* [Earth Advantage](https://www.earthadvantage.org/creating-change/home-energy-score.html)
 	* [Open](https://opentech.eco/)
 	* [PSD Consulting](http://psdconsulting.com)
+4. DOE/National Lab-Hosted Instance
 
 See the [Technical Allies page](technical_ally.md) for more information.
 
