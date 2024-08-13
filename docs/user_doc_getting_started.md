@@ -1,7 +1,8 @@
 To get started with SEED, you need to log in with you account credentials, and then the main screen will be displayed.
 
 ??? note "Getting Started"
-
+    ## Getting Started
+    
     ### Log in to SEED
 
     The first thing to do is to log in to SEED with your user email and password. These are assigned to you by the SEED administrator. 

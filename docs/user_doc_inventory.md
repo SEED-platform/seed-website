@@ -8,7 +8,9 @@ After the building data has been imported into SEED, it can be viewed from the I
 ## **Inventory List View**
 
 ??? note "**Inventory List Overview**"
-
+    
+    ## Inventory List Overview
+    
     The Inventory List view shows the data that has been imported into SEED. 
     
     It is viewed by Cycle, from the Cycle pulldown list in the upper left of the page.
@@ -35,6 +37,8 @@ After the building data has been imported into SEED, it can be viewed from the I
     * **Summary:** Lists the fields in the inventory, with the count of records with populated data in those fields
     
 ??? note "**Property / Tax Lot Relationship**" 
+    
+    ## Property / Tax Lot Relationship
 
     When importing data into SEED, in the data mapping step, a field is defined as belonging to either a Property or a Tax Lot 
 
@@ -48,6 +52,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ??? note "**Property or Tax Lot List View - General**" 
     
+    ## Property or Tax Lot List View - General
+
     Both the Property and Tax Lot tab have identical functionality, but applied to either the Property or the Tax Lot records, depending on the tab selected. The screenshots are shown for the Property tab, but the Tax Lot tab will have identical features.
 
     For either the Property or the Tax Lot tab, to view the desired data do the following:
@@ -75,6 +81,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ??? note "**Data Management**" 
     
+    ## Data Management
+
     The grid used in the Inventory List view has many features (explained in detail in the following sections)
 
     * **Filter:** enter filter criteria in the blank box under the column name
@@ -159,6 +167,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 
 ??? note "**Column List Profiles**"
+    
+    ## Column List Profiles
 
     Clicking on the **Column List Profile** link at the top of the Property List view displays the following screen, where the fields for each profile can be defined.
 
@@ -174,6 +184,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 ??? note "**Cross-Cycles**"
     
+    ## Cross-Cycles
+
     It is possible to building data over time using the Cross-Cycles functionality. If there are multiple years of data imported into SEED in time-based cycles, that data can be compared across those cycles.
 
     In the Property List view, click on the Cross-Cycles link and select the cycles to be compared.
@@ -186,6 +198,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 
 ??? note "**Map**"
+    
+    ## Map
 
     SEED will display the buildings on a map view if there is enough information to locate them geospatially. The buildings need to have good address information (including street address, city and postal code) in order to display them on the map. 
 
@@ -200,12 +214,16 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 
 ??? note "**Data**"
-
+    
+    ## Data
+    
     The Data link goes to the Custom Reports view where different data across cycles can be plotted.
 
     ![alt_text](images/inventory_property_data.png)
 
 ??? note "**Summary**"
+    
+    ## Summary
 
     The Summary link shows a list of all the fields in the selected cycle, with the number of records that have data for that field.
 
@@ -215,7 +233,9 @@ After the building data has been imported into SEED, it can be viewed from the I
 ## **Inventory Detail View**
 
 ??? note "**Inventory Detail Overview**"
-
+    
+    ## Inventory Detail Overview
+    
     The **Inventory Detail** view shows details about individual buildings, including a history of all the files that have been imported and added data to this building record. 
 
     The links at the top of the Detail view are the following:
@@ -235,7 +255,9 @@ After the building data has been imported into SEED, it can be viewed from the I
     This view is accessed by clicking on the small "i" icon to the right of the building in the Inventory List view. 
 
 ??? note "**Property Detail**"
-
+    
+    ## Property Detail
+    
     The Property Detail view is the default view that is displayed when clicking the "information" icon in the List view. 
 
     * **Actions:** The actions pulldown list has many options, which can be selected to perform those actions on the property currently being viewed. One of the more useful options to select after importing data is the last option "Only Show Populated Columns". This will cause only those fields with data in them to be displayed and the selected Column Profile List will be updated with this information. 
@@ -255,6 +277,8 @@ After the building data has been imported into SEED, it can be viewed from the I
     ![alt_text](images/inventory_property_detail.png)
 
 ??? note "**Meters**"
+    
+    ## Meters
 
     When meter data is imported for a property, it can be viewed either from:
     
@@ -272,6 +296,8 @@ After the building data has been imported into SEED, it can be viewed from the I
     ![alt_text](images/inventory_property_detail_meters_agg_02.png)
 
 ??? note "**Sensors**"
+    
+    ## Sensors
 
      Sensor data that has been collected on a time interval from a data logger can be imported into SEED for individual properties. In the example below, air quality data was collected in school classrooms, and then imported into SEED.
 
@@ -283,14 +309,18 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 
 ??? note "**Notes**"
-
+    
+    ## Notes
+    
     Notes can be added to a property either manually by clicking on Notes and typing a note. They are also added automatically by the program when data is changed. 
     
     ![alt_text](images/inventory_property_detail_notes.png)
 
 
 ??? note "**Column List Profiles**"
-
+    
+    ## Column List Profiles
+    
     Column List Profiles control what fields are displayed and in what order. It is possible to create as many Column List Profiles as needed to have different views of the data. 
 
     In a similar manner to the List view Column List Profiles, new profiles can be created, and existing profiles can be edited. 
@@ -299,6 +329,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 
 ??? note "**Cross-Cycles**"
+    
+    ## Cross-Cycles
 
     The Cross-Cycle view allows comparison of each field across the cycles, for example to show trends in Site EUI or emissions.
 
@@ -306,6 +338,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 
 ??? note "**Analyses**"
+    
+    ## Analyses
 
     The Analyses view shows the results from all the analyses completed for this property. It is also possible to run a new analysis from this view.
 
@@ -313,6 +347,8 @@ After the building data has been imported into SEED, it can be viewed from the I
 
 
 ??? note "**Timeline**"
+    
+    ## Timeline
 
     Clicking the Timeline link for a property will show all the actions across cycles.
 
@@ -330,7 +366,9 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     ![alt_text](images/inventory_property_detail_timeline_04.png)
 
-??? note "**UBIDS**"
+??? note "**UBIDs**"
+    
+    ## UBIDs
 
     Clicking the UBID link for a property will show all the UBIDs that have been associated with that property. Because a property can have more than one UBID value, it is necessary to set one of them to "Preferred", which can be done by clicking the Edit icon. UBIDs can also be deleted by clicking the Delete icon. And UBIDs can be added by clicking the Create UBID button. 
 
