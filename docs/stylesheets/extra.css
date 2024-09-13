@@ -135,6 +135,14 @@ button.blue:active {
     border: 1px solid #999;
 }
 
+.seed-img-lg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding:5px;
+    border: 1px solid #999;
+}
 
 .seed-img-sm {
     display: block;
@@ -143,4 +151,10 @@ button.blue:active {
     width: 40%;
     padding:5px;
     border: 1px solid #999;
+}
+
+.external {
+    padding-right: 20px; 
+    color: #005191;
+    background: transparent url(../images/arrow-up-right-from-square-solid.svg) no-repeat top right;  
 }
