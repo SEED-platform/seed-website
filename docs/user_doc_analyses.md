@@ -115,18 +115,18 @@ There are several analyses that can be run on properties.  Expand the sections b
 
 	The workflow implemented is depicted in the following diagram:
 
-	![Building Upgrade Recommendation decision tree](images/building_upgrade_rec.png){:.seed-img}
+	![Building Upgrade Recommendation decision tree](images/upgrade_rec_flowchart.webp){:.seed-img-lg}
 
 	The configurable parameters are defined as:
 
-	- **A** the Total EUI Goal for the building (including Electricity, Gas, Etc.)
-	- **B** the Year Built Threshold - The year built to use as a comparison threshold
-	- **C** the Poor Actual to Benchmark EUI Ratio - The poor ratio of Total EUI to Benchmark Total EUI value to use. Ratio = Total EUI/Benchmark EUI
-	- **D** the Building Square Footage Threshold - The gross square footage to use as a comparison threshold
-	- **E** the Fair Actual to Benchmark EUI Ratio - The fair ratio of Total EUI to Benchmark Total EUI value to use. Ratio = Total EUI/Benchmark EUI
-	- **F** the Fossil Fuel EUI Goal - The Fossil Fuel EUI Goal for the building
-	- **G** the Fossil Fuel-Fired Equipment RSL Threshold - The remaining service life value to use for your fossil fuel-fired equipment as a comparison threshold in the calculations.
-	- **H** the Condition Index Threshold - The condition index to use as a comparison threshold
+	- **Total EUI Goal** - The Total EUI Goal for the building (including Electricity, Gas, Etc.)
+	- **Year Built Threshold** - The year built to use as a comparison threshold
+	- **Poor Actual to Benchmark EUI Ratio** - The poor ratio of Total EUI to Benchmark Total EUI value to use. Ratio = Total EUI/Benchmark EUI
+	- **Fair Actual to Benchmark EUI Ratio** - The fair ratio of Total EUI to Benchmark Total EUI value to use. Ratio = Total EUI/Benchmark EUI
+	- **Building Square Footage Threshold** - The gross square footage to use as a comparison threshold
+	- **Fossil Fuel EUI Goal** - The Fossil Fuel EUI Goal for the building
+	- **Fossil Fuel-Fired Equipment RSL Threshold** - The remaining service life (RSL) value to use for your fossil fuel-fired equipment as a comparison threshold in the calculations.
+	- **Condition Index Threshold** - The condition index to use as a comparison threshold
 
 	### Analysis Pre-requisites
 
@@ -143,6 +143,8 @@ There are several analyses that can be run on properties.  Expand the sections b
 	- Condition Index of the Building
 	- Whether a building has a Building Automation System (BAS) - represented by counting the elements of type 'D.D.C Control Panel'
 	- The fossil fuel-fired element with the lowest remaining service life
+
+	The analysis will allow a user to select which fields to use for the information above, with the exception of "Year Built" and "Gross Floor Area": the canonical SEED fields "Year Built" and "Gross Floor Area" are automatically used to capture this information.
 
 	### Running the Analysis
 
