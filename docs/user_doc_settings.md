@@ -274,26 +274,26 @@ Expand the following sections to find out more about different functionality ava
 
 	At this point you can either wait until the auto-sync imports submissions into SEED, or you can manually import the submissions one of three ways:
 
-		- **Method 1:** Import Submissions from the Settings Page
+	- **Method 1:** Import Submissions from the Settings Page
 
-			This method is good for testing the connection. From SEED’s organization settings page,  press the “Import Submission” button. A modal will open displaying the update method selected (either “All Data” or “Most Recent Data”). Click “Import” to begin the import process.
+		This method is good for testing the connection. From SEED’s organization settings page,  press the “Import Submission” button. A modal will open displaying the update method selected (either “All Data” or “Most Recent Data”). Click “Import” to begin the import process.
 
-			![SEED Import Audit Template Submissions from the Settings Page](images/user_docs_at_workflow_step6a.webp){:.seed-img}
+		![SEED Import Audit Template Submissions from the Settings Page](images/user_docs_at_workflow_step6a.webp){:.seed-img}
 
-			The modal will then open up with the results of the update. Properties updated will be listed as well as any failures encountered.
+		The modal will then open up with the results of the update. Properties updated will be listed as well as any failures encountered.
 
-			![SEED Import Audit Template confirmation pop-up](images/user_docs_at_workflow_step6b.webp){:.seed-img}
+		![SEED Import Audit Template confirmation pop-up](images/user_docs_at_workflow_step6b.webp){:.seed-img}
 
 
-		- **Method 2:** Import Submissions from the Inventory List Page
+	- **Method 2:** Import Submissions from the Inventory List Page
 
-			Navigate to the Inventory List page and select the properties you want to update.  From the Actions dropdown menu, select the “Update with Audit Template” Option.  The same import modal as shown above will open to confirm the update and display the results when done.
+		Navigate to the Inventory List page and select the properties you want to update.  From the Actions dropdown menu, select the “Update with Audit Template” Option.  The same import modal as shown above will open to confirm the update and display the results when done.
 
-			![SEED Import Audit Template Submissions from the Inventory List Page](images/user_docs_at_workflow_step6c.webp){:.seed-img}
+		![SEED Import Audit Template Submissions from the Inventory List Page](images/user_docs_at_workflow_step6c.webp){:.seed-img}
 
-		- **Method 3:** Import Submission from a Property’s Detail Page
+	- **Method 3:** Import Submission from a Property’s Detail Page
 
-			You can also update a single property by navigating to that property’s page and selecting the ‘Update with Audit Template” option from the Actions dropdown menu.  The same modal will open up to confirm the update and display the results.
+		You can also update a single property by navigating to that property’s page and selecting the ‘Update with Audit Template” option from the Actions dropdown menu.  The same modal will open up to confirm the update and display the results.
 	
 
 
