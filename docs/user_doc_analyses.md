@@ -13,7 +13,104 @@ There are several analyses that can be run on properties.  Expand the sections b
 ??? note "BETTER Analysis"
 	## BETTER Analysis
 
-	details coming soon.
+	The Building Efficiency Targeting Tool for Energy Retrofits (BETTER) is a software toolkit that enables building operators to quickly and easily identify the most cost-saving eneryg efficiency measures in buildings and portfolios using readily available guilding and eneryg data. For more details, see the [BETTER website](https://better.lbl.gov/).
+
+	BETTER can be used to quickly assess the potential energy savings in a building, which then allows users to filter for the buildings with the hightest potential savings, and target those buildings for a more detailed energy audit.
+
+	It is possible to run BETTER from the SEED Property Inventory List view, and then view the results.
+
+	### Analysis Pre-requisites
+
+	In order to run a BETTER analysis from SEED on a building, the following data must be imported into the Property Inventory
+
+	#### Data mapping on import 
+	Several fields must be properly mapped when imported into SEED in order to have the correct information for a BETTER analysis. 
+	
+	**Property Type**
+	The Property Type must be mapped (for example from the ENERGY STAR Portfolio Manager field called "Property Type - Self Selected") and must be set to a "Space Type" recognized by BETTER. 
+	See the [BETTER FAQ web page, Building Spaces Types section](https://better.lbl.gov/docs/faq/){:.external}section for the latest space types, as new types are added frequently. 
+
+	**Address Data**
+	The Address data for the property must be mapped properly on import, according to the following fields, in order to correctly set the location and weather data that BETTER will use for the analysis.
+
+	- 'Address Line 1' field
+	- 'City' and 'State' fields OR 'Postal Code' field
+	
+	![](images/analyses_BETTER_DataFieldMapping.png)
+
+	#### Monthly meter data
+
+	- 12 months (or more) of consecutive meter data, for either gas or electricity, or both. This data is available from ENERGY STAR Portfolio Manager, which is one of the easiest methods for importing the data into SEED.
+
+	#### BETTER account settings
+	
+	When a BETTER account is created, an API token can be generated in the "My Profile" section of the BETTER account. This is used in SEED to connect to BETTER in the background to run a BETTER analysis on a property in SEED.
+
+	![](images/analyses_BETTER_API_01.png)
+
+	In SEED, this API token is then entered into the Organizations/Settings in the "BETTER Analysis API Key" section
+
+	![](images/analyses_BETTER_API_02.png) 
+
+	### Running the Analysis
+
+	1. In the Inventory List, select one or more properties on which you want to perform a BETTER analysis, and select ‘Run Analysis’ from the Actions dropdown menu
+	![](images/analyses_BETTER_select_analysis.png)
+
+	3. The **Run Analysis** dialog box will appear. Add a descriptive name for the current analysis, and set **Type** to **BETTER**
+	![](images/analyses_BETTER_select_analysis_settings_01.png)
+
+	4. Setting **Type** to **BETTER** causes more settings to be displayed. 
+	
+	![](images/analyses_BETTER_select_analysis_settings_02.png)
+
+	5. When all the settings have been properly defined, click the **Create Analysis** button to start the analysis running. Clicking on the Analyses navigation button will go to the Analyses page, where the currently running analysis is shown. The **Run Status** column shows the progress of the analyses
+
+	![](images/analyses_BETTER_select_analysis_running.png)
+
+	6. Viewing the BETTER results
+	On the Analyses page, click on the Analysis Name which will then display the results for each individual property.
+
+	![](images/analyses_BETTER_select_analysis_results_01.png)
+
+	![](images/analyses_BETTER_select_analysis_results_02.png)
+
+	SEED will display the reports in the same way as they would be displayed in BETTER.
+	Click the **Run ID** link to see the reports
+
+	![](images/analyses_BETTER_select_analysis_results_03.png)
+
+	Clicking on the Property link will display the Property Detail page for that property with the BETTER Analysis details added
+
+	![](images/analyses_BETTER_select_analysis_results_04.png)
+
+	One the Property Detail page, clicking on the Analyses link will show all the analyses for this property
+
+	![](images/analyses_BETTER_select_analysis_results_05.png)
+
+	SEED also saves many of the BETTER results in fields, which can then be added to the results display in both the Property List and Property Detail views
+
+	![](images/analyses_BETTER_select_analysis_results_06.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ??? note "Energy Equity & Environmental Justice (EEEJ) Analysis"
 	## Energy Equity & Environmental Justice (EEEJ) Analysis
