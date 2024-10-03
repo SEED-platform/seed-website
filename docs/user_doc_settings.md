@@ -252,7 +252,7 @@ Expand the following sections to find out more about different functionality ava
 
 	Next, navigate to SEED and login. If you use SEED for multiple jurisdictions, make sure that the organization listed in the upper right-hand corner of the page is the one you intend to work with. Click on the “+” sign in the upper right-hand corner of the screen, then navigate to “Settings” using this dropdown.
 
-	![SEED organization settings menu](images/user_docs_at_workflow_step3a.webp){:.seed-img}
+	![SEED organization settings menu](images/user_docs_at_workflow_step3a.webp){:.seed-img-sm}
 
 	In the “Settings” page, select “Audit Template” from the menu options near the left. Then paste the Audit Template Organization Token into the appropriate field. Next, enter your Audit Template email and password into the appropriate fields, enter the city ID, and select the Audit Template Submission Statuses that you want to import. The default report type in Audit Template is “Submitted”. You can also select the Conditional Import option in this step. If Conditional Import is selected, then SEED will only import audit template submissions that have been submitted more recently than the SEED records’ most recent update. If left unchecked, then all Audit Template submissions will be imported (each time the automatic update is triggered), regardless of their submission date. The Audit Template Report Type is not used in this workflow and can be left unset. After entering the required data, click “Import Submissions” to pull Audit Template submissions into SEED. This will open a status popup showing a summary of imported records once the import is complete.
 
