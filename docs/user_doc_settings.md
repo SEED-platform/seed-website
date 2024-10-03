@@ -198,6 +198,103 @@ Expand the following sections to find out more about different functionality ava
 
 	#### Automatic Daily Update
 
-	If the scheduled daily update section of the Settings page is configured, automatic daily updates will occur at the specified hour and minute each day. A log of any errors encountered will be sent to the email specified in the Organization Settings Page. 
+	If the scheduled daily update section of the Settings page is configured, automatic daily updates will occur at the specified hour and minute each day. A log of any errors encountered will be sent to the email specified in the Organization Settings Page.
+
+??? note "Connecting your SEED organization to Audit Template"
+	## Connecting your SEED organization to Audit Template
+
+	The SEED Platform supports connection to Audit Template that can be configured by a Jurisdictional Administrator within the SEED Platform’s settings. This can be configured to automatically update SEED with Audit Template submissions on a schedule set by the Jurisdictional Administrator. Additional Audit Template options are also available to enable users to update bulk or individual property records with Audit Template data on a case-by-case basis.
+
+	### Prerequisites
+
+	-	Jurisdiction Users must have both a SEED account and an Audit Template account with a customized report template for their jurisdiction. 
+	-	The ID used to distinguish a unique building in Audit Template must also be mapped to ‘Custom ID 1’ in SEED when the initial data import is performed. This will be the unique ID that enables the linking of Audit Template and SEED property data for individual buildings. 
+	-	Data must be mapped to a cycle that matches across SEED and Audit Template data. For example, if you want 2024 benchmarking data in SEED to be enriched with Audit Template Data, then SEED data should be matched to the 2024 cycle, and you should ensure that the Audit Template records also contain data from 2024.
+		- SEED is currently using Audit Template submission date to associate a submission to a property within a specific cycle in SEED.  This functionality will be enhanced for flexibility in future SEED updates.
+
+	### Process Overview
+
+	1. Request a SEED Account.
+		a. Configure your cycle and matching criteria for your SEED organization
+		b. Import your initial list of buildings in SEED. Ensure that the unique identifier (sometimes called ‘Tax ID’ in Audit Template) is mapped to the “Custom ID 1” field in SEED.
+	2. Request an Audit Template Account at https://buildingenergyscore.energy.gov/
+		a. Work with the Audit Template team to configure a customized Report Template for your jurisdiction. 
+	3. Configure the Audit Template connection in SEED settings.
+		a. Get the Audit Template API Token for the Organization from Audit Template.
+		b. Get the Audit Template City ID from Audit Template.
+		c. Link SEED to Audit Template using the API Token, Audit Template user login credentials, and City ID in the SEED Settings.
+		d. Select additional options for update cadence, report type, and submission type.
+	4. If desired, set automatic update cadence in SEED settings.
+	5. Save changes to finalize API connection and update schedule.
+	6. After entering the information above into SEED settings, import submissions to update SEED records with Audit Template records.
+
+	#### Step 1: Configure your SEED Account
+
+	If you do not already have a SEED account, request one. Configure your first cycle, configure your matching criteria fields, and import your initial dataset into SEED. Ensure that the unique identifier (sometimes called ‘Tax ID’ in Audit Template) is mapped to the “Custom ID 1” field in SEED.
+
+	#### Step 2: Configure your Audit Template Account
+
+	You will first need to obtain Audit Template login credentials and configure the customized report template for your jurisdiction if that has not been done already.
+
+	You can then retrieve the API token and City ID from Audit Template. The API Token can be obtained by first clicking on the “Cities” dropdown, selecting your city ,then clicking on the profile icon and selecting edit account. Under the account options, you will see the Organization API Token listed next to your organization. If this is not available, make sure that your account is linked to your Audit Template city / organization / jurisdiction.
+
+	![Audit Template Select City](images/user_docs_at_workflow_step2a.webp){:.seed-img}
+
+	![Audit Template Profile Menu](images/user_docs_at_workflow_step2b.webp){:.seed-img}
+
+	![Audit Template Organization API Token](images/user_docs_at_workflow_step2c.webp){:.seed-img}
+
+	You will also need the City ID number from Audit Template. This can be found by clicking on the “Cities” dropdown, selecting the city you are interested in, then looking at the URL in your browser. The number at the end of the URL is the City ID.
+
+	![Audit Template City ID](images/user_docs_at_workflow_step2d.webp){:.seed-img}
+
+	#### Step 3: Link Audit Template data to SEED in SEED settings
+
+	Next, navigate to SEED and login. If you use SEED for multiple jurisdictions, make sure that the organization listed in the upper right-hand corner of the page is the one you intend to work with. Click on the “+” sign in the upper right-hand corner of the screen, then navigate to “Settings” using this dropdown.
+
+	![SEED organization settings menu](images/user_docs_at_workflow_step3a.webp){:.seed-img-sm}
+
+	In the “Settings” page, select “Audit Template” from the menu options near the left. Then paste the Audit Template Organization Token into the appropriate field. Next, enter your Audit Template email and password into the appropriate fields, enter the city ID, and select the Audit Template Submission Statuses that you want to import. The default report type in Audit Template is “Submitted”. You can also select the Conditional Import option in this step. If Conditional Import is selected, then SEED will only import audit template submissions that have been submitted more recently than the SEED records’ most recent update. If left unchecked, then all Audit Template submissions will be imported (each time the automatic update is triggered), regardless of their submission date. The Audit Template Report Type is not used in this workflow and can be left unset. After entering the required data, click “Import Submissions” to pull Audit Template submissions into SEED. This will open a status popup showing a summary of imported records once the import is complete.
+
+	![SEED Audit Template Menu](images/user_docs_at_workflow_step3b.webp){:.seed-img}
+
+	#### Step 4: Schedule Update Cadence for Auto-Sync
+
+	After linking Audit Template data to SEED in settings, you will want to set a schedule for a weekly update to ensure auto-syncing of data from AT to SEED. Navigate to the same Settings page and Audit Template option described in the previous section. “Schedule Weekly Update” options can be found near the bottom of this page.
+
+	In the “Schedule Weekly Update” section, select “Enable Audit Template Auto Sync” and then enter the desired day of week and time of day. We recommend enabling a weekly automatic update and enabling the Condition Index so that only new submissions are imported in SEED each week.
+
+	![SEED Audit Template Update Scheduling](images/user_docs_at_workflow_step4a.webp){:.seed-img}
+
+	#### Step 5: Save Changes
+
+	To finalize the connection between Audit Template and SEED, as well as the weekly update cadence for auto-sync, review your entries in the steps above and then click on Save Changes.
+
+	#### Step 6: Test the import submissions workflow
+
+	At this point you can either wait until the auto-sync imports submissions into SEED, or you can manually import the submissions one of three ways:
+
+	- **Method 1:** Import Submissions from the Settings Page
+
+		This method is good for testing the connection. From SEED’s organization settings page,  press the “Import Submission” button. A modal will open displaying the update method selected (either “All Data” or “Most Recent Data”). Click “Import” to begin the import process.
+
+		![SEED Import Audit Template Submissions from the Settings Page](images/user_docs_at_workflow_step6a.webp){:.seed-img}
+
+		The modal will then open up with the results of the update. Properties updated will be listed as well as any failures encountered.
+
+		![SEED Import Audit Template confirmation pop-up](images/user_docs_at_workflow_step6b.webp){:.seed-img}
+
+
+	- **Method 2:** Import Submissions from the Inventory List Page
+
+		Navigate to the Inventory List page and select the properties you want to update.  From the Actions dropdown menu, select the “Update with Audit Template” Option.  The same import modal as shown above will open to confirm the update and display the results when done.
+
+		![SEED Import Audit Template Submissions from the Inventory List Page](images/user_docs_at_workflow_step6c.webp){:.seed-img}
+
+	- **Method 3:** Import Submission from a Property’s Detail Page
+
+		You can also update a single property by navigating to that property’s page and selecting the ‘Update with Audit Template” option from the Actions dropdown menu.  The same modal will open up to confirm the update and display the results.
+	
+
 
 
