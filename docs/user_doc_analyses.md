@@ -1,15 +1,76 @@
 There are several analyses that can be run on properties.  Expand the sections below to learn more about each analysis.
 
-??? note "EUI Analysis"
-	## EUI Analysis
+??? note "Overview"
+	## Analysis Overview
 
-	details coming soon.
+	There are currently six different types of Analyses available in SEED:
 
-??? note "CO2 Analysis"
-	## CO2 Analysis
+	- **BSyncr**
+		- Makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program
+		- Algorithms are based on methods in this Github repository
+		[NMECR Github Repo](https://github.com/kW-Labs/nmecr) 
+	- **BETTER**
+		- Runs a BETTER analysis from the property data in SEED
+		[BETTER web Tool](https://better.lbl.gov/)
+	- **EUI**
+		- Calculates the EUI of a property based on the meter data and the gross floor area
+	- **Average Annual CO2**
+		- Calculates the CO2 emissions of a property based on the meter data and the eGRID region (which is based on the location of the property)
+	- **Energy Equity & Environmental Justice (EEEJ)**
+		- The Energy Equity & Environmental Justice analysis retrieves EEEJ information and indicators for your properties from various sources
+	- **Element Statistics**
 
-	details coming soon.
+	## Generating an Analysis
+	- In the Property List, select the properties you want to perform an analysis on
+	- Select Run Analysis from the Actions menu choice
 
+	![](images/analyses_general_01.png)
+
+	- Add an Analysis Name and select the Analysis Type
+
+	![](images/analyses_general_02.png)
+
+	- Depending on the analysis type, there will be various other parameters to set
+	(see the sections below for each Analysis Type details)
+
+	- Start the Analysis
+	- Using the left Navigation bar, go to the Analyses section of SEED to see the results
+
+	![](images/navButton_analyses.png)
+
+	![](images/analyses_general_03.png)
+
+??? note "BSyncr" Analysis"
+	## Bsyncr Analysis
+
+	the BSyncr analysis option makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program. Algorithms are based on methods in this Github repository
+	[NMECR Github Repo](https://github.com/kW-Labs/nmecr) 
+
+	### Setting up the Analysis
+
+	- In the Property List, select the properties you want to perform an analysis on
+	- Select Run Analysis from the Actions menu choice
+	- Add an Analysis Name and set Type = BSyncr
+
+	![](images/analyses_BSyncr_setting_up_analysis.png)
+
+	### Running the Analysis
+
+	- Click the “Create Analysis” button to start the analysis
+	- Go to the Analyses page (from the left Navigation bar) to see the status of the analysis
+
+	![](images/navButton_analyses.png)
+
+	![](images/analyses_BSyncr_running_analysis.png)
+
+	### Viewing the Analysis Results
+
+	On the Analyses page, it is possible to click on the BSyncr analysis name, and see the individual analyses, and then click on the Run IDs for each property to see the details for that property.
+
+	![](images/analyses_BSyncr_viewing_analysis_results.png)
+	![](images/analyses_BSyncr_viewing_analysis_results_02.png)
+
+	
 ??? note "BETTER Analysis"
 	## BETTER Analysis
 
@@ -92,25 +153,78 @@ There are several analyses that can be run on properties.  Expand the sections b
 
 	![](images/analyses_BETTER_select_analysis_results_06.png)
 
+??? note "EUI Analysis"
+	## EUI Analysis
 
+	### Setting up the Analysis
 
+	- In the Property List, select the properties you want to perform an analysis on
+	- Select Run Analysis from the Actions menu choice
+	- Add an Analysis Name and set Type = EUI
 
+	![](images/analyses_EUI_setting_up_analysis.png)
 
+	### Running the Analysis
 
+	- Click the “Create Analysis” button to start the analysis
+	- Go to the Analyses page to see the status of the analysis
 
+	![](images/analyses_EUI_running_analysis.png)
 
+	### Viewing the Analysis Results
+	On the Analyses page, it is possible to click on the EUI analysis name, and see the individual analyses
 
+	![](images/analyses_EUI_viewing_analysis.png)
 
+	Then click on the Run IDs for each property to see the details for that property.
 
+	![](images/analyses_EUI_viewing_analysis_02.png)
 
+	In the Property List view, the field Analysis EUI is added to show the calculated value. 
+	
+	If the value is blank, it means that there was not meter data to calculate the value
 
+	![](images/analyses_EUI_viewing_analysis_03.png)
 
+??? note "Average Annual CO2 Analysis"
+	## Average Annual CO2 Analysis
 
+	### Data Import
 
+	- In the Property data being imported to SEED, for a CO2 analysis the following must be added
+		- eGRID Subregion Code
+			- Find the eGRID Subregion definitions here
+			[eGRID Subregion Codes](https://www.epa.gov/egrid/summary-data)
 
+	![](images/analyses_co2_setting_up_analysis-egrid.png)
 
+	### Setting up the Analysis
 
+	- In the Property List, select the properties you want to perform an analysis on
+	- Select Run Analysis from the Actions menu choice
+	- Add an Analysis Name and set Type = Average Annual CO2
 
+	![](images/analyses_co2_setting_up_analysis.png)
+
+	### Running the Analysis
+
+	- Click the “Create Analysis” button to start the analysis
+	- Go to the Analyses page (from the left Navigation bar) to see the status of the analysis
+
+	![](images/analyses_co2_running_analysis.png)
+
+	### Viewing the Analysis Results
+	On the Analyses page, it is possible to click on the CO2 analysis name, and see the individual analyses
+
+	![](images/analyses_co2_viewing_analysis.png)
+
+	Then click on the Run ID or the Property link for each property to see the details for that property.
+
+	![](images/analyses_co2_viewing_analysis_02.png)
+
+	In the Property List view, the fields “Average Annual CO2” and “Average Annual CO2 Coverage” contain the CO2 results in the Inventory Property List View.
+	
+	![](images/analyses_co2_viewing_analysis_03.png)
 
 ??? note "Energy Equity & Environmental Justice (EEEJ) Analysis"
 	## Energy Equity & Environmental Justice (EEEJ) Analysis
@@ -186,19 +300,6 @@ There are several analyses that can be run on properties.  Expand the sections b
 
 		![SEED map showing disadvantaged community census tracts](images/eeej_10.webp){:.seed-img}
 
-
-
-
-
-
-
-
-
-
-??? note "BSyncr" Analysis"
-	## Bsyncr Analysis
-
-	details coming soon.
 
 ??? note "Element Statistics Analysis"
 	## Element Statistics Analysis
