@@ -9,14 +9,14 @@ To get started with SEED, you need to log in with you account credentials, and t
 
     To see the NREL Data Terms for SEED, click the "View/Hide Terms" link
 
-    ![](images/login_withTerms.png){:.seed-img}
+    ![](images/login_withTerms.png)
 
 
     ### Main screen
 
     After logging in to SEED, you will see the main screen
 
-    ![](images/main_screen.png){:.seed-img}
+    ![](images/main_screen.png)
 
 
     ### Sample Data
@@ -47,7 +47,7 @@ of every screen, and they can be expanded to show full titles or collapsed to ju
 
 ??? note "Main Navigation"
 
-    ![](images/navigation_bar.png){:.seed-img}
+    ![](images/navigation_bar.png)
 
 
 ## Inventory
@@ -59,7 +59,7 @@ The Inventory screen displays the buildings that have been imported into SEED.
     After building data are imported into SEED, they can be accessed from the
     Inventory navigation button. The data can be viewed by cycle, as well as by Property and Tax Lot.
 
-    ![](images/inventory_property.png){:.seed-img}
+    ![](images/inventory_property.png)
 
 
     The links at the top of the page allow different views of the data, as follows:
@@ -86,7 +86,7 @@ data imports.
 
 ??? note "Data"
 
-    ![](images/data_dataSets.png){:.seed-img}
+    ![](images/data_dataSets.png)
 
 
     There are several types of data that can be imported, including
@@ -106,19 +106,19 @@ data imports.
     -   Data from the DOE tool Audit Template or Asset Score (via the
         BuildingSync format)
 
-     ![](images/data_upload.png){:.seed-img}
+     ![](images/data_upload.png)
 
 
      It is also possible to upload meter data from the same file, such as an ENERGY STAR Portfolio Manager file that has monthly meter data, using the Meter Data tab
 
-     ![](images/data_uploadMeter.png){:.seed-img}
+     ![](images/data_uploadMeter.png)
 
 
 ## Organizations 
 
 The Organizations navigation button is used to view many of the options for setting up the data import and data management.
 
-![Organization Links](images/org_links.png){:.seed-img}
+![Organization Links](images/org_links.png)
 
 
 ??? note "Organizations"
@@ -129,13 +129,13 @@ The Organizations navigation button is used to view many of the options for sett
 
     Those links are the following
 
-    -   **Access Level Tree:** manage the hierarchy of user permissions and levels of access to the data
-        ![Access Level Tree](images/org_accessLevelTree.png){:.seed-img}
+    - **Access Level Tree:** Manage the hierarchy of user permissions and levels of access to the data
+        ![Access Level Tree](images/org_accessLevelTree.png)
 
  
      -  **Column Mappings:** manage the field names that are mapped on
         import, creating Column Mapping Profiles for different file types
-        ![Column Mappings](images/org_columnMapping.png){:.seed-img}
+        ![Column Mappings](images/org_columnMapping.png)
 
     
     -   **Column Settings:** manage various settings for the mapped fields,
@@ -149,47 +149,47 @@ The Organizations navigation button is used to view many of the options for sett
         -   data type
         -   matching field
 
-        ![Column Settings](images/org_columnSettings.png){:.seed-img}
+        ![Column Settings](images/org_columnSettings.png)
 
 
     -   **Cycles:** manage cycle definitions, including creating new cycles,
         editing existing cycles (both names and dates), and deleting
         existing cycles
 
-        ![Organization Cycles](images/org_cycles.png){:.seed-img}
+        ![Organization Cycles](images/org_cycles.png)
 
 
     -   **Data Quality:** manage data quality rules, including defining new
         rules and adding labels to them, editing and deleting existing rules
 
-        ![Data Quality](images/org_dataQuality.png){:.seed-img}
+        ![Data Quality](images/org_dataQuality.png)
 
 
     -   **Derived Columns:** manage derived columns (fields calculated from
         other fields), including creating new fields, editing and deleting
         existing fields
 
-        ![Derived Columns](images/org_derivedColumns.png){:.seed-img}
+        ![Derived Columns](images/org_derivedColumns.png)
 
 
     -   **Email Templates:** manage email templates, which can be used to
         send "bulk" emails to contacts for SEED records, including creating
         new templates, editing and deleting existing templates
 
-        ![Email Templates](images/org_emailTemplate.png){:.seed-img}
+        ![Email Templates](images/org_emailTemplate.png)
 
 
     -   **Labels:** manage labels, which can be added to Inventory records
         (property and tax lots), including creating new labels, editing and
         deleting existing labels
 
-        ![Create Labels](images/labels_create.png){:.seed-img}
+        ![Create Labels](images/labels_create.png)
 
 
     -   **Members:** manage access to SEED by adding, editing or deleting
         members, including setting permissions such as Access Levels and Roles (Owner, Member or Viewer)
 
-        ![Organization Members](images/org_members.png){:.seed-img}
+        ![Organization Members](images/org_members.png)
 
 
     -   **Settings:** manage many different settings, including API keys
@@ -197,7 +197,7 @@ The Organizations navigation button is used to view many of the options for sett
         analyses), default display fields, Salesforce connections, UBID
         matching, and units for numeric fields.
 
-        ![Organization Settings](images/org_settings.png){:.seed-img}
+        ![Organization Settings](images/org_settings.png)
 
 
     -    **Sharing:** manage what fields are shared
@@ -216,7 +216,7 @@ targets, both individually and as a group, over specific time periods.
 
     **Program Overview** shows the compliance of a portfolio of buildings over time. In the example below, compliance is shown over a 5 year time period, 2019 - 2023, with the compliance of the buildings increasing during that period. The red column areas show non-compliance and the blue column areas show compliance.
 
-    ![Program Overview](images/insights_programOverview.png){:.seed-img}
+    ![Program Overview](images/insights_programOverview.png)
 
 
     **Property Insights** shows compliance of individual buildings for a
@@ -225,13 +225,13 @@ targets, both individually and as a group, over specific time periods.
     targets, with the "whisker line" showing the distance from compliance
     for those buildings.
 
-    ![Property Insights](images/insights_propertyInsights.png){:.seed-img}
+    ![Property Insights](images/insights_propertyInsights.png)
 
 
     **Custom Reports** shows compliance trends, compared to a target,
     over time in a graph
 
-    ![Custom Reports](images/insights_customReport.png){:.seed-img}
+    ![Custom Reports](images/insights_customReport.png)
 
 
 ## Analyses 
@@ -247,7 +247,7 @@ following:
 
 ??? note "Analyses"
 
-    ![Analyses](images/analysis_run.png){:.seed-img}
+    ![Analyses](images/analysis_run.png)
 
 
 ## API Documentation 
@@ -267,7 +267,7 @@ SEED, as well as a link to the SEED Github open source repository.
 
 ??? note "Contact"
 
-    ![Contact Screen](images/contact_screen.png){:.seed-img}
+    ![Contact Screen](images/contact_screen.png)
 
 
 ## About 
@@ -277,8 +277,7 @@ version number of the program release being used.
 
 ??? note "About"
 
-    ![About Page](images/aboutScreen.png){:.seed-img}
-
+    ![About Page](images/aboutScreen.png)
 
 ## Documentation  
 
@@ -286,7 +285,7 @@ The Documentation page has a series of Frequently Asked Questions.
 
 ??? note "Documentation"
 
-    ![Documentation Page](images/documentation_faq.png){:.seed-img}
+    ![Documentation Page](images/documentation_faq.png)
 
 
 ## Logout 
@@ -296,4 +295,4 @@ current session, and allow the user to log in again.
 
 ??? note "Logout"
 
-    ![Logout](images/login_logout_withoutTerms.png){:.seed-img}
+    ![Logout](images/login_logout_withoutTerms.png)
