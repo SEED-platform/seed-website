@@ -304,7 +304,41 @@ There are several analyses that can be run on properties.  Expand the sections b
 ??? note "Element Statistics Analysis"
 	## Element Statistics Analysis
 
-	details coming soon.
+	This Analysis provides aggregation values of the available Elements that exist on the Property Details page for a property.
+
+	![Property Elements Table](images/analysis_element_statistics.webp){:.seed-img}
+
+	There are two different types of aggregations that will be generated:
+
+	1. The analysis will count the number of Component_SubTypes that equal “D.D.C. Control Panel”. This will create a new field called “Number of D.D.C. Control Panels”. This field will be zero if there are no Component_SubTypes equal to “D.D.C Control Panel” in the Elements table for a property. 
+
+	2. The analysis will calculate the aggregate Condition Index of the Scope 1 Uniformat Categories listed below as an average.  This value will then create new fields called “DRINKING FOUNTAINS & COOLERS CI”, “DOMESTIC WATER EQUIPMENT CI”, etc. This field will be blank if there are missing Uniformat categories for a property. The Uniformat categories are listed below.
+
+	| Uniformat Category|
+	| -------- | 
+	| DRINKING FOUNTAINS & COOLERS |
+	| DOMESTIC WATER EQUIPMENT |
+	| GAS SUPPLY SYSTEM |
+	| STEAM SUPPLY SYSTEM (FROM CENTRAL PLANT) |
+	| OTHER ENERGY SUPPLY |
+	| BOILERS |
+	| FURNACES |
+	| FUEL-FIRED UNIT HEATERS | 
+	| AUXILIARY EQUIPMENT |
+	| OTHER HEAT GENERATING SYSTEMS | 
+	| CHILLED WATER SYSTEMS |
+	| DIRECT EXPANSION SYSTEMS | 
+	| OTHER COOLING GENERATING SYSTEMS | 
+	| AIR HANDLING UNITS |
+	| UNIT VENTILATORS |
+	| UNIT HEATERS |
+	| PACKAGE UNITS |
+	| OTHER TERMINAL & PACKAGE UNITS |
+	| REFRIGERATION SYSTEMS |
+	| OTHER SPECIAL MECHANICAL SYSTEMS | 
+
+	Property elements functionality is under development.
+
 
 ??? note "Building Upgrade Recommendation Analysis"
 	## Building Upgrade Recommendation Analysis
