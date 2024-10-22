@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation using Docker &mdash; SEED Platform 3.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=acc74ff5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Deployment Guide" href="deployment.html" />
+    <link rel="prev" title="Installation on OSX" href="setup_osx.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SEED Platform
+          </a>
+              <div class="version">
+                3.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="getting_started.html#development-setup">Development Setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setup_osx.html">Installation on OSX</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Installation using Docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#docker-native-ubuntu">Docker Native (Ubuntu)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#docker-native-windows-osx">Docker Native (Windows/OSX)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-and-running-containers-for-non-development">Building and Running Containers for Non-Development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-docker-for-development">Using Docker for Development</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matching.html">Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="getting_started.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Installation using Docker</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-using-docker">
+<h1>Installation using Docker<a class="headerlink" href="#installation-using-docker" title="Link to this heading"></a></h1>
+<p>Docker works natively on Linux, Mac OSX, and Windows 10. If you are using an older version of
+Windows (and some older versions of Mac OSX), you will need to install Docker Toolbox.</p>
+<p>Choose either <a class="reference internal" href="#docker-native-windows-osx">Docker Native (Windows/OSX)</a>  or <a class="reference internal" href="#docker-native-ubuntu">Docker Native (Ubuntu)</a> to
+install Docker.</p>
+<section id="docker-native-ubuntu">
+<h2>Docker Native (Ubuntu)<a class="headerlink" href="#docker-native-ubuntu" title="Link to this heading"></a></h2>
+<p>Follow instructions <a class="reference external" href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">here</a>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.docker.com/compose/install/">Install Docker Compose</a></p></li>
+</ul>
+</section>
+<section id="docker-native-windows-osx">
+<h2>Docker Native (Windows/OSX)<a class="headerlink" href="#docker-native-windows-osx" title="Link to this heading"></a></h2>
+<p>Following instructions <a class="reference external" href="https://docs.docker.com/docker-for-mac/install/">for Mac</a> or
+<a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">for Windows</a>. Note that for OSX you must have docker desktop version <cite>3.0 or later &lt;https://github.com/concourse/concourse/issues/6038&gt;</cite>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.docker.com/compose/install/">Install Docker Compose</a></p></li>
+</ul>
+</section>
+<section id="building-and-running-containers-for-non-development">
+<h2>Building and Running Containers for Non-Development<a class="headerlink" href="#building-and-running-containers-for-non-development" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Run Docker Compose</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>build
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=f4hkPn0Un_Q">Be Patient</a> … If the containers build successfully, then start the containers</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>seed_pgdata
+docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>seed_media
+docker<span class="w"> </span>compose<span class="w"> </span>up
+</pre></div>
+</div>
+<p><strong>Note that you may need to build the containers a couple times for everything to converge</strong></p>
+</div></blockquote>
+</li>
+<li><p>Login to container</p>
+<blockquote>
+<div><p>The docker-compose file creates a default user and password. Below are the defaults but can
+be overridden by setting environment variables.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>username:<span class="w"> </span>user@seed-platform.org
+password:<span class="w"> </span>super-secret-password
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don’t forget that you need to reset your default username and password if you are going
+to use these Docker images in production mode!</p>
+</div>
+</section>
+<section id="using-docker-for-development">
+<h2>Using Docker for Development<a class="headerlink" href="#using-docker-for-development" title="Link to this heading"></a></h2>
+<p>The development environment is configured for live reloading (i.e., restart webserver when files change)
+and debugging. It builds off the base docker-compose.yml, so it’s necessary
+to specify the files being used in docker-compose commands as seen below.</p>
+<section id="build">
+<h3>Build<a class="headerlink" href="#build" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create volumes for the database and media directory</span>
+docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>seed_pgdata
+docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>seed_media
+
+<span class="c1"># build the images</span>
+docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.dev.yml<span class="w"> </span>build
+</pre></div>
+</div>
+</section>
+<section id="running-the-server">
+<h3>Running the Server<a class="headerlink" href="#running-the-server" title="Link to this heading"></a></h3>
+<p>NOTE: the server config is sourced from config.settings.docker_dev, which will include
+your local_untracked.py if it exists. If you have a local_untracked.py, make sure it doesn’t
+overwrite the database or celery configuration!</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.dev.yml<span class="w"> </span>up
+</pre></div>
+</div>
+<p>If the server doesn’t start successfully, and <code class="code docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">logs</span></code> doesn’t help,
+the django development server probably failed to start due to an error in your config or code.
+Unfortunately docker/django logging doesn’t appear to work when the container is first started.
+Just try running the server yourself with docker exec, and see what the output is.</p>
+<p>The development docker-compose file has some configurable parameters for specifying volumes to use:</p>
+<ul class="simple">
+<li><p>SEED_DB_VOLUME: the name of the docker volume to mount for postgres</p></li>
+<li><p>SEED_MEDIA_VOLUME: the name of the docker volume to mount for the seed media folder</p></li>
+</ul>
+<p>Docker will use environment variables from the shell or from a .env file to set these values.</p>
+<p>This is useful if you want to switch between different databases for testing.
+For example, if you want to create a separate volume for storing a production backup, you could do the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>seed_pgdata_prod
+<span class="nv">SEED_DB_VOLUME</span><span class="o">=</span>seed_pgdata_prod<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.dev.yml<span class="w"> </span>up
+</pre></div>
+</div>
+<p>NOTE: you’ll need to run <code class="code docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">down</span></code> to remove the containers before you
+can restart the containers connecting to different volumes.</p>
+</section>
+<section id="running-tests">
+<h3>Running Tests<a class="headerlink" href="#running-tests" title="Link to this heading"></a></h3>
+<p>While the containers are running (i.e., after running the docker compose up command), use docker exec to run tests in the web container:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>seed_web<span class="w"> </span>./manage.py<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--settings<span class="w"> </span>config.settings.docker_dev
+</pre></div>
+</div>
+<p>Add the setting  <code class="code docutils literal notranslate"><span class="pre">--nocapture</span></code> in order to see <code class="code docutils literal notranslate"><span class="pre">stdout</span></code> while running tests.  You will need to do this in order to make use of debugging as described below or the output to your debug commands will not display until after the break point has passed and the tests are finished.</p>
+<p>Also worth noting: output from logging (_log.debug, etc) will not display in any situation unless a test fails.</p>
+</section>
+<section id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Link to this heading"></a></h3>
+<p>To use pdb on the server, the web container has <a class="reference external" href="https://github.com/ionelmc/python-remote-pdb">remote-pdb</a> installed.
+In your code, insert the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import<span class="w"> </span>remote_pdb<span class="p">;</span><span class="w"> </span>remote_pdb.set_trace<span class="o">()</span>
+</pre></div>
+</div>
+<p>Once the breakpoint is triggered, you should see the web container log something like “RemotePdb session open at 127.0.0.1:41653, waiting for connection …”.
+To connect to the remote session, run netcat from inside the container (using the appropriate port).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>seed_web<span class="w"> </span>nc<span class="w"> </span><span class="m">127</span>.0.0.1:41653
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup_osx.html" class="btn btn-neutral float-left" title="Installation on OSX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deployment.html" class="btn btn-neutral float-right" title="Deployment Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, 2024, Alliance for Sustainable Energy, LLC, and other contributors..</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
