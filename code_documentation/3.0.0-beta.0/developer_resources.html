@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Resources &mdash; SEED Platform 3.0.0-beta.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=1686fc05"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Migrations" href="migrations.html" />
+    <link rel="prev" title="Views Package" href="modules/seed.views.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SEED Platform
+          </a>
+              <div class="version">
+                3.0.0-beta.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matching.html">Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html">Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html">Translating SEED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-notes">General Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pre-commit">Pre-commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ruff-settings">Ruff Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-type-hints">Python Type Hints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-checking">Type Checking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#django-notes">Django Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-new-fields-to-database">Adding New Fields to Database</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nginx-notes">NGINX Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#angularjs-integration-notes">AngularJS Integration Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#template-tags">Template Tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#django-csrf-token-and-ajax-requests">Django CSRF Token and AJAX Requests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#routes-and-partials-or-views">Routes and Partials or Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#logging">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bedes-compliance-and-managing-columns">BEDES Compliance and Managing Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resetting-the-database">Resetting the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restoring-a-database-dump">Restoring a Database Dump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#migrating-the-database">Migrating the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-documentation">Building Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribution-instructions-best-practices">Contribution Instructions / Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-instructions">Release Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Developer Resources</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="developer-resources">
+<h1>Developer Resources<a class="headerlink" href="#developer-resources" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="migrations.html">Migrations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-develop">Version Develop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-3-0-0-beta-0">Version 3.0.0-beta.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-22-0">Version 2.22.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-21-0">Version 2.21.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-20-1">Version 2.20.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-20-0">Version 2.20.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-19-0">Version 2.19.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-18-1">Version 2.18.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-18-0">Version 2.18.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-17-4">Version 2.17.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-17-3">Version 2.17.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-17-2">Version 2.17.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-17-1">Version 2.17.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-17-0">Version 2.17.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-16-0">Version 2.16.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-15-2">Version 2.15.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-15-1">Version 2.15.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-15-0">Version 2.15.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-14-0">Version 2.14.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-13-0">Version 2.13.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-12-0-2-12-4">Version 2.12.0 - 2.12.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-11-0">Version 2.11.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-10-0">Version 2.10.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-7-3-to-2-9-0">Version 2.7.3 to 2.9.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-7-2">Version 2.7.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-7-1">Version 2.7.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-7-0">Version 2.7.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-6-1">Version 2.6.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-6-0">Version 2.6.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="migrations.html#docker-based-deployment">Docker-based Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="migrations.html#ubuntu">Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="migrations.html#max-osx">Max OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-5-2">Version 2.5.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-5-1">Version 2.5.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrations.html#version-2-5-0">Version 2.5.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="migrations.html#id1">Docker-based Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="migrations.html#development">Development</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="translation.html">Translating SEED</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="translation.html#general-philosophies-style">General philosophies / style</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="translation.html#don-t-go-crazy-with-indirection-and-interpolation">Don’t go crazy with indirection and interpolation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="general-notes">
+<h2>General Notes<a class="headerlink" href="#general-notes" title="Link to this heading"></a></h2>
+<section id="pre-commit">
+<h3>Pre-commit<a class="headerlink" href="#pre-commit" title="Link to this heading"></a></h3>
+<p>We use precommit commits for formatting. Set it up locally with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pre-commit<span class="w"> </span>install
+</pre></div>
+</div>
+</section>
+<section id="ruff-settings">
+<h3>Ruff Settings<a class="headerlink" href="#ruff-settings" title="Link to this heading"></a></h3>
+<p>Ruff is used to statically verify code syntax. To run ruff locally call:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tox<span class="w"> </span>-e<span class="w"> </span>precommit<span class="w"> </span>--<span class="w"> </span>ruff
+tox<span class="w"> </span>-e<span class="w"> </span>precommit<span class="w"> </span>--<span class="w"> </span>ruff-format
+</pre></div>
+</div>
+</section>
+<section id="python-type-hints">
+<h3>Python Type Hints<a class="headerlink" href="#python-type-hints" title="Link to this heading"></a></h3>
+<p>Python type hints are beginning to be added to the SEED codebase. The benefits are
+eliminating some accidental typing mistakes to prevent bugs as well as a better IDE
+experience.</p>
+<section id="usage">
+<h4>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h4>
+<p>SEED does not require exhaustive type annotations, but it is recommended you add them if you
+create any new functions or refactor any existing code where it might be beneficial (e.g. types
+that appear ambiguous or that the IDE can’t determine) and not require a ton of additional effort.</p>
+<p>When applicable, we recommend you use <a class="reference external" href="https://docs.python.org/3/whatsnew/3.9.html#type-hinting-generics-in-standard-collections">built-in collection types</a>
+such as <code class="code docutils literal notranslate"><span class="pre">list</span></code>, <code class="code docutils literal notranslate"><span class="pre">dict</span></code> or <code class="code docutils literal notranslate"><span class="pre">tuple</span></code> instead of the capitalized types
+from the <code class="code docutils literal notranslate"><span class="pre">typing</span></code> module. You can also use <code class="docutils literal notranslate"><span class="pre">TypedDict</span></code> and <code class="docutils literal notranslate"><span class="pre">NotRequired</span></code> from the <code class="docutils literal notranslate"><span class="pre">typing_extensions</span></code>
+package to specify the types of required/optional keys of dictionaries.</p>
+<p>Common gotchas:</p>
+<ul class="simple">
+<li><p>If trying to annotate a class method with the class itself, import <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">annotations</span></code></p></li>
+<li><p>If you’re getting warnings about runtime errors due to a type name, make sure your IDE is set up to point to an environment with python 3.9</p></li>
+<li><p>If you’re wasting time trying to please the type checker, feel free to throw <code class="code docutils literal notranslate"><span class="pre">#</span> <span class="pre">type:</span> <span class="pre">ignore</span></code> on the problematic line (or at the top of the file to ignore all issues for that file)</p></li>
+</ul>
+</section>
+<section id="type-checking">
+<h4>Type Checking<a class="headerlink" href="#type-checking" title="Link to this heading"></a></h4>
+<p>CI currently runs static type checking on the codebase using <a class="reference external" href="http://mypy-lang.org/">mypy</a>. For
+your own IDE, we recommend the following extensions:</p>
+<ul class="simple">
+<li><p>VSCode: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">Pylance</a> (uses Microsoft’s Pyright type checking)</p></li>
+</ul>
+<p>To run the same typechecking applied in CI (i.e., using mypy) you can run the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tox<span class="w"> </span>-e<span class="w"> </span>mypy
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="django-notes">
+<h2>Django Notes<a class="headerlink" href="#django-notes" title="Link to this heading"></a></h2>
+<section id="adding-new-fields-to-database">
+<h3>Adding New Fields to Database<a class="headerlink" href="#adding-new-fields-to-database" title="Link to this heading"></a></h3>
+<p>Adding new fields to SEED can be complicated since SEED has a mix of typed fields (database fields) and extra data
+fields. Follow the steps below to add new fields to the SEED database:</p>
+<ol class="arabic simple">
+<li><p>Add the field to the PropertyState or the TaxLotState model. Adding fields to the Property or TaxLot models is more complicated and not documented yet.</p></li>
+<li><p>Add field to list in the following locations:</p></li>
+</ol>
+<ul class="simple">
+<li><p>models/columns.py: Column.DATABASE_COLUMNS</p></li>
+<li><p>TaxLotState.coparent or PropertyState.coparent: SQL query and keep_fields</p></li>
+</ul>
+<ol class="arabic">
+<li><p>Run <cite>./manage.py makemigrations</cite></p></li>
+<li><p>Add in a Python script in the new migration to add in the new column into every organizations list of columns. Note that the new_db_fields will be the same as the data in the Column.DATABASE_COLUMNS that were added.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">forwards</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">schema_editor</span><span class="p">):</span>
+    <span class="n">Column</span> <span class="o">=</span> <span class="n">apps</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="s2">&quot;seed&quot;</span><span class="p">,</span> <span class="s2">&quot;Column&quot;</span><span class="p">)</span>
+    <span class="n">Organization</span> <span class="o">=</span> <span class="n">apps</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="s2">&quot;orgs&quot;</span><span class="p">,</span> <span class="s2">&quot;Organization&quot;</span><span class="p">)</span>
+
+    <span class="n">new_db_fields</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;geocoding_confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;table_name&#39;</span><span class="p">:</span> <span class="s1">&#39;PropertyState&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;display_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Geocoding Confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;column_description&#39;</span><span class="p">:</span> <span class="s1">&#39;Geocoding Confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;data_type&#39;</span><span class="p">:</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;geocoding_confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;table_name&#39;</span><span class="p">:</span> <span class="s1">&#39;TaxLotState&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;display_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Geocoding Confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;column_description&#39;</span><span class="p">:</span> <span class="s1">&#39;Geocoding Confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;data_type&#39;</span><span class="p">:</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Go through all the organizations</span>
+    <span class="k">for</span> <span class="n">org</span> <span class="ow">in</span> <span class="n">Organization</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">new_db_field</span> <span class="ow">in</span> <span class="n">new_db_fields</span><span class="p">:</span>
+            <span class="n">columns</span> <span class="o">=</span> <span class="n">Column</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">organization_id</span><span class="o">=</span><span class="n">org</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="n">table_name</span><span class="o">=</span><span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;table_name&#39;</span><span class="p">],</span>
+                <span class="n">column_name</span><span class="o">=</span><span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;column_name&#39;</span><span class="p">],</span>
+                <span class="n">is_extra_data</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">columns</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+                <span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;organization_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">org</span><span class="o">.</span><span class="n">id</span>
+                <span class="n">Column</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">new_db_field</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">columns</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="c1"># If the column exists, then update the display_name and data_type if empty</span>
+                <span class="n">c</span> <span class="o">=</span> <span class="n">columns</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">display_name</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">display_name</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                    <span class="n">c</span><span class="o">.</span><span class="n">display_name</span> <span class="o">=</span> <span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">data_type</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">data_type</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">data_type</span> <span class="o">==</span> <span class="s1">&#39;None&#39;</span><span class="p">:</span>
+                    <span class="n">c</span><span class="o">.</span><span class="n">data_type</span> <span class="o">=</span> <span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;data_type&#39;</span><span class="p">]</span>
+                        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+                <span class="c1"># If the column exists, then update the column_description if empty</span>
+                <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">column_description</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">column_description</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                    <span class="n">c</span><span class="o">.</span><span class="n">column_description</span> <span class="o">=</span> <span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;column_description&#39;</span><span class="p">]</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  More than one column returned&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Migration</span><span class="p">(</span><span class="n">migrations</span><span class="o">.</span><span class="n">Migration</span><span class="p">):</span>
+    <span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;seed&#39;</span><span class="p">,</span> <span class="s1">&#39;0090_auto_20180425_1154&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="n">operations</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="o">...</span> <span class="n">existing</span> <span class="n">db</span> <span class="n">migrations</span> <span class="o">...</span><span class="p">,</span>
+        <span class="n">migrations</span><span class="o">.</span><span class="n">RunPython</span><span class="p">(</span><span class="n">forwards</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Run migrations <cite>./manage.py migrate</cite></p></li>
+<li><p>Run unit tests, fix failures. Below is a list of files that need to be fixed (this is not an exhaustive list)</p></li>
+</ol>
+<ul class="simple">
+<li><p>test_mapping_data.py:test_keys</p></li>
+<li><p>test_columns.py:test_column_retrieve_schema</p></li>
+<li><p>test_columns.py:test_column_retrieve_db_fields</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>(Optional) Update example files to include new fields</p></li>
+<li><p>Test import workflow with mapping to new fields</p></li>
+</ol>
+</section>
+</section>
+<section id="nginx-notes">
+<h2>NGINX Notes<a class="headerlink" href="#nginx-notes" title="Link to this heading"></a></h2>
+<p>Toggle <em>maintenance mode</em> to display a maintenance page and prevent access to all site resources including API endpoints:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>seed_web<span class="w"> </span>./docker/maintenance.sh<span class="w"> </span>on
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>seed_web<span class="w"> </span>./docker/maintenance.sh<span class="w"> </span>off
+</pre></div>
+</div>
+</section>
+<section id="angularjs-integration-notes">
+<h2>AngularJS Integration Notes<a class="headerlink" href="#angularjs-integration-notes" title="Link to this heading"></a></h2>
+<section id="template-tags">
+<h3>Template Tags<a class="headerlink" href="#template-tags" title="Link to this heading"></a></h3>
+<p>Angular and Django both use <cite>{{</cite> and <cite>}}</cite> as variable delimiters, and thus the AngularJS variable delimiters are
+renamed <cite>{$</cite> and <cite>$}</cite>.</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">BE</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;BE.seed&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;$interpolateProvider&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">$interpolateProvider</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">$interpolateProvider</span><span class="p">.</span><span class="nx">startSymbol</span><span class="p">(</span><span class="s1">&#39;{$&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">$interpolateProvider</span><span class="p">.</span><span class="nx">endSymbol</span><span class="p">(</span><span class="s1">&#39;$}&#39;</span><span class="p">);</span>
+<span class="p">}]);</span>
+</pre></div>
+</div>
+</section>
+<section id="django-csrf-token-and-ajax-requests">
+<h3>Django CSRF Token and AJAX Requests<a class="headerlink" href="#django-csrf-token-and-ajax-requests" title="Link to this heading"></a></h3>
+<p>For ease of making angular <cite>$http</cite> requests, we automatically add the CSRF token to all <cite>$http</cite> requests as
+recommended by <a class="reference external" href="http://django-angular.readthedocs.io/en/latest/integration.html#xmlhttprequest">http://django-angular.readthedocs.io/en/latest/integration.html#xmlhttprequest</a></p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">BE</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">seed</span><span class="p">.</span><span class="nx">run</span><span class="p">((</span><span class="nx">$http</span><span class="p">,</span><span class="w"> </span><span class="nx">$cookies</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">$http</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">common</span><span class="p">[</span><span class="s1">&#39;X-CSRFToken&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$cookies</span><span class="p">[</span><span class="s1">&#39;csrftoken&#39;</span><span class="p">];</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="routes-and-partials-or-views">
+<h3>Routes and Partials or Views<a class="headerlink" href="#routes-and-partials-or-views" title="Link to this heading"></a></h3>
+<p>Routes in <cite>static/seed/js/seed.js</cite> (the normal angularjs <cite>app.js</cite>)</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="nx">SEED_app</span><span class="p">.</span><span class="nx">config</span><span class="p">([</span><span class="s1">&#39;stateHelperProvider&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;$urlRouterProvider&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;$locationProvider&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">stateHelperProvider</span><span class="p">,</span><span class="w"> </span><span class="nx">$urlRouterProvider</span><span class="p">,</span><span class="w"> </span><span class="nx">$locationProvider</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">stateHelperProvider</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">state</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;home&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">templateUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">static_url</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;seed/partials/home.html&#39;</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">state</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;profile&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/profile&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">templateUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">static_url</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;seed/partials/profile.html&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;profile_controller&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">auth_payload</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;auth_service&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;$q&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user_service&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">auth_service</span><span class="p">,</span><span class="w"> </span><span class="nx">$q</span><span class="p">,</span><span class="w"> </span><span class="nx">user_service</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">var</span><span class="w"> </span><span class="nx">organization_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user_service</span><span class="p">.</span><span class="nx">get_organization</span><span class="p">().</span><span class="nx">id</span><span class="p">;</span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="nx">auth_service</span><span class="p">.</span><span class="nx">is_authorized</span><span class="p">(</span><span class="nx">organization_id</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;requires_superuser&#39;</span><span class="p">]);</span>
+<span class="w">        </span><span class="p">}],</span>
+<span class="w">        </span><span class="nx">user_profile_payload</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;user_service&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">user_service</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="nx">user_service</span><span class="p">.</span><span class="nx">get_user_profile</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}]);</span>
+</pre></div>
+</div>
+<p>HTML partials in <cite>static/seed/partials/</cite></p>
+</section>
+</section>
+<section id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Link to this heading"></a></h2>
+<p>Information about error logging can be found here - <a class="reference external" href="https://docs.djangoproject.com/en/1.7/topics/logging/">https://docs.djangoproject.com/en/1.7/topics/logging/</a></p>
+<p>Below is a standard set of error messages from Django.</p>
+<p>A logger is configured to have a log level. This log level describes the severity of
+the messages that the logger will handle. Python defines the following log levels:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>DEBUG:<span class="w"> </span>Low<span class="w"> </span>level<span class="w"> </span>system<span class="w"> </span>information<span class="w"> </span><span class="k">for</span><span class="w"> </span>debugging<span class="w"> </span>purposes
+INFO:<span class="w"> </span>General<span class="w"> </span>system<span class="w"> </span>information
+WARNING:<span class="w"> </span>Information<span class="w"> </span>describing<span class="w"> </span>a<span class="w"> </span>minor<span class="w"> </span>problem<span class="w"> </span>that<span class="w"> </span>has<span class="w"> </span>occurred.
+ERROR:<span class="w"> </span>Information<span class="w"> </span>describing<span class="w"> </span>a<span class="w"> </span>major<span class="w"> </span>problem<span class="w"> </span>that<span class="w"> </span>has<span class="w"> </span>occurred.
+CRITICAL:<span class="w"> </span>Information<span class="w"> </span>describing<span class="w"> </span>a<span class="w"> </span>critical<span class="w"> </span>problem<span class="w"> </span>that<span class="w"> </span>has<span class="w"> </span>occurred.
+</pre></div>
+</div>
+<p>Each message that is written to the logger is a Log Record. The log record is stored
+in the web server &amp; Celery</p>
+</section>
+<section id="bedes-compliance-and-managing-columns">
+<h2>BEDES Compliance and Managing Columns<a class="headerlink" href="#bedes-compliance-and-managing-columns" title="Link to this heading"></a></h2>
+<p>Columns that do not represent hardcoded fields in the application are represented using
+a Django database model defined in the seed.models module. The goal of adding new columns
+to the database is to create seed.models.Column records in the database for each column to
+import. Currently, the list of Columns is dynamically populated by importing data.</p>
+<p>There are default mappings for ESPM are located here:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://github.com/SEED-platform/seed/blob/develop/seed/lib/mappings/data/pm-mapping.json">https://github.com/SEED-platform/seed/blob/develop/seed/lib/mappings/data/pm-mapping.json</a></p>
+</div></blockquote>
+</section>
+<section id="resetting-the-database">
+<h2>Resetting the Database<a class="headerlink" href="#resetting-the-database" title="Link to this heading"></a></h2>
+<p>This is a brief description of how to drop and re-create the database
+for the seed application.</p>
+<p>The first two commands below are commands distributed with the
+Postgres database, and are not part of the SEED application. The third
+command below will create the required database tables for SEED and
+setup initial data that the application expects (e.g. initial columns for
+BEDES). The last command below (spanning multiple lines) will create a
+new superuser and organization that you can use to login to the
+application, and from there create any other users or organizations
+that you require.</p>
+<p>Below are the commands for resetting the database and creating a new
+user:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>createuser<span class="w"> </span>-U<span class="w"> </span>seed<span class="w"> </span>seeduser
+
+psql<span class="w"> </span>-d<span class="w"> </span>postgres<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;DROP DATABASE seed;&#39;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>postgres<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;CREATE DATABASE seed;&#39;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;CREATE EXTENSION IF NOT EXISTS postgis;&#39;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;CREATE EXTENSION IF NOT EXISTS timescaledb;&#39;</span>
+
+./manage.py<span class="w"> </span>migrate
+./manage.py<span class="w"> </span>create_default_user<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--username<span class="o">=</span>demo@seed-platform.org<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--password<span class="o">=</span>password<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--organization<span class="o">=</span>testorg
+</pre></div>
+</div>
+</section>
+<section id="restoring-a-database-dump">
+<h2>Restoring a Database Dump<a class="headerlink" href="#restoring-a-database-dump" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>psql<span class="w"> </span>-d<span class="w"> </span>postgres<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;DROP DATABASE seed;&#39;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>postgres<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;CREATE DATABASE seed;&#39;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;CREATE EXTENSION IF NOT EXISTS postgis;&#39;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;CREATE EXTENSION IF NOT EXISTS timescaledb;&#39;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;SELECT timescaledb_pre_restore();&#39;</span>
+
+<span class="c1"># restore a previous database dump (must be pg_restore 12+)</span>
+pg_restore<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>/backups/prod-backups/prod_20191203_000002.dump
+<span class="c1"># if any errors appear during the pg_restore process check that the `installed_version` of the timescaledb extension where the database was dumped matches the extension version where it&#39;s being restored</span>
+<span class="c1"># `SELECT default_version, installed_version FROM pg_available_extensions WHERE name = &#39;timescaledb&#39;;`</span>
+
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;SELECT timescaledb_post_restore();&#39;</span>
+
+./manage.py<span class="w"> </span>migrate
+
+<span class="c1"># if needed add a user to the database</span>
+./manage.py<span class="w"> </span>create_default_user<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--username<span class="o">=</span>demo@seed-platform.org<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--password<span class="o">=</span>password<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--organization<span class="o">=</span>testorg
+</pre></div>
+</div>
+<p>If restoring a production backup to a different deployment update the site settings for password reset emails, and disable celerybeat Salesforce updates/emails:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./manage.py<span class="w"> </span>shell
+
+from<span class="w"> </span>django.contrib.sites.models<span class="w"> </span>import<span class="w"> </span>Site
+<span class="nv">site</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Site.objects.first<span class="o">()</span>
+site.domain<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;dev1.seed-platform.org&#39;</span>
+site.name<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SEED Dev1&#39;</span>
+site.save<span class="o">()</span>
+
+from<span class="w"> </span>seed.models<span class="w"> </span>import<span class="w"> </span>Organization
+Organization.objects.filter<span class="o">(</span><span class="nv">salesforce_enabled</span><span class="o">=</span>True<span class="o">)</span>.update<span class="o">(</span><span class="nv">salesforce_enabled</span><span class="o">=</span>False<span class="o">)</span>
+
+from<span class="w"> </span>django_celery_beat.models<span class="w"> </span>import<span class="w"> </span>PeriodicTask,<span class="w"> </span>PeriodicTasks
+PeriodicTask.objects.filter<span class="o">(</span><span class="nv">enabled</span><span class="o">=</span>True,<span class="w"> </span><span class="nv">name__startswith</span><span class="o">=</span><span class="s1">&#39;salesforce_sync_org-&#39;</span><span class="o">)</span>.update<span class="o">(</span><span class="nv">enabled</span><span class="o">=</span>False<span class="o">)</span>
+PeriodicTasks.update_changed<span class="o">()</span>
+</pre></div>
+</div>
+</section>
+<section id="migrating-the-database">
+<h2>Migrating the Database<a class="headerlink" href="#migrating-the-database" title="Link to this heading"></a></h2>
+<p>Migrations are handles through Django; however, various versions have customs actions for the migrations. See the <a class="reference internal" href="migrations.html"><span class="doc">migrations page</span></a> for more information based on the version of SEED.</p>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading"></a></h2>
+<p>JS tests can be run with Jasmine at the url <cite>/angular_js_tests/</cite>.</p>
+<p>Python unit tests are run with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--settings<span class="o">=</span>config.settings.test
+</pre></div>
+</div>
+<dl>
+<dt>Note on geocode-related testing:</dt><dd><p>Most of these tests use VCR.py and cassettes to capture and reuse recordings of HTTP requests and responses. Given that, unless you want to make changes and/or refresh the cassettes/recordings, there isn’t anything needed to run the geocode tests.</p>
+<p>In the case that the geocoding logic/code is changed or you’d like to the verify the MapQuest API is still working as expected, you’ll need to run the tests with a small change. Namely, you’ll want to provide the tests with an API key via an environment variable called “TESTING_MAPQUEST_API_KEY” or within your local_untracked.py file with that same variable name.</p>
+<p>In order to refresh the actual cassettes, you’ll just need to delete or move the old ones which can be found at “.seed/tests/data/vcr_cassettes”. The API key should be hidden within the cassettes, so these new cassettes can and should be pushed to GitHub.</p>
+</dd>
+</dl>
+<p>Run coverage using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>coverage<span class="w"> </span>run<span class="w"> </span>manage.py<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--settings<span class="o">=</span>config.settings.test
+coverage<span class="w"> </span>report<span class="w"> </span>--fail-under<span class="o">=</span><span class="m">83</span>
+</pre></div>
+</div>
+<p>Python compliance uses Ruff</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tox<span class="w"> </span>-e<span class="w"> </span>precommit<span class="w"> </span>--<span class="w"> </span>ruff
+tox<span class="w"> </span>-e<span class="w"> </span>precommit<span class="w"> </span>--<span class="w"> </span>ruff-format
+</pre></div>
+</div>
+<p>JavaScript compliance uses ESLint, SCSS compliance uses StyleLint, and HTML compliance uses Prettier</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>run<span class="w"> </span>lint
+npm<span class="w"> </span>run<span class="w"> </span>lint:fix
+</pre></div>
+</div>
+</section>
+<section id="building-documentation">
+<h2>Building Documentation<a class="headerlink" href="#building-documentation" title="Link to this heading"></a></h2>
+<p>Older versions of the source code documentation are (still) on readthedocs; however, newer versions are built and pushed to the seed-website repository manually. To build the documentation follow the script below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>docs
+rm<span class="w"> </span>-rf<span class="w"> </span>htmlout
+sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span><span class="nb">source</span><span class="w"> </span>htmlout
+</pre></div>
+</div>
+<p>For releasing, copy the <code class="docutils literal notranslate"><span class="pre">htmlout</span></code> directory into the seed-platform’s website repository under <code class="docutils literal notranslate"><span class="pre">docs/code_documentation/&lt;new_version&gt;</span></code>. Make sure to add the new documentation to the table in the <code class="docutils literal notranslate"><span class="pre">docs/developer_resources.md</span></code>.</p>
+</section>
+<section id="contribution-instructions-best-practices">
+<h2>Contribution Instructions / Best Practices<a class="headerlink" href="#contribution-instructions-best-practices" title="Link to this heading"></a></h2>
+<p>If this is the first time contributing and you are outside of the DOE National Lab system, then you will need to review and fill out the contribution agreement which is found in <a class="reference external" href="https://github.com/SEED-platform/seed/blob/develop/.github/CONTRIBUTING.md">SEED’s Contribution Agreement in the GitHub repository</a></p>
+<p>The desired workflow for development and submitting changes is the following:</p>
+<ol class="arabic simple">
+<li><p>Fork the repository on GitHub if you do not have access to the repository, otherwise, work within the <a class="reference external" href="https://github.com/seed-platform/seed">https://github.com/seed-platform/seed</a> repository.</p></li>
+<li><p>Ensure there is a ticket/issue created for the work you are doing. Verify that the ticket is assigned to you and that it is part of the latest project board on the GitHub site (<a class="reference external" href="https://github.com/orgs/SEED-platform/projects">https://github.com/orgs/SEED-platform/projects</a>).</p></li>
+<li><p>Move the ticket/issue to ‘In Progress’ in the GitHub project tracker when you begin work</p></li>
+<li><p>Create a branch off of develop (unless it is a hotfix, then branch of the appropriate tag). The recommended naming convention is &lt;issue_id&gt;-short-descriptive-name.</p></li>
+<li><p>Make changes and write a test for the code added.</p></li>
+<li><p>Make sure tests pass locally. Most branches created and pushed to GitHub will be tested automatically.</p></li>
+<li><p>Upon completion of the work, create a pull request (PR) against the develop branch (or hotfix branch if applicable). In the PR description fill out the requested information and include the issue number (e.g., #1234).</p></li>
+<li><dl class="simple">
+<dt>Assign one label to the PR (not the ticket/issue) in order to auto-populate change logs (e.g., Bug, Feature, Maintenance, Performance, DoNotPublish) This is required and CI will fail if not present.</dt><dd><ul class="simple">
+<li><p><strong>Bug</strong> (these will appear as “Bug Fixes” in the change log)</p></li>
+<li><p><strong>Feature</strong> (features will appear as “New Features” item in the change log)</p></li>
+<li><p><strong>Enhancement</strong> (these will appear as “Improvements” in the change log)</p></li>
+<li><p><strong>Maintenance</strong> (these will appear under “Maintenance” in the change log)</p></li>
+<li><p><strong>Performance</strong> (these will appear under “Maintenance” in the change log)</p></li>
+<li><p><strong>Documentation</strong> (these will appear under “Maintenance” in the change log)</p></li>
+<li><p><strong>Do not publish</strong> (these will no appear in the change log)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Ensure all tests pass.</p></li>
+<li><p>Assign a reviewer to the PR.</p></li>
+<li><p>If the reviewer requests changes, then addresses changes and re-assign the reviewer as needed.</p></li>
+<li><p>Once approved, merge the PR!</p></li>
+<li><p>Move the related ticket(s)/issue(s) to the ‘Ready to Deploy’ column in the GitHub project tracker.</p></li>
+</ol>
+</section>
+<section id="release-instructions">
+<h2>Release Instructions<a class="headerlink" href="#release-instructions" title="Link to this heading"></a></h2>
+<p>To make a release do the following:</p>
+<ol class="arabic simple">
+<li><p>Create a branch from develop to prepare the updates (e.g., 2.21.0-release-prep).</p></li>
+<li><p>Update the root <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file with the release version number, and then run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code>. Always use MAJOR.MINOR.RELEASE.</p></li>
+<li><p>Update the <code class="docutils literal notranslate"><span class="pre">docs/sources/migrations.rst</span></code> file with any required actions.</p></li>
+<li><p>Commit the changes and push the release prep branch to GitHub, then go to the Releases page to draft a new release which will generate the changelog.</p></li>
+<li><p>Copy the GitHub changelog results into <code class="docutils literal notranslate"><span class="pre">CHANGELOG.md</span></code>. Cleanup the formatting and items as needed (make sure the spelling is correct, starts with a capital letter, if any PRs were missing the <code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">not</span> <span class="pre">publish</span></code> label, etc.) and push the changelog update.</p></li>
+<li><p>Make sure that any new UI needing localization has been tagged for translation, and that any new translation keys exist in the lokalise.com project. (see <a class="reference internal" href="translation.html"><span class="doc">translation documentation</span></a>).</p></li>
+<li><p>Create PR for release preparation and merge after tests/reviews pass.</p></li>
+<li><p>Create a new Release using the develop branch and new release number as the tag (<a class="reference external" href="https://github.com/SEED-platform/seed/releases">https://github.com/SEED-platform/seed/releases</a>). Include list of changes since previous release (e.g., the additions to <code class="docutils literal notranslate"><span class="pre">CHANGELOG.md</span></code>).</p></li>
+<li><p>Locally, merge the <code class="docutils literal notranslate"><span class="pre">develop</span></code> branch into the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch and push.</p></li>
+<li><p>Verify that the Docker versions are built and pushed to Docker Hub (<a class="reference external" href="https://hub.docker.com/r/seedplatform/seed/tags/">https://hub.docker.com/r/seedplatform/seed/tags/</a>).</p></li>
+<li><p>Publish the new documentation in the seed-platform website repository (see instructions above under Building Documentation).</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules/seed.views.html" class="btn btn-neutral float-left" title="Views Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="migrations.html" class="btn btn-neutral float-right" title="Migrations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, 2024, Alliance for Sustainable Energy, LLC, and other contributors..</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

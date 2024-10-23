@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upgrade a SEED database from Postgres 12 to Postgres 16 &mdash; SEED Platform 3.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=acc74ff5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SEED Platform
+          </a>
+              <div class="version">
+                3.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matching.html">Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Upgrade a SEED database from Postgres 12 to Postgres 16</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="upgrade-a-seed-database-from-postgres-12-to-postgres-16">
+<h1>Upgrade a SEED database from Postgres 12 to Postgres 16<a class="headerlink" href="#upgrade-a-seed-database-from-postgres-12-to-postgres-16" title="Link to this heading"></a></h1>
+<section id="assumptions">
+<h2>Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>This process assumes that you’re currently using Postgres 12.7 with TimescaleDB 2.3.0 from <code class="docutils literal notranslate"><span class="pre">timescale/timescaledb-postgis:2.3.0-pg12</span></code> or <code class="docutils literal notranslate"><span class="pre">timescale/timescaledb-postgis:latest-pg12</span></code></p></li>
+<li><p>This also assumes that you have a directory in the host filesystem, e.g. <code class="docutils literal notranslate"><span class="pre">~/share</span></code>, that is bind mounted to <code class="docutils literal notranslate"><span class="pre">/share</span></code> in your existing database container</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Create a dump of the current database</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>seed_postgres<span class="w"> </span>pg_dump<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-Fc<span class="w"> </span>-f<span class="w"> </span>/share/seed-pg12.dump
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create a temporary Postgres 13 container using the Docker image <code class="docutils literal notranslate"><span class="pre">timescale/timescaledb-ha:pg13.14-ts2.14.2-oss</span></code></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>--name<span class="o">=</span>seed-pg13<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_DB</span><span class="o">=</span>seed<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_USER</span><span class="o">=</span>seeduser<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>password<span class="w"> </span>-v<span class="w"> </span>~/share:/share<span class="w"> </span>timescale/timescaledb-ha:pg13.14-ts2.14.2-oss
+</pre></div>
+</div>
+<p>Once the container has finished initializing, open a separate shell</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>seed-pg13<span class="w"> </span>bash
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;CREATE EXTENSION postgis;&quot;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;DROP EXTENSION timescaledb;&quot;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;CREATE EXTENSION timescaledb WITH VERSION &#39;2.3.0&#39;;&quot;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT timescaledb_pre_restore();&quot;</span>
+pg_restore<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>/share/seed-pg12.dump
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT timescaledb_post_restore();&quot;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER EXTENSION timescaledb UPDATE;&quot;</span>
+pg_dump<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-Fc<span class="w"> </span>-f<span class="w"> </span>/share/seed-pg13.dump
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Start the new, permanent Postgres 16 container using the Docker image <code class="docutils literal notranslate"><span class="pre">timescale/timescaledb-ha:pg16.2-ts2.14.2-oss</span></code></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>seed-pg16<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_DB</span><span class="o">=</span>seed<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_USER</span><span class="o">=</span>seeduser<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>password<span class="w"> </span>-v<span class="w"> </span>~/share:/share<span class="w"> </span>timescale/timescaledb-ha:pg16.2-ts2.14.2-oss
+</pre></div>
+</div>
+<p>Once the container has finished initializing, open a separate shell</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>seed-pg16<span class="w"> </span>bash
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;CREATE EXTENSION postgis;&quot;</span>
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT timescaledb_pre_restore();&quot;</span>
+pg_restore<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>/share/seed-pg13.dump
+psql<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT timescaledb_post_restore();&quot;</span>
+pg_dump<span class="w"> </span>-d<span class="w"> </span>seed<span class="w"> </span>-U<span class="w"> </span>seeduser<span class="w"> </span>-Fc<span class="w"> </span>-f<span class="w"> </span>/share/seed-pg16.dump
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, 2024, Alliance for Sustainable Energy, LLC, and other contributors..</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
