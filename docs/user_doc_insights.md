@@ -28,7 +28,7 @@ Insights can be used to compare metrics for building portfolios or individual bu
 	- **Custom Reports**
 	- **Portfolio Summary**
 
-	Below show high level previews of the Insights options. More details are contained in the specific sections for each option.
+	High level previews of the Insights options are shown below. More details are contained in the specific sections for each option.
 
 	#### Program Overview
 	This option shows portfolio compliance with a performance target over time
@@ -64,12 +64,12 @@ Insights can be used to compare metrics for building portfolios or individual bu
 	![](images/insights_configuration_01.png)
 
 	- Import metrics (ie, Site EUI or GHG emissions) for each building as well as targets for those metrics
-	- Define "drived fields" to calculate target "deltas" if that is useful
+	- Define "derived fields" to calculate target "deltas" if that is useful
 
 	![](images/insights_configuration_02.png)
 
 	### Program Configuration
-	Click on the Program Configuration link to define the criteria for these "program" report
+	Click on the Program Configuration link to define the criteria for these "program" reports
 	![](images/insights_configuration_03.png)
 
 	There are three components to define on the Program Configuration page:

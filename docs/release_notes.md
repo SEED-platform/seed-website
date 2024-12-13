@@ -20,7 +20,7 @@ If you have any questions about releases or changes to the program, please conta
 
 	**Property Detail** 
 		
-	- **Audit Template:** It is now possible to upload and download a BuidlingSync or Audit Template file
+	- **Audit Template:** It is now possible to upload and download a BuildingSync or Audit Template file
 
 		![](images/inventory_property_auditTemplate.png)
 	

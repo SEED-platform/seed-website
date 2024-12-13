@@ -74,7 +74,7 @@ There are several analyses that can be run on properties.  Expand the sections b
 ??? note "BETTER Analysis"
 	## BETTER Analysis
 
-	The Building Efficiency Targeting Tool for Energy Retrofits (BETTER) is a software toolkit that enables building operators to quickly and easily identify the most cost-saving eneryg efficiency measures in buildings and portfolios using readily available guilding and eneryg data. For more details, see the [BETTER website](https://better.lbl.gov/).
+	The Building Efficiency Targeting Tool for Energy Retrofits (BETTER) is a software toolkit that enables building operators to quickly and easily identify the most cost-saving energy efficiency measures in buildings and portfolios using readily available building and energy data. For more details, see the [BETTER website](https://better.lbl.gov/).
 
 	BETTER can be used to quickly assess the potential energy savings in a building, which then allows users to filter for the buildings with the hightest potential savings, and target those buildings for a more detailed energy audit.
 
@@ -89,7 +89,7 @@ There are several analyses that can be run on properties.  Expand the sections b
 	
 	**Property Type**
 	The Property Type must be mapped (for example from the ENERGY STAR Portfolio Manager field called "Property Type - Self Selected") and must be set to a "Space Type" recognized by BETTER. 
-	See the [BETTER FAQ web page, Building Spaces Types section](https://better.lbl.gov/docs/faq/){:.external}section for the latest space types, as new types are added frequently. 
+	See the [BETTER FAQ web page, Building Spaces Types section](https://better.lbl.gov/docs/faq/){:.external} section for the latest space types, as new types are added frequently. 
 
 	**Address Data**
 	The Address data for the property must be mapped properly on import, according to the following fields, in order to correctly set the location and weather data that BETTER will use for the analysis.
