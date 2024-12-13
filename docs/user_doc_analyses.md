@@ -1,19 +1,80 @@
 There are several analyses that can be run on properties.  Expand the sections below to learn more about each analysis.
 
-??? note "EUI Analysis"
-	## EUI Analysis
+??? note "Overview"
+	## Analysis Overview
 
-	details coming soon.
+	There are currently six different types of Analyses available in SEED:
 
-??? note "CO2 Analysis"
-	## CO2 Analysis
+	- **BSyncr**
+		- Makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program
+		- Algorithms are based on methods in this Github repository
+		[NMECR Github Repo](https://github.com/kW-Labs/nmecr) 
+	- **BETTER**
+		- Runs a BETTER analysis from the property data in SEED
+		[BETTER web Tool](https://better.lbl.gov/)
+	- **EUI**
+		- Calculates the EUI of a property based on the meter data and the gross floor area
+	- **Average Annual CO2**
+		- Calculates the CO2 emissions of a property based on the meter data and the eGRID region (which is based on the location of the property)
+	- **Energy Equity & Environmental Justice (EEEJ)**
+		- The Energy Equity & Environmental Justice analysis retrieves EEEJ information and indicators for your properties from various sources
+	- **Element Statistics**
 
-	details coming soon.
+	## Generating an Analysis
+	- In the Property List, select the properties you want to perform an analysis on
+	- Select Run Analysis from the Actions menu choice
 
+	![](images/analyses_general_01.png)
+
+	- Add an Analysis Name and select the Analysis Type
+
+	![](images/analyses_general_02.png)
+
+	- Depending on the analysis type, there will be various other parameters to set
+	(see the sections below for each Analysis Type details)
+
+	- Start the Analysis
+	- Using the left Navigation bar, go to the Analyses section of SEED to see the results
+
+	![](images/navButton_analyses.png)
+
+	![](images/analyses_general_03.png)
+
+??? note "BSyncr" Analysis"
+	## Bsyncr Analysis
+
+	the BSyncr analysis option makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program. Algorithms are based on methods in this Github repository
+	[NMECR Github Repo](https://github.com/kW-Labs/nmecr) 
+
+	### Setting up the Analysis
+
+	- In the Property List, select the properties you want to perform an analysis on
+	- Select Run Analysis from the Actions menu choice
+	- Add an Analysis Name and set Type = BSyncr
+
+	![](images/analyses_BSyncr_setting_up_analysis.png)
+
+	### Running the Analysis
+
+	- Click the “Create Analysis” button to start the analysis
+	- Go to the Analyses page (from the left Navigation bar) to see the status of the analysis
+
+	![](images/navButton_analyses.png)
+
+	![](images/analyses_BSyncr_running_analysis.png)
+
+	### Viewing the Analysis Results
+
+	On the Analyses page, it is possible to click on the BSyncr analysis name, and see the individual analyses, and then click on the Run IDs for each property to see the details for that property.
+
+	![](images/analyses_BSyncr_viewing_analysis_results.png)
+	![](images/analyses_BSyncr_viewing_analysis_results_02.png)
+
+	
 ??? note "BETTER Analysis"
 	## BETTER Analysis
 
-	The Building Efficiency Targeting Tool for Energy Retrofits (BETTER) is a software toolkit that enables building operators to quickly and easily identify the most cost-saving eneryg efficiency measures in buildings and portfolios using readily available guilding and eneryg data. For more details, see the [BETTER website](https://better.lbl.gov/).
+	The Building Efficiency Targeting Tool for Energy Retrofits (BETTER) is a software toolkit that enables building operators to quickly and easily identify the most cost-saving energy efficiency measures in buildings and portfolios using readily available building and energy data. For more details, see the [BETTER website](https://better.lbl.gov/).
 
 	BETTER can be used to quickly assess the potential energy savings in a building, which then allows users to filter for the buildings with the hightest potential savings, and target those buildings for a more detailed energy audit.
 
@@ -28,7 +89,7 @@ There are several analyses that can be run on properties.  Expand the sections b
 	
 	**Property Type**
 	The Property Type must be mapped (for example from the ENERGY STAR Portfolio Manager field called "Property Type - Self Selected") and must be set to a "Space Type" recognized by BETTER. 
-	See the [BETTER FAQ web page, Building Spaces Types section](https://better.lbl.gov/docs/faq/){:.external}section for the latest space types, as new types are added frequently. 
+	See the [BETTER FAQ web page, Building Spaces Types section](https://better.lbl.gov/docs/faq/){:.external} section for the latest space types, as new types are added frequently. 
 
 	**Address Data**
 	The Address data for the property must be mapped properly on import, according to the following fields, in order to correctly set the location and weather data that BETTER will use for the analysis.
@@ -92,25 +153,78 @@ There are several analyses that can be run on properties.  Expand the sections b
 
 	![](images/analyses_BETTER_select_analysis_results_06.png)
 
+??? note "EUI Analysis"
+	## EUI Analysis
 
+	### Setting up the Analysis
 
+	- In the Property List, select the properties you want to perform an analysis on
+	- Select Run Analysis from the Actions menu choice
+	- Add an Analysis Name and set Type = EUI
 
+	![](images/analyses_EUI_setting_up_analysis.png)
 
+	### Running the Analysis
 
+	- Click the “Create Analysis” button to start the analysis
+	- Go to the Analyses page to see the status of the analysis
 
+	![](images/analyses_EUI_running_analysis.png)
 
+	### Viewing the Analysis Results
+	On the Analyses page, it is possible to click on the EUI analysis name, and see the individual analyses
 
+	![](images/analyses_EUI_viewing_analysis.png)
 
+	Then click on the Run IDs for each property to see the details for that property.
 
+	![](images/analyses_EUI_viewing_analysis_02.png)
 
+	In the Property List view, the field Analysis EUI is added to show the calculated value. 
+	
+	If the value is blank, it means that there was not meter data to calculate the value
 
+	![](images/analyses_EUI_viewing_analysis_03.png)
 
+??? note "Average Annual CO2 Analysis"
+	## Average Annual CO2 Analysis
 
+	### Data Import
 
+	- In the Property data being imported to SEED, for a CO2 analysis the following must be added
+		- eGRID Subregion Code
+			- Find the eGRID Subregion definitions here
+			[eGRID Subregion Codes](https://www.epa.gov/egrid/summary-data)
 
+	![](images/analyses_co2_setting_up_analysis-egrid.png)
 
+	### Setting up the Analysis
 
+	- In the Property List, select the properties you want to perform an analysis on
+	- Select Run Analysis from the Actions menu choice
+	- Add an Analysis Name and set Type = Average Annual CO2
 
+	![](images/analyses_co2_setting_up_analysis.png)
+
+	### Running the Analysis
+
+	- Click the “Create Analysis” button to start the analysis
+	- Go to the Analyses page (from the left Navigation bar) to see the status of the analysis
+
+	![](images/analyses_co2_running_analysis.png)
+
+	### Viewing the Analysis Results
+	On the Analyses page, it is possible to click on the CO2 analysis name, and see the individual analyses
+
+	![](images/analyses_co2_viewing_analysis.png)
+
+	Then click on the Run ID or the Property link for each property to see the details for that property.
+
+	![](images/analyses_co2_viewing_analysis_02.png)
+
+	In the Property List view, the fields “Average Annual CO2” and “Average Annual CO2 Coverage” contain the CO2 results in the Inventory Property List View.
+	
+	![](images/analyses_co2_viewing_analysis_03.png)
 
 ??? note "Energy Equity & Environmental Justice (EEEJ) Analysis"
 	## Energy Equity & Environmental Justice (EEEJ) Analysis
@@ -187,23 +301,44 @@ There are several analyses that can be run on properties.  Expand the sections b
 		![SEED map showing disadvantaged community census tracts](images/eeej_10.webp){:.seed-img}
 
 
-
-
-
-
-
-
-
-
-??? note "BSyncr" Analysis"
-	## Bsyncr Analysis
-
-	details coming soon.
-
 ??? note "Element Statistics Analysis"
 	## Element Statistics Analysis
 
-	details coming soon.
+	This Analysis provides aggregation values of the available Elements that exist on the Property Details page for a property.
+
+	![Property Elements Table](images/analysis_element_statistics.webp){:.seed-img}
+
+	There are two different types of aggregations that will be generated:
+
+	1. The analysis will count the number of Component_SubTypes that equal “D.D.C. Control Panel”. This will create a new field called “Number of D.D.C. Control Panels”. This field will be zero if there are no Component_SubTypes equal to “D.D.C Control Panel” in the Elements table for a property. 
+
+	2. The analysis will calculate the aggregate Condition Index of the Scope 1 Uniformat Categories listed below as an average.  This value will then create new fields called “DRINKING FOUNTAINS & COOLERS CI”, “DOMESTIC WATER EQUIPMENT CI”, etc. This field will be blank if there are missing Uniformat categories for a property. The Uniformat categories are listed below.
+
+	| Uniformat Category|
+	| -------- | 
+	| DRINKING FOUNTAINS & COOLERS |
+	| DOMESTIC WATER EQUIPMENT |
+	| GAS SUPPLY SYSTEM |
+	| STEAM SUPPLY SYSTEM (FROM CENTRAL PLANT) |
+	| OTHER ENERGY SUPPLY |
+	| BOILERS |
+	| FURNACES |
+	| FUEL-FIRED UNIT HEATERS | 
+	| AUXILIARY EQUIPMENT |
+	| OTHER HEAT GENERATING SYSTEMS | 
+	| CHILLED WATER SYSTEMS |
+	| DIRECT EXPANSION SYSTEMS | 
+	| OTHER COOLING GENERATING SYSTEMS | 
+	| AIR HANDLING UNITS |
+	| UNIT VENTILATORS |
+	| UNIT HEATERS |
+	| PACKAGE UNITS |
+	| OTHER TERMINAL & PACKAGE UNITS |
+	| REFRIGERATION SYSTEMS |
+	| OTHER SPECIAL MECHANICAL SYSTEMS | 
+
+	Property elements functionality is under development.
+
 
 ??? note "Building Upgrade Recommendation Analysis"
 	## Building Upgrade Recommendation Analysis

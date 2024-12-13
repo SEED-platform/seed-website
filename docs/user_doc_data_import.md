@@ -212,7 +212,7 @@ The first few steps for importing Property and Tax Parcel data are the same
     years defined (based on a field called "Year Ending") the "Multiple
     Cycle Upload" box can be checked.
 
-    ![alt_text](images/Data - File Import Options.png "Data - File Import Optionsx")
+    ![alt_text](images/Data - File Import Options.png "Data - File Import Options")
 
 
 ??? Note "**Upload a Spreadsheet**"
@@ -545,7 +545,7 @@ Meter data associated with a building, both monthly and other time intervals, ca
     - **Step 3:** Click the **Upload File** button, browse to the desired GreenButton XML file
     - **Step 4:** Click the **Open** button
 
-    ![alt_text](images/data_meter_GB_import-01.png "GreenButton Monthly Meter Data Impport 1")
+    ![alt_text](images/data_meter_GB_import-01.png "GreenButton Monthly Meter Data Import 1")
 
     - **Step 5:** SEED displays a summary of the GreenButton data
         - Click **Confirm** to continue the file upload
@@ -556,7 +556,7 @@ Meter data associated with a building, both monthly and other time intervals, ca
     - **Step 9:** The GreenButton data is added to the Meter view in the Property Detail
         - **GB** is added as a prefix to the meter number for the GreenButton data
     
-    ![alt_text](images/data_meter_GB_import-02.png "GreenButton Monthly Meter Data Impport 2")
+    ![alt_text](images/data_meter_GB_import-02.png "GreenButton Monthly Meter Data Import 2")
 
 ## **Display Units for Meter Data**
 

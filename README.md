@@ -4,7 +4,7 @@ Documentation website for the SEED Platform.
 
 This site was generated and deployed using mkdocs.
 
-## Updating Documention
+## Updating Documentation
 
 * Install Python and PIP
 * Install mkdocs `pip install -r requirements.txt`
