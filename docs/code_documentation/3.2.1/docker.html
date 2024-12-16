@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docker Deployment on AWS &mdash; SEED Platform 3.2.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=eb155f5e"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Kubernetes Deployment Guide with Helm" href="kubernetes_deployment.html" />
+    <link rel="prev" title="General Linux Setup" href="linux.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SEED Platform
+          </a>
+              <div class="version">
+                3.2.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="deployment.html">Deployment Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="aws.html">AWS Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">General Linux Setup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Docker Deployment on AWS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deploying-with-docker">Deploying with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes_deployment.html">Kubernetes Deployment Guide with Helm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#migrations">Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matching.html">Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="deployment.html">Deployment Guide</a></li>
+      <li class="breadcrumb-item active">Docker Deployment on AWS</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="docker-deployment-on-aws">
+<h1>Docker Deployment on AWS<a class="headerlink" href="#docker-deployment-on-aws" title="Link to this heading"></a></h1>
+<p>Amazon Web Services (<a class="reference external" href="http://aws.amazon.com/">AWS</a>) provides the preferred hosting for the SEED Platform.</p>
+<p><strong>seed</strong> is a <a class="reference external" href="https://www.djangoproject.com/">Django Project</a> and Django’s documentation is an excellent place for general
+understanding of this project’s layout.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>Ubuntu server 18.04 or newer with a m5ad.xlarge (if using in Production instance)</p>
+<ul class="simple">
+<li><p>After launching the instance, run the following commands to install docker.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Install<span class="w"> </span>any<span class="w"> </span>upgrades
+<span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get upgrade -y</span>
+
+<span class="gp"># </span>Remove<span class="w"> </span>any<span class="w"> </span>old<span class="w"> </span>docker<span class="w"> </span>engines
+<span class="go">sudo apt-get remove docker docker-engine docker.io containerd runc</span>
+
+<span class="gp"># </span>Install<span class="w"> </span>docker<span class="w"> </span>community<span class="w"> </span>edition
+<span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common</span>
+<span class="go">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span>
+<span class="go">sudo add-apt-repository \</span>
+<span class="go">    &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span>
+<span class="gp">    $</span><span class="o">(</span>lsb_release<span class="w"> </span>-cs<span class="o">)</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>stable<span class="s2">&quot;</span>
+
+<span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get install -y docker-ce docker-ce-cli containerd.io</span>
+<span class="gp"># </span>Add<span class="w"> </span>your<span class="w"> </span>user<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>docker<span class="w"> </span>group
+<span class="go">sudo groupadd docker</span>
+<span class="go">sudo usermod -aG docker $USER</span>
+<span class="go">newgrp docker</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is okay if the first command fails</p>
+</div>
+<ul class="simple">
+<li><p>Verify that the DNS is working correctly. Run the following and verify the response lists IPs (v6 most likely)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>verify<span class="w"> </span>that<span class="w"> </span>the<span class="w"> </span>dns<span class="w"> </span>resolves
+<span class="go">docker run --rm seedplatform/seed getent hosts seed-platform.org</span>
+<span class="gp"># </span>or
+<span class="go">docker run --rm tutum/dnsutils nslookup email.us-west-2.amazonaws.com</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Install Docker compose</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span>
+<span class="go">sudo chmod +x /usr/local/bin/docker-compose</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Checkout SEED (or install from the releases).</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Add in the Server setting into profile.d. For example add the content below (appropriately filled out) into /etc/profile.d/seed.sh</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export POSTGRES_USER=seed</span>
+<span class="go">export POSTGRES_DB=seed</span>
+<span class="go">export POSTGRES_PASSWORD=GDEus3fasd1askj89QkAldjfX</span>
+<span class="go">export POSTGRES_PORT=5432</span>
+<span class="go">export SECRET_KEY=&quot;96=7jg%_&amp;1-z9c9qwwu2@w$hb3r322yf3lz@*ekw-1@ly-%+^&quot;</span>
+
+<span class="gp"># </span>The<span class="w"> </span>admin<span class="w"> </span>user<span class="w"> </span>is<span class="w"> </span>only<span class="w"> </span>valid<span class="w"> </span>only<span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>database<span class="w"> </span>is<span class="w"> </span>restored
+<span class="go">export SEED_ADMIN_USER=user@seed-platform.org</span>
+<span class="go">export SEED_ADMIN_PASSWORD=&quot;7FeBWal38*&amp;k3jlfa92lakj8ih4&quot;</span>
+<span class="go">export SEED_ADMIN_ORG=default</span>
+
+<span class="gp"># </span>For<span class="w"> </span>SES
+<span class="go">export AWS_ACCESS_KEY_ID=&lt;AWS_ACCESS_KEY&gt;</span>
+<span class="go">export AWS_SECRET_ACCESS_KEY=&lt;AWS_SECRET_KEY&gt;</span>
+<span class="go">export AWS_SES_REGION_NAME=us-west-2</span>
+<span class="go">export AWS_SES_REGION_ENDPOINT=email.us-west-2.amazonaws.com</span>
+<span class="go">export SERVER_EMAIL=user@seed-platform.org</span>
+
+<span class="gp"># </span>For<span class="w"> </span>custom<span class="w"> </span>cookie<span class="w"> </span>validity<span class="w"> </span>duration
+<span class="go">export COOKIE_EXPIRATION=1209600</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Before launching the first time, make sure the persistent volumes and the backup directory exist.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">docker volume create --name=seed_pgdata</span>
+<span class="go">docker volume create --name=seed_media</span>
+
+<span class="go">mkdir -p $HOME/seed-backups</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to have the seed-backups in your path, otherwise the db-postgres container will not launch.</p>
+</div>
+<ul class="simple">
+<li><p>Launch the project</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd &lt;checkout dir&gt;</span>
+<span class="go">./deploy.sh</span>
+</pre></div>
+</div>
+</section>
+<section id="deploying-with-docker">
+<h2>Deploying with Docker<a class="headerlink" href="#deploying-with-docker" title="Link to this heading"></a></h2>
+<p>The preferred way to deploy with Docker is using docker swarm and docker stack.
+Look at the <a class="reference external" href="https://github.com/SEED-platform/seed/blob/develop/deploy.sh">deploy.sh script</a>  for implementation details.</p>
+<p>The short version is to simply run the command below. Note that the passing of the docker-compose.yml filename is not required if using docker-compose.local.yml.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
+<span class="pre">./deploy.sh</span> <span class="pre">docker-compose.local.yml</span>
+<span class="pre">`</span></code></p>
+<p>If deploying using a custom docker-compose yml file, then simple replace the name in the command above.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="linux.html" class="btn btn-neutral float-left" title="General Linux Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="kubernetes_deployment.html" class="btn btn-neutral float-right" title="Kubernetes Deployment Guide with Helm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, 2024, Alliance for Sustainable Energy, LLC, and other contributors..</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
