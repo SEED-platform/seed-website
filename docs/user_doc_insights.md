@@ -1,228 +1,234 @@
 Insights can be used to compare metrics for building portfolios or individual buildings over time.
 
 ??? note "General Overview"
-	## General Overview
 
-	Insights, accessed from the left navigation bar, allows comparison of metrics, such as Energy or Greenhouse Gas Emissions, over time.
+## General Overview
 
-	![](images/navButton_insights.png)
+ Insights, accessed from the left navigation bar, allows comparison of metrics, such as Energy or Greenhouse Gas Emissions, over time.
 
-	This can be useful for implementing Building Performance Standards to reach zero energy or emissions goals by a certain date. 
+ ![](images/navButton_insights.png)
 
-	Insights allows users to:
+ This can be useful for implementing Building Performance Standards to reach zero energy or emissions goals by a certain date.
 
-	- Import data into cycles over time with updated metrics in the building data as buildings are made more energy efficient
-	- Compare the updated metrics to a target to understand how building energy performance is improving
-	- View metrics at a portfolio level based on building type or other criteria
-	- View individual buildings
+ Insights allows users to:
 
-	### Insight Options
+- Import data into cycles over time with updated metrics in the building data as buildings are made more energy efficient
+- Compare the updated metrics to a target to understand how building energy performance is improving
+- View metrics at a portfolio level based on building type or other criteria
+- View individual buildings
 
-	The **Insights options** include:
+### Insight Options
 
-	![](images/insights_options.png)
-	
-	- **Program Overview**
-	- **Property Insights**
-	- **Default Reports**
-	- **Custom Reports**
-	- **Portfolio Summary**
+ The **Insights options** include:
 
-	High level previews of the Insights options are shown below. More details are contained in the specific sections for each option.
+ ![](images/insights_options.png)
 
-	#### Program Overview
-	This option shows portfolio compliance with a performance target over time
+- **Program Overview**
+- **Property Insights**
+- **Default Reports**
+- **Custom Reports**
+- **Portfolio Summary**
 
-	![](images/insights_program_overview_01.png)
+ High level previews of the Insights options are shown below. More details are contained in the specific sections for each option.
 
-	#### Property Insights
-	This option shows compliance for individual buildings
+#### Program Overview
 
-	![](images/insights_property_insights_01.png)
+ This option shows portfolio compliance with a performance target over time
 
-	#### Default Reports
-	This option allows graphing of different metrics
+ ![](images/insights_program_overview_01.png)
 
-	![](images/insights_default_reports_01.png)
+#### Property Insights
 
-	#### Custom Reports
-	This options shows the metric trend over time for a collection of properties
+ This option shows compliance for individual buildings
 
-	![](images/insights_custom_reports_01.png)
+ ![](images/insights_property_insights_01.png)
 
-	#### Portfolio Summary
-	Details coming soon
+#### Default Reports
 
-  
+ This option allows graphing of different metrics
+
+ ![](images/insights_default_reports_01.png)
+
+#### Custom Reports
+
+ This options shows the metric trend over time for a collection of properties
+
+ ![](images/insights_custom_reports_01.png)
+
+#### Portfolio Summary
+
+ Details coming soon
+
 ??? note "Program Configuration"
-	## Program Configuration
-	The Program Configuration screen is where the set up for a given "program" is defined
 
-	### Setting up the Data
+## Program Configuration
 
-	Because Insights is used to look at trends over time, it is necessary to import data over time in different cycles
-	![](images/insights_configuration_01.png)
+ The Program Configuration screen is where the set up for a given "program" is defined
 
-	- Import metrics (ie, Site EUI or GHG emissions) for each building as well as targets for those metrics
-	- Define "derived fields" to calculate target "deltas" if that is useful
+### Setting up the Data
 
-	![](images/insights_configuration_02.png)
+ Because Insights is used to look at trends over time, it is necessary to import data over time in different cycles
+ ![](images/insights_configuration_01.png)
 
-	### Program Configuration
-	Click on the Program Configuration link to define the criteria for these "program" reports
-	![](images/insights_configuration_03.png)
+- Import metrics (ie, Site EUI or GHG emissions) for each building as well as targets for those metrics
+- Define "derived fields" to calculate target "deltas" if that is useful
 
-	There are three components to define on the Program Configuration page:
+ ![](images/insights_configuration_02.png)
 
-	- General Settings
-	- Metric Type Settings
-	- Visualization Settings
+### Program Configuration
 
-	![](images/insights_configuration_04.png)
+ Click on the Program Configuration link to define the criteria for these "program" reports
+ ![](images/insights_configuration_03.png)
 
-	#### General Settings
-	For a new program, click the green New Program button, and the information under General Settings will be blank
-	
-	- Change the "New Program" name to the desired name
-	- Choose the Cycles to use
-	- Choose the Filter Group to use
+ There are three components to define on the Program Configuration page:
 
-	![](images/insights_configuration_05.png)
+- General Settings
+- Metric Type Settings
+- Visualization Settings
 
-	#### Metric Type Settings
+ ![](images/insights_configuration_04.png)
 
-	This section is where the compliance between the actual and the target metrics are defined
+#### General Settings
 
-	![](images/insights_configuration_06.png)
+ For a new program, click the green New Program button, and the information under General Settings will be blank
 
-	#### Visualization Settings
+- Change the "New Program" name to the desired name
+- Choose the Cycles to use
+- Choose the Filter Group to use
 
-	The Visualization Settings determine the X-Axis options in the Property Insights view
+ ![](images/insights_configuration_05.png)
 
-	![](images/insights_configuration_07.png)
+#### Metric Type Settings
 
+ This section is where the compliance between the actual and the target metrics are defined
+
+ ![](images/insights_configuration_06.png)
+
+#### Visualization Settings
+
+ The Visualization Settings determine the X-Axis options in the Property Insights view
+
+ ![](images/insights_configuration_07.png)
 
 ??? note "Program Overview"
-	## Program Overview
 
-	The **Program Overview** option shows portfolio compliance with a performance target over time (cycles)
+## Program Overview
 
-	![](images/insights_program_overview_01.png)
+ The **Program Overview** option shows portfolio compliance with a performance target over time (cycles)
 
-	###Program Configuration
-	
-	Click the **Program Configuration** button to set up the metrics to compare
+ ![](images/insights_program_overview_01.png)
 
-	![](images/insights_program_configuration_button.png)
-	
-	In this example, the configuration setting are:
+### Program Configuration
 
-	**GENERAL SETTINGS**
+ Click the **Program Configuration** button to set up the metrics to compare
 
-	- **Cycles:** This EUI Comparison program is looking at data from 2019 - 2023
-	- **Filter Group:** For this program, the filter group includes all buildings. If multiple Filter Groups are defined, more than one Filter Group can be selected here
+ ![](images/insights_program_configuration_button.png)
 
-	** METRIC TYPE SETTINGS**
+ In this example, the configuration setting are:
 
-	- **Metrics:** Site EUI
-	- **Actual Value:** Site EUI (kBtu/ft2/year), from the pulldown list of fields for the building
-	- **Target Value:** Site EUI Target (kBtu/ft2/year), from the pulldown list of fields for the building
-	- **Type:** This setting defines "compliance". In this case, the Target EUI value must be larger than the Actual EUI value, meaning the building's actual site EUI is less than the target set for that building
+**GENERAL SETTINGS**
 
-	![](images/insights_program_overview_configuration.png)
-	
-	
+- **Cycles:** This EUI Comparison program is looking at data from 2019 - 2023
+- **Filter Group:** For this program, the filter group includes all buildings. If multiple Filter Groups are defined, more than one Filter Group can be selected here
+
+ **METRIC TYPE SETTINGS**
+
+- **Metrics:** Site EUI
+- **Actual Value:** Site EUI (kBtu/ft2/year), from the pulldown list of fields for the building
+- **Target Value:** Site EUI Target (kBtu/ft2/year), from the pulldown list of fields for the building
+- **Type:** This setting defines "compliance". In this case, the Target EUI value must be larger than the Actual EUI value, meaning the building's actual site EUI is less than the target set for that building
+
+ ![](images/insights_program_overview_configuration.png)
 
 ??? note "Property Insights"
-	## Property Insights
 
-	The **Property Insights** option shows the compliance status for individual buildings, again based on the program configuration settings.
+## Property Insights
 
-	In the example below, the program being viewed has the following selections:
+ The **Property Insights** option shows the compliance status for individual buildings, again based on the program configuration settings.
 
-	- **Program:** EUI Comparison 
-	- **Cycle:** 2022
-	- **Metric Type:** Energy metric (in this example, only energy metric is defined)
-	- **X Axis:** Property Type
+ In the example below, the program being viewed has the following selections:
 
-	![](images/insights_property_insights_02.png)
+- **Program:** EUI Comparison
+- **Cycle:** 2022
+- **Metric Type:** Energy metric (in this example, only energy metric is defined)
+- **X Axis:** Property Type
 
-	Hovering over an individual point displays information about the property
-	
-	Clicking on that point will open the Inventory Detail view for that building
+ ![](images/insights_property_insights_02.png)
 
-	![](images/insights_property_insights_03.png)
+ Hovering over an individual point displays information about the property
 
-	Below the graph is a small table which shows the number of Compliant and Non-Compliant buildings. Clicking on either section will display a list of the individual buildings with each status. 
-	
-	Clicking on an individual building will open the Inventory Detail view for that building.
+ Clicking on that point will open the Inventory Detail view for that building
 
-	![](images/insights_property_insights_04.png)
+ ![](images/insights_property_insights_03.png)
 
-	###Program Configuration
+ Below the graph is a small table which shows the number of Compliant and Non-Compliant buildings. Clicking on either section will display a list of the individual buildings with each status.
 
-	The **Program Configuration** set up for the **Program Overview** also controls the information shown here in **Property Insights**, repeated here for completeness.
+ Clicking on an individual building will open the Inventory Detail view for that building.
 
-	Click the **Program Configuration** button to set up the metrics to compare
+ ![](images/insights_property_insights_04.png)
 
-	![](images/insights_program_configuration_button.png)
-	
-	In this example, the configuration setting are:
+ ###Program Configuration
 
-	**GENERAL SETTINGS**
+ The **Program Configuration** set up for the **Program Overview** also controls the information shown here in **Property Insights**, repeated here for completeness.
 
-	- **Cycles:** This EUI Comparison program is looking at data from 2019 - 2023
-	- **Filter Group:** For this program, the filter group includes all buildings. If multiple Filter Groups are defined, more than one Filter Group can be selected here
+ Click the **Program Configuration** button to set up the metrics to compare
 
-	** METRIC TYPE SETTINGS**
+ ![](images/insights_program_configuration_button.png)
 
-	- **Metrics:** Site EUI
-	- **Actual Value:** Site EUI (kBtu/ft2/year), from the pulldown list of fields for the building
-	- **Target Value:** Site EUI Target (kBtu/ft2/year), from the pulldown list of fields for the building
-	- **Type:** This setting defines "compliance". In this case, the Target EUI value must be larger than the Actual EUI value, meaning the building's actual site EUI is less than the target set for that building
+ In this example, the configuration setting are:
 
-	![](images/insights_program_overview_configuration.png)
+ **GENERAL SETTINGS**
 
-	
+- **Cycles:** This EUI Comparison program is looking at data from 2019 - 2023
+- **Filter Group:** For this program, the filter group includes all buildings. If multiple Filter Groups are defined, more than one Filter Group can be selected here
+
+ **METRIC TYPE SETTINGS**
+
+- **Metrics:** Site EUI
+- **Actual Value:** Site EUI (kBtu/ft2/year), from the pulldown list of fields for the building
+- **Target Value:** Site EUI Target (kBtu/ft2/year), from the pulldown list of fields for the building
+- **Type:** This setting defines "compliance". In this case, the Target EUI value must be larger than the Actual EUI value, meaning the building's actual site EUI is less than the target set for that building
+
+ ![](images/insights_program_overview_configuration.png)
+
 ??? note "Default Reports"
-	## Default Reports
 
-	Default reports allow graphing of different metrics
+## Default Reports
 
-	![](images/insights_default_reports_01.png)
+ Default reports allow graphing of different metrics
 
-	#### Property Reports Settings
+ ![](images/insights_default_reports_01.png)
 
-	![](images/insights_default_reports_03.png)
+### Property Reports Settings
 
-	This section of the page defines what data will be plotted, based on the selection of:
+ ![](images/insights_default_reports_03.png)
 
-	- Cycles to include
-	- X Axis metric
-	- Y Axis metric
+ This section of the page defines what data will be plotted, based on the selection of:
 
-	![](images/insights_default_reports_04.png)
+- Cycles to include
+- X Axis metric
+- Y Axis metric
 
-	
+ ![](images/insights_default_reports_04.png)
+
 ??? note "Custom Reports"
-	## Custom Reports
 
-	Custom Reports show the metric trend over time for a collection of buildings
+## Custom Reports
 
-	![](images/insights_customReport.png)
+ Custom Reports show the metric trend over time for a collection of buildings
 
-	**Config**
+ ![](images/insights_customReport.png)
 
-	The **Config** option in the upper right controls the display (or not) of the configuration settings. If it is "off", the display of the graph has more room on the web page
+ **Config**
 
-	![](images/insights_custom_reports_02.png)
+ The **Config** option in the upper right controls the display (or not) of the configuration settings. If it is "off", the display of the graph has more room on the web page
 
-	The table below the graph can be expanded to show the individual properties, and clicking on the buildings will display the Inventory Detail view for the property.
+ ![](images/insights_custom_reports_02.png)
 
-	![](images/insights_custom_reports_03.png)
+ The table below the graph can be expanded to show the individual properties, and clicking on the buildings will display the Inventory Detail view for the property.
 
-	
+ ![](images/insights_custom_reports_03.png)
 
 ??? note "Portfolio Summary"
 
-	Details coming soon
+ Details coming soon

@@ -5,7 +5,9 @@
 SEED will attempt to geocode your data with latitude and longitude values only if the following are true:
 
 1. Your organization has a MapQuest API key. You can register for one through [MapQuest's website](https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register) and apply it on your organization settings page.
+
 2. The records being geocoded have address values that can be read by SEED. In your organization column settings page, you can specify which fields and in what order SEED will use to build the full address that will be geocoded by MapQuest.
+
 3. The records being geocoded _do not_ already have latitude and longitude populated. SEED won't override these values, but you can edit and remove these values if you want SEED to attempt to generate them with MapQuest.
 
 SEED will make this attempt in the following cases:

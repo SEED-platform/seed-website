@@ -30,13 +30,15 @@ Note: Each page on the [website](https://seed-platform.org/) corresponds to a fi
 For any issues, please reach out to Katherine Fleming.
 
 ## Releasing New Documentation
+
 * Create a pull request into the `main` branch
-* The PR will automatically deploy when merging to `main`. 
-    * If a manual deploy is needed then run `mkdocs gh-deploy`
+* The PR will automatically deploy when merging to `main`.
+  * If a manual deploy is needed then run `mkdocs gh-deploy`
 
 ## Markdown Examples
 
 ### Collapsible Sections
+
 To make a section collapsible, you have to remove the `#`s before the section name and replace them with three `?`s. Additionally, you have to add the word `note` and put quotation marks around the section title. For example, change `### Collapsible Sections` to `??? note "Collapsible Sections"`. Finally, the remaining content in that section needs to be indented. See below for an example block of markdown.
 
 ```markdown
@@ -45,6 +47,7 @@ To make a section collapsible, you have to remove the `#`s before the section na
 ```
 
 ### Image Optimization
+
 Install [pngquant](https://lib.rs/install/pngquant). Once installed run the following commands (these were tested on MacOS):
 
 ```BASH

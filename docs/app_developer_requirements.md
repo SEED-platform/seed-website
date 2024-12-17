@@ -18,9 +18,10 @@ A company could use the SEED Platform API to create mobile apps or web sites tha
 ## Requirements
 
 App developer Technical Allies must meet these requirements annually:
+
 - Demonstrate an application built using the SEED Platform API either by:
-	- (a) calling the APIs of the LBNL-hosted instance of SEED, or 
-	- (b) sending the SHA of the SEED version they are using and server logs verifying the API calls.
+  - (a) calling the APIs of the LBNL-hosted instance of SEED, or
+  - (b) sending the SHA of the SEED version they are using and server logs verifying the API calls.
 - Execute a SEED Platform trademark [sublicense](resources/SEED_LBNL_sample_license.pdf) with LBNL.
 
 ## Approval Process
@@ -31,9 +32,9 @@ To be approved as a SEED-Platform Technical Ally, software contributors must fol
 - Contact the SEED Development team using one of the methods on the [contact page](contact.md) to express interest in becoming a Technical Ally or hosting provider,
 - Demonstrate your application's functionality to the SEED Development team,
 - Documentation must include:
-	- Screenshots of app
-	- Version of SEED API it is built for
-	- List of API endpoints used
-	- If app is browser-based, screenshot of browser debug screen showing API endpoints accessed
+  - Screenshots of app
+  - Version of SEED API it is built for
+  - List of API endpoints used
+  - If app is browser-based, screenshot of browser debug screen showing API endpoints accessed
 
 Please note that any individual or organization is welcome to develop stand-alone apps for the SEED Platform APIs. Official recognition as a Technical Ally is only required when the organization wishes to use the SEED Platform trademark and logo to publicly identify their contributions to the SEED Platform Collaborative.

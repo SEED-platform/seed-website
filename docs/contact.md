@@ -21,4 +21,3 @@ It is recommended to use [GitHub issues](https://github.com/SEED-platform/seed/i
 The SEED Developers Forum contains various topics and joining enables you to connect with other developers. It is recommended to join this forum to submit developer questions, features requests, and report issues as needed. Also, submitting issues on GitHub is encouraged.
 
 [https://lists.buildingenergytools.org/g/SEEDdevelopers/topics](https://lists.buildingenergytools.org/g/SEEDdevelopers/topics)
-

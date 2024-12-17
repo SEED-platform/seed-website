@@ -16,18 +16,15 @@ Different inventory management and analysis features in SEED are based on the re
 
 * **Pairing** refers to the association between properties and tax lots within the same cycle.
 
-* **Linking** refers to the association between properties across cycles (or tax lots across cycles) and is useful for analysis. 
-
+* **Linking** refers to the association between properties across cycles (or tax lots across cycles) and is useful for analysis.
 
 For more details, refer to [this documentation that covers matching, merging, and linking](https://github.com/SEED-platform/seed/blob/develop/docs/source/matching.rst).
-
 
 ## The linking feature is new - can I get more details on how it works?
 
 Cross-cycle linking, or simply **linking**, allows organizations to analyze uploads of the same property (or tax lot) over time. This is done by matching records in one cycle with records within other cycles. SEED builds these associations automatically during import using matching criteria as specified by the organization. Additionally, this association can be made during a manual edit to record values (especially if the changed value is a matching criteria field).
 
 For even more details on matching and linking, refer to [this section of the matching, merging, and linking documentation](https://github.com/SEED-platform/seed/blob/develop/docs/source/matching.rst#linking-across-cycles).
-
 
 ## How does linking interact with paired properties and tax lots?
 

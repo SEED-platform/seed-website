@@ -1,4 +1,4 @@
-# About 
+# About
 
 ## Hosting Options
 
@@ -52,7 +52,7 @@ The PROPRIETARY DATA shall remain protected until the PROVIDER provides notice o
 
 By providing the PROPRIETARY DATA, PROVIDER agrees to the following:
 
-- PROVIDER has the authority to provide the PROPRIETARY DATA to the RECIPIENT, that the information provided constitutes PROPRIETARY DATA, and consents to the information provided being labeled and treated as PROPRIETARY DATA. If PROVIDER wishes to provide non-proprietary data, please contact BTODataTools@ee.doe.gov.
+- PROVIDER has the authority to provide the PROPRIETARY DATA to the RECIPIENT, that the information provided constitutes PROPRIETARY DATA, and consents to the information provided being labeled and treated as PROPRIETARY DATA. If PROVIDER wishes to provide non-proprietary data, please contact <BTODataTools@ee.doe.gov>.
 
 - RECIPIENT may host, display, and manage such PROPRIETARY DATA for the PROVIDER and the Government to access, analyze, and manage through the SEED Platform.
 
@@ -81,10 +81,12 @@ There are three hosting options:
 1. Self-hosting on user-owned hardware
 2. Self-hosting on the cloud (e.g. Amazon, Google Compute)
 3. Paying a hosting provider. Several companies offer SEED as a hosted solution:
-	* [ClearlyEnergy](https://www.clearlyenergy.com/)
-	* [Earth Advantage](https://www.earthadvantage.org/creating-change/home-energy-score.html)
-	* [Open](https://opentech.eco/)
-	* [PSD Consulting](http://psdconsulting.com)
+
+    - [ClearlyEnergy](https://www.clearlyenergy.com/)
+    - [Earth Advantage](https://www.earthadvantage.org/creating-change/home-energy-score.html)
+    - [Open](https://opentech.eco/)
+    - [PSD Consulting](http://psdconsulting.com)
+
 4. DOE/National Lab-Hosted Instance
 
 See the [Technical Allies page](technical_ally.md) for more information.
