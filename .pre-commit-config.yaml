@@ -50,4 +50,3 @@ repos:
         args: [
           "--config", ".markdownlint.json"
         ]
-

@@ -2,10 +2,10 @@ To get started with SEED, you need to log in with you account credentials, and t
 
 ??? note "Getting Started"
     ## Getting Started
-    
+
     ### Log in to SEED
 
-    The first thing to do is to log in to SEED with your user email and password. These are assigned to you by the SEED administrator. 
+    The first thing to do is to log in to SEED with your user email and password. These are assigned to you by the SEED administrator.
 
     To see the NREL Data Terms for SEED, click the "View/Hide Terms" link
 
@@ -28,19 +28,18 @@ To get started with SEED, you need to log in with you account credentials, and t
 
     Note that this represents an ideal case, but it can be used to confirm proper program performance.
 
-    All sample data should work with all versions of SEED, although the newer datasets may contain fields that do not exist in earlier versions. 
+    All sample data should work with all versions of SEED, although the newer datasets may contain fields that do not exist in earlier versions.
 
-        
+
     | Version | Files |
     |---------|-------|
-    | 2.7.0-Beta | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.7.0-Beta/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.7.0-Beta/seed/tests/data/portfolio-manager-sample.csv) | 
-    | 2.6.1 | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/portfolio-manager-sample.csv) | 
+    | 2.7.0-Beta | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.7.0-Beta/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.7.0-Beta/seed/tests/data/portfolio-manager-sample.csv) |
+    | 2.6.1 | [Covered Buildings Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/covered-buildings-sample.csv) &nbsp; &nbsp; [Portfolio Manager Sample File](https://raw.githubusercontent.com/SEED-platform/seed/v2.6.1/seed/tests/data/portfolio-manager-sample.csv) |
 
 
     See the [Importing Data](user_doc_data_import.md) page for more information on importing data.
 
-
-## Main Navigation 
+## Main Navigation
 
 The primary navigation options in SEED are shown on the left hand side
 of every screen, and they can be expanded to show full titles or collapsed to just show icons.
@@ -48,7 +47,6 @@ of every screen, and they can be expanded to show full titles or collapsed to ju
 ??? note "Main Navigation"
 
     ![](images/navigation_bar.png)
-
 
 ## Inventory
 
@@ -72,11 +70,11 @@ The Inventory screen displays the buildings that have been imported into SEED.
 
     * **Map:** If the properties have been correctly geocoded, they will be displayed on a map based on those locations
 
-    * **Data:** Links to Insights 
+    * **Data:** Links to Insights
 
     * **Summary (Beta):** Displays summary information about the records and fields by cycle
 
-## Data 
+## Data
 
 The Data navigation tab will take you to the Data Sets view, where Data
 Sets (groups of imported files) can be created, and files imported. For
@@ -113,17 +111,15 @@ data imports.
 
      ![](images/data_uploadMeter.png)
 
-
-## Organizations 
+## Organizations
 
 The Organizations navigation button is used to view many of the options for setting up the data import and data management.
 
 ![Organization Links](images/org_links.png)
 
-
 ??? note "Organizations"
 
-    The links across the screen under "Organizations" allow setting up various options for the entire SEED organization. 
+    The links across the screen under "Organizations" allow setting up various options for the entire SEED organization.
 
     ![](images/org_links.png)
 
@@ -132,12 +128,12 @@ The Organizations navigation button is used to view many of the options for sett
     - **Access Level Tree:** Manage the hierarchy of user permissions and levels of access to the data
         ![Access Level Tree](images/org_accessLevelTree.png)
 
- 
+
      -  **Column Mappings:** manage the field names that are mapped on
         import, creating Column Mapping Profiles for different file types
         ![Column Mappings](images/org_columnMapping.png)
 
-    
+
     -   **Column Settings:** manage various settings for the mapped fields,
         including:
 
@@ -205,7 +201,7 @@ The Organizations navigation button is used to view many of the options for sett
     -   **Sub-Organization:** manage sub-organizations, if any, to the main
         organization
 
-## Insights 
+## Insights
 
 The Insights feature in SEED allows analysis of building energy benchmarking or Building
 Performance Standards compliance over time based on setting performance
@@ -233,8 +229,7 @@ targets, both individually and as a group, over specific time periods.
 
     ![Custom Reports](images/insights_customReport.png)
 
-
-## Analyses 
+## Analyses
 
 The Analyses feature has many different analysis options, including the
 following:
@@ -249,8 +244,7 @@ following:
 
     ![Analyses](images/analysis_run.png)
 
-
-## API Documentation 
+## API Documentation
 
 The API Documentation page uses Swagger to document, in detail, the API
 calls that are available to access data in SEED.
@@ -259,8 +253,7 @@ calls that are available to access data in SEED.
 
     ![API Documentation](images/api_docExample.png){:.seed-img}
 
-
-## Contact 
+## Contact
 
 The Contact page has information and links to various websites about
 SEED, as well as a link to the SEED Github open source repository.
@@ -269,8 +262,7 @@ SEED, as well as a link to the SEED Github open source repository.
 
     ![Contact Screen](images/contact_screen.png)
 
-
-## About 
+## About
 
 The about page has information about the development team as well as the
 version number of the program release being used.
@@ -279,7 +271,7 @@ version number of the program release being used.
 
     ![About Page](images/aboutScreen.png)
 
-## Documentation  
+## Documentation
 
 The Documentation page has a series of Frequently Asked Questions.
 
@@ -287,8 +279,7 @@ The Documentation page has a series of Frequently Asked Questions.
 
     ![Documentation Page](images/documentation_faq.png)
 
-
-## Logout 
+## Logout
 
 Clicking the Logout navigation button will log the user out of the
 current session, and allow the user to log in again.

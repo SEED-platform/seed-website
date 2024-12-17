@@ -8,6 +8,17 @@
       "addWords": true
     }
   ],
-  "dictionaries": ["project-words"],
-  "ignorePaths": ["node_modules", "/project-words.txt", "site", "/mkdocs.yml", "/.pre-commit-config.yaml", "/requirements.txt"]
+  "dictionaries": [
+    "project-words"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "/project-words.txt",
+    "site",
+    "/mkdocs.yml",
+    "/.pre-commit-config.yaml",
+    "/requirements.txt",
+    ".github",
+    "docs/code_documentation"
+  ]
 }

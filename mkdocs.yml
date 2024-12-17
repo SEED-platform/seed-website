@@ -48,7 +48,7 @@ nav:
     - Overview: 'user_doc_overview.md'
     - Getting Started: 'user_doc_getting_started.md'
     - Importing Data: 'user_doc_data_import.md'
-    - View Building Inventory: 'user_doc_inventory.md'    
+    - View Building Inventory: 'user_doc_inventory.md'
     - Insights: 'user_doc_insights.md'
     - Analyses: 'user_doc_analyses.md'
     - Organization Settings: 'user_doc_settings.md'
@@ -77,4 +77,3 @@ plugins:
       redirect_maps:
         'lbnl.md': 'about.md'
   - search
-            
