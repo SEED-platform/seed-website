@@ -4,10 +4,10 @@
   "dictionaryDefinitions": [
     {
       "name": "project-words",
-      "path": "./project-words.txt",
+      "path": "./.project-words.txt",
       "addWords": true
     }
   ],
   "dictionaries": ["project-words"],
-  "ignorePaths": ["node_modules", "/project-words.txt", "site", "/mkdocs.yml"]
+  "ignorePaths": ["node_modules", "/project-words.txt", "site", "/mkdocs.yml", "/.pre-commit-config.yaml", "/requirements.txt"]
 }
