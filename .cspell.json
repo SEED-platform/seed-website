@@ -12,13 +12,14 @@
     "project-words"
   ],
   "ignorePaths": [
+    ".github",
+    ".vscode",
     "node_modules",
-    "/project-words.txt",
     "site",
+    "docs/code_documentation",
+    "/project-words.txt",
     "/mkdocs.yml",
     "/.pre-commit-config.yaml",
-    "/requirements.txt",
-    ".github",
-    "docs/code_documentation"
+    "/requirements.txt"
   ]
 }
