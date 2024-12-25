@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; SEED Platform 3.2.0 documentation</title>
+  <title>Index &mdash; SEED Platform 3.2.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
 
 
   <!--[if lt IE 9]>
@@ -15,8 +15,8 @@
 
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4f6ddb47"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/documentation_options.js?v=dcedd534"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="#" />
@@ -35,7 +35,7 @@
             SEED Platform
           </a>
               <div class="version">
-                3.2.0
+                3.2.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -546,14 +546,14 @@
 </li>
       <li><a href="modules/seed.models.html#seed.models.models.Unit.DECIMAL">DECIMAL (seed.models.models.Unit attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="modules/seed.landing.html#seed.landing.forms.CustomCreateUserForm.declared_fields">declared_fields (seed.landing.forms.CustomCreateUserForm attribute)</a>
 
       <ul>
         <li><a href="modules/seed.landing.html#seed.landing.forms.LoginForm.declared_fields">(seed.landing.forms.LoginForm attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="modules/seed.html#seed.decorators.decorator_to_mixin">decorator_to_mixin() (in module seed.decorators)</a>
 </li>
       <li><a href="modules/seed.serializers.html#seed.serializers.celery.CeleryDatetimeSerializer.default">default() (seed.serializers.celery.CeleryDatetimeSerializer method)</a>
@@ -573,8 +573,6 @@
       <li><a href="modules/seed.cleansing.html#seed.models.data_quality.Rule.DEFAULT_RULES">DEFAULT_RULES (seed.models.data_quality.Rule attribute)</a>
 </li>
       <li><a href="modules/seed.models.html#seed.models.columns.Column.delete_all">delete_all() (seed.models.columns.Column static method)</a>
-</li>
-      <li><a href="modules/seed.html#seed.tasks.delete_organization">delete_organization() (in module seed.tasks)</a>
 </li>
       <li><a href="modules/seed.tests.html#seed.tests.util.DeleteModelsTestCase">DeleteModelsTestCase (class in seed.tests.util)</a>
 </li>
@@ -605,8 +603,6 @@
       <li><a href="modules/seed.models.html#seed.models.columns.Column.display_name">display_name (seed.models.columns.Column attribute)</a>
 </li>
       <li><a href="modules/seed.models.html#seed.models.tax_lots.TaxLotState.district">district (seed.models.tax_lots.TaxLotState attribute)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory">DjangoFunctionalFactory (class in seed.test_helpers.factory.helpers)</a>
 </li>
       <li><a href="modules/seed.utils.html#seed.utils.api.drf_api_endpoint">drf_api_endpoint() (in module seed.utils.api)</a>
 </li>
@@ -808,6 +804,8 @@
         <li><a href="modules/seed.models.html#seed.models.tax_lots.TaxLotState.get_next_by_updated">(seed.models.tax_lots.TaxLotState method)</a>
 </li>
       </ul></li>
+      <li><a href="modules/seed.models.html#seed.models.columns.Column.get_num_of_nonnulls_by_column_name">get_num_of_nonnulls_by_column_name() (seed.models.columns.Column static method)</a>
+</li>
       <li><a href="modules/seed.models.html#seed.models.cycles.Cycle.get_or_create_default">get_or_create_default() (seed.models.cycles.Cycle class method)</a>
 </li>
       <li><a href="modules/seed.utils.html#seed.utils.api.get_org_id_from_validator">get_org_id_from_validator() (in module seed.utils.api)</a>
@@ -918,6 +916,8 @@
 </li>
       <li><a href="modules/seed.models.html#seed.models.properties.PropertyViewLabel.goal_id">goal_id (seed.models.properties.PropertyViewLabel attribute)</a>
 </li>
+      <li><a href="modules/seed.models.html#seed.models.columns.Column.goal_transactions_columns">goal_transactions_columns (seed.models.columns.Column attribute)</a>
+</li>
       <li><a href="modules/seed.models.html#seed.models.properties.Property.goalnote_set">goalnote_set (seed.models.properties.Property attribute)</a>
 </li>
       <li><a href="modules/seed.models.html#seed.models.models.StatusLabel.GRAY_CHOICE">GRAY_CHOICE (seed.models.models.StatusLabel attribute)</a>
@@ -932,6 +932,12 @@
 </li>
       <li><a href="modules/seed.models.html#seed.models.properties.PropertyState.gross_floor_area_orig">gross_floor_area_orig (seed.models.properties.PropertyState attribute)</a>
 </li>
+      <li><a href="modules/seed.models.html#seed.models.properties.Property.group_mappings">group_mappings (seed.models.properties.Property attribute)</a>
+
+      <ul>
+        <li><a href="modules/seed.models.html#seed.models.tax_lots.TaxLot.group_mappings">(seed.models.tax_lots.TaxLot attribute)</a>
+</li>
+      </ul></li>
       <li><a href="modules/seed.landing.html#seed.landing.models.SEEDUser.groups">groups (seed.landing.models.SEEDUser attribute)</a>
 </li>
   </ul></td>
@@ -1059,8 +1065,6 @@
       <li><a href="modules/seed.models.html#seed.models.models.Unit.INTEGER">INTEGER (seed.models.models.Unit attribute)</a>
 </li>
       <li><a href="modules/seed.models.html#seed.models.columns.Column.INTERNAL_TYPE_TO_DATA_TYPE">INTERNAL_TYPE_TO_DATA_TYPE (seed.models.columns.Column attribute)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.invalid_test_cc_number">invalid_test_cc_number() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
 </li>
       <li><a href="modules/seed.models.html#seed.models.properties.Property.inventory_documents">inventory_documents (seed.models.properties.Property attribute)</a>
 </li>
@@ -1315,8 +1319,6 @@
         <li><a href="modules/seed.templatetags.html#module-seed.templatetags.breadcrumbs">seed.templatetags.breadcrumbs</a>
 </li>
         <li><a href="modules/seed.test_helpers.html#module-seed.test_helpers">seed.test_helpers</a>
-</li>
-        <li><a href="modules/seed.test_helpers.factory.html#module-seed.test_helpers.factory.helpers">seed.test_helpers.factory.helpers</a>
 </li>
         <li><a href="modules/seed.tests.html#module-seed.tests.test_admin_views">seed.tests.test_admin_views</a>
 </li>
@@ -1739,36 +1741,6 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_bool">rand_bool() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_city">rand_city() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_city_suffix">rand_city_suffix() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_currency">rand_currency() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_date">rand_date() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_domain">rand_domain() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_email">rand_email() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_float">rand_float() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_int">rand_int() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_name">rand_name() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_phone">rand_phone() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_plant_name">rand_plant_name() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_str">rand_str() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_street_address">rand_street_address() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.rand_street_suffix">rand_street_suffix() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
       <li><a href="modules/seed.models.html#seed.models.properties.PropertyState.raw_access_level_instance">raw_access_level_instance (seed.models.properties.PropertyState attribute)</a>
 
       <ul>
@@ -1817,12 +1789,12 @@
         <li><a href="modules/seed.templatetags.html#seed.templatetags.breadcrumbs.UrlBreadcrumbNode.render">(seed.templatetags.breadcrumbs.UrlBreadcrumbNode method)</a>
 </li>
       </ul></li>
+      <li><a href="modules/seed.models.html#seed.models.cycles.Cycle.report_configurations">report_configurations (seed.models.cycles.Cycle attribute)</a>
+</li>
       <li><a href="modules/seed.html#seed.decorators.require_organization_id">require_organization_id() (in module seed.decorators)</a>
 </li>
       <li><a href="modules/seed.html#seed.decorators.require_organization_id_class">require_organization_id_class() (in module seed.decorators)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="modules/seed.html#seed.decorators.require_organization_membership">require_organization_membership() (in module seed.decorators)</a>
 </li>
       <li><a href="modules/seed.cleansing.html#seed.models.data_quality.Rule.required">required (seed.models.data_quality.Rule attribute)</a>
@@ -1839,6 +1811,8 @@
 </li>
       <li><a href="modules/seed.cleansing.html#seed.models.data_quality.DataQualityCheck.reset_default_rules">reset_default_rules() (seed.models.data_quality.DataQualityCheck method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="modules/seed.cleansing.html#seed.models.data_quality.DataQualityCheck.reset_results">reset_results() (seed.models.data_quality.DataQualityCheck method)</a>
 </li>
       <li><a href="modules/seed.lib.mappings.html#seed.lib.mappings.mapping_columns.MappingColumns.resolve_duplicate">resolve_duplicate() (seed.lib.mappings.mapping_columns.MappingColumns method)</a>
@@ -2182,13 +2156,6 @@
 </li>
       </ul></li>
       <li>
-    seed.test_helpers.factory.helpers
-
-      <ul>
-        <li><a href="modules/seed.test_helpers.factory.html#module-seed.test_helpers.factory.helpers">module</a>
-</li>
-      </ul></li>
-      <li>
     seed.tests.test_admin_views
 
       <ul>
@@ -2223,8 +2190,6 @@
         <li><a href="modules/seed.tests.html#module-seed.tests.util">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     seed.token_generators
 
@@ -2232,6 +2197,8 @@
         <li><a href="modules/seed.html#module-seed.token_generators">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     seed.utils
 
@@ -2546,8 +2513,6 @@
 </li>
       <li><a href="modules/seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_format_type">test_ajax_request_class_format_type() (seed.tests.test_decorators.ClassDecoratorTests method)</a>
 </li>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.test_cc_number">test_cc_number() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
       <li><a href="modules/seed.tests.html#seed.tests.test_views.TestMCMViews.test_create_dataset">test_create_dataset() (seed.tests.test_views.TestMCMViews method)</a>
 </li>
       <li><a href="modules/seed.tests.html#seed.tests.test_views.DatasetPermissionsTests.test_dataset_count">test_dataset_count() (seed.tests.test_views.DatasetPermissionsTests method)</a>
@@ -2590,10 +2555,10 @@
 </li>
       <li><a href="modules/seed.tests.html#seed.tests.test_decorators.TestDecorators.test_get_prog_key">test_get_prog_key() (seed.tests.test_decorators.TestDecorators method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="modules/seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties">test_get_properties() (seed.tests.test_views.InventoryViewTests method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="modules/seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_cycle_id">test_get_properties_cycle_id() (seed.tests.test_views.InventoryViewTests method)</a>
 </li>
       <li><a href="modules/seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_empty_page">test_get_properties_empty_page() (seed.tests.test_views.InventoryViewTests method)</a>
@@ -2816,8 +2781,6 @@
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="modules/seed.test_helpers.factory.html#seed.test_helpers.factory.helpers.DjangoFunctionalFactory.valid_test_cc_number">valid_test_cc_number() (seed.test_helpers.factory.helpers.DjangoFunctionalFactory class method)</a>
-</li>
       <li><a href="modules/seed.cleansing.html#seed.models.data_quality.Rule.valid_text">valid_text() (seed.models.data_quality.Rule method)</a>
 </li>
       <li><a href="modules/seed.utils.html#seed.utils.api.OrgValidateMixin.validate">validate() (seed.utils.api.OrgValidateMixin method)</a>

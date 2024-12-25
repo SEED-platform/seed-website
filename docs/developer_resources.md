@@ -10,7 +10,9 @@ documentation of classes and methods. General developer resources are found in t
 
 | Release Date | Version               | Documentation Link                                   |
 |--------------|-----------------------|------------------------------------------------------|
-| 09/27/2024   | latest stable (3.2.0) | [link](./code_documentation/latest/index.html)       |
+| 12/16/2024   | latest stable (3.2.2) | [link](./code_documentation/latest/index.html)       |
+| 12/16/2024   | 3.2.2                 | [link](./code_documentation/3.2.2/index.html)        |
+| 11/14/2024   | 3.2.1                 | [link](./code_documentation/3.2.1/index.html)        |
 | 09/27/2024   | 3.2.0                 | [link](./code_documentation/3.2.0/index.html)        |
 | 09/03/2024   | 3.1.0                 | [link](./code_documentation/3.1.0/index.html)        |
 | 07/16/2024   | 3.0.0                 | [link](./code_documentation/3.0.0/index.html)        |
