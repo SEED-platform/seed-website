@@ -5,7 +5,7 @@ The SEED Platform&trade; is an open-source project. The source code and document
 ## Source Code Documentation
 
 Links to the source code documentation are below by version. Versions prior to 2.14.0 did not include
-documentation of classes and methods. General developer resources are found in the source code 
+documentation of classes and methods. General developer resources are found in the source code
 [documentation page](./code_documentation/latest/developer_resources.html).
 
 | Release Date | Version               | Documentation Link                                   |
@@ -53,7 +53,7 @@ documentation of classes and methods. General developer resources are found in t
 | 01/24/2018   | 2.3.0                 | [link](./code_documentation/2.3.0/index.html)        |
 | 11/15/2017   | 2.2.1                 | [link](./code_documentation/2.2.1/index.html)        |
 | 09/29/2017   | 2.2.0                 | [link](./code_documentation/2.2.0/index.html)        |
- 
+
 ## Release Notes
 
 - [Release Notes](https://github.com/SEED-platform/seed/releases)
