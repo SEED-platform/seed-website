@@ -53,7 +53,6 @@ of every screen, and they can be expanded to show full titles or collapsed to ju
 The Inventory screen displays the buildings that have been imported into SEED.
 
 ??? note "Inventory"
-
     After building data are imported into SEED, they can be accessed from the
     Inventory navigation button. The data can be viewed by cycle, as well as by Property and Tax Lot.
 
@@ -83,9 +82,7 @@ sets based on compliance years is a standard method of organizing the
 data imports.
 
 ??? note "Data"
-
     ![](images/data_dataSets.png)
-
 
     There are several types of data that can be imported, including
 
@@ -118,7 +115,6 @@ The Organizations navigation button is used to view many of the options for sett
 ![Organization Links](images/org_links.png)
 
 ??? note "Organizations"
-
     The links across the screen under "Organizations" allow setting up various options for the entire SEED organization.
 
     ![](images/org_links.png)
@@ -209,11 +205,9 @@ targets into the future and showing how buildings are meeting those
 targets, both individually and as a group, over specific time periods.
 
 ??? note "Insights"
-
     **Program Overview** shows the compliance of a portfolio of buildings over time. In the example below, compliance is shown over a 5 year time period, 2019 - 2023, with the compliance of the buildings increasing during that period. The red column areas show non-compliance and the blue column areas show compliance.
 
     ![Program Overview](images/insights_programOverview.png)
-
 
     **Property Insights** shows compliance of individual buildings for a
     particular period of time (cycle), where the blue dots indicate buildings that have met their compliance targets,
@@ -222,7 +216,6 @@ targets, both individually and as a group, over specific time periods.
     for those buildings.
 
     ![Property Insights](images/insights_propertyInsights.png)
-
 
     **Custom Reports** shows compliance trends, compared to a target,
     over time in a graph
@@ -241,7 +234,6 @@ following:
 - Energy Equity & Environmental Justice (EEEJ)
 
 ??? note "Analyses"
-
     ![Analyses](images/analysis_run.png)
 
 ## API Documentation
@@ -250,7 +242,6 @@ The API Documentation page uses Swagger to document, in detail, the API
 calls that are available to access data in SEED.
 
 ??? note "API Documentation"
-
     ![API Documentation](images/api_docExample.png){:.seed-img}
 
 ## Contact
@@ -259,7 +250,6 @@ The Contact page has information and links to various websites about
 SEED, as well as a link to the SEED Github open source repository.
 
 ??? note "Contact"
-
     ![Contact Screen](images/contact_screen.png)
 
 ## About
@@ -268,7 +258,6 @@ The about page has information about the development team as well as the
 version number of the program release being used.
 
 ??? note "About"
-
     ![About Page](images/aboutScreen.png)
 
 ## Documentation
@@ -276,7 +265,6 @@ version number of the program release being used.
 The Documentation page has a series of Frequently Asked Questions.
 
 ??? note "Documentation"
-
     ![Documentation Page](images/documentation_faq.png)
 
 ## Logout
@@ -285,5 +273,4 @@ Clicking the Logout navigation button will log the user out of the
 current session, and allow the user to log in again.
 
 ??? note "Logout"
-
     ![Logout](images/login_logout_withoutTerms.png)

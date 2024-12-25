@@ -13,7 +13,6 @@ Many communities, jurisdictions and cities are managing their data for these ord
 * Lack of ability to easily integrate with other solutions
 
 ??? note "Features"
-
     ## Features
 
     The core functionality of SEED includes the ability to
@@ -49,7 +48,6 @@ Many communities, jurisdictions and cities are managing their data for these ord
     ![alt_text](images/Current-Known-Adoption-2024-02-07.png "Current Known Adoption SEED"){:.seed-img}
 
 ??? note "Web-based Platform"
-
     ## Web-based Platform
 
     SEED is an [open source web based platform](https://github.com/SEED-platform/seed) that can be deployed as is, or it can be used as the base for additional functionality. SEED provides both a browser-based interface for users to upload and manage their building data, as well as a full set of APIs that app developers can use to access these same data management functions.
@@ -59,7 +57,6 @@ Many communities, jurisdictions and cities are managing their data for these ord
     ![alt_text](images/ThirdPartyContributors.png "Third Party Contributors"){:.seed-img}
 
 ??? note "Data Guides"
-
     ## Data Guides
 
     The following guides detail the SEED import process and supported data types:
