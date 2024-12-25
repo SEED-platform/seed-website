@@ -2,3 +2,4 @@
 /site
 .python-version
 .DS_Store
+.vscode

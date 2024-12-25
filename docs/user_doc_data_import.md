@@ -28,7 +28,7 @@ a critical component to understand.
     SEED can import data from spreadsheets downloaded from ENERGY STAR
     Portfolio Manager and then imported into SEED. It is also possible to
     log into an ENERGY STAR Portfolio Manager account directly from SEED and
-    specify a "Custom Report Template" to be imported. 
+    specify a "Custom Report Template" to be imported.
 
     ### Match data from different sources
 
@@ -93,7 +93,6 @@ a critical component to understand.
 
     ![alt_text](images/Import Data Workflow_300.png "Import Data Workflow")
 
-
 ## **Before importing data**
 
 There are a few steps that should be completed before importing data, in
@@ -101,7 +100,6 @@ order to have a smooth process.
 
 - Define cycles
 - Define Matching fields
-
 
 ??? note "**Cycles**"
     ## Cycles
@@ -137,7 +135,6 @@ order to have a smooth process.
     ![alt_text](images/Multi cycle upload 02.png "Multi Cycle Upload Step 2")
 
 ??? note "**Matching Fields**"
-    
     ## Matching Fields
 
     ### Define Matching fields in Organizations / Column Settings
@@ -175,9 +172,10 @@ order to have a smooth process.
     is time to import the data
 
 ## **Import data - General**
-The first few steps for importing Property and Tax Parcel data are the same 
-??? note "**Overview**" 
-    
+
+The first few steps for importing Property and Tax Parcel data are the same
+
+??? note "**Overview**"
     ## Overview
 
     There are a few different ways to start importing data. You can click
@@ -187,9 +185,7 @@ The first few steps for importing Property and Tax Parcel data are the same
 
     ![alt_text](images/Data Upload 01.png "Data Upload Step 1")
 
-
 ??? note "**Create a Data Set**"
-    
     ## Create a Data Set
 
     The DATA navigation button on the left side of the application will
@@ -214,9 +210,7 @@ The first few steps for importing Property and Tax Parcel data are the same
 
     ![alt_text](images/Data - File Import Options.png "Data - File Import Options")
 
-
 ??? Note "**Upload a Spreadsheet**"
-
     ## Upload a Spreadsheet
 
     The first option in the list of upload options is "Upload a
@@ -244,8 +238,7 @@ The first few steps for importing Property and Tax Parcel data are the same
 
 ## **Import Tax Parcel Data**
 
-??? Note "**Upload a spreadsheet**"
-    
+??? Note "**Upload a Spreadsheet**"
     ## Upload a Spreadsheet
 
     First, import the tax parcel spreadsheet into the data set by clicking
@@ -261,7 +254,6 @@ The first few steps for importing Property and Tax Parcel data are the same
     ![alt_text](images/Tax Lot upload 02.png "Tax Lot upload Step 2")
 
 ??? Note "**Map the Fields**"
-
     ## Map the Fields
 
     The Mapping screen will now appear, and the fields in the uploaded file
@@ -270,12 +262,12 @@ The first few steps for importing Property and Tax Parcel data are the same
     If this is the first file being imported, the easiest way to start the
     mapping is to click the "Copy Data File Headers directly to SEED
     headers" which copies the fields from the right hand side (the fields in
-    the uploaded file) to the SEED Mapped Fields on the left side.   
+    the uploaded file) to the SEED Mapped Fields on the left side.
 
     Select "Tax Lot" for the "Set all fields to" pulldown list
 
     Change the field called "Parcel Number" to the matching field
-    "Jurisdiction Tax Lot ID". 
+    "Jurisdiction Tax Lot ID".
 
     ![alt_text](images/Tax Lot Mapping 01.png "Tax Lot Mapping Step 1")
 
@@ -297,9 +289,8 @@ The first few steps for importing Property and Tax Parcel data are the same
     ![alt_text](images/Map You Data button.png "Map You Data button")
 
 ??? note "**Review the Mapped Data**"
-    
     ## Review the Mapped Data
-    
+
     In the Mapping Review screen all the records will be displayed, with the
     new field mapping. If there is anything that needs to be changed, click
     the Back to Mapping button and the mapping can be changed as needed.
@@ -307,7 +298,6 @@ The first few steps for importing Property and Tax Parcel data are the same
     ![alt_text](images/Tax Lot Mapping Review.png "Tax Lot Mapping Review")
 
 ??? note "**Save Field Mappings and View the Results in the Inventory List View**"
-
     ## Save Field Mappings and View the Results in the Inventory List View
 
     Click the Save Mappings button to complete the data upload process; a
@@ -335,66 +325,60 @@ The first few steps for importing Property and Tax Parcel data are the same
 ## **Import ENERGY STAR&reg; Portfolio Manager&reg; Data**
 
 ??? note "**Import Options**"
-    
     ## Import Options
 
     There are two methods for importing ENERGY STAR Portfolio Manager Data
 
-    -   **Option 1:** Download a spreadsheet from the ENERGY STAR Portfolio Manager application and import that spreadsheet into SEED, in the same manner as any spreadsheet.
-    -   **Option 2:** Log in to the ENERGY STAR Portfolio Manager account from SEED and specify the Custom Report Template to upload into SEED. This eliminates the need to use the spreadsheet option.
+    - **Option 1:** Download a spreadsheet from the ENERGY STAR Portfolio Manager application and import that spreadsheet into SEED, in the same manner as any spreadsheet.
+    - **Option 2:** Log in to the ENERGY STAR Portfolio Manager account from SEED and specify the Custom Report Template to upload into SEED. This eliminates the need to use the spreadsheet option.
 
     ![alt_text](images/ESPM Import Options.png "ESPM Import Options")
 
-
 ??? note "**Option 1: Upload an ENERGY STAR Portfolio Manager Spreadsheet**"
-    
     ## Option 1: Upload an ENERGY STAR Portfolio Manager Spreadsheet
-    
+
     After uploading the tax lot spreadsheet, the next step might be to load the ENERGY STAR Portfolio Manager spreadsheet for the buildings associated with the tax lots already imported.
 
     ENERGY STAR Portfolio Manager data can also be imported by itself, without having imported tax lot data.
 
     The same steps are followed as any other spreadsheet:
 
-    -   In the same Data Set, click the **Add more data files** link
+    - In the same Data Set, click the **Add more data files** link
 
     ![alt_text](images/ESPM Add Data File.png "ESPM Add Data File")
 
-    -   Make sure the same cycle is selected, then click the Upload a Spreadsheet button.
+    - Make sure the same cycle is selected, then click the Upload a Spreadsheet button.
 
     ![alt_text](images/ESPM Upload a Spreadsheet.png "ESPM Upload a Spreadsheet")
 
-    -   Browse to the appropriate file
+    - Browse to the appropriate file
 
 ??? note "**Option 2: Import ENERGY STAR Portfolio Manager Building Data**"
-
     ## Option 2: Import ENERGY STAR Portfolio Manager Building Data
 
     It is possible to log directly into an ENERGY STAR Portfolio Manager account and specify the Custom Report Template to import. With this option, SEED will automatically regenerate the Custom Report Template in the ENERGY STAR Portfolio Manager account, and then download the data to SEED.
 
-    -   Make sure to select the correct Cycle   
-    -   Click the "Import Portfolio Manager Data" from the Import screen
+    - Make sure to select the correct Cycle
+    - Click the "Import Portfolio Manager Data" from the Import screen
 
     ![alt_text](images/ESPM_Import_login.png "ESPM Import login")
 
-    -   Input the Username and Password into the appropriate fields
-    -   Click the "Get Report Templates" button, which will cause all the Custom Report Templates for that account to be displayed.
-    -   Select the desired Custom Report Template
-    -   Click the "Submit" button
+    - Input the Username and Password into the appropriate fields
+    - Click the "Get Report Templates" button, which will cause all the Custom Report Templates for that account to be displayed.
+    - Select the desired Custom Report Template
+    - Click the "Submit" button
 
     ![alt_text](images/ESPM_Import_login-02.png "ESPM Import login 2")
 
-
 ??? note "**Map the Fields**"
-    
     ## Map the Fields
 
     In the Mapping screen
-    -   Copy the Data File headers to the SEED headers
-    -   Set the INVENTORY TYPE to Property for all fields except "Parcel ID"
-    -   Set the INVENTORY TYPE to Tax Lot for the "Parcel ID" field, and change the SEED Header mapping to the Tax Lot matching field "Jurisdiction Tax Lot ID". This will establish the relationship between the **PM Property ID** Matching field and the **Jurisdiction Tax Lot** field for each record
-    -   Save the final mapping to a new Column Mapping Profile
-    -   Click Map Your data to go to the Mapping Review screen
+    - Copy the Data File headers to the SEED headers
+    - Set the INVENTORY TYPE to Property for all fields except "Parcel ID"
+    - Set the INVENTORY TYPE to Tax Lot for the "Parcel ID" field, and change the SEED Header mapping to the Tax Lot matching field "Jurisdiction Tax Lot ID". This will establish the relationship between the **PM Property ID** Matching field and the **Jurisdiction Tax Lot** field for each record
+    - Save the final mapping to a new Column Mapping Profile
+    - Click Map Your data to go to the Mapping Review screen
 
     ![alt_text](images/ESPM Mapping.png "ESPM Mapping")
 
@@ -404,7 +388,6 @@ The first few steps for importing Property and Tax Parcel data are the same
     ![alt_text](images/Data-MappingTax-Property Fields.png "Data-MappingTax-Property Fields")
 
 ??? note "**Review the Mapped Data and View the Results in the Inventory List View**"
-    
     ## Review the Mapped Data and View the Results in the Inventory List View
 
     The Mapping Review screen will show the records mapped to the Properties table and the records mapped to the Tax Lot table
@@ -425,36 +408,37 @@ The first few steps for importing Property and Tax Parcel data are the same
     ![alt_text](images/Inventory List Merged Tax Lot Properties.png "Inventory List Merged Tax Lot Properties")
 
 ## **Import Meter Data - General**
+
 Meter data associated with a building, both monthly and other time intervals, can be imported into SEED, either at the time of the regular building data import if the data is in the same file, or as a separate import
+
 ??? note "**Import Options**"
-    
+
     ## Import Options
-    
+
     There are two type of meter data that can be imported into SEED.
 
-    -  **ENERGY STAR Portfolio Manager Monthly Data Spreadsheet**
+    - **ENERGY STAR Portfolio Manager Monthly Data Spreadsheet**
         - Monthly meter data can be exported from ENERGY STAR Portfolio Manager, and then imported into SEED
         - This monthly meter data can be in two different formats depending on how it was reported (and exported)
             - Meter data is in columns by meter
             - Meter data is in rows by meter
     - **Green Button XML Interval Data**
         - Imported in the Property Detail Meter page
-    
+
     Multiple meters per building
 
     - A building can have multiple meters from different sources and fuel types, which will be imported as separate meters into SEED if the data if formatted properly
 
-## **Import ENERGY STAR Portfolio Manager Meter Data**
+    ## **Import ENERGY STAR Portfolio Manager Meter Data**
 
 ??? note "**Overview**"
-    
     ## Overview
-    
+
     The two options for how meter data can be exported from ENERGY STAR Portfolio Manager are that the data is formatted either with:
 
     - Meter data in columns
     - Meter data in rows
- 
+
     ### Meter data in columns
 
     In the screenshot below, the meter data is formatted so that the meter data is in columns
@@ -479,12 +463,11 @@ Meter data associated with a building, both monthly and other time intervals, ca
     ![alt_text](images/data_meter_ESPM_row.png "ESPM Monthly Meter Data in Rows")
 
 ??? note "**Import the Meter Data**"
-
     ##  Import the Meter Data
 
-    Importing an ENERGY STAR Portfolio Manager file that contains a tab for Properties and one or more tabs for meter data (see examples above) can be completed in one step, or the meter data can be imported in a separate step if desired. 
+    Importing an ENERGY STAR Portfolio Manager file that contains a tab for Properties and one or more tabs for meter data (see examples above) can be completed in one step, or the meter data can be imported in a separate step if desired.
 
-    **Step 1:** Import the data as you would any other file, using the **Upload a Spreadsheet** option. 
+    **Step 1:** Import the data as you would any other file, using the **Upload a Spreadsheet** option.
 
     **Step 2:** After the building data (the first tab in the file) has been imported, an option will appear to import **Meter Data**. Click on that button
 
@@ -494,12 +477,11 @@ Meter data associated with a building, both monthly and other time intervals, ca
 
     ![alt_text](images/data_meter_ESPM_import-02.png "ESPM Monthly Meter Data Import step 1-2")
 
-    **Step 4:** Click the **Confirm** button, and SEED will upload the data and present the imported results. 
+    **Step 4:** Click the **Confirm** button, and SEED will upload the data and present the imported results.
 
     ![alt_text](images/data_meter_ESPM_import-03.png "ESPM Monthly Meter Data Import step 1-2")
 
 ??? note "**View the Imported Meter Data**"
-    
     ## View the Imported Meter Data
 
     To see the imported meter data:
@@ -510,9 +492,8 @@ Meter data associated with a building, both monthly and other time intervals, ca
 
     There are two ways to see the meter data
 
-    - **Option 1:** Click the **i** (Info) icon to get to the **Property Detail** view, then click the **Meters** link at the center top of the page 
+    - **Option 1:** Click the **i** (Info) icon to get to the **Property Detail** view, then click the **Meters** link at the center top of the page
     - **Option 2:** Click the **Lightning bolt** icon to go directly to the **Meters" view for that property
-
 
     ![alt_text](images/data_meter_ESPM_view-01.png "ESPM Monthly Meter Data View 1")
 
@@ -520,14 +501,14 @@ Meter data associated with a building, both monthly and other time intervals, ca
 
     ![alt_text](images/data_meter_ESPM_view-02.png "ESPM Monthly Meter Data View 2")
 
-    **Readings**: The Readings section of the page shows the individual meter readings for each meter 
+    **Readings**: The Readings section of the page shows the individual meter readings for each meter
 
     ![alt_text](images/data_meter_ESPM_view-04.png "ESPM Monthly Meter Data View 4")
-    
-    **Interval Setting:** SEED will show all the data if the **Interval** is set to **Exact**. 
+
+    **Interval Setting:** SEED will show all the data if the **Interval** is set to **Exact**.
 
     The **Interval** options allow viewing the data exactly as imported, as well as aggregated by **month** or **year**.
-    
+
     ![alt_text](images/data_meter_ESPM_view-03.png "ESPM Monthly Meter Data View 3")
 
     ![alt_text](images/data_meter_ESPM_view-05.png "ESPM Monthly Meter Data View 5")
@@ -535,7 +516,7 @@ Meter data associated with a building, both monthly and other time intervals, ca
 ## **Import Green Button XML Meter Data**
 
 ??? note "**Upload Green Button data from Inventory Property Detail**"
-    
+
     ## Upload Green Button data from Inventory Property Detail
 
     From the Inventory List view, Property Tab, click on the **i** (info) icon to see the Property Detail view.
@@ -555,16 +536,14 @@ Meter data associated with a building, both monthly and other time intervals, ca
     - **Step 8:** Click the **Complete and Refresh Page** button to complete the upload
     - **Step 9:** The GreenButton data is added to the Meter view in the Property Detail
         - **GB** is added as a prefix to the meter number for the GreenButton data
-    
+
     ![alt_text](images/data_meter_GB_import-02.png "GreenButton Monthly Meter Data Import 2")
 
 ## **Display Units for Meter Data**
 
 ??? note "**Units Set in Organization / Settings**"
-    
     ## Units Set in Organization / Settings
 
     The units for the data in the Inventory / Property Detail Meter view are controlled in the Organization / Settings view
 
     ![alt_text](images/data_meter_displaysettings.png "Meter Data Display Settings")
-
