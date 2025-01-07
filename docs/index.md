@@ -8,7 +8,7 @@
  </div>
 </div>
 
-The Standard Energy Efficiency Data Platform (SEED) Platform is an open-source software application designed to manage building performance data (such as required by a benchmarking ordinance) which can be costly and time consuming for states, local governments and other organizations. SEED helps users combine data from multiple sources, clean and validate it, and generate queries and reports.
+The Standard Energy Efficiency Data (SEED) Platform is an open-source software application designed to manage building performance data (such as required by a benchmarking ordinance) which can be costly and time consuming for states, local governments and other organizations. SEED helps users combine data from multiple sources, clean and validate it, and generate queries and reports.
 
 <div class="video">
     <iframe src="https://www.youtube.com/embed/3-tVQZ996lU" allow="picture-in-picture; web-share" allowfullscreen title="The SEED Platform"></iframe>
