@@ -231,7 +231,6 @@ following:
 - BETTER
 - EUI
 - Average Annual CO2
-- Energy Equity & Environmental Justice (EEEJ)
 
 ??? note "Analyses"
     ![Analyses](images/analysis_run.png)

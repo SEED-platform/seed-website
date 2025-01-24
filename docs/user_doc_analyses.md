@@ -3,7 +3,7 @@ There are several analyses that can be run on properties.  Expand the sections b
 ??? note "Overview"
     ## Analysis Overview
 
-    There are currently six different types of Analyses available in SEED:
+    There are currently several different types of Analyses available in SEED:
 
     - **BSyncr**
     - Makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program
@@ -16,9 +16,8 @@ There are several analyses that can be run on properties.  Expand the sections b
     - Calculates the EUI of a property based on the meter data and the gross floor area
     - **Average Annual CO2**
     - Calculates the CO2 emissions of a property based on the meter data and the eGRID region (which is based on the location of the property)
-    - **Energy Equity & Environmental Justice (EEEJ)**
-    - The Energy Equity & Environmental Justice analysis retrieves EEEJ information and indicators for your properties from various sources
     - **Element Statistics**
+    - Provides various aggregations of the available Elements in a property
 
     ## Generating an Analysis
 
@@ -41,7 +40,7 @@ There are several analyses that can be run on properties.  Expand the sections b
 
     ![](images/analyses_general_03.png)
 
-??? note "BSyncr" Analysis"
+??? note "BSyncr Analysis"
     ## Bsyncr Analysis
 
     the BSyncr analysis option makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program. Algorithms are based on methods in this Github repository
@@ -226,72 +225,6 @@ There are several analyses that can be run on properties.  Expand the sections b
     In the Property List view, the fields “Average Annual CO2” and “Average Annual CO2 Coverage” contain the CO2 results in the Inventory Property List View.
 
     ![](images/analyses_co2_viewing_analysis_03.png)
-
-??? note "Energy Equity & Environmental Justice (EEEJ) Analysis"
-    ## Energy Equity & Environmental Justice (EEEJ) Analysis
-
-    The Energy Equity & Environmental Justice analysis retrieves EEEJ information and indicators for your properties from various sources including:
-
-    - [The Climate and Economic Justice Screening Tool](https://screeningtool.geoplatform.gov/en/methodology){:.external}
-    - [Environmental Justice Screening and Mapping Tool (EJScreen)](https://www.epa.gov/ejscreen){:.external}
-    - [The U.S. Department of Housing and Urban Development](https://hudgis-hud.opendata.arcgis.com/){:.external}
-
-    ### Analysis Pre-requisites
-
-    The analysis requires certain data to be available in SEED in order to run successfully. The name of these fields is important at this time.
-
-    - 'Address Line 1' field
-    - 'City' and 'State' fields OR 'Postal Code' field
-    - Optional: 'Latitude' and 'Longitude' from geocoded property
-
-    The analysis workflow uses the [Census geocoder API](https://geocoding.geo.census.gov/){:.external} to retrieve each property's census tract based on the Address Line 1 + either City/State or Postal Code information. If the property has already been geocoded, this information will instead be used to determine the census tract.
-
-    Note that the census geocoder API is a bit slow. Selecting less than 20 properties at a time for teh analysis or geocoding the properties with the MapQuest API prior to running the analysis is recommended.
-
-    Once the census tract is determined
-
-    ### Running the Analysis
-
-    1. First select one or more properties on the inventory list page and then choose ‘Run Analysis’ from the Actions dropdown menu:
-    ![Select Run an Analysis from the Actions Menu](images/eeej_1.webp){:.seed-img}
-
-    2. In the modal window that will appear, name your analysis and select “Energy Equity & Environmental Justice (EEEJ)” as the Type of analysis from the dropdown menu:
-    ![Name your analysis and select EEEJ as the type](images/eeej_2.webp){:.seed-img}
-
-    3. Messages indicating an error or a successful analysis creation will be displayed in the top right corner of the page. You can click the link in the message at the top right of the screen “Click here to view your analyses”. Or you can navigate to the Analyses page from the left navigation menu.
-    ![Navigate to your analysis](images/eeej_3.webp){:.seed-img}
-
-    4. On the Analyses page you can see a list of analyses run and their status:
-    ![List of analyses](images/eeej_4.webp){:.seed-img}
-
-    5. Click on the analysis name to access more details about the analysis. You can read a small description of the analysis explaining where the data came from at the top of the page. To see details about a specific property, click on the run ID next to the property:
-    ![Click on run ID for details page](images/eeej_5.webp){:.seed-img}
-
-        Details for a property include:
-
-        - Latitude, Longitude, and Census Tract retrieved from the Census Geocoder service
-        - Whether a property is classified as disadvantaged (DAC) according to the CEJST data
-        - Whether a property is low income according to CEJST data
-        - Whether a property is classified as having an energy burden and being low income according to CEJST data
-        - The percentile of energy burden according to CEJST data
-        - The share of neighboring disadvantaged tracts according to CEJST data
-        - The number of affordable housing locations in the identified census tract according to HUD datasets on multi-family assisted housing and public development housing.
-        - A link to the EJ screen report generated for a 1-mile area around the property
-
-        ![Analysis details page](images/eeej_6.webp){:.seed-img}
-
-        An example EJ Screen report:
-
-        ![Example EJ Screen report](images/eeej_7.webp){:.seed-img}
-
-    6. As part of the analysis, the result fields above (except for the EJ Screen Report Link) have been saved directly to each property:
-    ![Analysis results saved to property fields](images/eeej_8.webp){:.seed-img}
-
-    7. Additionally, an Analysis "Card" is saved at the top of the individual Property Detail page (note that this shows only the last analysis run, but all analyses can be accessed from the Analyses menu).
-    ![Analysis card at the top of the property detail page](images/eeej_9.webp){:.seed-img}
-
-    8. The disadvantaged census tracts can be visualized on the map page (the areas with blue shading):
-    ![SEED map showing disadvantaged community census tracts](images/eeej_10.webp){:.seed-img}
 
 ??? note "Element Statistics Analysis"
     ## Element Statistics Analysis
