@@ -53,56 +53,6 @@ If you have any questions about releases or changes to the program, please conta
 
     ## New Features
 
-    ### Analyses
-
-    #### EEEJ -- Energy Equity and Environmental Justice
-
-    SEED now has an Analyses feature that will show buildings that are in disadvantaged communities using data from:
-
-    - US Census Bureau census tract data
-    - [Climate and economic Justice Screening Tool](https://screeningtool.geoplatform.gov/en#3/33.47/-97.5)
-
-        ![](images/EEEJ_climateJusticeScreeningTool.png)
-
-    To run an EEEJ analysis, do the following:
-
-    - **Property List view**
-
-    - **Select the properties for the analysis**
-    - **Actions pulldown list**
-    - Give the analysis a name and select the “Energy Equity & Environmental Justice (EEEJ) option
-
-        ![](images/EEEJ_runAnalyses.png)
-
-    To view the results:
-
-    - **Analyses**
-
-    - The results will be be displayed in the Analyses screen
-
-        ![](images/EEEJ_analyses_results.png)
-
-    - Click on the Run ID in the analysis list to see individual building results
-
-        ![](images/EEEJ_analyses_results_bldg.png)
-
-    - **Inventory**
-
-    - **Property List and Detail View:** Results are displayed in the Inventory Property List and Detail view in these fields
-
-      ![](images/EEEJ_inventory_prop_results.png)
-
-    - **Property List View:** Results are also displayed on the Inventory List Map
-
-      ![](images/EEEJ_inventory_prop_map.png)
-
-    - **Property Detail:**
-
-    - Results are displayed in the Property Detail view in "card" format
-    - It is also possible to run Analysis for a specific property from the Property Detail view
-
-        ![](images/EEEJ_inventory_prop_detail.png)
-
     ### Data
 
     #### Batch Import of Audit Template Files
