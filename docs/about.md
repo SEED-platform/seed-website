@@ -36,6 +36,7 @@ DOE and the National Laboratories agree to provide:
 
 You, and your company or organization (the PROVIDER) have agreed to upload and provide PROPRIETARY DATA, including energy efficiency data, building data, and building energy performance data to the Standard Energy Efficiency Data (SEED™) Platform database that the U.S. Department of Energy (the Government) and Alliance for Sustainable Energy, LLC (“Alliance”) the manager and operator of the National Renewable Energy Laboratory (“NREL”) (the RECIPIENT) have created and provide for use for registered users.
 
+
 PROPRIETARY DATA is defined as follows:
 
 (a) information that embody trade secrets or commercial or financial information that is confidential and privileged;
@@ -57,8 +58,6 @@ By providing the PROPRIETARY DATA, PROVIDER agrees to the following:
 - RECIPIENT may host, display, and manage such PROPRIETARY DATA for the PROVIDER and the Government to access, analyze, and manage through the SEED Platform.
 
 - RECIPIENT may use, view, or duplicate the PROPRIETARY DATA and may share the PROPRIETARY DATA with support services contractors within the scope of their contracts. RECIPIENT may share the PROPRIETARY DATA to other DOE National Laboratories participating in the SEED Platform project, under the restriction that (i) the PROPRIETARY DATA be retained in confidence and not be further disclosed, (ii) the PROPRIETARY DATA will be destroyed when the DOE National Laboratory’s participation in the SEED Platform has ended.
-
-Download a copy of the [data privacy policy](resources/SEED Data Privacy Terms.pdf).
 
 Please [contact us](contact.md) if you have any questions about this privacy policy. Any data uploaded to National Lab hosted SEED instances or shared with NREL/LBNL is proprietary and not to be shared.
 
