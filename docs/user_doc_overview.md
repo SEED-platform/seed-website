@@ -34,7 +34,7 @@ Many communities, jurisdictions and cities are managing their data for these ord
 
     It is also possible to dynamically connect the records in SEED to other applications such as Salesforce.
 
-    ![alt_text](images/SEED-Tools-Interaction-Diagram.png "image_tooltip"){:.seed-img}
+    ![alt_text](images/SEED-Tools-Interaction-Diagram.webp "image_tooltip"){:.seed-img}
 
     Once the data is imported into SEED it is possible to:
 
