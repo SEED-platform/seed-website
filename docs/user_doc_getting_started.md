@@ -233,7 +233,7 @@ following:
 - Average Annual CO2
 
 ??? note "Analyses"
-    ![Analyses](images/analysis_run.png)
+    ![Analyses](images/analysis_run.webp)
 
 ## API Documentation
 

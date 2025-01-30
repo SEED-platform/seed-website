@@ -198,9 +198,6 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     ![alt_text](images/map_01.png)
 
-    Zoom in on the map using the mouse to see the details of building in the census tracts designated as **Disadvantaged Communities (DAC)**
-
-    ![alt_text](images/map_DAC.png)
 
 ??? note "**Data**"
     ## Data
