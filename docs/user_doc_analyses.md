@@ -83,6 +83,44 @@ There are several analyses that can be run on properties.  Expand the sections b
 
     In order to run a BETTER analysis from SEED on a building, the following data must be imported into the Property Inventory
 
+    #### Building Types supported
+
+    BETTER has built-in generated U.S. benchmark statistics for selected building types. This means that single building can be analyzed using BETTER for these building types by selecting 'DEFAULT' as the Benchmark Data Type in the analysis:
+
+    - Office
+    - K-12 School
+    - Multifamily
+    - Public Library
+    - Hospital (General Medical & Surgical)
+
+    For more information on single building analytics, visit the [BETTER documentation](https://better.lbl.gov/docs/api/building_analytics/).
+
+    Additionally, BETTER supports portfolio analytics for the following building types but requires at least 30 buildings of each type to successfully generate benchmark statistics and results. This can be accomplished by selecting 30 or more buildings of the same type and selecting 'GENERATE' as the Benchmark Data Type in the analysis:
+
+    - Office
+    - Hotel
+    - K-12 School
+    - Multifamily Housing
+    - Worship Facility
+    - Museum
+    - Bank Branch
+    - Courthouse
+    - Data Center
+    - Distribution Center
+    - Fast Food Restaurant
+    - Financial Office
+    - Fire Station
+    - Non-Refrigerated Warehouse
+    - Police Station
+    - Refrigerated Warehouse
+    - Retail Store
+    - Self-Storage Facility
+    - Senior Care Community
+    - Supermarket/Grocery Store
+    - Restaurant
+    - Public Library
+
+
     #### Data mapping on import
 
     Several fields must be properly mapped when imported into SEED in order to have the correct information for a BETTER analysis.
