@@ -85,7 +85,7 @@ There are several analyses that can be run on properties.  Expand the sections b
 
     #### Building Types supported
 
-    BETTER has built-in generated U.S. benchmark statistics for selected building types. This means that single building can be analyzed using BETTER for these building types by selecting 'DEFAULT' as the Benchmark Data Type in the analysis:
+    BETTER has built-in generated U.S. benchmark statistics for selected building types. This means that single building can be analyzed using BETTER for the following building types; this is done by selecting 'DEFAULT' as the Benchmark Data Type in the analysis.
 
     - Office
     - K-12 School
@@ -271,36 +271,62 @@ There are several analyses that can be run on properties.  Expand the sections b
 
     ![Property Elements Table](images/analysis_element_statistics.webp){:.seed-img}
 
-    There are two different types of aggregations that will be generated:
+     There are two different types of aggregations that will be generated:
 
-    1. The analysis will count the number of Component_SubTypes that equal “D.D.C. Control Panel”. This will create a new field called “Number of D.D.C. Control Panels”. This field will be zero if there are no Component_SubTypes equal to “D.D.C Control Panel” in the Elements table for a property.
+    1. The analysis will determine if there are any Component_SubTypes that equal “D.D.C. Control Panel”. This will create a new field called "Has D.D.C. Control Panels”. This field will be zero (or False) if there are no Component_SubTypes equal to “D.D.C Control Panel” in the Elements table for a property and one (or True) if there are Component_SubTypes equal to “D.D.C Control Panel” in the Elements table for a property.
 
-    2. The analysis will calculate the aggregate Condition Index of the Scope 1 Uniformat Categories listed below as an average.  This value will then create new fields called “DRINKING FOUNTAINS & COOLERS CI”, “DOMESTIC WATER EQUIPMENT CI”, etc. This field will be blank if there are missing Uniformat categories for a property. The Uniformat categories are listed below.
+    2. The analysis will calculate the aggregate Condition Index of the EISA 2007-432 Uniformat Categories listed below as an average.  This value will then create new fields called “WINDOWS CI”, “DOMESTIC WATER EQUIPMENT CI”, etc. This field will be blank if there are missing Uniformat categories for a property. The Uniformat categories are listed below.
 
     | Uniformat Category|
     | -------- |
-    | DRINKING FOUNTAINS & COOLERS |
+    | OTHER STANDARD FOUNDATIONS |
+    | OTHER FLOOR CONSTRUCTION |
+    | INSULATION & VAPOR RETARDER |
+    | EXTERIOR LOUVERS & SCREENS |
+    | SUN CONTROL DEVICES |
+    | WINDOWS |
+    | EXTERIOR GLAZING |
+    | ROOF INSULATION & FILL |
+    | OTHER CEILING & CEILING FINISHES |
+    | OTHER VERTICAL TRANSPORTATION EQUIPMENT |
+    | WATERCLOSETS |
+    | PIPES & FITTINGS |
     | DOMESTIC WATER EQUIPMENT |
-    | GAS SUPPLY SYSTEM |
-    | STEAM SUPPLY SYSTEM (FROM CENTRAL PLANT) |
+    | SPECIALTIES |
+    | OTHER DOMESTIC WATER SUPPLY |
+    | SOLAR ENERGY SUPPLY SYSTEMS |
+    | WIND ENERGY SUPPLY SYSTEM |
     | OTHER ENERGY SUPPLY |
     | BOILERS |
-    | FURNACES |
-    | FUEL-FIRED UNIT HEATERS |
-    | AUXILIARY EQUIPMENT |
     | OTHER HEAT GENERATING SYSTEMS |
     | CHILLED WATER SYSTEMS |
     | DIRECT EXPANSION SYSTEMS |
     | OTHER COOLING GENERATING SYSTEMS |
+    | AIR DISTRIBUTION, HEATING & COOLING |
+    | STEAM DISTRIBUTION SYSTEMS |
+    | HOT WATER DISTRIBUTION SYSTEMS |
     | AIR HANDLING UNITS |
-    | UNIT VENTILATORS |
-    | UNIT HEATERS |
+    | OTHER DISTRIBUTION SYSTEMS |
     | PACKAGE UNITS |
-    | OTHER TERMINAL & PACKAGE UNITS |
+    | HVAC CONTROLS |
+    | ELECTRONIC CONTROLS |
+    | PNEUMATIC CONTROLS |
+    | OTHER CONTROLS INSTRUMENTATION |
     | REFRIGERATION SYSTEMS |
     | OTHER SPECIAL MECHANICAL SYSTEMS |
-
-    Property elements functionality is under development.
+    | SERVICE ENTRANCE EQUIPMENT |
+    | MOTOR CONTROL CENTERS |
+    | OTHER SERVICE AND DISTRIBUTION |
+    | LIGHTING EQUIPMENT |
+    | OTHER LIGHTING AND BRANCH WIRING |
+    | IRRIGATION SYSTEMS |
+    | PACKAGED SANITARY SEWER TREATMENT PLANTS |
+    | OTHER SANITARY SEWER |
+    | GAS DISTRIBUTION PIPING (NATURAL AND PROPANE) |
+    | TRANSFORMERS |
+    | SWITCHES, CONTROLS & DEVICES |
+    | OTHER ELECTRIC TRANSMISSION & DISTRIBUTION |
+    | EXTERIOR LIGHTING FIXTURES & CONTROLS |
 
 ??? note "Building Upgrade Recommendation Analysis"
     ## Building Upgrade Recommendation Analysis
@@ -335,7 +361,7 @@ There are several analyses that can be run on properties.  Expand the sections b
     - ASHRAE Electricity EUI Target
     - ASHRAE Gas EUI Target
     - Condition Index of the Building
-    - Whether a building has a Building Automation System (BAS) - represented by counting the elements of type 'D.D.C Control Panel'
+    - Whether a building has a Building Automation System (BAS) - represented by having the element of type 'Has D.D.C Control Panels'
     - The fossil fuel-fired element with the lowest remaining service life
 
     The analysis will allow a user to select which fields to use for the information above, with the exception of "Year Built" and "Gross Floor Area": the canonical SEED fields "Year Built" and "Gross Floor Area" are automatically used to capture this information.
