@@ -42,6 +42,11 @@ markdown_extensions:
 extra_css:
   - 'stylesheets/extra.css'
 
+extra:
+  analytics:
+    provider: google
+    property: G-L4813JJ6GP
+
 nav:
   - Home: 'index.md'
   - User Documentation:
