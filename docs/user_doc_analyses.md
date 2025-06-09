@@ -92,6 +92,7 @@ There are several analyses that can be run on properties.  Expand the sections b
     - Multifamily
     - Public Library
     - Hospital (General Medical & Surgical)
+    - Workship Facility
 
     For more information on single building analytics, visit the [BETTER documentation](https://better.lbl.gov/docs/api/building_analytics/).
 
