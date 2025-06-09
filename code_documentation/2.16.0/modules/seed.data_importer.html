@@ -1,0 +1,994 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Data Importer Package &mdash; SEED Platform 2.16.0 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Features Package" href="seed.features.html" />
+    <link rel="prev" title="Data Package" href="seed.data.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                2.16.0
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data.html">Data Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Importer Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.data_importer.managers">Managers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#urls">URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.data_importer.utils">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.data_importer">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.landing.html">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.html">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.managers.html">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.public.html">Public Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.html">SEED Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.serializers.html">Serializers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.urls.html">URLs Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.utils.html">Utilities Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.views.html">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+
+          <li><a href="../modules.html">Modules</a> &raquo;</li>
+
+      <li>Data Importer Package</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="data-importer-package">
+<h1>Data Importer Package<a class="headerlink" href="#data-importer-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.data_importer.managers">
+<span id="managers"></span><h2>Managers<a class="headerlink" href="#module-seed.data_importer.managers" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.data_importer.managers.NotDeletedManager">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.data_importer.managers.</span></span><span class="sig-name descname"><span class="pre">NotDeletedManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.managers.NotDeletedManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.manager.Manager</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.data_importer.managers.NotDeletedManager.get_all">
+<span class="sig-name descname"><span class="pre">get_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.managers.NotDeletedManager.get_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to return ALL ImportFiles, including the ones where <cite>deleted == True</cite> which are normally excluded.
+This is used for database/filesystem cleanup.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.data_importer.managers.NotDeletedManager.get_queryset">
+<span class="sig-name descname"><span class="pre">get_queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.managers.NotDeletedManager.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new QuerySet object. Subclasses can override this method to
+customize the behavior of the Manager.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.data_importer.managers.NotDeletedManager.use_for_related_fields">
+<span class="sig-name descname"><span class="pre">use_for_related_fields</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#seed.data_importer.managers.NotDeletedManager.use_for_related_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="urls">
+<h2>URLs<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.data_importer.utils">
+<span id="utils"></span><h2>Utils<a class="headerlink" href="#module-seed.data_importer.utils" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.data_importer.utils.CoercionRobot">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.data_importer.utils.</span></span><span class="sig-name descname"><span class="pre">CoercionRobot</span></span><a class="headerlink" href="#seed.data_importer.utils.CoercionRobot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.data_importer.utils.CoercionRobot.lookup_hash">
+<span class="sig-name descname"><span class="pre">lookup_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uncoerced_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.CoercionRobot.lookup_hash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.data_importer.utils.CoercionRobot.make_key">
+<span class="sig-name descname"><span class="pre">make_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.CoercionRobot.make_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.data_importer.utils.acquire_lock">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.utils.</span></span><span class="sig-name descname"><span class="pre">acquire_lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.acquire_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to acquire a lock from the cache.
+Also sets the lock’s value to the current time, allowing us to see how long
+it has been held.</p>
+<p>Returns False if lock already belongs by another process.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.data_importer.utils.chunk_iterable">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.utils.</span></span><span class="sig-name descname"><span class="pre">chunk_iterable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterlist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.chunk_iterable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Breaks an iterable (e.g., list) into smaller chunks,
+returning a generator of the chunk.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.data_importer.utils.get_core_pk_column">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.utils.</span></span><span class="sig-name descname"><span class="pre">get_core_pk_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_column_mappings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primary_field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.get_core_pk_column" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.data_importer.utils.get_lock_time">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.utils.</span></span><span class="sig-name descname"><span class="pre">get_lock_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.get_lock_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Examines a lock to see when it was acquired.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.data_importer.utils.kbtu_thermal_conversion_factors">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.utils.</span></span><span class="sig-name descname"><span class="pre">kbtu_thermal_conversion_factors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">country</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.kbtu_thermal_conversion_factors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns thermal conversion factors provided by Portfolio Manager.
+In the PM app, using NREL’s test account, a property was created for each US
+and CAN. All possible Meters of different Type and Units were added.
+Readings of value 1 were added to deduce the factors provided below.</p>
+<p>Consideration was given regarding having the provided ‘country’ value align with
+Organizations’ thermal_conversion_assumption enums. Even though these two
+should be aligned, the concept and need for these factors are not specific
+solely to Orgs. So the ‘country’ value here is expected to be a string.
+Specifically, there are instances in the codebase where the factors are
+needed irrespective of any Organization’s preferences.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.data_importer.utils.release_lock">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.utils.</span></span><span class="sig-name descname"><span class="pre">release_lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.release_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frees a lock.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.data_importer.utils.usage_point_id">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.utils.</span></span><span class="sig-name descname"><span class="pre">usage_point_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_source_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.data_importer.utils.usage_point_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts and returns the usage point ID of a GreenButton full uri ID.</p>
+</dd></dl>
+
+</section>
+<section id="views">
+<h2>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.data_importer.views.</span></span><span class="sig-name descname"><span class="pre">ImportFileViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.viewsets.ViewSet</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">data_quality_progress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Return the progress of the data quality check.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>progress:</dt><dd><p>type: integer
+description: status of background data quality task</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import file ID
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Returns suggested mappings from an uploaded file’s headers to known
+data fields.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: Either success or error</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: import_file_id
+required: true
+paramType: path</p></li>
+<li><p>name: organization_id
+description: The organization_id for this user’s organization
+required: true
+paramType: query</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">filtered_mapping_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves a paginated list of Properties and Tax Lots for an import file after mapping.
+—
+parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import File ID (Primary key)
+type: integer
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+<p>response_serializer: MappingResultsResponseSerializer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">first_five_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves the first five rows of an ImportFile.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>first_five_rows:</dt><dd><p>type: array of strings
+description: list of strings for each of the first five rows for this import file</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: “Primary Key”
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">has_coparent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Return the coparent of the current state id based on the inventory type. If fields
+are given (as a list), then it will only return the fields specified of the state model
+object as a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_id</strong> – int, ID of PropertyState or TaxLotState</p></li>
+<li><p><strong>inventory_type</strong> – string, either properties | taxlots</p></li>
+<li><p><strong>fields</strong> – list, either None or list of fields to return</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict or state object, If fields is not None then will return state_object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">mapping_done</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Tell the backend that the mapping is complete.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>message:</dt><dd><p>required: false
+type: string
+description: error message, if any</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import file ID
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">mapping_suggestions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Returns suggested mappings from an uploaded file’s headers to known
+data fields.
+—
+type:</p>
+<blockquote>
+<div><dl>
+<dt>status:</dt><dd><p>required: true
+type: string
+description: Either success or error</p>
+</dd>
+<dt>suggested_column_mappings:</dt><dd><p>required: true
+type: dictionary
+description: Dictionary where (key, value) = (the column header from the file,</p>
+<blockquote>
+<div><p>array of tuples (destination column, score))</p>
+</div></blockquote>
+</dd>
+<dt>building_columns:</dt><dd><p>required: true
+type: array
+description: A list of all possible columns</p>
+</dd>
+<dt>building_column_types:</dt><dd><p>required: true
+type: array
+description: A list of column types corresponding to the building_columns array</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: import_file_id
+required: true
+paramType: path</p></li>
+<li><p>name: organization_id
+description: The organization_id for this user’s organization
+required: true
+paramType: query</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">matching_and_geocoding_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves the number of matched and unmatched properties &amp; tax lots for
+a given ImportFile record.  Specifically for new imports</p>
+<dl class="field-list simple">
+<dt class="field-odd">GET</dt>
+<dd class="field-odd"><p>Expects import_file_id corresponding to the ImportFile in question.</p>
+</dd>
+</dl>
+<p>Returns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;success&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;matched&#39;</span><span class="p">:</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">PropertyStates</span> <span class="n">that</span> <span class="n">have</span> <span class="n">been</span> <span class="n">matched</span><span class="p">,</span>
+        <span class="s1">&#39;unmatched&#39;</span><span class="p">:</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">PropertyStates</span> <span class="n">that</span> <span class="n">are</span> <span class="n">unmatched</span> <span class="n">new</span> <span class="n">imports</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;tax_lots&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;matched&#39;</span><span class="p">:</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">TaxLotStates</span> <span class="n">that</span> <span class="n">have</span> <span class="n">been</span> <span class="n">matched</span><span class="p">,</span>
+        <span class="s1">&#39;unmatched&#39;</span><span class="p">:</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">TaxLotStates</span> <span class="n">that</span> <span class="n">are</span> <span class="n">unmatched</span> <span class="n">new</span> <span class="n">imports</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">perform_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Starts a background task to convert imported raw data into
+PropertyState and TaxLotState, using user’s column mappings.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>progress_key:</dt><dd><p>type: integer
+description: ID of background job, for retrieving job progress</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import file ID
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/example-sensor-metadata_R49B31F.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/example-sensor-metadata.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/pm_imports/pm_import_2022-11-15.csv&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/pm_imports/pm_import_2022-11-11_g5Rx4Vu.csv&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/BPS-sample-Targets-2019_OMrqLn3.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/CBL-building-performance-standards-sample-2019_9zQ588H.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/pm_imports/pm_import_2022-11-11.csv&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/BPS-sample-Targets-2019_Y7Rxd7b.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/BPS-sample-Targets-2019_Kva3Abf.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/CBL-building-performance-standards-sample-2019_kQqMOjt.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data-with-meters_kPyIvWT.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data-with-meters_kPyIvWT.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data_57idmQr.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data_C9OjS43.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data_2L1v34W.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data-with-meters_JTWKI1T.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data-with-meters_JTWKI1T.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data_L5nayWf.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data_xPY9EUj.xlsx&gt;,</span> <span class="pre">&lt;ImportFile:</span> <span class="pre">/Users/nlong/working/seed/seed/media/uploads/test-seed-data_1dtm3IM.xlsx&gt;,</span> <span class="pre">'...(remaining</span> <span class="pre">elements</span> <span class="pre">truncated)...']&gt;</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">raise_exception</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">raw_column_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves a list of all column names from an ImportFile.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>raw_columns:</dt><dd><p>type: array of strings
+description: list of strings of the header row of the ImportFile</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: “Primary Key”
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">retrieve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves details about an ImportFile.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>import_file:</dt><dd><p>type: ImportFile structure
+description: full detail of import file</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: “Primary Key”
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">save_column_mappings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Saves the mappings between the raw headers of an ImportFile and the
+destination fields in the <cite>to_table_name</cite> model which should be either
+PropertyState or TaxLotState</p>
+<p>Valid source_type values are found in <code class="docutils literal notranslate"><span class="pre">seed.models.SEED_DATA_SOURCES</span></code></p>
+<p>Payload:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;import_file_id&quot;</span><span class="p">:</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="n">ImportFile</span> <span class="n">record</span><span class="p">,</span>
+    <span class="s2">&quot;mappings&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;from_field&#39;</span><span class="p">:</span> <span class="s1">&#39;eui&#39;</span><span class="p">,</span>  <span class="c1"># raw field in import file</span>
+            <span class="s1">&#39;from_units&#39;</span><span class="p">:</span> <span class="s1">&#39;kBtu/ft**2/year&#39;</span><span class="p">,</span> <span class="c1"># pint-parsable units, optional</span>
+            <span class="s1">&#39;to_field&#39;</span><span class="p">:</span> <span class="s1">&#39;energy_use_intensity&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;to_field_display_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Energy Use Intensity&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;to_table_name&#39;</span><span class="p">:</span> <span class="s1">&#39;PropertyState&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;from_field&#39;</span><span class="p">:</span> <span class="s1">&#39;gfa&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;from_units&#39;</span><span class="p">:</span> <span class="s1">&#39;ft**2&#39;</span><span class="p">,</span> <span class="c1"># pint-parsable units, optional</span>
+            <span class="s1">&#39;to_field&#39;</span><span class="p">:</span> <span class="s1">&#39;gross_floor_area&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;to_field_display_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Gross Floor Area&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;to_table_name&#39;</span><span class="p">:</span> <span class="s1">&#39;PropertyState&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Returns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;success&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">save_raw_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Starts a background task to import raw data from an ImportFile
+into PropertyState objects as extra_data. If the cycle_id is set to
+year_ending then the cycle ID will be set to the year_ending column for each
+record in the uploaded file. Note that the year_ending flag is not yet enabled.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>message:</dt><dd><p>required: false
+type: string
+description: error message, if any</p>
+</dd>
+<dt>progress_key:</dt><dd><p>type: integer
+description: ID of background job, for retrieving job progress</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import file ID
+required: true
+paramType: path</p></li>
+<li><p>name: cycle_id
+description: The ID of the cycle or the string “year_ending”
+paramType: string
+required: true</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">start_data_quality_checks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Starts a background task to attempt automatic matching between buildings
+in an ImportFile with other existing buildings within the same org.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>progress_key:</dt><dd><p>type: integer
+description: ID of background job, for retrieving job progress</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import file ID
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">start_system_matching_and_geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Starts a background task to attempt automatic matching between buildings
+in an ImportFile with other existing buildings within the same org.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>progress_key:</dt><dd><p>type: integer
+description: ID of background job, for retrieving job progress</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import file ID
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">validate_use_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Starts a background task to call BuildingSync’s use case validation
+tool.
+—
+type:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>status:</dt><dd><p>required: true
+type: string
+description: either success or error</p>
+</dd>
+<dt>message:</dt><dd><p>required: false
+type: string
+description: error message, if any</p>
+</dd>
+<dt>progress_key:</dt><dd><p>type: integer
+description: ID of background job, for retrieving job progress</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import file ID
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.data_importer.views.</span></span><span class="sig-name descname"><span class="pre">LocalUploaderViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.viewsets.ViewSet</span></code></p>
+<p>Endpoint to upload data files to, if uploading to local file storage.
+Valid source_type values are found in <code class="docutils literal notranslate"><span class="pre">seed.models.SEED_DATA_SOURCES</span></code></p>
+<p>Returns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;import_file_id&#39;</span><span class="p">:</span> <span class="n">The</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="n">newly</span><span class="o">-</span><span class="n">uploaded</span> <span class="n">ImportFile</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Upload a new file to an import_record. This is a multipart/form upload.
+—
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: import_record
+description: the ID of the ImportRecord to associate this file with.
+required: true
+paramType: body</p></li>
+<li><p>name: source_type
+description: the type of file (e.g., ‘Portfolio Raw’ or ‘Assessed Raw’)
+required: false
+paramType: body</p></li>
+<li><p>name: source_program_version
+description: the version of the file as related to the source_type
+required: false
+paramType: body</p></li>
+<li><p>name: file or qqfile
+description: In-memory file object
+required: true
+paramType: Multipart</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">create_from_pm_import</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Create an import_record from a PM import request.
+TODO: The properties key here is going to be an enormous amount of XML data at times, need to change this
+This allows the PM import workflow to be treated essentially the same as a standard file upload
+The process comprises the following steps:</p>
+<ul class="simple">
+<li><p>Get a unique file name for this portfolio manager import</p></li>
+<li></li>
+</ul>
+<p>—
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: import_record
+description: the ID of the ImportRecord to associate this file with.
+required: true
+paramType: body</p></li>
+<li><p>name: properties
+description: In-memory list of properties from PM import
+required: true
+paramType: body</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.data_importer.views.</span></span><span class="sig-name descname"><span class="pre">MappingResultsPropertySerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.Serializer</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.data_importer.views.</span></span><span class="sig-name descname"><span class="pre">MappingResultsResponseSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.Serializer</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.data_importer.views.</span></span><span class="sig-name descname"><span class="pre">MappingResultsTaxLotSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.Serializer</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.views.</span></span><span class="sig-name descname"><span class="pre">convert_first_five_rows_to_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_five_rows</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Return the first five rows. This is a complicated method because it handles converting the
+persisted format of the first five rows into a list of dictionaries. It handles some basic
+logic if there are crlf in the fields. Note that this method does not cover all the use cases
+and cannot due to the custom delimiter. See the tests in
+test_views.py:test_get_first_five_rows_newline_should_work to see the limitation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>header</strong> – list, ordered list of headers as strings</p></li>
+<li><p><strong>first_five_rows</strong> – string, long string with <a href="#id1"><span class="problematic" id="id2">|#*#|</span></a> delimiter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">seed.data_importer.views.</span></span><span class="sig-name descname"><span class="pre">get_upload_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves details about how to upload files to this instance.</p>
+<p>Returns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;upload_path&#39;</span><span class="p">:</span> <span class="n">The</span> <span class="n">url</span> <span class="n">to</span> <span class="n">POST</span> <span class="n">files</span> <span class="n">to</span> <span class="p">(</span><span class="n">see</span> <span class="n">local_uploader</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-seed.data_importer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seed.data_importer" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+</section>
+</section>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+        <a href="seed.features.html" class="btn btn-neutral float-right" title="Features Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+        <a href="seed.data.html" class="btn btn-neutral float-left" title="Data Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>
