@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Model &mdash; SEED Platform 3.2.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7895512d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Quality" href="data_quality.html" />
+    <link rel="prev" title="API" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SEED Platform
+          </a>
+              <div class="version">
+                3.2.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#parents-and-children">parents and children</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#matching">matching</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-matching-vs-auto-matching">manual-matching vs auto-matching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-really-happens-to-the-buildingsnapshot-table-on-import-and-when">what really happens to the BuildingSnapshot table on import (and when)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-really-happens-to-the-canonicalbuilding-table-on-import-and-when">what really happens to the CanonicalBuilding table on import (and when)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#organization">organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-id-fields">*_source_id fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extra-data">extra_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saving-and-possible-data-loss">saving and possible data loss</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matching.html">Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Model</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-model">
+<h1>Data Model<a class="headerlink" href="#data-model" title="Link to this heading"></a></h1>
+<img alt="_images/case-a.webp" src="_images/case-a.webp" />
+<img alt="_images/case-b.webp" src="_images/case-b.webp" />
+<img alt="_images/case-c.webp" src="_images/case-c.webp" />
+<img alt="_images/case-d.webp" src="_images/case-d.webp" />
+<img alt="_images/data-model.webp" src="_images/data-model.webp" />
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Documentation below is out of state and needs updated.</p>
+</div>
+<p>Our primary data model is based on a tree structure with BuildingSnapshot
+instances as nodes of the tree and the tip of the tree referenced by a
+CanonicalBuilding.</p>
+<p>Take the following example: a user has loaded a CSV file containing information
+about one building and created the first BuildingSnapshot (BS0). At this point
+in time, BS0 is linked to the first CanonicalBuilding (CB0), and CB0 is also
+linked to BS0.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0<span class="w"> </span>&lt;--<span class="w"> </span>CB0
+BS0<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+</pre></div>
+</div>
+<p>These relations are represented in the database as foreign keys from the
+BuildingSnapshot table to the CanonicalBuilding table, and from the
+CanonicalBuilding table to the BuildingSnapshot table.</p>
+<p>The tree structure comes to fruition when a building, BS0 in our case, is
+matched with a new building, say BS1, enters the system and is auto-matched.</p>
+<p>Here BS1 entered the system and was matched with BS0. When a match occurs,
+a new BuildingSnapshot is created, BS2, with the fields from the existing
+BuildingSnapshot, BS0, and the new BuildingSnapshot, BS1, merged
+together. If both the existing and new BuildingSnapshot have data for a
+given field, the new record’s fields are preferred and merged into the child, B3.</p>
+<p>The fields from new snapshot are preferred because that is the newer of the
+two records from the perspective of the system.  By preferring the most recent fields
+this allows for evolving building snapshots over time.  For example, if an existing
+canonical record has a Site EUI value of 75 and some changes happen to a building
+that cause this to change to 80 the user can submit a new record with that change.</p>
+<p>All BuildingSnapshot instances point to a CanonicalBuilding.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0<span class="w">  </span>BS1
+<span class="w">  </span><span class="se">\ </span>/
+<span class="w">  </span>BS2<span class="w"> </span>&lt;--<span class="w"> </span>CB0
+
+BS0<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+BS1<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+BS2<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+</pre></div>
+</div>
+<section id="parents-and-children">
+<h2>parents and children<a class="headerlink" href="#parents-and-children" title="Link to this heading"></a></h2>
+<p>BuildingSnapshots also have linkage to other BuildingSnapshots in order to
+keep track of their <em>parents</em> and <em>children</em>. This is represented in the
+Django model as a many-to-many relation from BuildingSnapshot to BuildingSnapshot.
+It is represented in the PostgreSQL database as an additional seed_buildingsnapshot_children
+table.</p>
+<p>In our case here, BS0 and BS1 would both have <em>children</em> BS2, and BS2 would
+have <em>parents</em> BS0 and BS1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>throughout most of the application, the <code class="docutils literal notranslate"><span class="pre">search_buildings</span></code> endpoint
+is used to search or list active building. This is to say, buildings that
+are pointed to by an active CanonicalBuilding.
+The <code class="docutils literal notranslate"><span class="pre">search_mapping_results</span></code> endpoint allows the search of buildings
+regardless of whether the BuildingSnapshot is pointed to by an active
+CanonicalBuilding or not and this search is needed during the mapping
+preview and matching sections of the application.</p>
+</div>
+<p>For illustration purposes let’s suppose BS2 and a new building BS3 match to form a child BS4.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>parent</p></th>
+<th class="head"><p>child</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BS0</p></td>
+<td><p>BS2</p></td>
+</tr>
+<tr class="row-odd"><td><p>BS1</p></td>
+<td><p>BS2</p></td>
+</tr>
+<tr class="row-even"><td><p>BS2</p></td>
+<td><p>BS4</p></td>
+</tr>
+<tr class="row-odd"><td><p>BS3</p></td>
+<td><p>BS4</p></td>
+</tr>
+</tbody>
+</table>
+<p>And the corresponding tree would look like:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0<span class="w">  </span>BS1
+<span class="w">  </span><span class="se">\ </span>/
+<span class="w">  </span>BS2<span class="w">  </span>BS3
+<span class="w">    </span><span class="se">\ </span><span class="w"> </span>/
+<span class="w">     </span>BS4<span class="w"> </span>&lt;--<span class="w"> </span>CB0
+
+BS0<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+BS1<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+BS2<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+BS3<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+BS4<span class="w"> </span>--&gt;<span class="w"> </span>CB0
+</pre></div>
+</div>
+<section id="matching">
+<h3>matching<a class="headerlink" href="#matching" title="Link to this heading"></a></h3>
+<p>During the auto-matching process, if a <em>raw</em> BuildingSnapshot matches an
+existing BuildingSnapshot instance, then it will point to the existing
+BuildingSnapshot instance’s CanonicalBuilding. In the case where there is no
+existing BuildingSnapshot to match, a new CanonicalBuilding will be created, as
+happened to B0 and C0 above.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>BS0</p></th>
+<th class="head"><p>BS1</p></th>
+<th class="head"><p>BS2 (child)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id1</p></td>
+<td><p><strong>11</strong></p></td>
+<td><p>11</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>id2</p></td>
+<td></td>
+<td><p><strong>12</strong></p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-even"><td><p>id3</p></td>
+<td><p><strong>13</strong></p></td>
+<td></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td><p>id4</p></td>
+<td><p>14</p></td>
+<td><p><strong>15</strong></p></td>
+<td><p>15</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="manual-matching-vs-auto-matching">
+<h2>manual-matching vs auto-matching<a class="headerlink" href="#manual-matching-vs-auto-matching" title="Link to this heading"></a></h2>
+<p>Since BuildingSnapshots can be manually matched, there is the possibility for
+two BuildingSnapshots each with an active CanonicalBuilding to match and the
+system has to choose to move only one CanonicalBuilding to the tip of the tree
+for the primary BuildingSnapshot and <em>deactivate</em> the secondary
+BuildingSnapshot’s CanonicalBuilding.</p>
+<p>Take for example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0<span class="w">  </span>BS1
+<span class="w">  </span><span class="se">\ </span>/
+<span class="w">  </span>BS2<span class="w">  </span>BS3
+<span class="w">    </span><span class="se">\ </span><span class="w"> </span>/
+<span class="w">     </span>BS4<span class="w"> </span>&lt;--<span class="w"> </span>CB0<span class="w"> </span><span class="o">(</span>active:<span class="w"> </span>True<span class="o">)</span><span class="w">         </span>BS5<span class="w"> </span>&lt;--<span class="w"> </span>CB1<span class="w"> </span><span class="o">(</span>active:<span class="w"> </span>True<span class="o">)</span>
+</pre></div>
+</div>
+<p>If a user decides to manually match BS4 and BS5, the system will take the
+primary BuildingSnapshot’s CanonicalBuilding and have it point to their
+child and deactivate CB1. The deactivation is handled by setting a field
+on the CanonicalBuilding instance, <em>active</em>, from <code class="docutils literal notranslate"><span class="pre">True</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>Here is what the tree would look like after the manual match of <strong>BS4</strong> and
+<strong>BS5</strong>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0<span class="w">  </span>BS1
+<span class="w">  </span><span class="se">\ </span>/
+<span class="w">  </span>BS2<span class="w">  </span>BS3
+<span class="w">    </span><span class="se">\ </span><span class="w"> </span>/
+<span class="w">     </span>BS4<span class="w">  </span>BS5<span class="w"> </span>&lt;--<span class="w"> </span>CB1<span class="w"> </span><span class="o">(</span>active:<span class="w"> </span>False<span class="o">)</span>
+<span class="w">       </span><span class="se">\ </span><span class="w"> </span>/
+<span class="w">        </span>BS6<span class="w"> </span>&lt;--<span class="w"> </span>CB0<span class="w"> </span><span class="o">(</span>active:<span class="w"> </span>True<span class="o">)</span>
+</pre></div>
+</div>
+<p>Even though BS5 is pointed to by a CanonicalBuilding, CB1, BS5 will not be
+returned by the normal <code class="docutils literal notranslate"><span class="pre">search_buildings</span></code> endpoint because the
+CanonicalBuilding pointing to it has its field <code class="docutils literal notranslate"><span class="pre">active</span></code> set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>anytime a match is <strong>unmatched</strong> the system will create a new
+CanonicalBuilding or set an existing CanonicalBuilding’s active field to
+<code class="docutils literal notranslate"><span class="pre">True</span></code> for any leaf BuildingSnapshot trees.</p>
+</div>
+</section>
+<section id="what-really-happens-to-the-buildingsnapshot-table-on-import-and-when">
+<h2>what really happens to the BuildingSnapshot table on import (and when)<a class="headerlink" href="#what-really-happens-to-the-buildingsnapshot-table-on-import-and-when" title="Link to this heading"></a></h2>
+<p>The above is conceptually what happens but sometimes the devil is in the details.
+Here is what happens to the BuildingSnapshot table in the database when records
+are imported.</p>
+<p>Every time a record is added at least two BuildingSnapshot records are created.</p>
+<p>Consider the following simple record:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Property Id</p></th>
+<th class="head"><p>Year Ending</p></th>
+<th class="head"><p>Property Floor Area</p></th>
+<th class="head"><p>Address 1</p></th>
+<th class="head"><p>Release Date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>499045</p></td>
+<td><p>2000</p></td>
+<td><p>1234</p></td>
+<td><p>1 fake st</p></td>
+<td><p>12/12/2000</p></td>
+</tr>
+</tbody>
+</table>
+<p>The first thing the user is upload the file.  When the user sees the
+“Successful Upload!” dialog one record has been added to the
+BuildingSnapshot table.</p>
+<p>This new record has an id (73700 in this case) and a created and
+modified timestamp.  Then there are a lot of empty fields and a
+source_type of 0.  Then there is the extra_data column which contains
+the contents of the record in key-value form:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Address 1<span class="colon">:</span></dt>
+<dd class="field-odd"><p>“1 fake st”</p>
+</dd>
+<dt class="field-even">Property Id<span class="colon">:</span></dt>
+<dd class="field-even"><p>“499045”</p>
+</dd>
+<dt class="field-odd">Year Ending<span class="colon">:</span></dt>
+<dd class="field-odd"><p>“2000”</p>
+</dd>
+<dt class="field-even">Release Date<span class="colon">:</span></dt>
+<dd class="field-even"><p>“12/12/2000”</p>
+</dd>
+<dt class="field-odd">Property Floor Area<span class="colon">:</span></dt>
+<dd class="field-odd"><p>“1234”</p>
+</dd>
+</dl>
+<p>And a corresponding extra_data_sources that looks like</p>
+<dl class="field-list simple">
+<dt class="field-odd">Address 1<span class="colon">:</span></dt>
+<dd class="field-odd"><p>73700</p>
+</dd>
+<dt class="field-even">Property Id<span class="colon">:</span></dt>
+<dd class="field-even"><p>73700</p>
+</dd>
+<dt class="field-odd">Year Ending<span class="colon">:</span></dt>
+<dd class="field-odd"><p>73700</p>
+</dd>
+<dt class="field-even">Release Date<span class="colon">:</span></dt>
+<dd class="field-even"><p>73700</p>
+</dd>
+<dt class="field-odd">Property Floor Area<span class="colon">:</span></dt>
+<dd class="field-odd"><p>73700</p>
+</dd>
+</dl>
+<p>All of the fields that look like _source_id are also populated
+with 73700 E.G. owner_postal_code_source_id.</p>
+<p>The other fields of interest are the organization field which
+is populated with the user’s default organization and the import_file_id
+field which is populated with a reference to a data_importer_importfile record.</p>
+<p>At this point the record has been created before the user hits the
+“Continue to data mapping” button.</p>
+<p>The second record (id = 73701) is created by the time the user gets to the screen
+with the “Save Mappings” button.  This second record has the following fields populated:</p>
+<ul class="simple">
+<li><p>id</p></li>
+<li><p>created</p></li>
+<li><p>modified</p></li>
+<li><p>pm_property_id</p></li>
+<li><p>year_ending</p></li>
+<li><p>gross_floor_area</p></li>
+<li><p>address_line_1</p></li>
+<li><p>release_date</p></li>
+<li><p>source_type (this is 2 instead of 0 as with the other record)</p></li>
+<li><p>import_file_id</p></li>
+<li><p>organization_id.</p></li>
+</ul>
+<p>That is all.  All other fields are empty.  In this case that is all that happens.</p>
+<p>Now consider the same user uploading a new file from the next year that looks like</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Property Id</p></th>
+<th class="head"><p>Year Ending</p></th>
+<th class="head"><p>Property Floor Area</p></th>
+<th class="head"><p>Address 1</p></th>
+<th class="head"><p>Release Date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>499045</p></td>
+<td><p>2000</p></td>
+<td><p>1234</p></td>
+<td><p>1 fake st</p></td>
+<td><p>12/12/2001</p></td>
+</tr>
+</tbody>
+</table>
+<p>As before one new record is created on upload.  This has id 73702 and follows the same
+pattern as 73700.  And similarly 73703 is created like 73701 before the “Save Mappings”
+button appears.</p>
+<p>However this time the system was able to make a match with an existing record.
+After the user clicks the “Confirm mappings &amp; start matching” button a new record
+is created with ID 73704.</p>
+<p>73704 is identical to 73703 (in terms of contents of the BuildingSnapshot table only)
+with the following exceptions:</p>
+<ul class="simple">
+<li><p>created and modified timestamps are different</p></li>
+<li><p>match type is populated and has a value of 1</p></li>
+<li><p>confidence is populated and has a value of .9</p></li>
+<li><p>source_type is 4 instead of 2</p></li>
+<li><p>canonical_building_id is populated with a value</p></li>
+<li><p>import_file_id is NULL</p></li>
+<li><p>last_modified_by_id is populated with value 2 (This is a key into the landing_seeduser table)</p></li>
+<li><p>address_line_1_source_id is 73701</p></li>
+<li><p>gross_floor_area_source_id is populated with value 73701</p></li>
+<li><p>pm_property_id_source_id is populated with 73701</p></li>
+<li><p>release_date_source_id is populated with 73701</p></li>
+<li><p>year_ending_source_id is populated with 73701</p></li>
+</ul>
+</section>
+<section id="what-really-happens-to-the-canonicalbuilding-table-on-import-and-when">
+<h2>what really happens to the CanonicalBuilding table on import (and when)<a class="headerlink" href="#what-really-happens-to-the-canonicalbuilding-table-on-import-and-when" title="Link to this heading"></a></h2>
+<p>In addition to the BuildingSnapshot table the CanonicalBuilding table is also updated
+during the import process.  To summarize the above 5 records were created in the
+BuildingSnapshot table:</p>
+<ol class="arabic simple">
+<li><p>73700 is created from the raw 2000 data</p></li>
+<li><p>73701 is the mapped 2000 data,</p></li>
+<li><p>73702 is created from the raw 2001 data</p></li>
+<li><p>73703 is the mapped 2001 data</p></li>
+<li><p>73704 is the result of merging the 2000 and 2001 data.</p></li>
+</ol>
+<p>In this process CanonicalBuilding is updated twice.  First when the 2000 record is imported the
+CanonicalBuilding gets populated with one new row at the end of the matching step.
+I.E. when the user sees the “Load More Data” screen.  At this point there is a new row that looks like</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>active</p></th>
+<th class="head"><p>canonical_building_id</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>20505</p></td>
+<td><p>TRUE</p></td>
+<td><p>73701</p></td>
+</tr>
+</tbody>
+</table>
+<p>At this point there is one new canonical building and that is the BuildingSnapshot with
+id 73701.  Next the user uploads the 2001 data.  When the “Matching Results” screen
+appears the CanonicalBuilding table has been updated.  Now it looks like</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>active</p></th>
+<th class="head"><p>canonical_building_id</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>20505</p></td>
+<td><p>TRUE</p></td>
+<td><p>73704</p></td>
+</tr>
+</tbody>
+</table>
+<p>There is still only one canonical building but now it is the BuildingSnapshot record
+that is the result of merging the 2000 and 2001 data:  id = 73704.</p>
+</section>
+<section id="organization">
+<h2>organization<a class="headerlink" href="#organization" title="Link to this heading"></a></h2>
+<p>BuildingSnapshots belong to an Organization field that is a foreign key into the organization
+model (orgs_organization in Postgres).</p>
+<p>Many endpoints filter the buildings based on the organizations the requesting user
+belongs to.  E.G. get_buildings changes which fields are returned based on the
+requesting user’s membership in the BuildingSnapshot’s organization.</p>
+</section>
+<section id="source-id-fields">
+<h2>*_source_id fields<a class="headerlink" href="#source-id-fields" title="Link to this heading"></a></h2>
+<p>Any field in the BuildingSnapshot table that is populated with data from a
+submitted record will have a corresponding _source_id field.  E.G
+pm_property_id has pm_property_id_source_id,
+address_line_1 has address_line_1_source_id,
+etc…</p>
+<p>These are foreign keys into the BuildingSnapshot that is the source of that
+value.  To extend the above table</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>BS0</p></th>
+<th class="head"><p>BS1</p></th>
+<th class="head"><p>BS2 (child)</p></th>
+<th class="head"><p>BS2 (child) _source_id</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id1</p></td>
+<td><p><strong>11</strong></p></td>
+<td></td>
+<td><p>11</p></td>
+<td><p>BS0</p></td>
+</tr>
+<tr class="row-odd"><td><p>id2</p></td>
+<td></td>
+<td><p><strong>12</strong></p></td>
+<td><p>12</p></td>
+<td><p>BS1</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE:</strong>  The BuildingSnapshot records made from the raw input file have all the
+_source_id fields populated with that record’s ID.  The non-canonical BuildingSnapshot
+records created from the mapped data have none set.  The canonical BuildingSnapshot
+records that are the result of merging two records have only the _source_id fields
+set where the record itself has data.  E.G. in the above address_line_1 is set to
+“1 fake st.” so there is a value in the canonical BuildingSnapshot’s address_line_1_source_id
+field.  However there is no block number so block_number_source_id is empty.  This
+is unlike the two raw BuildingSnapshot records who also have no block_number but
+nevertheless have a block_number_source_id populated.</p>
+</section>
+<section id="extra-data">
+<h2>extra_data<a class="headerlink" href="#extra-data" title="Link to this heading"></a></h2>
+<p>The BuildingSnapshot model has many “named” fields.  Fields like “address_line_1”,
+“year_built”, and “pm_property_id”.  However the users are allowed to submit files
+with arbitrary fields.  Some of those arbitrary fields can be mapped to “named”
+fields.  E.G. “Street Address” can usually be mapped to “Address Line 1”.
+For all the fields that cannot be mapped like that there is the extra_data field.</p>
+<p>extra_data is Django json field that serves as key-value storage for other
+user-submitted fields.  As with the other “named” fields there is a corresponding
+extra_data_sources field that serves the same role as the other _source_id fields.
+E.G. If a BuildingSnapshot has an extra_data field that looks like</p>
+<dl class="field-list simple">
+<dt class="field-odd">an_unknown_field<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+<dt class="field-even">something_else<span class="colon">:</span></dt>
+<dd class="field-even"><p>2</p>
+</dd>
+</dl>
+<p>It should have an extra_data_sources field that looks like</p>
+<dl class="field-list simple">
+<dt class="field-odd">an_unknown_field<span class="colon">:</span></dt>
+<dd class="field-odd"><p>some_BuildingSnapshot_id</p>
+</dd>
+<dt class="field-even">something_else<span class="colon">:</span></dt>
+<dd class="field-even"><p>another_BuildingSnapshot_id</p>
+</dd>
+</dl>
+</section>
+<section id="saving-and-possible-data-loss">
+<h2>saving and possible data loss<a class="headerlink" href="#saving-and-possible-data-loss" title="Link to this heading"></a></h2>
+<p>When saving a Property file some fields that are truncated if too long.
+The following are truncated to 255 characters</p>
+<ul class="simple">
+<li><p>jurisdiction_tax_lot_id</p></li>
+<li><p>pm_property_id</p></li>
+<li><p>custom_id_1</p></li>
+<li><p>ubid</p></li>
+<li><p>lot_number</p></li>
+<li><p>block_number</p></li>
+<li><p>district</p></li>
+<li><p>owner</p></li>
+<li><p>owner_email</p></li>
+<li><p>owner_telephone</p></li>
+<li><p>owner_address</p></li>
+<li><p>owner_city_state</p></li>
+<li><p>owner_postal_code</p></li>
+</ul>
+<p>And the following are truncated to 255:</p>
+<ul class="simple">
+<li><p>property_name</p></li>
+<li><p>address_line_1</p></li>
+<li><p>address_line_2</p></li>
+<li><p>city</p></li>
+<li><p>postal_code</p></li>
+<li><p>state_province</p></li>
+<li><p>building_certification</p></li>
+</ul>
+<p>No truncation happens to any of the fields stored in extra_data.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api.html" class="btn btn-neutral float-left" title="API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_quality.html" class="btn btn-neutral float-right" title="Data Quality" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, 2025, Alliance for Sustainable Energy, LLC, and other contributors..</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
