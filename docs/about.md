@@ -36,7 +36,6 @@ DOE and the National Laboratories agree to provide:
 
 You, and your company or organization (the PROVIDER) have agreed to upload and provide PROPRIETARY DATA, including energy efficiency data, building data, and building energy performance data to the Standard Energy Efficiency Data (SEED™) Platform database that the U.S. Department of Energy (the Government) and Alliance for Sustainable Energy, LLC (“Alliance”) the manager and operator of the National Renewable Energy Laboratory (“NREL”) (the RECIPIENT) have created and provide for use for registered users.
 
-
 PROPRIETARY DATA is defined as follows:
 
 (a) information that embody trade secrets or commercial or financial information that is confidential and privileged;

@@ -198,7 +198,6 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     ![alt_text](images/map_01.png)
 
-
 ??? note "**Data**"
     ## Data
 
