@@ -1,8 +1,9 @@
 name: Publish via GitHub Pages
+
 on:
   push:
-    branches:
-      - main
+    branches: ["**"]
+
 jobs:
   build:
     name: Build docs
