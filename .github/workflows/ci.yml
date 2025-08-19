@@ -1,5 +1,4 @@
-name: Publish via GitHub Pages
-
+name: CI
 on:
   push:
     branches: ["**"]
