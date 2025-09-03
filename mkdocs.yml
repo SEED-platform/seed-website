@@ -3,6 +3,7 @@ repo_url: https://github.com/SEED-platform/seed
 
 theme:
   name: 'material'
+  custom_dir: overrides
   palette:
     primary: 'indigo'
     accent: 'blue'
