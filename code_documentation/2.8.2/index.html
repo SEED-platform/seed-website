@@ -1,0 +1,3012 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SEED Platform 2.8.2 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="#" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+
+              <div class="version">
+                v2.8.2
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-getting_started">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#development-setup">Development Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-deployment">Deployment Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-aws">AWS Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-linux">General Linux Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-docker">Docker Deployment on AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#migrations">Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-api">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#payloads">Payloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#responses">Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#api-endpoints">API Endpoints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-data_model">Data Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#parents-and-children">parents and children</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#manual-matching-vs-auto-matching">manual-matching vs auto-matching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#what-really-happens-to-the-buildingsnapshot-table-on-import-and-when">what really happens to the BuildingSnapshot table on import (and when)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#what-really-happens-to-the-canonicalbuilding-table-on-import-and-when">what really happens to the CanonicalBuilding table on import (and when)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#organization">organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#source-id-fields">*_source_id fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#extra-data">extra_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#saving-and-possible-data-loss">saving and possible data loss</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-data_quality">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-mapping">Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#import">Import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id1">Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#matching">Matching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#pairing">Pairing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/config">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.data">Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.data_importer">Data Importer Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.features">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.landing">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.lib">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.mappings">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.managers">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.public">Public Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed">SEED Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.serializers">Serializers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.tests">Tests Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.urls">URLs Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.utils">Utilities Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-modules/seed.views">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-developer_resources">Developer Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#general-notes">General Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#django-notes">Django Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#angularjs-integration-notes">AngularJS Integration Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#logging">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#bedes-compliance-and-managing-columns">BEDES Compliance and Managing Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#resetting-the-database">Resetting the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#restoring-a-database-dump">Restoring a Database Dump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#migrating-the-database">Migrating the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#git-naming-conventions">Git Naming Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#release-instructions">Release Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-help">Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#for-seed-platform-users">For SEED-Platform Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#for-seed-platform-developers">For SEED-Platform Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-faq">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#questions">Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#issues">Issues</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="#">Docs</a> &raquo;</li>
+
+      <li>SEED Platform 2.8.2 documentation</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+              <a href="https://github.com/SEED-platform/seed/blob/v2.8.2/docs/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <div class="section" id="standard-energy-efficiency-data-seed-platform">
+<h1>Standard Energy Efficiency Data (SEED) Platform<a class="headerlink" href="#standard-energy-efficiency-data-seed-platform" title="Permalink to this headline">¶</a></h1>
+<p>The Standard Energy Efficiency Data (SEED) Platform™ is a web-based application
+that helps organizations easily manage data on the energy performance of large
+groups of buildings. Users can combine data from multiple sources, clean and
+validate it, and share the information with others. The software application
+provides an easy, flexible, and cost-effective method to improve the quality
+and availability of data to help demonstrate the economic and environmental
+benefits of energy efficiency, to implement programs, and to target investment
+activity.</p>
+<p>The SEED application is written in Python/Django, with AngularJS, Bootstrap,
+and other JavaScript libraries used for the front-end. The back-end database
+is required to be PostgreSQL.</p>
+<p>The SEED web application provides both a browser-based interface for users to
+upload and manage their building data, as well as a full set of APIs that app
+developers can use to access these same data management functions.</p>
+<p>Work on SEED Platform is managed by the National Renewable Energy Laboratory,
+with funding from the U.S. Department of Energy.</p>
+<div class="toctree-wrapper compound">
+<span id="document-getting_started"></span><div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="development-setup">
+<h3>Development Setup<a class="headerlink" href="#development-setup" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<span id="document-setup_osx"></span><div class="section" id="installation-on-osx">
+<h4>Installation on OSX<a class="headerlink" href="#installation-on-osx" title="Permalink to this headline">¶</a></h4>
+<p>These instructions are for installing and running SEED on Mac OSX in
+development mode.</p>
+<div class="section" id="quick-installation-instructions">
+<h5>Quick Installation Instructions<a class="headerlink" href="#quick-installation-instructions" title="Permalink to this headline">¶</a></h5>
+<p>This section is intended for developers who may already have their machine
+ready for general development. If this is not the case, skip to Prerequisites.  Note that SEED uses python 3.</p>
+<ul class="simple">
+<li><p>install Postgres 11.1 and redis for cache and message broker</p></li>
+<li><p>install PostGIS 2.5 and enable it on the database using <cite>CREATE EXTENSION postgis;</cite></p></li>
+<li><p>install TimescaleDB 1.5.0</p></li>
+<li><p>use a virtualenv (if desired)</p></li>
+<li><p><cite>git clone git&#64;github.com:seed-platform/seed.git</cite></p></li>
+<li><p>create a <cite>local_untracked.py</cite> in the <cite>config/settings</cite> folder and add CACHE and DB config (example <cite>local_untracked.py.dist</cite>)</p></li>
+<li><p>to enable geocoding, get MapQuest API key and attach it to your organization</p></li>
+<li><p><cite>export DJANGO_SETTINGS_MODULE=config.settings.dev</cite> in all terminals used by SEED (celery terminal and runserver terminal)</p></li>
+<li><dl class="simple">
+<dt><cite>pip install -r requirements/local.txt</cite></dt><dd><ul>
+<li><p>for condas python, you way need to run this command to get pip install to succeed: <cite>conda install -c conda-forge python-crfsuite</cite></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>bin/install_javascript_dependencies.sh</p></li>
+<li><p><cite>./manage.py migrate</cite></p></li>
+<li><p><cite>./manage.py create_default_user</cite></p></li>
+<li><p><cite>./manage.py runserver</cite></p></li>
+<li><p><cite>DJANGO_SETTINGS_MODULE=config.settings.dev celery -A seed worker -l info -c 4 –maxtasksperchild=1000 –events</cite></p></li>
+<li><p>navigate to <cite>http://127.0.0.1:8000/app/#/profile/admin</cite> in your browser to add users to organizations</p></li>
+<li><p>main app runs at <cite>127.0.0.1:8000/app</cite></p></li>
+</ul>
+<p>The <cite>python manage.py create_default_user</cite> will setup a default <cite>superuser</cite>
+which must be used to access the system the first time. The management command
+can also create other superusers.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./manage.py create_default_user --username=demo@seed.lbl.gov --organization=lbl --password=demo123</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="prerequisites">
+<h5>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h5>
+<p>These instructions assume you have <a class="reference external" href="https://www.macports.org/">MacPorts</a> or <a class="reference external" href="http://brew.sh/">Homebrew</a>. Your system
+should have the following dependencies already installed:</p>
+<ul>
+<li><p>git (<cite>port install git</cite> or <cite>brew install git</cite>)</p></li>
+<li><p>graphviz (<cite>brew install graphviz</cite>)</p></li>
+<li><p><a class="reference external" href="https://github.com/pyenv/pyenv">pyenv</a> (Recommended)</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although you <em>could</em> install Python packages globally, this is the
+easiest way to install Python packages. Setting these up first will
+help avoid polluting your base Python installation and make it much
+easier to switch between different versions of the code.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install pyenv
+pyenv install &lt;python3 version you want&gt;
+pyenv virtualenv &lt;python3 version you want&gt; seed
+pyenv <span class="nb">local</span> seed
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="postgresql-11-1">
+<h5>PostgreSQL 11.1<a class="headerlink" href="#postgresql-11-1" title="Permalink to this headline">¶</a></h5>
+<p>MacPorts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo su - root
+port install postgresql94-server postgresql94 postgresql94-doc
+# init db
+mkdir -p /opt/local/var/db/postgresql94/defaultdb
+chown postgres:postgres /opt/local/var/db/postgresql94/defaultdb
+su postgres -c &#39;/opt/local/lib/postgresql94/bin/initdb -D /opt/local/var/db/postgresql94/defaultdb&#39;
+
+# At this point, you may want to add start/stop scripts or aliases to
+# ~/.bashrc or your virtualenv ``postactivate`` script
+# (in ``~/.virtualenvs/{env-name}/bin/postactivate``).
+
+alias pg_start=&#39;sudo su postgres -c &quot;/opt/local/lib/postgresql94/bin/pg_ctl \
+    -D /opt/local/var/db/postgresql94/defaultdb \
+    -l /opt/local/var/db/postgresql94/defaultdb/postgresql.log start&quot;&#39;
+alias pg_stop=&#39;sudo su postgres -c &quot;/opt/local/lib/postgresql94/bin/pg_ctl \
+    -D /opt/local/var/db/postgresql94/defaultdb stop&quot;&#39;
+
+pg_start
+
+sudo su - postgres
+PATH=$PATH:/opt/local/lib/postgresql94/bin/
+</pre></div>
+</div>
+<p>Homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">postgres</span>
+<span class="c1"># follow the post install instructions to add to launchagents or call</span>
+<span class="c1"># manually with `postgres -D /usr/local/var/postgres`</span>
+<span class="c1"># Skip the remaining Postgres instructions!</span>
+</pre></div>
+</div>
+<p>Configure PostgreSQL. Replace ‘seeddb’, ‘seeduser’ with desired db/user. By
+default use password <cite>seedpass</cite> when prompted. Use the code block below in development only since
+the seeduser is a SUPERUSER.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>createuser -P seeduser
+createdb <span class="sb">`</span>whoami<span class="sb">`</span>
+psql -c <span class="s1">&#39;CREATE DATABASE &quot;seeddb&quot; WITH OWNER = &quot;seeduser&quot;;&#39;</span>
+psql -c <span class="s1">&#39;GRANT ALL PRIVILEGES ON DATABASE &quot;seeddb&quot; TO seeduser;&#39;</span>
+psql -c <span class="s1">&#39;ALTER ROLE seeduser SUPERUSER;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="postgis-2-5">
+<h5>PostGIS 2.5<a class="headerlink" href="#postgis-2-5" title="Permalink to this headline">¶</a></h5>
+<p>MacPorts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assuming you&#39;re still root from installing PostgreSQL,</span>
+<span class="n">port</span> <span class="n">install</span> <span class="n">postgis2</span>
+</pre></div>
+</div>
+<p>Homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">postgis</span>
+</pre></div>
+</div>
+<p>Configure PostGIS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">d</span> <span class="n">seeddb</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;CREATE EXTENSION postgis;&quot;</span>
+
+<span class="c1"># For testing, give seed user superuser access:</span>
+<span class="c1"># psql -c &#39;ALTER USER seeduser CREATEDB;&#39;</span>
+</pre></div>
+</div>
+<p>If upgrading from an existing database or existing local_untracked.py file, make sure to add the
+MapQuest API Key and set the database engine to ‘ENGINE’: ‘django.contrib.gis.db.backends.postgis’.</p>
+<p>Now exit any root environments, becoming just yourself (even though it’s not
+that easy being green), for the remainder of these instructions.</p>
+</div>
+<div class="section" id="timescaledb-1-5-0">
+<h5>TimescaleDB 1.5.0<a class="headerlink" href="#timescaledb-1-5-0" title="Permalink to this headline">¶</a></h5>
+<p>Note, as of version 1.5.0, dumping and restoring databases requires that both the source and target
+database have the same version of TimescaleDB.</p>
+<p>Downloading From Source:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Note: Installing from source should only be done</span>
+<span class="c1"># if you have a Postgres installation not maintained by Homebrew.</span>
+<span class="c1"># This installation requires C compiler (e.g., gcc or clang) and CMake version 3.4 or greater.</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">timescale</span><span class="o">/</span><span class="n">timescaledb</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">timescaledb</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="mf">1.5</span><span class="o">.</span><span class="mi">0</span>
+
+<span class="c1"># Bootstrap the build system</span>
+<span class="o">./</span><span class="n">bootstrap</span>
+
+<span class="c1"># If OpenSSL can&#39;t be found by cmake - run the following instead</span>
+<span class="c1"># ./bootstrap -DOPENSSL_ROOT_DIR=&lt;location of OpenSSL&gt; # e.g., -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl</span>
+
+<span class="c1"># To build the extension</span>
+<span class="n">cd</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">make</span>
+
+<span class="c1"># To install</span>
+<span class="n">make</span> <span class="n">install</span>
+
+<span class="c1"># Find postgresql.conf</span>
+<span class="c1"># Then uncomment the shared_preload_libraries line changing it to the following</span>
+<span class="c1"># shared_preload_libraries = &#39;timescaledb&#39;</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">d</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;SHOW config_file;&quot;</span>
+
+<span class="c1"># Restart PostgreSQL instance</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-packages">
+<h5>Python Packages<a class="headerlink" href="#python-packages" title="Permalink to this headline">¶</a></h5>
+<p>Run these commands as your normal user id.</p>
+<p>Change to a virtualenv (using virtualenvwrapper) or do the following as a
+superuser. A virtualenv is usually better for development. Set the virtualenv
+to seed.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>workon seed
+</pre></div>
+</div>
+<p>Make sure PostgreSQL command line scripts are in your PATH (if using MacPorts)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/local/lib/postgresql94/bin
+</pre></div>
+</div>
+<p>Some packages (uWSGI) may need to find your C compiler. Make sure you have
+‘gcc’ on your system, and then also export this to the <cite>CC</cite> environment
+variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">CC</span><span class="o">=</span>gcc
+</pre></div>
+</div>
+<p>Install requirements with <cite>pip</cite></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements/local.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="nodejs-npm">
+<h5>NodeJS/npm<a class="headerlink" href="#nodejs-npm" title="Permalink to this headline">¶</a></h5>
+<p>Install <a class="reference external" href="https://www.npmjs.com/">npm</a>. You can do this by installing from <a class="reference external" href="http://nodejs.org/">nodejs.org</a>, MacPorts, or
+Homebrew:</p>
+<p>MacPorts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">port</span> <span class="n">install</span> <span class="n">npm</span>
+</pre></div>
+</div>
+<p>Homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">npm</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-django-and-databases">
+<h5>Configure Django and Databases<a class="headerlink" href="#configure-django-and-databases" title="Permalink to this headline">¶</a></h5>
+<p>In the <cite>config/settings</cite> directory, there must be a file called
+<cite>local_untracked.py</cite> that sets up databases and a number of other things.
+To create and edit this file, start by copying over the template</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> config/settings
+cp local_untracked.py.dist local_untracked.py
+</pre></div>
+</div>
+<p>Edit <cite>local_untracked.py</cite>. Open the file you created in your favorite editor. The PostgreSQL config section will look something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># postgres DB config</span>
+<span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.contrib.gis.db.backends.postgis&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;seeddb&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;seeduser&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;seedpass&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You may want to comment out the AWS settings.</p>
+<p>For Redis, edit the <cite>CACHES</cite> and <cite>CELERY_BROKER_URL</cite> values to look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;redis_cache.cache.RedisCache&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1:6379&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;DB&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+        <span class="s1">&#39;TIMEOUT&#39;</span><span class="p">:</span> <span class="mi">300</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://127.0.0.1:6379/1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mapquest-api-key">
+<h5>MapQuest API Key<a class="headerlink" href="#mapquest-api-key" title="Permalink to this headline">¶</a></h5>
+<p>Register for a MapQuest API key:
+<a class="reference external" href="https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register">https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register</a></p>
+<p>Visit the Manage Keys page:
+<a class="reference external" href="https://developer.mapquest.com/user/me/apps">https://developer.mapquest.com/user/me/apps</a>
+Either create a new key or use the key initially provided.
+Copy the “Consumer Key” into the target organizations MapQuest API Key field under the organization’s settings page or directly within the DB.</p>
+</div>
+<div class="section" id="run-django-migrations">
+<h5>Run Django Migrations<a class="headerlink" href="#run-django-migrations" title="Permalink to this headline">¶</a></h5>
+<p>Change back to the root of the repository. Now run the migration script to set
+up the database tables</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span>config.settings.dev
+./manage.py migrate
+</pre></div>
+</div>
+</div>
+<div class="section" id="django-admin-user">
+<h5>Django Admin User<a class="headerlink" href="#django-admin-user" title="Permalink to this headline">¶</a></h5>
+<p>You need a Django admin (super) user.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./manage.py create_default_user --username<span class="o">=</span>admin@my.org --organization<span class="o">=</span>seedorg --password<span class="o">=</span>badpass
+</pre></div>
+</div>
+<p>Of course, you need to save this user/password somewhere, since this is what
+you will use to login to the SEED website.</p>
+<p>If you want to do any API testing (and of course you do!), you will need to
+add an API KEY for this user. You can do this in postgresql directly:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>psql seeddb seeduser
+<span class="nv">seeddb</span><span class="o">=</span>&gt; update landing_seeduser <span class="nb">set</span> <span class="nv">api_key</span><span class="o">=</span><span class="s1">&#39;DEADBEEF&#39;</span> where <span class="nv">id</span><span class="o">=</span><span class="m">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The ‘secret’ key DEADBEEF is hard-coded into the test scripts.</p>
+</div>
+<div class="section" id="install-redis">
+<h5>Install Redis<a class="headerlink" href="#install-redis" title="Permalink to this headline">¶</a></h5>
+<p>You need to manually install Redis for Celery to work.</p>
+<p>MacPorts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">port</span> <span class="n">install</span> <span class="n">redis</span>
+</pre></div>
+</div>
+<p>Homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">redis</span>
+<span class="c1"># follow the post install instructions to add to launchagents or</span>
+<span class="c1"># call manually with `redis-server`</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-javascript-dependencies">
+<h5>Install JavaScript Dependencies<a class="headerlink" href="#install-javascript-dependencies" title="Permalink to this headline">¶</a></h5>
+<p>The JS dependencies are installed using node.js package management (npm).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm install
+</pre></div>
+</div>
+</div>
+<div class="section" id="start-the-server">
+<h5>Start the Server<a class="headerlink" href="#start-the-server" title="Permalink to this headline">¶</a></h5>
+<p>You should put the following statement in ~/.bashrc or add it to the
+virtualenv post-activation script (e.g., in
+<cite>~/.virtualenvs/seed/bin/postactivate</cite>).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span>config.settings.dev
+</pre></div>
+</div>
+<p>The combination of Redis, Celery, and Django have been encapsulated in a
+single shell script, which examines existing processes and does not start
+duplicate instances:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./bin/start-seed.sh
+</pre></div>
+</div>
+<p>When this script is done, the Django stand-alone server will be running in
+the foreground.</p>
+</div>
+<div class="section" id="login">
+<h5>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h5>
+<p>Open your browser and navigate to <a class="reference external" href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></p>
+<p>Login with the user/password you created before, e.g., <cite>admin&#64;my.org</cite> and
+<cite>badpass</cite>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>these steps have been combined into a script called <cite>start-seed.sh</cite>.
+The script will also not start Celery or Redis if they already seem
+to be running.</p>
+</div>
+</div>
+</div>
+<span id="document-setup_docker"></span><div class="section" id="installation-using-docker">
+<h4>Installation using Docker<a class="headerlink" href="#installation-using-docker" title="Permalink to this headline">¶</a></h4>
+<p>Docker works natively on Linux, Mac OSX, and Windows 10. If you are using an older version of
+Windows (and some older versions of Mac OSX), you will need to install Docker Toolbox.</p>
+<p>Choose either <a class="reference internal" href="#docker-native-windows-osx">Docker Native (Windows/OSX)</a>  or <a class="reference internal" href="#docker-native-ubuntu">Docker Native (Ubuntu)</a> to
+install Docker.</p>
+<div class="section" id="docker-native-ubuntu">
+<h5>Docker Native (Ubuntu)<a class="headerlink" href="#docker-native-ubuntu" title="Permalink to this headline">¶</a></h5>
+<p>Follow instructions <a class="reference external" href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">here</a>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.docker.com/compose/install/">Install Docker Compose</a></p></li>
+</ul>
+</div>
+<div class="section" id="docker-native-windows-osx">
+<h5>Docker Native (Windows/OSX)<a class="headerlink" href="#docker-native-windows-osx" title="Permalink to this headline">¶</a></h5>
+<p>Following instructions <a class="reference external" href="https://docs.docker.com/docker-for-mac/install/">for Mac</a> or
+<a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">for Windows</a>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.docker.com/compose/install/">Install Docker Compose</a></p></li>
+</ul>
+</div>
+<div class="section" id="building-and-running-containers-for-non-development">
+<h5>Building and Running Containers for Non-Development<a class="headerlink" href="#building-and-running-containers-for-non-development" title="Permalink to this headline">¶</a></h5>
+<ul>
+<li><p>Run Docker Compose</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose build
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=f4hkPn0Un_Q">Be Patient</a> … If the containers build successfully, then start the containers</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker volume create --name<span class="o">=</span>seed_pgdata
+docker volume create --name<span class="o">=</span>seed_media
+docker-compose up
+</pre></div>
+</div>
+<p><strong>Note that you may need to build the containers a couple times for everything to converge</strong></p>
+</div></blockquote>
+</li>
+<li><p>Login to container</p>
+<blockquote>
+<div><p>The docker-compose file creates a default user and password. Below are the defaults but can
+be overridden by setting environment variables.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>username: user@seed-platform.org
+password: super-secret-password
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don’t forget that you need to reset your default username and password if you are going
+to use these Docker images in production mode!</p>
+</div>
+</div>
+<div class="section" id="using-docker-for-development">
+<h5>Using Docker for Development<a class="headerlink" href="#using-docker-for-development" title="Permalink to this headline">¶</a></h5>
+<p>The development environment is configured for live reloading (ie restart webserver when files change)
+and debugging. It builds off the base docker-compose.yml, so it’s necessary
+to specify the files being used in docker-compose commands as seen below.</p>
+<div class="section" id="build">
+<h6>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h6>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create volumes for the database and media directory</span>
+docker volume create --name<span class="o">=</span>seed_pgdata
+docker volume create --name<span class="o">=</span>seed_media
+
+<span class="c1"># build the images</span>
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-server">
+<h6>Running the Server<a class="headerlink" href="#running-the-server" title="Permalink to this headline">¶</a></h6>
+<p>NOTE: the server config is sourced from config.settings.docker_dev, which will include
+your local_untracked.py if it exists. If you have a local_untracked.py, make sure it doesn’t
+overwrite the database or celery configuration!</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+</pre></div>
+</div>
+<p>If the server doesn’t start successfully, and <code class="code docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">logs</span></code> doesn’t help,
+the django development server probably failed to start due to an error in your config or code.
+Unfortunately docker/django logging doesn’t appear to work when the container is first started.
+Just try running the server yourself with docker exec, and see what the output is.</p>
+<p>The development docker-compose file has some configurable parameters for specifying volumes to use:</p>
+<ul class="simple">
+<li><p>SEED_DB_VOLUME: the name of the docker volume to mount for postgres</p></li>
+<li><p>SEED_MEDIA_VOLUME: the name of the docker volume to mount for the seed media folder</p></li>
+</ul>
+<p>Docker will use environment variables from the shell or from a .env file to set these values.</p>
+<p>This is useful if you want to switch between different databases for testing.
+For example, if you want to create a separate volume for storing a production backup, you could do the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker volume create --name<span class="o">=</span>seed_pgdata_prod
+<span class="nv">SEED_DB_VOLUME</span><span class="o">=</span>seed_pgdata_prod docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+</pre></div>
+</div>
+<p>NOTE: you’ll need to run <code class="code docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">down</span></code> to remove the containers before you
+can restart the containers connecting to different volumes.</p>
+</div>
+<div class="section" id="running-tests">
+<h6>Running Tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h6>
+<p>While the containers are running (ie after running the docker-compose up command), use docker exec to run tests in the web container:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> -it seed_web_1 python manage.py <span class="nb">test</span> --settings config.settings.docker_dev
+</pre></div>
+</div>
+<p>Add the setting  <code class="code docutils literal notranslate"><span class="pre">--nocapture</span></code> in order to see <code class="code docutils literal notranslate"><span class="pre">stdout</span></code> while running tests.  You will need to do this in order to make use of debugging as described below or the output to your debug commands will not display until after the break point has passed and the tests are finished.</p>
+<p>Also worth noting: output from logging (_log.debug, etc) will not display in any situation unless a test fails.</p>
+</div>
+<div class="section" id="debugging">
+<h6>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h6>
+<p>To use pdb on the server, the web container has <a class="reference external" href="https://github.com/ionelmc/python-remote-pdb">remote-pdb</a> installed.
+In your code, insert the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import remote_pdb<span class="p">;</span> remote_pdb.set_trace<span class="o">()</span>
+</pre></div>
+</div>
+<p>Once the breakpoint is triggered, you should see the web container log something like “RemotePdb session open at 127.0.0.1:41653, waiting for connection …”.
+To connect to the remote session, run netcat from inside the container (using the appropriate port).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> -it seed_web_1 nc <span class="m">127</span>.0.0.1:41653
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<span id="document-deployment"></span><div class="section" id="deployment-guide">
+<h2>Deployment Guide<a class="headerlink" href="#deployment-guide" title="Permalink to this headline">¶</a></h2>
+<p>SEED is intended to be installed on Linux instances in the cloud (e.g. AWS), and on local hardware. SEED Platform does not officially support Windows for production deployment. If this is desired, see the Django <a class="reference external" href="https://docs.djangoproject.com/en/1.7/howto/windows/">notes</a>.</p>
+<div class="toctree-wrapper compound">
+<span id="document-aws"></span><div class="section" id="aws-setup">
+<h3>AWS Setup<a class="headerlink" href="#aws-setup" title="Permalink to this headline">¶</a></h3>
+<p>Amazon Web Services (<a class="reference external" href="http://aws.amazon.com/">AWS</a>) provides the preferred hosting for the SEED Platform.</p>
+<p><strong>seed</strong> is a <a class="reference external" href="https://www.djangoproject.com/">Django Project</a> and Django’s documentation is an excellent place for general
+understanding of this project’s layout.</p>
+<div class="section" id="prerequisites">
+<h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h4>
+<p>Ubuntu server 18.04 LTS</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These instructions have not been updated for Ubuntu 18.04. It is recommended to use Docker-based deployments.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get upgrade</span>
+<span class="go">sudo apt-get install -y libpq-dev python-dev python-pip libatlas-base-dev \</span>
+<span class="go">gfortran build-essential g++ npm libxml2-dev libxslt1-dev git mercurial \</span>
+<span class="go">libssl-dev libffi-dev curl uwsgi-core uwsgi-plugin-python</span>
+</pre></div>
+</div>
+<p>PostgreSQL and Redis are not included in the above commands. For a quick installation on AWS it
+is okay to install PostgreSQL and Redis locally on the AWS instance. If a more permanent and
+scalable solution, it is recommended to use AWS’s hosted Redis (ElastiCache) and PostgreSQL service.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>postgresql <code class="docutils literal notranslate"><span class="pre">&gt;=9.4</span></code> is required to support <a class="reference external" href="https://www.postgresql.org/docs/9.4/datatype-json.html">JSON Type</a></p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> To install PostgreSQL and Redis locally
+<span class="go">sudo apt-get install redis-server</span>
+<span class="go">sudo apt-get install postgresql postgresql-contrib</span>
+</pre></div>
+</div>
+<div class="section" id="amazon-web-services-aws-dependencies">
+<h5>Amazon Web Services (AWS) Dependencies<a class="headerlink" href="#amazon-web-services-aws-dependencies" title="Permalink to this headline">¶</a></h5>
+<p>The following AWS services can be used for <strong>SEED</strong> but are not required:</p>
+<ul class="simple">
+<li><p>RDS (PostgreSQL &gt;=9.4)</p></li>
+<li><p>ElastiCache (redis)</p></li>
+<li><p>SES</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="python-dependencies">
+<h4>Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h4>
+<p>Clone the <strong>SEED</strong> repository from <strong>github</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone git@github.com:SEED-platform/seed.git
+</pre></div>
+</div>
+<p>enter the repo and install the python dependencies from <a class="reference external" href="https://github.com/SEED-platform/seed/blob/master/requirements/aws.txt">requirements</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> seed
+<span class="gp">$</span> sudo pip install -r requirements/aws.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascript-dependencies">
+<h4>JavaScript Dependencies<a class="headerlink" href="#javascript-dependencies" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">npm</span></code> is required to install the JS dependencies.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apt-get install build-essential
+<span class="gp">$</span> sudo apt-get install curl
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> npm install
+</pre></div>
+</div>
+</div>
+<div class="section" id="database-configuration">
+<h4>Database Configuration<a class="headerlink" href="#database-configuration" title="Permalink to this headline">¶</a></h4>
+<p>Copy the <code class="docutils literal notranslate"><span class="pre">local_untracked.py.dist</span></code> file in the <code class="docutils literal notranslate"><span class="pre">config/settings</span></code> directory to
+<code class="docutils literal notranslate"><span class="pre">config/settings/local_untracked.py</span></code>, and add a <code class="docutils literal notranslate"><span class="pre">DATABASES</span></code> configuration with your database username,
+password, host, and port. Your database configuration can point to an AWS RDS instance or a PostgreSQL 9.4 database
+instance you have manually installed within your infrastructure.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Database</span>
+<span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span><span class="s1">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;seed&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the above database configuration, <code class="docutils literal notranslate"><span class="pre">seed</span></code> is the database name, this
+is arbitrary and any valid name can be used as long as the database exists.</p>
+</div>
+<p>create the database within the postgres <code class="docutils literal notranslate"><span class="pre">psql</span></code> shell:</p>
+<div class="highlight-psql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">seed</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>or from the command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">createdb seed</span>
+</pre></div>
+</div>
+<p>create the database tables and migrations:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python manage.py syncdb</span>
+<span class="go">python manage.py migrate</span>
+</pre></div>
+</div>
+<p>create a superuser to access the system</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python manage.py create_default_user --username<span class="o">=</span>demo@example.com --organization<span class="o">=</span>example --password<span class="o">=</span>demo123
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every user must be tied to an organization, visit <code class="docutils literal notranslate"><span class="pre">/app/#/profile/admin</span></code>
+as the superuser to create parent organizations and add users to them.</p>
+</div>
+</div>
+<div class="section" id="cache-and-message-broker">
+<h4>Cache and Message Broker<a class="headerlink" href="#cache-and-message-broker" title="Permalink to this headline">¶</a></h4>
+<p>The SEED project relies on <a class="reference external" href="http://redis.io/">redis</a> for both cache and message brokering, and
+is available as an AWS <a class="reference external" href="https://aws.amazon.com/elasticache/">ElastiCache</a> service.
+<code class="docutils literal notranslate"><span class="pre">local_untracked.py</span></code> should be updated with the <code class="docutils literal notranslate"><span class="pre">CACHES</span></code> and <code class="docutils literal notranslate"><span class="pre">CELERY_BROKER_URL</span></code>
+settings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;redis_cache.cache.RedisCache&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s2">&quot;seed-core-cache.ntmprk.0001.usw2.cache.amazonaws.com:6379&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;DB&#39;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
+        <span class="s1">&#39;TIMEOUT&#39;</span><span class="p">:</span> <span class="mi">300</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://seed-core-cache.ntmprk.0001.usw2.cache.amazonaws.com:6379/1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-celery-the-background-task-worker">
+<h4>Running Celery the Background Task Worker<a class="headerlink" href="#running-celery-the-background-task-worker" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.celeryproject.org/">Celery</a> is used for background tasks (saving data, matching, creating
+projects, etc) and must be connected to the message broker queue. From the
+project directory, <code class="docutils literal notranslate"><span class="pre">celery</span></code> can be started:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">celery -A seed worker -l INFO -c 2 -B --events --maxtasksperchild 1000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<span id="document-linux"></span><div class="section" id="general-linux-setup">
+<h3>General Linux Setup<a class="headerlink" href="#general-linux-setup" title="Permalink to this headline">¶</a></h3>
+<p>While Amazon Web Services (<a class="reference external" href="http://aws.amazon.com/">AWS</a>) provides the preferred hosting for SEED,
+running on a bare-bones Linux server follows a similar setup, replacing the
+AWS services with their Linux package counterparts, namely: PostgreSQL and
+Redis.</p>
+<p><strong>SEED</strong> is a <a class="reference external" href="https://www.djangoproject.com/">Django project</a> and Django’s documentation
+is an excellent place to general understanding of this project’s layout.</p>
+<div class="section" id="prerequisites">
+<h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h4>
+<p>Ubuntu server/desktop 16.04 or newer (18.04 recommended)</p>
+<p>Install the following base packages to run SEED:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo add-apt-repository ppa:timescale/timescaledb-ppa</span>
+<span class="go">sudo apt update</span>
+<span class="go">sudo apt upgrade</span>
+<span class="go">sudo apt install libpq-dev python3-dev python3-pip libatlas-base-dev \</span>
+<span class="go">gfortran build-essential nodejs npm libxml2-dev libxslt1-dev git \</span>
+<span class="go">libssl-dev libffi-dev curl uwsgi-core uwsgi-plugin-python mercurial</span>
+<span class="go">sudo apt install gdal-bin postgis</span>
+<span class="go">sudo apt install redis-server</span>
+<span class="go">sudo apt install timescaledb-postgresql-10 postgresql-contrib</span>
+
+<span class="gp">#</span> For running selenium/protractor
+<span class="go">sudo apt install default-jre</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>postgresql <code class="docutils literal notranslate"><span class="pre">&gt;=9.3</span></code> is required to support <a class="reference external" href="http://www.postgresql.org/docs/9.3/static/datatype-json.html">JSON Type</a></p>
+</div>
+</div>
+<div class="section" id="configure-postgresql">
+<h4>Configure PostgreSQL<a class="headerlink" href="#configure-postgresql" title="Permalink to this headline">¶</a></h4>
+<p>Replace ‘seeddb’, ‘seeduser’ with desired db/user. By
+default use password <cite>seedpass</cite> when prompted</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo timescaledb-tune
+<span class="gp">$</span> sudo service postgresql restart
+<span class="gp">$</span> sudo su - postgres
+<span class="gp">$</span> createuser -P <span class="s2">&quot;seeduser&quot;</span>
+<span class="gp">$</span> createdb <span class="s2">&quot;seeddb&quot;</span> --owner<span class="o">=</span><span class="s2">&quot;seeduser&quot;</span>
+<span class="gp">$</span> psql
+<span class="go">postgres=# GRANT ALL PRIVILEGES ON DATABASE &quot;seeddb&quot; TO &quot;seeduser&quot;;</span>
+<span class="go">postgres=# ALTER USER &quot;seeduser&quot; CREATEDB CREATEROLE SUPERUSER;</span>
+<span class="go">postgres=# \q</span>
+<span class="gp">$</span> <span class="nb">exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-dependencies">
+<h4>Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h4>
+<p>clone the <strong>seed</strong> repository from <strong>github</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone git@github.com:SEED-platform/seed.git
+</pre></div>
+</div>
+<p>enter the repo and install the python dependencies from <a class="reference external" href="https://github.com/SEED-platform/seed/blob/master/requirements/local.txt">requirements</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> seed
+<span class="gp">$</span> pip3 install -r requirements/local.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascript-dependencies">
+<h4>JavaScript Dependencies<a class="headerlink" href="#javascript-dependencies" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> npm install
+</pre></div>
+</div>
+</div>
+<div class="section" id="django-database-configuration">
+<h4>Django Database Configuration<a class="headerlink" href="#django-database-configuration" title="Permalink to this headline">¶</a></h4>
+<p>Copy the <code class="docutils literal notranslate"><span class="pre">local_untracked.py.dist</span></code> file in the <code class="docutils literal notranslate"><span class="pre">config/settings</span></code> directory to
+<code class="docutils literal notranslate"><span class="pre">config/settings/local_untracked.py</span></code>, and add a <code class="docutils literal notranslate"><span class="pre">DATABASES</span></code> configuration with your database username, password,
+host, and port. Your database configuration can point to an AWS RDS instance or a PostgreSQL 9.4 database instance
+you have manually installed within your infrastructure.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Database</span>
+<span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.contrib.gis.db.backends.postgis&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;seeddb&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;seeduser&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;PASSWORD&gt;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other databases could be used such as MySQL, but are not supported
+due to the postgres-specific <a class="reference external" href="http://www.postgresql.org/docs/9.3/static/datatype-json.html">JSON Type</a></p>
+</div>
+<p>In in the above database configuration, <code class="docutils literal notranslate"><span class="pre">seed</span></code> is the database name, this is arbitrary and any valid name can be
+used as long as the database exists. Enter the database name, user, password you set above.</p>
+<p>The database settings can be tested using the Django management command, <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">manage.py</span> <span class="pre">dbshell</span></code> to connect to the
+configured database.</p>
+<p>create the database tables and migrations:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 manage.py migrate
+</pre></div>
+</div>
+</div>
+<div class="section" id="cache-and-message-broker">
+<h4>Cache and Message Broker<a class="headerlink" href="#cache-and-message-broker" title="Permalink to this headline">¶</a></h4>
+<p>The SEED project relies on <a class="reference external" href="http://redis.io/">redis</a> for both cache and message brokering, and
+is available as an AWS <a class="reference external" href="https://aws.amazon.com/elasticache/">ElastiCache</a> service or with the <code class="docutils literal notranslate"><span class="pre">redis-server</span></code>
+Linux package. (<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">redis-server</span></code>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">local_untracked.py</span></code> should be updated with the <code class="docutils literal notranslate"><span class="pre">CACHES</span></code> and <code class="docutils literal notranslate"><span class="pre">CELERY_BROKER_URL</span></code>
+settings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;redis_cache.cache.RedisCache&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1:6379&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;DB&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+        <span class="s1">&#39;TIMEOUT&#39;</span><span class="p">:</span> <span class="mi">300</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://127.0.0.1:6379/1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-the-initial-user">
+<h4>Creating the initial user<a class="headerlink" href="#creating-the-initial-user" title="Permalink to this headline">¶</a></h4>
+<p>create a superuser to access the system</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 manage.py create_default_user --username<span class="o">=</span>admin@my.org --organization<span class="o">=</span>lbnl --password<span class="o">=</span>badpass
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Of course, you need to save this user/password somewhere, since this is what
+you will use to login to the SEED website.</p>
+<p>Every user must be tied to an organization, visit <code class="docutils literal notranslate"><span class="pre">/app/#/profile/admin</span></code>
+as the superuser to create parent organizations and add users to them.</p>
+</div>
+</div>
+<div class="section" id="running-celery-the-background-task-worker">
+<h4>Running celery the background task worker<a class="headerlink" href="#running-celery-the-background-task-worker" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.celeryproject.org/">Celery</a> is used for background tasks (saving data, matching, creating
+projects, etc) and must be connected to the message broker queue. From the
+project directory, <code class="docutils literal notranslate"><span class="pre">celery</span></code> can be started:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">DJANGO_SETTINGS_MODULE=config.settings.dev celery -A seed worker -l info -c 2 -B --events --maxtasksperchild=1000</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-development-web-server">
+<h4>Running the development web server<a class="headerlink" href="#running-the-development-web-server" title="Permalink to this headline">¶</a></h4>
+<p>The Django dev server (not for production use) can be a quick and easy way to
+get an instance up and running. The dev server runs by default on port 8000
+and can be run on any port. See Django’s <a class="reference external" href="https://docs.djangoproject.com/en/1.6/ref/django-admin/#django-admin-runserver">runserver documentation</a> for more
+options.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 manage.py runserver --settings<span class="o">=</span>config.settings.dev
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-a-production-web-server">
+<h4>Running a production web server<a class="headerlink" href="#running-a-production-web-server" title="Permalink to this headline">¶</a></h4>
+<p>Our recommended web server is uwsgi sitting behind nginx. The python package <code class="docutils literal notranslate"><span class="pre">uwsgi</span></code> is needed for this, and
+should install to <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/uwsgi</span></code> We recommend using <code class="docutils literal notranslate"><span class="pre">dj-static</span></code> to load static files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The use of the <code class="docutils literal notranslate"><span class="pre">dev</span></code> settings file is production ready, and should be
+used for non-AWS installs with <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> set to <code class="docutils literal notranslate"><span class="pre">False</span></code> for production use.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip3 install uwsgi dj-static
+</pre></div>
+</div>
+<p>Generate static files:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 manage.py collectstatic --settings<span class="o">=</span>config.settings.prod -i package.json -i npm-shrinkwrap.json -i node_modules/openlayers-ext/index.html
+</pre></div>
+</div>
+<p>Update <code class="docutils literal notranslate"><span class="pre">config/settings/local_untracked.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># static files</span>
+<span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="s1">&#39;collected_static&#39;</span>
+<span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">&#39;/static/&#39;</span>
+</pre></div>
+</div>
+<p>Start the web server (this also starts celery):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ./bin/start-seed
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that uwsgi has port set to <code class="docutils literal notranslate"><span class="pre">80</span></code>. In a production setting, a dedicated web server such as NGINX would be
+receiving requests on port 80 and passing requests to uwsgi running on a different port, e.g 8000.</p>
+</div>
+</div>
+<div class="section" id="environment-variables">
+<h4>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h4>
+<p>The following environment variables can be set within the <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file to
+override default Django settings.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">SENTRY_DSN</span><span class="o">=</span>https://xyz@app.getsentry.com/123
+<span class="nb">export</span> <span class="nv">DEBUG</span><span class="o">=</span>False
+<span class="nb">export</span> <span class="nv">ONLY_HTTPS</span><span class="o">=</span>True
+</pre></div>
+</div>
+</div>
+<div class="section" id="mail-services">
+<h4>Mail Services<a class="headerlink" href="#mail-services" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="aws-ses-service">
+<h5>AWS SES Service<a class="headerlink" href="#aws-ses-service" title="Permalink to this headline">¶</a></h5>
+<p>In the AWS setup, we can use SES to provide an email service for Django. The service is
+configured in the config/settings/local_untracked.py:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">EMAIL_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;django_ses.SESBackend&#39;</span>
+</pre></div>
+</div>
+<p>In general, the following steps are needed to configure SES:</p>
+<ol class="arabic simple">
+<li><p>Access Amazon SES Console  - <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quick-start.html">Quickstart</a></p></li>
+<li><p>Login to Amazon SES Console. Verify which region we are using (e.g., us-east-1)</p></li>
+<li><p>Decide on email address that will be sending the emails and add them to the <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html">SES Verified Emails</a>.</p></li>
+<li><p>Test that SES works as expected (while in the SES sandbox). Note that you will need to add the sender and recipient emails to the verified emails while in the sandbox.</p></li>
+<li><p>Update the local_untracked.py file or set the environment variables for the docker file.</p></li>
+<li><p>Once ready, move the SES instance out of the sandbox. Following instructions <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html">here</a></p></li>
+<li><p>(Optional) Set up Amazon Simple Notification Service (Amazon SNS) to notify you of bounced emails and other issues.</p></li>
+<li><p>(Optional) Use the AWS Management Console to set up Easy DKIM, which is a way to authenticate your emails. Amazon SES console will have the values for SPF and DKIM that you need to put into your DNS.</p></li>
+</ol>
+</div>
+<div class="section" id="smtp-service">
+<h5>SMTP service<a class="headerlink" href="#smtp-service" title="Permalink to this headline">¶</a></h5>
+<p>Many options for setting up your own <a class="reference external" href="https://docs.djangoproject.com/en/2.0/ref/settings/#email-backend">SMTP</a> service/server or using other SMTP
+third party services are available and compatible including <a class="reference external" href="http://stackoverflow.com/questions/19264907/python-django-gmail-smtp-setup">gmail</a>. SMTP is not configured for working within Docker at the moment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">EMAIL_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;django.core.mail.backends.smtp.EmailBackend&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="local-untracked-py">
+<h4>local_untracked.py<a class="headerlink" href="#local-untracked-py" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PostgreSQL DB config</span>
+<span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;seed&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;your-username&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;your-password&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;your-host&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;your-port&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># config for local storage backend</span>
+<span class="n">DOMAIN_URLCONFS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="s1">&#39;config.urls&#39;</span><span class="p">}</span>
+
+<span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;redis_cache.cache.RedisCache&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1:6379&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;DB&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+        <span class="s1">&#39;TIMEOUT&#39;</span><span class="p">:</span> <span class="mi">300</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://127.0.0.1:6379/1&#39;</span>
+
+<span class="c1"># SMTP config</span>
+<span class="n">EMAIL_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;django.core.mail.backends.smtp.EmailBackend&#39;</span>
+
+<span class="c1"># static files</span>
+<span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="s1">&#39;collected_static&#39;</span>
+<span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">&#39;/static/&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<span id="document-docker"></span><div class="section" id="docker-deployment-on-aws">
+<h3>Docker Deployment on AWS<a class="headerlink" href="#docker-deployment-on-aws" title="Permalink to this headline">¶</a></h3>
+<p>Amazon Web Services (<a class="reference external" href="http://aws.amazon.com/">AWS</a>) provides the preferred hosting for the SEED Platform.</p>
+<p><strong>seed</strong> is a <a class="reference external" href="https://www.djangoproject.com/">Django Project</a> and Django’s documentation is an excellent place for general
+understanding of this project’s layout.</p>
+<div class="section" id="installation">
+<h4>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h4>
+<p>Ubuntu server 18.04 or newer with a m5ad.xlarge (if using in Production instance)</p>
+<ul class="simple">
+<li><p>After launching the instance, run the following commands to install docker.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Install any upgrades
+<span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get upgrade -y</span>
+
+<span class="gp">#</span> Remove any old docker engines
+<span class="go">sudo apt-get remove docker docker-engine docker.io containerd runc</span>
+
+<span class="gp">#</span> Install docker community edition
+<span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common</span>
+<span class="go">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span>
+<span class="go">sudo add-apt-repository \</span>
+<span class="go">    &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span>
+<span class="gp">    $</span><span class="o">(</span>lsb_release -cs<span class="o">)</span> <span class="se">\</span>
+    stable<span class="s2">&quot;</span>
+
+<span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get install -y docker-ce docker-ce-cli containerd.io</span>
+<span class="gp">#</span> Add your user to the docker group
+<span class="go">sudo groupadd docker</span>
+<span class="go">sudo usermod -aG docker $USER</span>
+<span class="go">newgrp docker</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is okay if the first command fails</p>
+</div>
+<ul class="simple">
+<li><p>Verify that the DNS is working correctly. Run the following and verify the response lists IPs (v6 most likely)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> verify that the dns resolves
+<span class="go">docker run --rm seedplatform/seed getent hosts seed-platform.org</span>
+<span class="gp">#</span> or
+<span class="go">docker run --rm tutum/dnsutils nslookup email.us-west-2.amazonaws.com</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Install Docker compose</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span>
+<span class="go">sudo chmod +x /usr/local/bin/docker-compose</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Checkout SEED (or install from the releases).</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Add in the Server setting into profile.d. For example add the content below (appropriately filled out) into /etc/profile.d/seed.sh</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export POSTGRES_USER=seed</span>
+<span class="go">export POSTGRES_DB=seed</span>
+<span class="go">export POSTGRES_PASSWORD=GDEus3fasd1askj89QkAldjfX</span>
+<span class="go">export POSTGRES_PORT=5432</span>
+<span class="go">export SECRET_KEY=&quot;96=7jg%_&amp;1-z9c9qwwu2@w$hb3r322yf3lz@*ekw-1@ly-%+^&quot;</span>
+
+<span class="gp">#</span> The admin user is only valid only <span class="k">until</span> the database is restored
+<span class="go">export SEED_ADMIN_USER=user@seed-platform.org</span>
+<span class="go">export SEED_ADMIN_PASSWORD=&quot;7FeBWal38*&amp;k3jlfa92lakj8ih4&quot;</span>
+<span class="go">export SEED_ADMIN_ORG=default</span>
+
+<span class="gp">#</span> For SES
+<span class="go">export AWS_ACCESS_KEY_ID=&lt;AWS_ACCESS_KEY&gt;</span>
+<span class="go">export AWS_SECRET_ACCESS_KEY=&lt;AWS_SECRET_KEY&gt;</span>
+<span class="go">export AWS_SES_REGION_NAME=us-west-2</span>
+<span class="go">export AWS_SES_REGION_ENDPOINT=email.us-west-2.amazonaws.com</span>
+<span class="go">export SERVER_EMAIL=user@seed-platform.org</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Before launching the first time, make sure the persistent volumes and the backup directory exist.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">docker volume create --name=seed_pgdata</span>
+<span class="go">docker volume create --name=seed_media</span>
+
+<span class="go">mkdir -p $HOME/seed-backups</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to have the seed-backups in your path, otherwise the db-postgres container will not launch.</p>
+</div>
+<ul class="simple">
+<li><p>Launch the project</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd &lt;checkout dir&gt;</span>
+<span class="go">./deploy.sh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="deploying-with-oep">
+<h4>Deploying with OEP<a class="headerlink" href="#deploying-with-oep" title="Permalink to this headline">¶</a></h4>
+<p>The preferred way to deploy with Docker is using docker swarm and docker stack.
+Look at the <a class="reference external" href="https://github.com/SEED-platform/seed/blob/develop/deploy.sh">deploy.sh script</a>  for implementation details.</p>
+<p>The short version is to simply run the command below. Note that the passing of the docker-compose.yml filename is not required if using docker-compose.local.yml.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
+<span class="pre">./deploy.sh</span> <span class="pre">docker-compose.local.yml</span>
+<span class="pre">`</span></code></p>
+<p>If deploying using a custom docker-compose yml file, then simple replace the name in the command above. This would be required if using the Open Efficiency Platform work (connecting SEED to Salesforce).</p>
+</div>
+</div>
+</div>
+<div class="section" id="migrations">
+<h3>Migrations<a class="headerlink" href="#migrations" title="Permalink to this headline">¶</a></h3>
+<p>Migrations are handles through Django; however, various versions have customs actions for the migrations. See the <a class="reference internal" href="index.html#document-migrations"><span class="doc">migrations page</span></a> for more information.</p>
+</div>
+<div class="section" id="monitoring">
+<h3>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="sentry">
+<h4>Sentry<a class="headerlink" href="#sentry" title="Permalink to this headline">¶</a></h4>
+<p>Sentry can monitor your webservers for any issues. To enable sentry add the following to
+your local_untracked.py files after setting up your Sentry account on sentry.io.</p>
+<p>The RAVEN_CONFIG is used for the backend and the SENTRY_JS_DSN is used for the frontend. At the moment,
+it is recommended to setup two sentry projects, one for backend and one for frontend.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">raven</span>
+
+<span class="n">RAVEN_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;dsn&#39;</span><span class="p">:</span> <span class="s1">&#39;https://&lt;user&gt;:&lt;key&gt;@sentry.io/&lt;job_id&gt;&#39;</span><span class="p">,</span>
+   <span class="c1"># If you are using git, you can also automatically configure the</span>
+   <span class="c1"># release based on the git info.</span>
+   <span class="s1">&#39;release&#39;</span><span class="p">:</span> <span class="n">raven</span><span class="o">.</span><span class="n">fetch_git_sha</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)),</span>
+<span class="p">}</span>
+<span class="n">SENTRY_JS_DSN</span> <span class="o">=</span> <span class="s1">&#39;https://&lt;key&gt;@sentry.io/&lt;job_id&gt;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<span id="document-api"></span><div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="authentication">
+<h3>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h3>
+<p>Authentication is handled via an encoded authorization token set in a HTTP header.
+To request an API token, go to <code class="docutils literal notranslate"><span class="pre">/app/#/profile/developer</span></code> and click ‘Get a New API Key’.</p>
+<p>Authenticate every API request with your username (email, all lowercase) and the API key via <a class="reference external" href="https://en.wikipedia.org/wiki/Basic_access_authentication">Basic Auth</a>.
+The header is sent in the form of <code class="docutils literal notranslate"><span class="pre">Authorization:</span> <span class="pre">Basic</span> <span class="pre">&lt;credentials&gt;</span></code>, where credentials is the base64 encoding of the email and key joined by a single colon <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
+<p>Using Python, use the requests library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://seed-platform.org/api/version/&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="n">user_email</span><span class="p">,</span> <span class="n">api_key</span><span class="p">))</span>
+<span class="nb">print</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Using curl, pass the username and API key as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">user_email</span><span class="p">:</span><span class="n">api_key</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">seed</span><span class="o">-</span><span class="n">platform</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">version</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>If authentication fails, the response’s status code will be 302, redirecting the user to <code class="docutils literal notranslate"><span class="pre">/app/login</span></code>.</p>
+</div>
+<div class="section" id="payloads">
+<h3>Payloads<a class="headerlink" href="#payloads" title="Permalink to this headline">¶</a></h3>
+<p>Many requests require a JSON-encoded payload and parameters in the query string of the url. A frequent
+requirement is including the organization_id of the org you belong to. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">user_email</span><span class="p">:</span><span class="n">api_key</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">seed</span><span class="o">-</span><span class="n">platform</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">organizations</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Or in a JSON payload:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">user_email</span><span class="p">:</span><span class="n">api_key</span> \
+  <span class="o">-</span><span class="n">d</span> <span class="s1">&#39;{&quot;organization_id&quot;:6, &quot;role&quot;: &quot;viewer&quot;}&#39;</span> \
+  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">seed</span><span class="o">-</span><span class="n">platform</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">users</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="n">update_role</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Using Python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span><span class="p">:</span> <span class="s1">&#39;viewer&#39;</span><span class="p">}</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://seed-platform.org/api/v2/users/12/update_role/&#39;</span><span class="p">,</span>
+                       <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">params</span><span class="p">),</span>
+                       <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="n">user_email</span><span class="p">,</span> <span class="n">api_key</span><span class="p">))</span>
+<span class="nb">print</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="responses">
+<h3>Responses<a class="headerlink" href="#responses" title="Permalink to this headline">¶</a></h3>
+<p>Responses from all requests will be JSON-encoded objects, as specified in each endpoint’s documentation.
+In the case of an error, most endpoints will return this instead of the expected payload (or an HTTP status code):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;explanation of the error here&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-endpoints">
+<h3>API Endpoints<a class="headerlink" href="#api-endpoints" title="Permalink to this headline">¶</a></h3>
+<p>A list of interactive endpoints are available by accessing the API menu item on the left navigation
+pane within you account on your SEED instance.</p>
+<p>To view a list of non-interactive endpoints without an account, view <a class="reference external" href="https://seed-platform.org/api/swagger/">swagger</a> on the development server.</p>
+</div>
+</div>
+<span id="document-data_model"></span><div class="section" id="data-model">
+<h2>Data Model<a class="headerlink" href="#data-model" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/case-a.png" src="_images/case-a.png" />
+<img alt="_images/case-b.png" src="_images/case-b.png" />
+<img alt="_images/case-c.png" src="_images/case-c.png" />
+<img alt="_images/case-d.png" src="_images/case-d.png" />
+<img alt="_images/data-model.png" src="_images/data-model.png" />
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Documentation below is out of state and needs updated.</p>
+</div>
+<p>Our primary data model is based on a tree structure with BuildingSnapshot
+instances as nodes of the tree and the tip of the tree referenced by a
+CanonicalBuilding.</p>
+<p>Take the following example: a user has loaded a CSV file containing information
+about one building and created the first BuildingSnapshot (BS0). At this point
+in time, BS0 is linked to the first CanonicalBuilding (CB0), and CB0 is also
+linked to BS0.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0 &lt;-- CB0
+BS0 --&gt; CB0
+</pre></div>
+</div>
+<p>These relations are represented in the database as foreign keys from the
+BuildingSnapshot table to the CanonicalBuilding table, and from the
+CanonicalBuilding table to the BuildingSnapshot table.</p>
+<p>The tree structure comes to fruition when a building, BS0 in our case, is
+matched with a new building, say BS1, enters the system and is auto-matched.</p>
+<p>Here BS1 entered the system and was matched with BS0. When a match occurs,
+a new BuildingSnapshot is created, BS2, with the fields from the existing
+BuildingSnapshot, BS0, and the new BuildingSnapshot, BS1, merged
+together. If both the existing and new BuildingSnapshot have data for a
+given field, the new record’s fields are preferred and merged into the child, B3.</p>
+<p>The fields from new snapshot are preferred because that is the newer of the
+two records from the perspective of the system.  By preferring the most recent fields
+this allows for evolving building snapshots over time.  For example, if an existing
+canonical record has a Site EUI value of 75 and some changes happen to a building
+that cause this to change to 80 the user can submit a new record with that change.</p>
+<p>All BuildingSnapshot instances point to a CanonicalBuilding.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0  BS1
+  <span class="se">\ </span>/
+  BS2 &lt;-- CB0
+
+BS0 --&gt; CB0
+BS1 --&gt; CB0
+BS2 --&gt; CB0
+</pre></div>
+</div>
+<div class="section" id="parents-and-children">
+<h3>parents and children<a class="headerlink" href="#parents-and-children" title="Permalink to this headline">¶</a></h3>
+<p>BuildingSnapshots also have linkage to other BuildingSnapshots in order to
+keep track of their <em>parents</em> and <em>children</em>. This is represented in the
+Django model as a many-to-many relation from BuildingSnapshot to BuildingSnapshot.
+It is represented in the PostgreSQL database as an additional seed_buildingsnapshot_children
+table.</p>
+<p>In our case here, BS0 and BS1 would both have <em>children</em> BS2, and BS2 would
+have <em>parents</em> BS0 and BS1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>throughout most of the application, the <code class="docutils literal notranslate"><span class="pre">search_buildings</span></code> endpoint
+is used to search or list active building. This is to say, buildings that
+are pointed to by an active CanonicalBuilding.
+The <code class="docutils literal notranslate"><span class="pre">search_mapping_results</span></code> endpoint allows the search of buildings
+regardless of whether the BuildingSnapshot is pointed to by an active
+CanonicalBuilding or not and this search is needed during the mapping
+preview and matching sections of the application.</p>
+</div>
+<p>For illustration purposes let’s suppose BS2 and a new building BS3 match to form a child BS4.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>parent</p></th>
+<th class="head"><p>child</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BS0</p></td>
+<td><p>BS2</p></td>
+</tr>
+<tr class="row-odd"><td><p>BS1</p></td>
+<td><p>BS2</p></td>
+</tr>
+<tr class="row-even"><td><p>BS2</p></td>
+<td><p>BS4</p></td>
+</tr>
+<tr class="row-odd"><td><p>BS3</p></td>
+<td><p>BS4</p></td>
+</tr>
+</tbody>
+</table>
+<p>And the corresponding tree would look like:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0  BS1
+  <span class="se">\ </span>/
+  BS2  BS3
+    <span class="se">\ </span> /
+     BS4 &lt;-- CB0
+
+BS0 --&gt; CB0
+BS1 --&gt; CB0
+BS2 --&gt; CB0
+BS3 --&gt; CB0
+BS4 --&gt; CB0
+</pre></div>
+</div>
+<div class="section" id="matching">
+<h4>matching<a class="headerlink" href="#matching" title="Permalink to this headline">¶</a></h4>
+<p>During the auto-matching process, if a <em>raw</em> BuildingSnapshot matches an
+existing BuildingSnapshot instance, then it will point to the existing
+BuildingSnapshot instance’s CanonicalBuilding. In the case where there is no
+existing BuildingSnapshot to match, a new CanonicalBuilding will be created, as
+happened to B0 and C0 above.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>BS0</p></th>
+<th class="head"><p>BS1</p></th>
+<th class="head"><p>BS2 (child)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id1</p></td>
+<td><p><strong>11</strong></p></td>
+<td><p>11</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>id2</p></td>
+<td></td>
+<td><p><strong>12</strong></p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-even"><td><p>id3</p></td>
+<td><p><strong>13</strong></p></td>
+<td></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td><p>id4</p></td>
+<td><p>14</p></td>
+<td><p><strong>15</strong></p></td>
+<td><p>15</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="manual-matching-vs-auto-matching">
+<h3>manual-matching vs auto-matching<a class="headerlink" href="#manual-matching-vs-auto-matching" title="Permalink to this headline">¶</a></h3>
+<p>Since BuildingSnapshots can be manually matched, there is the possibility for
+two BuildingSnapshots each with an active CanonicalBuilding to match and the
+system has to choose to move only one CanonicalBuilding to the tip of the tree
+for the primary BuildingSnapshot and <em>deactivate</em> the secondary
+BuildingSnapshot’s CanonicalBuilding.</p>
+<p>Take for example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0  BS1
+  <span class="se">\ </span>/
+  BS2  BS3
+    <span class="se">\ </span> /
+     BS4 &lt;-- CB0 <span class="o">(</span>active: True<span class="o">)</span>         BS5 &lt;-- CB1 <span class="o">(</span>active: True<span class="o">)</span>
+</pre></div>
+</div>
+<p>If a user decides to manually match BS4 and BS5, the system will take the
+primary BuildingSnapshot’s CanonicalBuilding and have it point to their
+child and deactivate CB1. The deactivation is handled by setting a field
+on the CanonicalBuilding instance, <em>active</em>, from <code class="docutils literal notranslate"><span class="pre">True</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>Here is what the tree would look like after the manual match of <strong>BS4</strong> and
+<strong>BS5</strong>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>BS0  BS1
+  <span class="se">\ </span>/
+  BS2  BS3
+    <span class="se">\ </span> /
+     BS4  BS5 &lt;-- CB1 <span class="o">(</span>active: False<span class="o">)</span>
+       <span class="se">\ </span> /
+        BS6 &lt;-- CB0 <span class="o">(</span>active: True<span class="o">)</span>
+</pre></div>
+</div>
+<p>Even though BS5 is pointed to by a CanonicalBuilding, CB1, BS5 will not be
+returned by the normal <code class="docutils literal notranslate"><span class="pre">search_buildings</span></code> endpoint because the
+CanonicalBuilding pointing to it has its field <code class="docutils literal notranslate"><span class="pre">active</span></code> set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>anytime a match is <strong>unmatched</strong> the system will create a new
+CanonicalBuilding or set an existing CanonicalBuilding’s active field to
+<code class="docutils literal notranslate"><span class="pre">True</span></code> for any leaf BuildingSnapshot trees.</p>
+</div>
+</div>
+<div class="section" id="what-really-happens-to-the-buildingsnapshot-table-on-import-and-when">
+<h3>what really happens to the BuildingSnapshot table on import (and when)<a class="headerlink" href="#what-really-happens-to-the-buildingsnapshot-table-on-import-and-when" title="Permalink to this headline">¶</a></h3>
+<p>The above is conceptually what happens but sometimes the devil is in the details.
+Here is what happens to the BuildingSnapshot table in the database when records
+are imported.</p>
+<p>Every time a record is added at least two BuildingSnapshot records are created.</p>
+<p>Consider the following simple record:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 29%" />
+<col style="width: 15%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property Id</p></th>
+<th class="head"><p>Year Ending</p></th>
+<th class="head"><p>Property Floor Area</p></th>
+<th class="head"><p>Address 1</p></th>
+<th class="head"><p>Release Date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>499045</p></td>
+<td><p>2000</p></td>
+<td><p>1234</p></td>
+<td><p>1 fake st</p></td>
+<td><p>12/12/2000</p></td>
+</tr>
+</tbody>
+</table>
+<p>The first thing the user is upload the file.  When the user sees the
+“Successful Upload!” dialog one record has been added to the
+BuildingSnapshot table.</p>
+<p>This new record has an id (73700 in this case) and a created and
+modified timestamp.  Then there are a lot of empty fields and a
+source_type of 0.  Then there is the extra_data column which contains
+the contents of the record in key-value form:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Address 1</dt>
+<dd class="field-odd"><p>“1 fake st”</p>
+</dd>
+<dt class="field-even">Property Id</dt>
+<dd class="field-even"><p>“499045”</p>
+</dd>
+<dt class="field-odd">Year Ending</dt>
+<dd class="field-odd"><p>“2000”</p>
+</dd>
+<dt class="field-even">Release Date</dt>
+<dd class="field-even"><p>“12/12/2000”</p>
+</dd>
+<dt class="field-odd">Property Floor Area</dt>
+<dd class="field-odd"><p>“1234”</p>
+</dd>
+</dl>
+<p>And a corresponding extra_data_sources that looks like</p>
+<dl class="field-list simple">
+<dt class="field-odd">Address 1</dt>
+<dd class="field-odd"><p>73700</p>
+</dd>
+<dt class="field-even">Property Id</dt>
+<dd class="field-even"><p>73700</p>
+</dd>
+<dt class="field-odd">Year Ending</dt>
+<dd class="field-odd"><p>73700</p>
+</dd>
+<dt class="field-even">Release Date</dt>
+<dd class="field-even"><p>73700</p>
+</dd>
+<dt class="field-odd">Property Floor Area</dt>
+<dd class="field-odd"><p>73700</p>
+</dd>
+</dl>
+<p>All of the fields that look like _source_id are also populated
+with 73700 E.G. owner_postal_code_source_id.</p>
+<p>The other fields of interest are the organization field which
+is populated with the user’s default organization and the import_file_id
+field which is populated with a reference to a data_importer_importfile record.</p>
+<p>At this point the record has been created before the user hits the
+“Continue to data mapping” button.</p>
+<p>The second record (id = 73701) is created by the time the user gets to the screen
+with the “Save Mappings” button.  This second record has the following fields populated:</p>
+<ul class="simple">
+<li><p>id</p></li>
+<li><p>created</p></li>
+<li><p>modified</p></li>
+<li><p>pm_property_id</p></li>
+<li><p>year_ending</p></li>
+<li><p>gross_floor_area</p></li>
+<li><p>address_line_1</p></li>
+<li><p>release_date</p></li>
+<li><p>source_type (this is 2 instead of 0 as with the other record)</p></li>
+<li><p>import_file_id</p></li>
+<li><p>organization_id.</p></li>
+</ul>
+<p>That is all.  All other fields are empty.  In this case that is all that happens.</p>
+<p>Now consider the same user uploading a new file from the next year that looks like</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 29%" />
+<col style="width: 15%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property Id</p></th>
+<th class="head"><p>Year Ending</p></th>
+<th class="head"><p>Property Floor Area</p></th>
+<th class="head"><p>Address 1</p></th>
+<th class="head"><p>Release Date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>499045</p></td>
+<td><p>2000</p></td>
+<td><p>1234</p></td>
+<td><p>1 fake st</p></td>
+<td><p>12/12/2001</p></td>
+</tr>
+</tbody>
+</table>
+<p>As before one new record is created on upload.  This has id 73702 and follows the same
+pattern as 73700.  And similarly 73703 is created like 73701 before the “Save Mappings”
+button appears.</p>
+<p>However this time the system was able to make a match with an existing record.
+After the user clicks the “Confirm mappings &amp; start matching” button a new record
+is created with ID 73704.</p>
+<p>73704 is identical to 73703 (in terms of contents of the BuildingSnapshot table only)
+with the following exceptions:</p>
+<ul class="simple">
+<li><p>created and modified timestamps are different</p></li>
+<li><p>match type is populated and has a value of 1</p></li>
+<li><p>confidence is populated and has a value of .9</p></li>
+<li><p>source_type is 4 instead of 2</p></li>
+<li><p>canonical_building_id is populated with a value</p></li>
+<li><p>import_file_id is NULL</p></li>
+<li><p>last_modified_by_id is populated with value 2 (This is a key into the landing_seeduser table)</p></li>
+<li><p>address_line_1_source_id is 73701</p></li>
+<li><p>gross_floor_area_source_id is populated with value 73701</p></li>
+<li><p>pm_property_id_source_id is populated with 73701</p></li>
+<li><p>release_date_source_id is populated with 73701</p></li>
+<li><p>year_ending_source_id is populated with 73701</p></li>
+</ul>
+</div>
+<div class="section" id="what-really-happens-to-the-canonicalbuilding-table-on-import-and-when">
+<h3>what really happens to the CanonicalBuilding table on import (and when)<a class="headerlink" href="#what-really-happens-to-the-canonicalbuilding-table-on-import-and-when" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the BuildingSnapshot table the CanonicalBuilding table is also updated
+during the import process.  To summarize the above 5 records were created in the
+BuildingSnapshot table:</p>
+<ol class="arabic simple">
+<li><p>73700 is created from the raw 2000 data</p></li>
+<li><p>73701 is the mapped 2000 data,</p></li>
+<li><p>73702 is created from the raw 2001 data</p></li>
+<li><p>73703 is the mapped 2001 data</p></li>
+<li><p>73704 is the result of merging the 2000 and 2001 data.</p></li>
+</ol>
+<p>In this process CanonicalBuilding is updated twice.  First when the 2000 record is imported the
+CanonicalBuilding gets populated with one new row at the end of the matching step.
+I.E. when the user sees the “Load More Data” screen.  At this point there is a new row that looks like</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>active</p></th>
+<th class="head"><p>canonical_building_id</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>20505</p></td>
+<td><p>TRUE</p></td>
+<td><p>73701</p></td>
+</tr>
+</tbody>
+</table>
+<p>At this point there is one new canonical building and that is the BuildingSnapshot with
+id 73701.  Next the user uploads the 2001 data.  When the “Matching Results” screen
+appears the CanonicalBuilding table has been updated.  Now it looks like</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>active</p></th>
+<th class="head"><p>canonical_building_id</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>20505</p></td>
+<td><p>TRUE</p></td>
+<td><p>73704</p></td>
+</tr>
+</tbody>
+</table>
+<p>There is still only one canonical building but now it is the BuildingSnapshot record
+that is the result of merging the 2000 and 2001 data:  id = 73704.</p>
+</div>
+<div class="section" id="organization">
+<h3>organization<a class="headerlink" href="#organization" title="Permalink to this headline">¶</a></h3>
+<p>BuildingSnapshots belong to an Organization field that is a foreign key into the organization
+model (orgs_organization in Postgres).</p>
+<p>Many endpoints filter the buildings based on the organizations the requesting user
+belongs to.  E.G. get_buildings changes which fields are returned based on the
+requesting user’s membership in the BuildingSnapshot’s organization.</p>
+</div>
+<div class="section" id="source-id-fields">
+<h3>*_source_id fields<a class="headerlink" href="#source-id-fields" title="Permalink to this headline">¶</a></h3>
+<p>Any field in the BuildingSnapshot table that is populated with data from a
+submitted record will have a corresponding _source_id field.  E.G
+pm_property_id has pm_property_id_source_id,
+address_line_1 has address_line_1_source_id,
+etc…</p>
+<p>These are foreign keys into the BuildingSnapshot that is the source of that
+value.  To extend the above table</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 22%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>BS0</p></th>
+<th class="head"><p>BS1</p></th>
+<th class="head"><p>BS2 (child)</p></th>
+<th class="head"><p>BS2 (child) _source_id</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id1</p></td>
+<td><p><strong>11</strong></p></td>
+<td></td>
+<td><p>11</p></td>
+<td><p>BS0</p></td>
+</tr>
+<tr class="row-odd"><td><p>id2</p></td>
+<td></td>
+<td><p><strong>12</strong></p></td>
+<td><p>12</p></td>
+<td><p>BS1</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE:</strong>  The BuildingSnapshot records made from the raw input file have all the
+_source_id fields populated with that record’s ID.  The non-canonical BuildingSnapshot
+records created from the mapped data have none set.  The canonical BuildingSnapshot
+records that are the result of merging two records have only the _source_id fields
+set where the record itself has data.  E.G. in the above address_line_1 is set to
+“1 fake st.” so there is a value in the canonical BuildingSnapshot’s address_line_1_source_id
+field.  However there is no block number so block_number_source_id is empty.  This
+is unlike the two raw BuildingSnapshot records who also have no block_number but
+nevertheless have a block_number_source_id populated.</p>
+</div>
+<div class="section" id="extra-data">
+<h3>extra_data<a class="headerlink" href="#extra-data" title="Permalink to this headline">¶</a></h3>
+<p>The BuildingSnapshot model has many “named” fields.  Fields like “address_line_1”,
+“year_built”, and “pm_property_id”.  However the users are allowed to submit files
+with arbitrary fields.  Some of those arbitrary fields can be mapped to “named”
+fields.  E.G. “Street Address” can usually be mapped to “Address Line 1”.
+For all the fields that cannot be mapped like that there is the extra_data field.</p>
+<p>extra_data is Django json field that serves as key-value storage for other
+user-submitted fields.  As with the other “named” fields there is a corresponding
+extra_data_sources field that serves the same role as the other _source_id fields.
+E.G. If a BuildingSnapshot has an extra_data field that looks like</p>
+<dl class="field-list simple">
+<dt class="field-odd">an_unknown_field</dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+<dt class="field-even">something_else</dt>
+<dd class="field-even"><p>2</p>
+</dd>
+</dl>
+<p>It should have an extra_data_sources field that looks like</p>
+<dl class="field-list simple">
+<dt class="field-odd">an_unknown_field</dt>
+<dd class="field-odd"><p>some_BuildingSnapshot_id</p>
+</dd>
+<dt class="field-even">something_else</dt>
+<dd class="field-even"><p>another_BuildingSnapshot_id</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="saving-and-possible-data-loss">
+<h3>saving and possible data loss<a class="headerlink" href="#saving-and-possible-data-loss" title="Permalink to this headline">¶</a></h3>
+<p>When saving a Property file some fields that are truncated if too long.
+The following are truncated to 255 characters</p>
+<ul class="simple">
+<li><p>jurisdiction_tax_lot_id</p></li>
+<li><p>pm_property_id</p></li>
+<li><p>custom_id_1</p></li>
+<li><p>ubid</p></li>
+<li><p>lot_number</p></li>
+<li><p>block_number</p></li>
+<li><p>district</p></li>
+<li><p>owner</p></li>
+<li><p>owner_email</p></li>
+<li><p>owner_telephone</p></li>
+<li><p>owner_address</p></li>
+<li><p>owner_city_state</p></li>
+<li><p>owner_postal_code</p></li>
+</ul>
+<p>And the following are truncated to 255:</p>
+<ul class="simple">
+<li><p>property_name</p></li>
+<li><p>address_line_1</p></li>
+<li><p>address_line_2</p></li>
+<li><p>city</p></li>
+<li><p>postal_code</p></li>
+<li><p>state_province</p></li>
+<li><p>building_certification</p></li>
+</ul>
+<p>No truncation happens to any of the fields stored in extra_data.</p>
+</div>
+</div>
+<span id="document-data_quality"></span><div class="section" id="data-quality">
+<h2>Data Quality<a class="headerlink" href="#data-quality" title="Permalink to this headline">¶</a></h2>
+<p>Data quality checks are run after the data are paired, during import of Properties/TaxLots, or on-demand by selecting rows in the inventory
+page and clicking the action button. This checks whether any default or user-defined Rules are broken or satisfied by Property/TaxLot records.</p>
+<p>Notably, in most cases when data quality checks are run, Labels can be applied for any broken Rules that have a Label.
+To elaborate, Rules can have an attached Label. When a data quality check is run, records that break one of these “Labeled Rules”
+are then given that Label. The case where this Label attachment does not happen is during import due to performance reasons.</p>
+</div>
+<span id="document-mapping"></span><div class="section" id="mapping">
+<h2>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h2>
+<p>This document describes the set of calls that occur from the web client or API
+down to the back-end for the process of mapping data into SEED.</p>
+<p>An overview of the process is:</p>
+<ol class="arabic simple">
+<li><p>Import - A file is uploaded to the server</p></li>
+<li><p>Save - The file is batched saved into the database as JSON data</p></li>
+<li><p>Mapping - Mapping occurs on that file</p></li>
+<li><p>Matching / Merging</p></li>
+<li><p>Pairing</p></li>
+</ol>
+<div class="section" id="import">
+<h3>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
+<p>From the web UI, the import process invokes <cite>seed.views.main.save_raw_data</cite> to save the data. When the data is
+done uploading, we need to know whether it is a Portfolio Manager file, so we can add metadata to the record in the
+database. The end of the upload happens in <cite>seed.data_importer.views.DataImportBackend.upload_complete</cite>. At this
+point, the request object has additional attributes for Portfolio Manager files. These are saved in the model
+<cite>seed.data_importer.models.ImportFile</cite>.</p>
+</div>
+<div class="section" id="id1">
+<h3>Mapping<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Once files are uploaded, file header columns need to be mapped to SEED columns. Mappings can be specified/decided manually for any particular file import,
+or mapping profiles can be created and subsequently applied to any file imports.</p>
+<p>When a column mapping profile is applied to an import file, file header columns defined in the profile must match exactly (spaces, lowercase, uppercase, etc.)
+in order for the corresponding SEED column information to be used/mapped.</p>
+</div>
+<div class="section" id="matching">
+<h3>Matching<a class="headerlink" href="#matching" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>document</p>
+</div>
+</div>
+<div class="section" id="pairing">
+<h3>Pairing<a class="headerlink" href="#pairing" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>document</p>
+</div>
+</div>
+</div>
+<span id="document-modules"></span><div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<span id="document-modules/config"></span><div class="section" id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-config.template_context">
+<span id="template-context"></span><h4>Template Context<a class="headerlink" href="#module-config.template_context" title="Permalink to this headline">¶</a></h4>
+<p>:copyright (c) 2014 - 2020, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.  # NOQA
+:author</p>
+<dl class="py function">
+<dt id="config.template_context.sentry_js">
+<code class="sig-prename descclassname">config.template_context.</code><code class="sig-name descname">sentry_js</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#config.template_context.sentry_js" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="config.template_context.session_key">
+<code class="sig-prename descclassname">config.template_context.</code><code class="sig-name descname">session_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#config.template_context.session_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-config.tests">
+<span id="tests"></span><h4>Tests<a class="headerlink" href="#module-config.tests" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-config.utils">
+<span id="utils"></span><h4>Utils<a class="headerlink" href="#module-config.utils" title="Permalink to this headline">¶</a></h4>
+<p>:copyright (c) 2014 - 2020, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.  # NOQA
+:author</p>
+<dl class="py function">
+<dt id="config.utils.de_camel_case">
+<code class="sig-prename descclassname">config.utils.</code><code class="sig-name descname">de_camel_case</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#config.utils.de_camel_case" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="views">
+<h4>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="wsgi">
+<h4>WSGI<a class="headerlink" href="#wsgi" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.data"></span><div class="section" id="data-package">
+<h3>Data Package<a class="headerlink" href="#data-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="bedes">
+<h4>BEDES<a class="headerlink" href="#bedes" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.data_importer"></span><div class="section" id="data-importer-package">
+<h3>Data Importer Package<a class="headerlink" href="#data-importer-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="managers">
+<h4>Managers<a class="headerlink" href="#managers" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="models">
+<h4>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="urls">
+<h4>URLs<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="utils">
+<h4>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="views">
+<h4>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.features"></span><div class="section" id="features-package">
+<h3>Features Package<a class="headerlink" href="#features-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.landing"></span><div class="section" id="landing-package">
+<h3>Landing Package<a class="headerlink" href="#landing-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="subpackages">
+<h4>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h4>
+<div class="toctree-wrapper compound">
+<span id="document-modules/seed.landing.management"></span><div class="section" id="seed-landing-management-package">
+<h5>seed.landing.management package<a class="headerlink" href="#seed-landing-management-package" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="subpackages">
+<h6>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h6>
+<div class="toctree-wrapper compound">
+<span id="document-modules/seed.landing.management.commands"></span><div class="section" id="landing-management-package">
+<h7>Landing Management Package<a class="headerlink" href="#landing-management-package" title="Permalink to this headline">¶</a></h7>
+<div class="section" id="submodules">
+<h8>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h8>
+</div>
+<div class="section" id="update-eula">
+<h8>Update EULA<a class="headerlink" href="#update-eula" title="Permalink to this headline">¶</a></h8>
+</div>
+<div class="section" id="module-contents">
+<h8>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h8>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="module-contents">
+<h6>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h6>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="forms">
+<h4>Forms<a class="headerlink" href="#forms" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="models">
+<h4>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="tests">
+<h4>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="urls">
+<h4>URLs<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="views">
+<h4>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.lib"></span><div class="section" id="library-packages">
+<h3>Library Packages<a class="headerlink" href="#library-packages" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.mappings"></span><div class="section" id="mapping-package">
+<h3>Mapping Package<a class="headerlink" href="#mapping-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="seed-mappings-mapper-module">
+<h4>seed.mappings.mapper module<a class="headerlink" href="#seed-mappings-mapper-module" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="seed-mappings-seed-mappings-module">
+<h4>seed.mappings.seed_mappings module<a class="headerlink" href="#seed-mappings-seed-mappings-module" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.managers"></span><div class="section" id="managers-package">
+<h3>Managers Package<a class="headerlink" href="#managers-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="subpackages">
+<h4>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h4>
+<div class="toctree-wrapper compound">
+<span id="document-modules/seed.managers.tests"></span><div class="section" id="manager-tests-package">
+<h5>Manager Tests Package<a class="headerlink" href="#manager-tests-package" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="submodules">
+<h6>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="test-json-manager">
+<h6>Test JSON Manager<a class="headerlink" href="#test-json-manager" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="module-contents">
+<h6>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h6>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="json">
+<h4>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.models"></span><div class="section" id="models">
+<h3>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="auditlog">
+<h4>AuditLog<a class="headerlink" href="#auditlog" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="columns">
+<h4>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="cycles">
+<h4>Cycles<a class="headerlink" href="#cycles" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="joins">
+<h4>Joins<a class="headerlink" href="#joins" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="generic-models">
+<h4>Generic Models<a class="headerlink" href="#generic-models" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="projects">
+<h4>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="properties">
+<h4>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="taxlots">
+<h4>TaxLots<a class="headerlink" href="#taxlots" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.public"></span><div class="section" id="public-package">
+<h3>Public Package<a class="headerlink" href="#public-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="models">
+<h4>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed"></span><div class="section" id="seed-package">
+<h3>SEED Package<a class="headerlink" href="#seed-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="subpackages">
+<h4>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h4>
+<div class="toctree-wrapper compound">
+<span id="document-modules/seed.management"></span><div class="section" id="management-package">
+<h5>Management Package<a class="headerlink" href="#management-package" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="subpackages">
+<h6>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h6>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="module-contents">
+<h6>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h6>
+</div>
+</div>
+<span id="document-modules/seed.templatetags"></span><div class="section" id="templatetags-package">
+<h5>Templatetags Package<a class="headerlink" href="#templatetags-package" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="submodules">
+<h6>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="breadcrumbs">
+<h6>Breadcrumbs<a class="headerlink" href="#breadcrumbs" title="Permalink to this headline">¶</a></h6>
+</div>
+</div>
+<span id="document-modules/seed.test_helpers"></span><div class="section" id="test-helpers-package">
+<h5>Test Helpers Package<a class="headerlink" href="#test-helpers-package" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="subpackages">
+<h6>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h6>
+<div class="toctree-wrapper compound">
+<span id="document-modules/seed.test_helpers.factory"></span><div class="section" id="test-helper-factor-package">
+<h7>Test Helper Factor Package<a class="headerlink" href="#test-helper-factor-package" title="Permalink to this headline">¶</a></h7>
+<div class="section" id="subpackages">
+<h8>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h8>
+<div class="toctree-wrapper compound">
+<span id="document-modules/seed.test_helpers.factory.lib"></span><div class="section" id="test-helper-factory-lib-package">
+<h9>Test Helper Factory Lib Package<a class="headerlink" href="#test-helper-factory-lib-package" title="Permalink to this headline">¶</a></h9>
+<div class="section" id="submodules">
+<h10>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h10>
+</div>
+<div class="section" id="chomsky">
+<h10>Chomsky<a class="headerlink" href="#chomsky" title="Permalink to this headline">¶</a></h10>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="submodules">
+<h8>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h8>
+</div>
+<div class="section" id="helpers">
+<h8>Helpers<a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h8>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="module-contents">
+<h6>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h6>
+</div>
+</div>
+<span id="document-modules/seed.tests"></span><div class="section" id="tests-package">
+<h5>Tests Package<a class="headerlink" href="#tests-package" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="submodules">
+<h6>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h6>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="admin-views">
+<h6>Admin Views<a class="headerlink" href="#admin-views" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="decorators">
+<h6>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="exporters">
+<h6>Exporters<a class="headerlink" href="#exporters" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="models">
+<h6>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="tasks">
+<h6>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="views">
+<h6>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="tests">
+<h6>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h6>
+</div>
+<div class="section" id="utils">
+<h6>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h6>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="inheritance">
+<h4>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="decorators">
+<h4>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="factory">
+<h4>Factory<a class="headerlink" href="#factory" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="models">
+<h4>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="search">
+<h4>Search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="tasks">
+<h4>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="token-generator">
+<h4>Token Generator<a class="headerlink" href="#token-generator" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="urls">
+<h4>URLs<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="utils">
+<h4>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="views">
+<h4>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.serializers"></span><div class="section" id="serializers-package">
+<h3>Serializers Package<a class="headerlink" href="#serializers-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="serializers">
+<h4>Serializers<a class="headerlink" href="#serializers" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="labels">
+<h4>Labels<a class="headerlink" href="#labels" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.urls"></span><div class="section" id="urls-package">
+<h3>URLs Package<a class="headerlink" href="#urls-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="accounts">
+<h4>Accounts<a class="headerlink" href="#accounts" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="apis">
+<h4>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="main">
+<h4>Main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="projects">
+<h4>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.utils"></span><div class="section" id="utilities-package">
+<h3>Utilities Package<a class="headerlink" href="#utilities-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="apis">
+<h4>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="buildings">
+<h4>Buildings<a class="headerlink" href="#buildings" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="constants">
+<h4>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="mappings">
+<h4>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="organizations">
+<h4>Organizations<a class="headerlink" href="#organizations" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="projects">
+<h4>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="time">
+<h4>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<span id="document-modules/seed.views"></span><div class="section" id="views-package">
+<h3>Views Package<a class="headerlink" href="#views-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="accounts">
+<h4>Accounts<a class="headerlink" href="#accounts" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="apis">
+<h4>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="main">
+<h4>Main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="meters">
+<h4>Meters<a class="headerlink" href="#meters" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="projects">
+<h4>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-contents">
+<h4>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+<span id="document-developer_resources"></span><div class="section" id="developer-resources">
+<h2>Developer Resources<a class="headerlink" href="#developer-resources" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-notes">
+<h3>General Notes<a class="headerlink" href="#general-notes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="flake-settings">
+<h4>Flake Settings<a class="headerlink" href="#flake-settings" title="Permalink to this headline">¶</a></h4>
+<p>Flake is used to statically verify code syntax. If the developer is running
+flake from the command line, they should ignore the following checks in order
+to emulate the same checks as the CI machine.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 89%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>E402</p></td>
+<td><p>module level import not at top of file</p></td>
+</tr>
+<tr class="row-odd"><td><p>E501</p></td>
+<td><p>line too long (82 characters) or max-line = 100</p></td>
+</tr>
+<tr class="row-even"><td><p>E731</p></td>
+<td><p>do not assign a lambda expression, use a def</p></td>
+</tr>
+<tr class="row-odd"><td><p>W503</p></td>
+<td><p>line break occurred before a binary operator</p></td>
+</tr>
+<tr class="row-even"><td><p>W504</p></td>
+<td><p>line break occurred after a binary operator</p></td>
+</tr>
+</tbody>
+</table>
+<p>To run flake locally call:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tox -e flake8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="django-notes">
+<h3>Django Notes<a class="headerlink" href="#django-notes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="adding-new-fields-to-database">
+<h4>Adding New Fields to Database<a class="headerlink" href="#adding-new-fields-to-database" title="Permalink to this headline">¶</a></h4>
+<p>Adding new fields to SEED can be complicated since SEED has a mix of typed fields (database fields) and extra data
+fields. Follow the steps below to add new fields to the SEED database:</p>
+<ol class="arabic simple">
+<li><p>Add the field to the PropertyState or the TaxLotState model. Adding fields to the Property or TaxLot models is more complicated and not documented yet.</p></li>
+<li><p>Add field to list in the following locations:</p></li>
+</ol>
+<ul class="simple">
+<li><p>models/columns.py: Column.DATABASE_COLUMNS</p></li>
+<li><p>TaxLotState.coparent or PropertyState.coparent: SQL query and keep_fields</p></li>
+</ul>
+<ol class="arabic">
+<li><p>Run <cite>./manage.py makemigrations</cite></p></li>
+<li><p>Add in a Python script in the new migration to add in the new column into every organizations list of columns. Note that the new_db_fields will be the same as the data in the Column.DATABASE_COLUMNS that were added.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">forwards</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">schema_editor</span><span class="p">):</span>
+    <span class="n">Column</span> <span class="o">=</span> <span class="n">apps</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="s2">&quot;seed&quot;</span><span class="p">,</span> <span class="s2">&quot;Column&quot;</span><span class="p">)</span>
+    <span class="n">Organization</span> <span class="o">=</span> <span class="n">apps</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="s2">&quot;orgs&quot;</span><span class="p">,</span> <span class="s2">&quot;Organization&quot;</span><span class="p">)</span>
+
+    <span class="n">new_db_fields</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;geocoding_confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;table_name&#39;</span><span class="p">:</span> <span class="s1">&#39;PropertyState&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;display_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Geocoding Confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;data_type&#39;</span><span class="p">:</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s1">&#39;column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;geocoding_confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;table_name&#39;</span><span class="p">:</span> <span class="s1">&#39;TaxLotState&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;display_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Geocoding Confidence&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;data_type&#39;</span><span class="p">:</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Go through all the organizatoins</span>
+    <span class="k">for</span> <span class="n">org</span> <span class="ow">in</span> <span class="n">Organization</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">new_db_field</span> <span class="ow">in</span> <span class="n">new_db_fields</span><span class="p">:</span>
+            <span class="n">columns</span> <span class="o">=</span> <span class="n">Column</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">organization_id</span><span class="o">=</span><span class="n">org</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="n">table_name</span><span class="o">=</span><span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;table_name&#39;</span><span class="p">],</span>
+                <span class="n">column_name</span><span class="o">=</span><span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;column_name&#39;</span><span class="p">],</span>
+                <span class="n">is_extra_data</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">columns</span><span class="o">.</span><span class="n">count</span><span class="p">():</span>
+                <span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;organization_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">org</span><span class="o">.</span><span class="n">id</span>
+                <span class="n">Column</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">new_db_field</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">columns</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="c1"># If the column exists, then just update the display_name and data_type if empty</span>
+                <span class="n">c</span> <span class="o">=</span> <span class="n">columns</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">display_name</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">display_name</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                    <span class="n">c</span><span class="o">.</span><span class="n">display_name</span> <span class="o">=</span> <span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">data_type</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">data_type</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">data_type</span> <span class="o">==</span> <span class="s1">&#39;None&#39;</span><span class="p">:</span>
+                    <span class="n">c</span><span class="o">.</span><span class="n">data_type</span> <span class="o">=</span> <span class="n">new_db_field</span><span class="p">[</span><span class="s1">&#39;data_type&#39;</span><span class="p">]</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  More than one column returned&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Migration</span><span class="p">(</span><span class="n">migrations</span><span class="o">.</span><span class="n">Migration</span><span class="p">):</span>
+    <span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;seed&#39;</span><span class="p">,</span> <span class="s1">&#39;0090_auto_20180425_1154&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="n">operations</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="o">...</span> <span class="n">existing</span> <span class="n">db</span> <span class="n">migrations</span> <span class="o">...</span><span class="p">,</span>
+        <span class="n">migrations</span><span class="o">.</span><span class="n">RunPython</span><span class="p">(</span><span class="n">forwards</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Run migrations <cite>./manage.py migrate</cite></p></li>
+<li><p>Run unit tests, fix failures. Below is a list of files that need to be fixed (this is not an exhaustive list)</p></li>
+</ol>
+<ul class="simple">
+<li><p>test_mapping_data.py:test_keys</p></li>
+<li><p>test_columns.py:test_column_retrieve_schema</p></li>
+<li><p>test_columns.py:test_column_retrieve_db_fields</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>(Optional) Update example files to include new fields</p></li>
+<li><p>Test import workflow with mapping to new fields</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="angularjs-integration-notes">
+<h3>AngularJS Integration Notes<a class="headerlink" href="#angularjs-integration-notes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="template-tags">
+<h4>Template Tags<a class="headerlink" href="#template-tags" title="Permalink to this headline">¶</a></h4>
+<p>Angular and Django both use <cite>{{</cite> and <cite>}}</cite> as variable delimiters, and thus the AngularJS variable delimiters are
+renamed <cite>{$</cite> and <cite>$}</cite>.</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">BE</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">seed</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;BE.seed&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;$interpolateProvider&#39;</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$interpolateProvider</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$interpolateProvider</span><span class="p">.</span><span class="nx">startSymbol</span><span class="p">(</span><span class="s2">&quot;{$&quot;</span><span class="p">);</span>
+        <span class="nx">$interpolateProvider</span><span class="p">.</span><span class="nx">endSymbol</span><span class="p">(</span><span class="s2">&quot;$}&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="django-csrf-token-and-ajax-requests">
+<h4>Django CSRF Token and AJAX Requests<a class="headerlink" href="#django-csrf-token-and-ajax-requests" title="Permalink to this headline">¶</a></h4>
+<p>For ease of making angular <cite>$http</cite> requests, we automatically add the CSRF token to all <cite>$http</cite> requests as
+recommended by <a class="reference external" href="http://django-angular.readthedocs.io/en/latest/integration.html#xmlhttprequest">http://django-angular.readthedocs.io/en/latest/integration.html#xmlhttprequest</a></p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">BE</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">seed</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">$http</span><span class="p">,</span> <span class="nx">$cookies</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$http</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">common</span><span class="p">[</span><span class="s1">&#39;X-CSRFToken&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">$cookies</span><span class="p">[</span><span class="s1">&#39;csrftoken&#39;</span><span class="p">];</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="routes-and-partials-or-views">
+<h4>Routes and Partials or Views<a class="headerlink" href="#routes-and-partials-or-views" title="Permalink to this headline">¶</a></h4>
+<p>Routes in <cite>static/seed/js/seed.js</cite> (the normal angularjs <cite>app.js</cite>)</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="nx">SEED_app</span><span class="p">.</span><span class="nx">config</span><span class="p">([</span><span class="s1">&#39;stateHelperProvider&#39;</span><span class="p">,</span> <span class="s1">&#39;$urlRouterProvider&#39;</span><span class="p">,</span> <span class="s1">&#39;$locationProvider&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">stateHelperProvider</span><span class="p">,</span> <span class="nx">$urlRouterProvider</span><span class="p">,</span> <span class="nx">$locationProvider</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">stateHelperProvider</span>
+    <span class="p">.</span><span class="nx">state</span><span class="p">({</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;home&#39;</span><span class="p">,</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span>
+      <span class="nx">templateUrl</span><span class="o">:</span> <span class="nx">static_url</span> <span class="o">+</span> <span class="s1">&#39;seed/partials/home.html&#39;</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">state</span><span class="p">({</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;profile&#39;</span><span class="p">,</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;/profile&#39;</span><span class="p">,</span>
+      <span class="nx">templateUrl</span><span class="o">:</span> <span class="nx">static_url</span> <span class="o">+</span> <span class="s1">&#39;seed/partials/profile.html&#39;</span><span class="p">,</span>
+      <span class="nx">controller</span><span class="o">:</span> <span class="s1">&#39;profile_controller&#39;</span><span class="p">,</span>
+      <span class="nx">resolve</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">auth_payload</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;auth_service&#39;</span><span class="p">,</span> <span class="s1">&#39;$q&#39;</span><span class="p">,</span> <span class="s1">&#39;user_service&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">auth_service</span><span class="p">,</span> <span class="nx">$q</span><span class="p">,</span> <span class="nx">user_service</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">var</span> <span class="nx">organization_id</span> <span class="o">=</span> <span class="nx">user_service</span><span class="p">.</span><span class="nx">get_organization</span><span class="p">().</span><span class="nx">id</span><span class="p">;</span>
+          <span class="k">return</span> <span class="nx">auth_service</span><span class="p">.</span><span class="nx">is_authorized</span><span class="p">(</span><span class="nx">organization_id</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;requires_superuser&#39;</span><span class="p">]);</span>
+        <span class="p">}],</span>
+        <span class="nx">user_profile_payload</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;user_service&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">user_service</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">user_service</span><span class="p">.</span><span class="nx">get_user_profile</span><span class="p">();</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}]);</span>
+</pre></div>
+</div>
+<p>HTML partials in <cite>static/seed/partials/</cite></p>
+</div>
+</div>
+<div class="section" id="logging">
+<h3>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h3>
+<p>Information about error logging can be found here - <a class="reference external" href="https://docs.djangoproject.com/en/1.7/topics/logging/">https://docs.djangoproject.com/en/1.7/topics/logging/</a></p>
+<p>Below is a standard set of error messages from Django.</p>
+<p>A logger is configured to have a log level. This log level describes the severity of
+the messages that the logger will handle. Python defines the following log levels:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">DEBUG: Low level system information for debugging purposes</span>
+<span class="go">INFO: General system information</span>
+<span class="go">WARNING: Information describing a minor problem that has occurred.</span>
+<span class="go">ERROR: Information describing a major problem that has occurred.</span>
+<span class="go">CRITICAL: Information describing a critical problem that has occurred.</span>
+</pre></div>
+</div>
+<p>Each message that is written to the logger is a Log Record. The log record is stored
+in the web server &amp; Celery</p>
+</div>
+<div class="section" id="bedes-compliance-and-managing-columns">
+<h3>BEDES Compliance and Managing Columns<a class="headerlink" href="#bedes-compliance-and-managing-columns" title="Permalink to this headline">¶</a></h3>
+<p>Columns that do not represent hardcoded fields in the application are represented using
+a Django database model defined in the seed.models module. The goal of adding new columns
+to the database is to create seed.models.Column records in the database for each column to
+import. Currently, the list of Columns is dynamically populated by importing data.</p>
+<p>There are default mappings for ESPM are located here:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://github.com/SEED-platform/seed/blob/develop/seed/lib/mappings/data/pm-mapping.json">https://github.com/SEED-platform/seed/blob/develop/seed/lib/mappings/data/pm-mapping.json</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="resetting-the-database">
+<h3>Resetting the Database<a class="headerlink" href="#resetting-the-database" title="Permalink to this headline">¶</a></h3>
+<p>This is a brief description of how to drop and re-create the database
+for the seed application.</p>
+<p>The first two commands below are commands distributed with the
+Postgres database, and are not part of the seed application. The third
+command below will create the required database tables for seed and
+setup initial data that the application expects (initial columns for
+BEDES). The last command below (spanning multiple lines) will create a
+new superuser and organization that you can use to login to the
+application, and from there create any other users or organizations
+that you require.</p>
+<p>Below are the commands for resetting the database and creating a new
+user:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">createuser -U seed seeduser</span>
+
+<span class="go">psql -c &#39;DROP DATABASE &quot;seeddb&quot;&#39;</span>
+<span class="go">psql -c &#39;CREATE DATABASE &quot;seeddb&quot; WITH OWNER = &quot;seeduser&quot;;&#39;</span>
+<span class="go">psql -c &#39;GRANT ALL PRIVILEGES ON DATABASE &quot;seeddb&quot; TO seeduser;&#39;</span>
+<span class="go">psql -c &#39;ALTER USER &quot;seeduser&quot; CREATEDB CREATEROLE SUPERUSER;&#39;</span>
+<span class="go">psql -d seeddb -c &#39;CREATE EXTENSION IF NOT EXISTS postgis;&#39;</span>
+<span class="go">psql -d seeddb -c &#39;CREATE EXTENSION IF NOT EXISTS timescaledb;&#39;</span>
+<span class="go">psql -d seeddb -c &#39;SELECT timescaledb_pre_restore();&#39;</span>
+<span class="go">psql -d seeddb -c &#39;SELECT timescaledb_post_restore();&#39;</span>
+
+<span class="go">./manage.py migrate</span>
+<span class="go">./manage.py create_default_user \</span>
+<span class="go">    --username=demo@seed-platform.org \</span>
+<span class="go">    --password=password \</span>
+<span class="go">    --organization=testorg</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="restoring-a-database-dump">
+<h3>Restoring a Database Dump<a class="headerlink" href="#restoring-a-database-dump" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">psql -c &#39;DROP DATABASE &quot;seeddb&quot;;&#39;</span>
+<span class="go">psql -c &#39;CREATE DATABASE &quot;seeddb&quot; WITH OWNER = &quot;seeduser&quot;;&#39;</span>
+<span class="go">psql -c &#39;GRANT ALL PRIVILEGES ON DATABASE &quot;seeddb&quot; TO &quot;seeduser&quot;;&#39;</span>
+<span class="go">psql -c &#39;ALTER USER &quot;seeduser&quot; CREATEDB CREATEROLE SUPERUSER;&#39;</span>
+<span class="go">psql -d seeddb -c &#39;CREATE EXTENSION IF NOT EXISTS postgis;&#39;</span>
+<span class="go">psql -d seeddb -c &#39;CREATE EXTENSION IF NOT EXISTS timescaledb;&#39;</span>
+<span class="go">psql -d seeddb -c &#39;SELECT timescaledb_pre_restore();&#39;</span>
+
+<span class="gp">#</span> restore a previous database dump <span class="o">(</span>must be pg_restore <span class="m">12</span>+<span class="o">)</span>
+<span class="go">/usr/lib/postgresql/12/bin/pg_restore -U seeduser -d seeddb /backups/prod-backups/seedv2_20191203_000002.dump</span>
+
+<span class="go">psql -d seeddb -c &#39;SELECT timescaledb_post_restore();&#39;</span>
+
+<span class="go">./manage.py migrate</span>
+
+<span class="gp">#</span> <span class="k">if</span> needed add a user to the database
+<span class="go">./manage.py create_default_user \</span>
+<span class="go">    --username=demo@seed-platform.org \</span>
+<span class="go">    --password=password \</span>
+<span class="go">    --organization=testorg</span>
+
+
+<span class="gp">#</span> <span class="k">if</span> restoring a seedv2 backup to a different deployment update the site settings <span class="k">for</span> password reset emails
+<span class="go">./manage.py shell</span>
+
+<span class="go">from django.contrib.sites.models import Site</span>
+<span class="go">site = Site.objects.first()</span>
+<span class="go">site.domain = &#39;dev1.seed-platform.org&#39;</span>
+<span class="go">site.name = &#39;SEED Dev1&#39;</span>
+<span class="go">site.save()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="migrating-the-database">
+<h3>Migrating the Database<a class="headerlink" href="#migrating-the-database" title="Permalink to this headline">¶</a></h3>
+<p>Migrations are handles through Django; however, various versions have customs actions for the migrations. See the <a class="reference internal" href="index.html#document-migrations"><span class="doc">migrations page</span></a> for more information based on the version of SEED.</p>
+</div>
+<div class="section" id="testing">
+<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
+<p>JS tests can be run with Jasmine at the url <cite>/angular_js_tests/</cite>.</p>
+<p>Python unit tests are run with</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python manage.py test --settings=config.settings.test</span>
+</pre></div>
+</div>
+<dl>
+<dt>Note on geocode-related testing:</dt><dd><p>Most of these tests use VCR.py and cassettes to capture and reuse recordings of HTTP requests and responses. Given that, unless you want to make changes and/or refresh the cassettes/recordings, there isn’t anything needed to run the geocode tests.</p>
+<p>In the case that the geocoding logic/code is changed or you’d like to the verify the MapQuest API is still working as expected, you’ll need to run the tests with a small change. Namely, you’ll want to provide the tests with an API key via an environment variable called “TESTING_MAPQUEST_API_KEY” or within your local_untracked.py file with that same variable name.</p>
+<p>In order to refresh the actual cassettes, you’ll just need to delete or move the old ones which can be found at “.seed/tests/data/vcr_cassettes”. The API key should be hidden within the cassettes, so these new cassettes can and should be pushed to GitHub.</p>
+</dd>
+</dl>
+<p>Run coverage using</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">coverage run manage.py test --settings=config.settings.test</span>
+<span class="go">coverage report --fail-under=83</span>
+</pre></div>
+</div>
+<p>Python compliance uses PEP8 with flake8</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">flake8</span>
+<span class="gp">#</span> or
+<span class="go">tox -e flake8</span>
+</pre></div>
+</div>
+<p>JS Compliance uses jshint</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">jshint seed/static/seed/js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="best-practices">
+<h3>Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Make sure there is an issue created for items you are working on (for tracking purposes and so that the item appears in the changelog for the release)</p></li>
+<li><dl class="simple">
+<dt>Use the following labels on the GitHub issue:</dt><dd><p><strong>Feature</strong> (features will appear as “New” item in the changelog)
+<strong>Enhancement</strong> (these will appear as “Improved” in the changelog)
+<strong>Bug</strong> (these will appear as “Fixed” in the changelog)</p>
+</dd>
+</dl>
+</li>
+<li><p>Move the ticket/issue to ‘In Progress’ in the GitHub project tracker when you begin work</p></li>
+<li><p>Branch off of the ‘develop’ branch (unless it’s a hotfix for production)</p></li>
+<li><p>Write a test for the code added.</p></li>
+<li><p>Make sure to test locally.  note that all branches created and pushed to GitHub will also be tested automatically.</p></li>
+<li><p>When done, create a pull request (you can group related issues together in the same PR).  Assign a reviewer to look over the code</p></li>
+<li><p>Use the “DO NOT MERGE” label for Pull Requests that should not be merged</p></li>
+<li><p>When PR has been reviewed and approved, move the ticket/issue to the ‘Ready to Deploy to Dev’ box in the GitHub project tracker.</p></li>
+</ol>
+</div>
+<div class="section" id="git-naming-conventions">
+<h3>Git Naming Conventions<a class="headerlink" href="#git-naming-conventions" title="Permalink to this headline">¶</a></h3>
+<p>Commit messages should follow the format of</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;type&gt;[( optional scope )]: &lt;subject&gt;</span>
+
+<span class="go">[optional body]</span>
+</pre></div>
+</div>
+<p><code class="code docutils literal notranslate"><span class="pre">type</span></code> must be one of the following:</p>
+<ul class="simple">
+<li><p><strong>docs</strong>: Changes to the documentation (e.g. improving docstring, updating this file, etc)</p></li>
+<li><p><strong>feat</strong>: Adds a new feature</p></li>
+<li><p><strong>fix</strong>: A bug fix</p></li>
+<li><p><strong>refactor</strong>: Changes that don’t fix a bug or add a new feature</p></li>
+<li><p><strong>style</strong>: Changes that don’t affect the meaning of code (e.g. whitespace)</p></li>
+<li><p><strong>test</strong>: Adding or correcting tests</p></li>
+</ul>
+<p><code class="code docutils literal notranslate"><span class="pre">scope</span></code> is optional for commit messages, and should indicate the general area of the application affected.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">subject</span></code> is a short description of the changes in imperative present tense (such as “add function to _”, not “added function”)</p>
+<p>Branches should be named as <code class="code docutils literal notranslate"><span class="pre">[&lt;optional</span> <span class="pre">issue</span> <span class="pre">number&gt;</span> <span class="pre">-]&lt;type&gt;/&lt;scope&gt;</span></code>, where <code class="code docutils literal notranslate"><span class="pre">scope</span></code> is the general scope affected, or if creating a feature branch, a shortened name of the feature being added. If <code class="code docutils literal notranslate"><span class="pre">scope</span></code> is more than one word, it should be separated by dashes.</p>
+<p>Pull Request titles should follow the format <code class="code docutils literal notranslate"><span class="pre">[#</span> <span class="pre">optional</span> <span class="pre">issue</span> <span class="pre">number]</span> <span class="pre">&lt;type&gt;[(optional</span> <span class="pre">scope)]:</span> <span class="pre">&lt;subject&gt;</span></code>, following the same conventions as commit messages.</p>
+<p>Commit examples:</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">feat(models):</span> <span class="pre">add</span> <span class="pre">date_modified</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">MyModel</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">refactor:</span> <span class="pre">change</span> <span class="pre">var</span> <span class="pre">to</span> <span class="pre">let/const</span> <span class="pre">in</span> <span class="pre">frontend</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">docs:</span> <span class="pre">update</span> <span class="pre">release</span> <span class="pre">instructions</span></code></p></li>
+</ul>
+<p>Branch examples:</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">1234-feat/buildingsync-v2.3-import</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">5678-refactor/org-views-auth</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">fix/error-mapping-pm-taxlots</span></code></p></li>
+</ul>
+<p>Pull request examples:</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">#1234</span> <span class="pre">feat(models):</span> <span class="pre">add</span> <span class="pre">date_modified</span> <span class="pre">to</span> <span class="pre">MyModel</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">#4567</span> <span class="pre">refactor:</span> <span class="pre">change</span> <span class="pre">var</span> <span class="pre">to</span> <span class="pre">let/const</span> <span class="pre">in</span> <span class="pre">frontend</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="release-instructions">
+<h3>Release Instructions<a class="headerlink" href="#release-instructions" title="Permalink to this headline">¶</a></h3>
+<p>To make a release do the following:</p>
+<ol class="arabic simple">
+<li><p>Github admin user, on develop branch: update the <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file with the most recent version number. Always use MAJOR.MINOR.RELEASE.</p></li>
+<li><p>Update the <code class="docutils literal notranslate"><span class="pre">docs/sources/migrations.rst</span></code> file with any required actions.</p></li>
+<li><p>Run the <code class="docutils literal notranslate"><span class="pre">docs/scripts/change_log.py</span></code> script and add the changes to the CHANGELOG.md file for the range of time between last release and this release. Only add the <em>Closed Issues</em>. Also make sure that all the pull requests have a related Issue in order to be included in the change log.</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python docs/scripts/change_log.py –k GITHUB_API_TOKEN –s 2018-02-26 –e 2018-05-30</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Paste the results (remove unneeded Accepted Pull Requests) into the CHANGELOG.md. Make sure to cleanup the formatting.</p></li>
+<li><p>Make sure that any new UI needing localization has been tagged for translation, and that any new translation keys exist in the lokalise.com project. (see <a class="reference internal" href="index.html#document-translation"><span class="doc">translation documentation</span></a>).</p></li>
+<li><p>Once develop passes, then create a new PR from develop to master.</p></li>
+<li><p>Draft new Release from Github (<a class="reference external" href="https://github.com/SEED-platform/seed/releases">https://github.com/SEED-platform/seed/releases</a>).</p></li>
+<li><p>Include list of changes since previous release (i.e. the content in the CHANGELOG.md)</p></li>
+<li><p>Verify that the Docker versions are built and pushed to Docker hub (<a class="reference external" href="https://hub.docker.com/r/seedplatform/seed/tags/">https://hub.docker.com/r/seedplatform/seed/tags/</a>).</p></li>
+<li><p>Go to Read the Docs and enable the latest version to be active (<a class="reference external" href="https://readthedocs.org/dashboard/seed-platform/versions/">https://readthedocs.org/dashboard/seed-platform/versions/</a>)</p></li>
+</ol>
+</div>
+</div>
+<span id="document-license"></span><div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright (c) 2014 - 2020, The Regents of the University of California, through
+Lawrence Berkeley National Laboratory (subject to receipt of any required approvals
+from the U.S. Department of Energy) and contributors.  All rights reserved.</p>
+<p>1. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+following conditions are met:</p>
+<p>(1) Redistributions of source code must retain the copyright notice, this
+list of conditions and the following disclaimer.
+(2) Redistributions in binary form must reproduce the copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+(3) Neither the name of the University of California, Lawrence Berkeley
+National Laboratory, U.S. Dept. of Energy nor the names of its
+contributors may be used to endorse or promote products derived from this
+software without specific prior written permission.
+(4) Neither the names Standard Energy Efficiency Data Platform, Standard
+Energy Efficiency Data, SEED Platform, SEED, derivatives thereof nor
+designations containing these names, may be used to endorse or promote
+products derived from this software without specific prior written
+permission from the U.S. Dept. of Energy.</p>
+<p>2. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS”
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+</div>
+<span id="document-help"></span><div class="section" id="help">
+<h2>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="for-seed-platform-users">
+<h3>For SEED-Platform Users<a class="headerlink" href="#for-seed-platform-users" title="Permalink to this headline">¶</a></h3>
+<p>Please visit our User Support website for tutorials and documentation to help you learn how to use SEED-Platform.</p>
+<p><a class="reference external" href="https://sites.google.com/a/lbl.gov/seed/">https://sites.google.com/a/lbl.gov/seed/</a></p>
+<p>There is also a link to the SEED-Platform Users forum, where you can connect with other users.</p>
+<p><a class="reference external" href="https://groups.google.com/forum/#!forum/seed-platform-users">https://groups.google.com/forum/#!forum/seed-platform-users</a></p>
+<p>For direct help on a specific problem, please email: <a class="reference external" href="mailto:SEED-Support&#37;&#52;&#48;lists&#46;lbl&#46;gov">SEED-Support<span>&#64;</span>lists<span>&#46;</span>lbl<span>&#46;</span>gov</a></p>
+</div>
+<div class="section" id="for-seed-platform-developers">
+<h3>For SEED-Platform Developers<a class="headerlink" href="#for-seed-platform-developers" title="Permalink to this headline">¶</a></h3>
+<p>The Open Source code is available on the Github organization SEED-Platform:</p>
+<p><a class="reference external" href="https://github.com/SEED-platform">https://github.com/SEED-platform</a></p>
+<p>Please join the SEED-Platform Dev forum where you can connect with other developers.</p>
+<p><a class="reference external" href="https://groups.google.com/forum/#!forum/seed-platform-dev">https://groups.google.com/forum/#!forum/seed-platform-dev</a></p>
+</div>
+</div>
+<span id="document-faq"></span><div class="section" id="frequently-asked-questions">
+<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
+<p>Here are some frequently asked questions and/or issues.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#questions" id="id1">Questions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-is-the-seed-platform" id="id2">What is the SEED Platform?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#issues" id="id3">Issues</a></p>
+<ul>
+<li><p><a class="reference internal" href="#why-is-the-domain-set-to-example-com" id="id4">Why is the domain set to example.com?</a></p></li>
+<li><p><a class="reference internal" href="#why-aren-t-the-static-assets-being-served-correctly" id="id5">Why aren’t the static assets being served correctly?</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="questions">
+<h3><a class="toc-backref" href="#id1">Questions</a><a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="what-is-the-seed-platform">
+<span id="whatisseed"></span><h4><a class="toc-backref" href="#id2">What is the SEED Platform?</a><a class="headerlink" href="#what-is-the-seed-platform" title="Permalink to this headline">¶</a></h4>
+<p>The Standard Energy Efficiency Data (SEED) Platform™ is a web-based application
+that helps organizations easily manage data on the energy performance of large
+groups of buildings. Users can combine data from multiple sources, clean and
+validate it, and share the information with others. The software application
+provides an easy, flexible, and cost-effective method to improve the quality
+and availability of data to help demonstrate the economic and environmental
+benefits of energy efficiency, to implement programs, and to target investment
+activity.</p>
+<p>The SEED application is written in Python/Django, with AngularJS, Bootstrap,
+and other JavaScript libraries used for the front-end. The back-end database
+is required to be PostgreSQL.</p>
+<p>The SEED web application provides both a browser-based interface for users to
+upload and manage their building data, as well as a full set of APIs that app
+developers can use to access these same data management functions.</p>
+<p>Work on SEED Platform is managed by the National Renewable Energy Laboratory,
+with funding from the U.S. Department of Energy.</p>
+</div>
+</div>
+<div class="section" id="issues">
+<h3><a class="toc-backref" href="#id3">Issues</a><a class="headerlink" href="#issues" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="why-is-the-domain-set-to-example-com">
+<span id="domain"></span><h4><a class="toc-backref" href="#id4">Why is the domain set to example.com?</a><a class="headerlink" href="#why-is-the-domain-set-to-example-com" title="Permalink to this headline">¶</a></h4>
+<p>If you see example.com in the emails that are sent from your hosted version of SEED then you will
+need to update your django sites object in the database.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./manage.py shell
+
+from django.contrib.sites.models import Site
+<span class="nv">one</span> <span class="o">=</span> Site.objects.all<span class="o">()[</span><span class="m">0</span><span class="o">]</span>
+one.domain <span class="o">=</span> <span class="s1">&#39;newdomain.org&#39;</span>
+one.name <span class="o">=</span> <span class="s1">&#39;SEED&#39;</span>
+one.save<span class="o">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="why-aren-t-the-static-assets-being-served-correctly">
+<span id="staticfiles"></span><h4><a class="toc-backref" href="#id5">Why aren’t the static assets being served correctly?</a><a class="headerlink" href="#why-aren-t-the-static-assets-being-served-correctly" title="Permalink to this headline">¶</a></h4>
+<p>Make sure that your local_untracked.py file does not have STATICFILES_STORAGE set to anything. If so,
+then comment out that section and redeploy/recollect/compress your static assets.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="updating-this-documentation">
+<h2>Updating this documentation<a class="headerlink" href="#updating-this-documentation" title="Permalink to this headline">¶</a></h2>
+<p>This python code documentation was generated by running the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -r requirements/local.txt
+$ sphinx-apidoc -o docs/source/modules . seed/lib/mcm seed/lib/superperms
+$ cd docs
+$ make html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2020, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+        <span class="commit">
+          Revision <code>3b9211ed</code>.
+        </span>
+
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: v2.8.2
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+
+          <dd><a href="/en/latest/">latest</a></dd>
+
+          <dd><a href="/en/stable/">stable</a></dd>
+
+          <dd><a href="/en/v2.8.2/">v2.8.2</a></dd>
+
+          <dd><a href="/en/v2.8.1/">v2.8.1</a></dd>
+
+          <dd><a href="/en/v2.8.0/">v2.8.0</a></dd>
+
+          <dd><a href="/en/v2.7.2/">v2.7.2</a></dd>
+
+          <dd><a href="/en/v2.7.1/">v2.7.1</a></dd>
+
+          <dd><a href="/en/v2.7.0/">v2.7.0</a></dd>
+
+          <dd><a href="/en/v2.6.1/">v2.6.1</a></dd>
+
+          <dd><a href="/en/v2.6.0/">v2.6.0</a></dd>
+
+          <dd><a href="/en/v2.5.2/">v2.5.2</a></dd>
+
+          <dd><a href="/en/v2.5.1/">v2.5.1</a></dd>
+
+          <dd><a href="/en/v2.5.0/">v2.5.0</a></dd>
+
+          <dd><a href="/en/v2.4.2/">v2.4.2</a></dd>
+
+          <dd><a href="/en/v2.4.1/">v2.4.1</a></dd>
+
+          <dd><a href="/en/v2.4.0/">v2.4.0</a></dd>
+
+          <dd><a href="/en/v2.3.3/">v2.3.3</a></dd>
+
+          <dd><a href="/en/v2.3.2/">v2.3.2</a></dd>
+
+          <dd><a href="/en/v2.3.1/">v2.3.1</a></dd>
+
+          <dd><a href="/en/v2.3.0/">v2.3.0</a></dd>
+
+          <dd><a href="/en/v2.2.2/">v2.2.2</a></dd>
+
+          <dd><a href="/en/v2.2.1/">v2.2.1</a></dd>
+
+          <dd><a href="/en/v2.2.0/">v2.2.0</a></dd>
+
+          <dd><a href="/en/v2.1.2/">v2.1.2</a></dd>
+
+          <dd><a href="/en/v2.1.1/">v2.1.1</a></dd>
+
+          <dd><a href="/en/v2.1.0/">v2.1.0</a></dd>
+
+          <dd><a href="/en/v2.0.2/">v2.0.2</a></dd>
+
+          <dd><a href="/en/v2.0.1/">v2.0.1</a></dd>
+
+          <dd><a href="/en/v2.0.0/">v2.0.0</a></dd>
+
+          <dd><a href="/en/v1.5.0/">v1.5.0</a></dd>
+
+          <dd><a href="/en/v1.4.0/">v1.4.0</a></dd>
+
+          <dd><a href="/en/v1.3.2/">v1.3.2</a></dd>
+
+          <dd><a href="/en/v1.3.1/">v1.3.1</a></dd>
+
+          <dd><a href="/en/v1.3.0/">v1.3.0</a></dd>
+
+          <dd><a href="/en/main/">main</a></dd>
+
+          <dd><a href="/en/develop/">develop</a></dd>
+
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="//readthedocs.org/projects/seed-platform/?fromdocs=seed-platform">Project Home</a>
+          </dd>
+          <dd>
+            <a href="//readthedocs.org/builds/seed-platform/?fromdocs=seed-platform">Builds</a>
+          </dd>
+      </dl>
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+</body>
+</html>
