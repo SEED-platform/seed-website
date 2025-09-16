@@ -100,6 +100,13 @@ After the building data has been imported into SEED, it can be viewed from the I
 
     ![alt_text](images/inventory_property_list_filter_02.png)
 
+    **Important Note for Dates**
+
+    Avoid using equality / inequality in date filters; they only work on Extra Data fields but not on Canonical fields (due to the underlying storage of the data and timezones). You will get better results using range queries such as: >2025-09-01,<2025-09-03. Filters will only work up to the Day (do not add hour or minute to your filter). Ensure that you add an operator (a filter with only the date, ex: 2025 will not work while a filter with an operation, ex: >2025 will work).
+
+    All canonical Datetime fields are stored as GMT timestamps on the backend.
+    All extra data fields are stored as strings on the backend.
+
     **Most of the lists in SEED (Mapping, Matching, Inventory) allow you to sort and filter on the data in the columns by entering the filter values in the input box below the field (column name)**
 
     ![alt_text](images/inventory_property_list_filter_03.png)
