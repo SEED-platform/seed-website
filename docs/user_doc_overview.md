@@ -41,7 +41,7 @@ Many communities, jurisdictions and cities are managing their data for these ord
     * Check the data quality based on used defined rules
     * Sort, filter and label building records
     * Run analyses on the building data, such as calculating the Energy Use Intensity (EUI)
-    * Set future targets and plan how to reach your goals by a certain time period
+    * Set future energy performance or EUI targets and plan how to reach those targets by a certain time period
     * View the progress reaching those targets, either at the building level or the portfolio level
     * View a map of the building locations
 
