@@ -1,0 +1,1540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../user_doc_insights/">
+      
+      
+        <link rel="next" href="../user_doc_settings/">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Analyses - SEED Platform&trade; Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%205h2V3h-2m0%2018h2v-2h-2M11%205h2V3h-2m8%202h2V3h-2m0%206h2V7h-2m0%2014h2v-2h-2m0-6h2v-2h-2m0%206h2v-2h-2M3%205h2V3H3m0%206h2V7H3m0%206h2v-2H3m0%206h2v-2H3m0%206h2v-2H3m8%202h2v-2h-2m-4%202h2v-2H7M7%205h2V3H7z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-L4813JJ6GP"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-L4813JJ6GP",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-L4813JJ6GP",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  <!-- extend base theme with custom content here -->
+  <!-- DAP -->
+  <script id="_fed_an_ua_tag" async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE
+  &subagency=EERE"></script>
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SEED Platform&amp;trade; Documentation" class="md-header__button md-logo" aria-label="SEED Platform&trade; Documentation" data-md-component="logo">
+      
+  <img src="../images/icon-city.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SEED Platform&trade; Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analyses
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SEED-platform/seed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SEED Platform&amp;trade; Documentation" class="md-nav__button md-logo" aria-label="SEED Platform&trade; Documentation" data-md-component="logo">
+      
+  <img src="../images/icon-city.svg" alt="logo">
+
+    </a>
+    SEED Platform&trade; Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SEED-platform/seed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_data_import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Importing Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    View Building Inventory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Insights
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analyses
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organization Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../known_issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known Issues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hosting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../technical_ally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SEED Technical Allies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosting_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hosting Provider Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_hosting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Self-Hosting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app_developer_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/geocoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Geocoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/inventory_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventory Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Miscellaneous
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/industry_involvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Industry Involvement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer_resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Developer Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Analyses</h1>
+
+<p>There are several analyses that can be run on properties.  Expand the sections below to learn more about each analysis.</p>
+<details class="note">
+<summary>Overview</summary>
+<h2 id="analysis-overview">Analysis Overview<a class="headerlink" href="#analysis-overview" title="Permanent link">&para;</a></h2>
+<p>There are currently several different types of Analyses available in SEED:</p>
+<ul>
+<li><strong>BSyncr</strong></li>
+<li>Makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program</li>
+<li>Algorithms are based on methods in this Github repository
+  <a href="https://github.com/kW-Labs/nmecr">NMECR Github Repo</a></li>
+<li><strong>BETTER</strong></li>
+<li>Runs a BETTER analysis from the property data in SEED
+  <a href="https://better.lbl.gov/">BETTER web Tool</a></li>
+<li><strong>EUI</strong></li>
+<li>Calculates the EUI of a property based on the meter data and the gross floor area</li>
+<li><strong>Average Annual CO2</strong></li>
+<li>Calculates the CO2 emissions of a property based on the meter data and the eGRID region (which is based on the location of the property)</li>
+<li><strong>Element Statistics</strong></li>
+<li>Provides various aggregations of the available Elements in a property</li>
+</ul>
+<h2 id="generating-an-analysis">Generating an Analysis<a class="headerlink" href="#generating-an-analysis" title="Permanent link">&para;</a></h2>
+<ul>
+<li>In the Property List, select the properties you want to perform an analysis on</li>
+<li>Select Run Analysis from the Actions menu choice</li>
+</ul>
+<p><img alt="" src="../images/analyses_general_01.png" /></p>
+<ul>
+<li>Add an Analysis Name and select the Analysis Type</li>
+</ul>
+<p><img alt="" src="../images/analyses_general_02.png" /></p>
+<ul>
+<li>
+<p>Depending on the analysis type, there will be various other parameters to set
+(see the sections below for each Analysis Type details)</p>
+</li>
+<li>
+<p>Start the Analysis</p>
+</li>
+<li>Using the left Navigation bar, go to the Analyses section of SEED to see the results</li>
+</ul>
+<p><img alt="" src="../images/navButton_analyses.png" /></p>
+<p><img alt="" src="../images/analyses_general_03.png" /></p>
+</details>
+<details class="note">
+<summary>BSyncr Analysis</summary>
+<h2 id="bsyncr-analysis">Bsyncr Analysis<a class="headerlink" href="#bsyncr-analysis" title="Permanent link">&para;</a></h2>
+<p>the BSyncr analysis option makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program. Algorithms are based on methods in this Github repository
+<a href="https://github.com/kW-Labs/nmecr">NMECR Github Repo</a></p>
+<h3 id="setting-up-the-analysis">Setting up the Analysis<a class="headerlink" href="#setting-up-the-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In the Property List, select the properties you want to perform an analysis on</li>
+<li>Select Run Analysis from the Actions menu choice</li>
+<li>Add an Analysis Name and set Type = BSyncr</li>
+</ul>
+<p><img alt="" src="../images/analyses_BSyncr_setting_up_analysis.png" /></p>
+<h3 id="running-the-analysis">Running the Analysis<a class="headerlink" href="#running-the-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click the “Create Analysis” button to start the analysis</li>
+<li>Go to the Analyses page (from the left Navigation bar) to see the status of the analysis</li>
+</ul>
+<p><img alt="" src="../images/navButton_analyses.png" /></p>
+<p><img alt="" src="../images/analyses_BSyncr_running_analysis.png" /></p>
+<h3 id="viewing-the-analysis-results">Viewing the Analysis Results<a class="headerlink" href="#viewing-the-analysis-results" title="Permanent link">&para;</a></h3>
+<p>On the Analyses page, it is possible to click on the BSyncr analysis name, and see the individual analyses, and then click on the Run IDs for each property to see the details for that property.</p>
+<p><img alt="" src="../images/analyses_BSyncr_viewing_analysis_results.png" />
+<img alt="" src="../images/analyses_BSyncr_viewing_analysis_results_02.png" /></p>
+</details>
+<details class="note">
+<summary>BETTER Analysis</summary>
+<h2 id="better-analysis">BETTER Analysis<a class="headerlink" href="#better-analysis" title="Permanent link">&para;</a></h2>
+<p>The Building Efficiency Targeting Tool for Energy Retrofits (BETTER) is a software toolkit that enables building operators to quickly and easily identify the most cost-saving energy efficiency measures in buildings and portfolios using readily available building and energy data. For more details, see the <a href="https://better.lbl.gov/">BETTER website</a>.</p>
+<p>BETTER can be used to quickly assess the potential energy savings in a building, which then allows users to filter for the buildings with the hightest potential savings, and target those buildings for a more detailed energy audit.</p>
+<p>It is possible to run BETTER from the SEED Property Inventory List view, and then view the results.</p>
+<h3 id="analysis-pre-requisites">Analysis Pre-requisites<a class="headerlink" href="#analysis-pre-requisites" title="Permanent link">&para;</a></h3>
+<p>In order to run a BETTER analysis from SEED on a building, the following data must be imported into the Property Inventory</p>
+<h4 id="building-types-supported">Building Types supported<a class="headerlink" href="#building-types-supported" title="Permanent link">&para;</a></h4>
+<p>BETTER has built-in generated U.S. benchmark statistics for selected building types. This means that single building can be analyzed using BETTER for the following building types; this is done by selecting 'DEFAULT' as the Benchmark Data Type in the analysis.</p>
+<ul>
+<li>Office</li>
+<li>K-12 School</li>
+<li>Multifamily</li>
+<li>Public Library</li>
+<li>Hospital (General Medical &amp; Surgical)</li>
+<li>Workship Facility</li>
+</ul>
+<p>For more information on single building analytics, visit the <a href="https://better.lbl.gov/docs/api/building_analytics/">BETTER documentation</a>.</p>
+<p>Additionally, BETTER supports portfolio analytics for the following building types but requires at least 30 buildings of each type to successfully generate benchmark statistics and results. This can be accomplished by selecting 30 or more buildings of the same type and selecting 'GENERATE' as the Benchmark Data Type in the analysis:</p>
+<ul>
+<li>Office</li>
+<li>Hotel</li>
+<li>K-12 School</li>
+<li>Multifamily Housing</li>
+<li>Worship Facility</li>
+<li>Museum</li>
+<li>Bank Branch</li>
+<li>Courthouse</li>
+<li>Data Center</li>
+<li>Distribution Center</li>
+<li>Fast Food Restaurant</li>
+<li>Financial Office</li>
+<li>Fire Station</li>
+<li>Non-Refrigerated Warehouse</li>
+<li>Police Station</li>
+<li>Refrigerated Warehouse</li>
+<li>Retail Store</li>
+<li>Self-Storage Facility</li>
+<li>Senior Care Community</li>
+<li>Supermarket/Grocery Store</li>
+<li>Restaurant</li>
+<li>Public Library</li>
+</ul>
+<h4 id="data-mapping-on-import">Data mapping on import<a class="headerlink" href="#data-mapping-on-import" title="Permanent link">&para;</a></h4>
+<p>Several fields must be properly mapped when imported into SEED in order to have the correct information for a BETTER analysis.</p>
+<p><strong>Property Type</strong>
+The Property Type must be mapped (for example from the ENERGY STAR Portfolio Manager field called "Property Type - Self Selected") and must be set to a "Space Type" recognized by BETTER.
+See the <a class="external" href="https://better.lbl.gov/docs/faq/">BETTER FAQ web page, Building Spaces Types section</a> section for the latest space types, as new types are added frequently.</p>
+<p><strong>Address Data</strong>
+The Address data for the property must be mapped properly on import, according to the following fields, in order to correctly set the location and weather data that BETTER will use for the analysis.</p>
+<ul>
+<li>'Address Line 1' field</li>
+<li>'City' and 'State' fields OR 'Postal Code' field</li>
+</ul>
+<p><img alt="" src="../images/analyses_BETTER_DataFieldMapping.png" /></p>
+<h4 id="monthly-meter-data">Monthly meter data<a class="headerlink" href="#monthly-meter-data" title="Permanent link">&para;</a></h4>
+<ul>
+<li>12 months (or more) of consecutive meter data, for either gas or electricity, or both. This data is available from ENERGY STAR Portfolio Manager, which is one of the easiest methods for importing the data into SEED.</li>
+</ul>
+<h4 id="better-account-settings">BETTER account settings<a class="headerlink" href="#better-account-settings" title="Permanent link">&para;</a></h4>
+<p>When a BETTER account is created, an API token can be generated in the "My Profile" section of the BETTER account. This is used in SEED to connect to BETTER in the background to run a BETTER analysis on a property in SEED.</p>
+<p><img alt="" src="../images/analyses_BETTER_API_01.png" /></p>
+<p>In SEED, this API token is then entered into the Organizations/Settings in the "BETTER Analysis API Key" section</p>
+<p><img alt="" src="../images/analyses_BETTER_API_02.png" /></p>
+<h3 id="running-the-analysis_1">Running the Analysis<a class="headerlink" href="#running-the-analysis_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In the Inventory List, select one or more properties on which you want to perform a BETTER analysis, and select ‘Run Analysis’ from the Actions dropdown menu
+<img alt="" src="../images/analyses_BETTER_select_analysis.png" /></p>
+</li>
+<li>
+<p>The <strong>Run Analysis</strong> dialog box will appear. Add a descriptive name for the current analysis, and set <strong>Type</strong> to <strong>BETTER</strong>
+<img alt="" src="../images/analyses_BETTER_select_analysis_settings_01.png" /></p>
+</li>
+<li>
+<p>Setting <strong>Type</strong> to <strong>BETTER</strong> causes more settings to be displayed.
+<img alt="" src="../images/analyses_BETTER_select_analysis_settings_02.png" /></p>
+</li>
+<li>
+<p>When all the settings have been properly defined, click the <strong>Create Analysis</strong> button to start the analysis running. Clicking on the Analyses navigation button will go to the Analyses page, where the currently running analysis is shown. The <strong>Run Status</strong> column shows the progress of the analyses
+<img alt="" src="../images/analyses_BETTER_select_analysis_running.png" /></p>
+</li>
+<li>
+<p>Viewing the BETTER results
+On the Analyses page, click on the Analysis Name which will then display the results for each individual property.</p>
+</li>
+</ol>
+<p><img alt="" src="../images/analyses_BETTER_select_analysis_results_01.png" /></p>
+<p><img alt="" src="../images/analyses_BETTER_select_analysis_results_02.png" /></p>
+<p>SEED will display the reports in the same way as they would be displayed in BETTER.
+Click the <strong>Run ID</strong> link to see the reports</p>
+<p><img alt="" src="../images/analyses_BETTER_select_analysis_results_03.png" /></p>
+<p>Clicking on the Property link will display the Property Detail page for that property with the BETTER Analysis details added</p>
+<p><img alt="" src="../images/analyses_BETTER_select_analysis_results_04.png" /></p>
+<p>One the Property Detail page, clicking on the Analyses link will show all the analyses for this property</p>
+<p><img alt="" src="../images/analyses_BETTER_select_analysis_results_05.png" /></p>
+<p>SEED also saves many of the BETTER results in fields, which can then be added to the results display in both the Property List and Property Detail views</p>
+<p><img alt="" src="../images/analyses_BETTER_select_analysis_results_06.png" /></p>
+</details>
+<details class="note">
+<summary>EUI Analysis</summary>
+<h2 id="eui-analysis">EUI Analysis<a class="headerlink" href="#eui-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="setting-up-the-analysis_1">Setting up the Analysis<a class="headerlink" href="#setting-up-the-analysis_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In the Property List, select the properties you want to perform an analysis on</li>
+<li>Select Run Analysis from the Actions menu choice</li>
+<li>Add an Analysis Name and set Type = EUI</li>
+</ul>
+<p><img alt="" src="../images/analyses_EUI_setting_up_analysis.png" /></p>
+<h3 id="running-the-analysis_2">Running the Analysis<a class="headerlink" href="#running-the-analysis_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click the “Create Analysis” button to start the analysis</li>
+<li>Go to the Analyses page to see the status of the analysis</li>
+</ul>
+<p><img alt="" src="../images/analyses_EUI_running_analysis.png" /></p>
+<h3 id="viewing-the-analysis-results_1">Viewing the Analysis Results<a class="headerlink" href="#viewing-the-analysis-results_1" title="Permanent link">&para;</a></h3>
+<p>On the Analyses page, it is possible to click on the EUI analysis name, and see the individual analyses</p>
+<p><img alt="" src="../images/analyses_EUI_viewing_analysis.png" /></p>
+<p>Then click on the Run IDs for each property to see the details for that property.</p>
+<p><img alt="" src="../images/analyses_EUI_viewing_analysis_02.png" /></p>
+<p>In the Property List view, the field Analysis EUI is added to show the calculated value.</p>
+<p>If the value is blank, it means that there was not meter data to calculate the value</p>
+<p><img alt="" src="../images/analyses_EUI_viewing_analysis_03.png" /></p>
+</details>
+<details class="note">
+<summary>Average Annual CO2 Analysis</summary>
+<h2 id="average-annual-co2-analysis">Average Annual CO2 Analysis<a class="headerlink" href="#average-annual-co2-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="data-import">Data Import<a class="headerlink" href="#data-import" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In the Property data being imported to SEED, for a CO2 analysis the following must be added</li>
+<li>eGRID Subregion Code</li>
+<li>Find the eGRID Subregion definitions here
+  <a href="https://www.epa.gov/egrid/summary-data">eGRID Subregion Codes</a></li>
+</ul>
+<p><img alt="" src="../images/analyses_co2_setting_up_analysis-egrid.png" /></p>
+<h3 id="setting-up-the-analysis_2">Setting up the Analysis<a class="headerlink" href="#setting-up-the-analysis_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In the Property List, select the properties you want to perform an analysis on</li>
+<li>Select Run Analysis from the Actions menu choice</li>
+<li>Add an Analysis Name and set Type = Average Annual CO2</li>
+</ul>
+<p><img alt="" src="../images/analyses_co2_setting_up_analysis.png" /></p>
+<h3 id="running-the-analysis_3">Running the Analysis<a class="headerlink" href="#running-the-analysis_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click the “Create Analysis” button to start the analysis</li>
+<li>Go to the Analyses page (from the left Navigation bar) to see the status of the analysis</li>
+</ul>
+<p><img alt="" src="../images/analyses_co2_running_analysis.png" /></p>
+<h3 id="viewing-the-analysis-results_2">Viewing the Analysis Results<a class="headerlink" href="#viewing-the-analysis-results_2" title="Permanent link">&para;</a></h3>
+<p>On the Analyses page, it is possible to click on the CO2 analysis name, and see the individual analyses</p>
+<p><img alt="" src="../images/analyses_co2_viewing_analysis.png" /></p>
+<p>Then click on the Run ID or the Property link for each property to see the details for that property.</p>
+<p><img alt="" src="../images/analyses_co2_viewing_analysis_02.png" /></p>
+<p>In the Property List view, the fields “Average Annual CO2” and “Average Annual CO2 Coverage” contain the CO2 results in the Inventory Property List View.</p>
+<p><img alt="" src="../images/analyses_co2_viewing_analysis_03.png" /></p>
+</details>
+<details class="note">
+<summary>Element Statistics Analysis</summary>
+<h2 id="element-statistics-analysis">Element Statistics Analysis<a class="headerlink" href="#element-statistics-analysis" title="Permanent link">&para;</a></h2>
+<p>This Analysis provides aggregation values of the available Elements that exist on the Property Details page for a property.</p>
+<p><img alt="Property Elements Table" class="seed-img" src="../images/analysis_element_statistics.webp" /></p>
+<p>There are two different types of aggregations that will be generated:</p>
+<ol>
+<li>
+<p>The analysis will determine if there are any Component_SubTypes that equal “D.D.C. Control Panel”. This will create a new field called "Has D.D.C. Control Panels”. This field will be zero (or False) if there are no Component_SubTypes equal to “D.D.C Control Panel” in the Elements table for a property and one (or True) if there are Component_SubTypes equal to “D.D.C Control Panel” in the Elements table for a property.</p>
+</li>
+<li>
+<p>The analysis will calculate the aggregate Condition Index of the EISA 2007-432 Uniformat Categories listed below as an average.  This value will then create new fields called “WINDOWS CI”, “DOMESTIC WATER EQUIPMENT CI”, etc. This field will be blank if there are missing Uniformat categories for a property. The Uniformat categories are listed below.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Uniformat Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OTHER STANDARD FOUNDATIONS</td>
+</tr>
+<tr>
+<td>OTHER FLOOR CONSTRUCTION</td>
+</tr>
+<tr>
+<td>INSULATION &amp; VAPOR RETARDER</td>
+</tr>
+<tr>
+<td>EXTERIOR LOUVERS &amp; SCREENS</td>
+</tr>
+<tr>
+<td>SUN CONTROL DEVICES</td>
+</tr>
+<tr>
+<td>WINDOWS</td>
+</tr>
+<tr>
+<td>EXTERIOR GLAZING</td>
+</tr>
+<tr>
+<td>ROOF INSULATION &amp; FILL</td>
+</tr>
+<tr>
+<td>OTHER CEILING &amp; CEILING FINISHES</td>
+</tr>
+<tr>
+<td>OTHER VERTICAL TRANSPORTATION EQUIPMENT</td>
+</tr>
+<tr>
+<td>WATERCLOSETS</td>
+</tr>
+<tr>
+<td>PIPES &amp; FITTINGS</td>
+</tr>
+<tr>
+<td>DOMESTIC WATER EQUIPMENT</td>
+</tr>
+<tr>
+<td>SPECIALTIES</td>
+</tr>
+<tr>
+<td>OTHER DOMESTIC WATER SUPPLY</td>
+</tr>
+<tr>
+<td>SOLAR ENERGY SUPPLY SYSTEMS</td>
+</tr>
+<tr>
+<td>WIND ENERGY SUPPLY SYSTEM</td>
+</tr>
+<tr>
+<td>OTHER ENERGY SUPPLY</td>
+</tr>
+<tr>
+<td>BOILERS</td>
+</tr>
+<tr>
+<td>OTHER HEAT GENERATING SYSTEMS</td>
+</tr>
+<tr>
+<td>CHILLED WATER SYSTEMS</td>
+</tr>
+<tr>
+<td>DIRECT EXPANSION SYSTEMS</td>
+</tr>
+<tr>
+<td>OTHER COOLING GENERATING SYSTEMS</td>
+</tr>
+<tr>
+<td>AIR DISTRIBUTION, HEATING &amp; COOLING</td>
+</tr>
+<tr>
+<td>STEAM DISTRIBUTION SYSTEMS</td>
+</tr>
+<tr>
+<td>HOT WATER DISTRIBUTION SYSTEMS</td>
+</tr>
+<tr>
+<td>AIR HANDLING UNITS</td>
+</tr>
+<tr>
+<td>OTHER DISTRIBUTION SYSTEMS</td>
+</tr>
+<tr>
+<td>PACKAGE UNITS</td>
+</tr>
+<tr>
+<td>HVAC CONTROLS</td>
+</tr>
+<tr>
+<td>ELECTRONIC CONTROLS</td>
+</tr>
+<tr>
+<td>PNEUMATIC CONTROLS</td>
+</tr>
+<tr>
+<td>OTHER CONTROLS INSTRUMENTATION</td>
+</tr>
+<tr>
+<td>REFRIGERATION SYSTEMS</td>
+</tr>
+<tr>
+<td>OTHER SPECIAL MECHANICAL SYSTEMS</td>
+</tr>
+<tr>
+<td>SERVICE ENTRANCE EQUIPMENT</td>
+</tr>
+<tr>
+<td>MOTOR CONTROL CENTERS</td>
+</tr>
+<tr>
+<td>OTHER SERVICE AND DISTRIBUTION</td>
+</tr>
+<tr>
+<td>LIGHTING EQUIPMENT</td>
+</tr>
+<tr>
+<td>OTHER LIGHTING AND BRANCH WIRING</td>
+</tr>
+<tr>
+<td>IRRIGATION SYSTEMS</td>
+</tr>
+<tr>
+<td>PACKAGED SANITARY SEWER TREATMENT PLANTS</td>
+</tr>
+<tr>
+<td>OTHER SANITARY SEWER</td>
+</tr>
+<tr>
+<td>GAS DISTRIBUTION PIPING (NATURAL AND PROPANE)</td>
+</tr>
+<tr>
+<td>TRANSFORMERS</td>
+</tr>
+<tr>
+<td>SWITCHES, CONTROLS &amp; DEVICES</td>
+</tr>
+<tr>
+<td>OTHER ELECTRIC TRANSMISSION &amp; DISTRIBUTION</td>
+</tr>
+<tr>
+<td>EXTERIOR LIGHTING FIXTURES &amp; CONTROLS</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>Building Upgrade Recommendation Analysis</summary>
+<h2 id="building-upgrade-recommendation-analysis">Building Upgrade Recommendation Analysis<a class="headerlink" href="#building-upgrade-recommendation-analysis" title="Permanent link">&para;</a></h2>
+<p>The Building Upgrade Recommendation Analysis is a workflow that can be used to identify what types of upgrades could be performed on selected buildings based on specific parameters such as year built, gross floor area, EUI, etc. Buildings can then be prioritized based on the results of the analysis.</p>
+<p>The workflow implemented is depicted in the following diagram:</p>
+<p><img alt="Building Upgrade Recommendation decision tree" class="seed-img-lg" src="../images/upgrade_rec_flowchart.webp" /></p>
+<p>The configurable parameters are defined as:</p>
+<ul>
+<li><strong>Total EUI Goal</strong> - The Total EUI Goal for the building (including Electricity, Gas, Etc.)</li>
+<li><strong>Year Built Threshold</strong> - The year built to use as a comparison threshold</li>
+<li><strong>Poor Actual to Benchmark EUI Ratio</strong> - The poor ratio of Total EUI to Benchmark Total EUI value to use. Ratio = Total EUI/Benchmark EUI</li>
+<li><strong>Fair Actual to Benchmark EUI Ratio</strong> - The fair ratio of Total EUI to Benchmark Total EUI value to use. Ratio = Total EUI/Benchmark EUI</li>
+<li><strong>Building Square Footage Threshold</strong> - The gross square footage to use as a comparison threshold</li>
+<li><strong>Fossil Fuel EUI Goal</strong> - The Fossil Fuel EUI Goal for the building</li>
+<li><strong>Fossil Fuel-Fired Equipment RSL Threshold</strong> - The remaining service life (RSL) value to use for your fossil fuel-fired equipment as a comparison threshold in the calculations.</li>
+<li><strong>Condition Index Threshold</strong> - The condition index to use as a comparison threshold</li>
+</ul>
+<h3 id="analysis-pre-requisites_1">Analysis Pre-requisites<a class="headerlink" href="#analysis-pre-requisites_1" title="Permanent link">&para;</a></h3>
+<p>The analysis requires certain data to be available in SEED in order to run successfully:</p>
+<ul>
+<li>Year Built</li>
+<li>Gross Floor Area</li>
+<li>Total Building EUI</li>
+<li>Building Gas EUI</li>
+<li>Building Electricity EUI</li>
+<li>Building actual energy use</li>
+<li>ASHRAE Electricity EUI Target</li>
+<li>ASHRAE Gas EUI Target</li>
+<li>Condition Index of the Building</li>
+<li>Whether a building has a Building Automation System (BAS) - represented by having the element of type 'Has D.D.C Control Panels'</li>
+<li>The fossil fuel-fired element with the lowest remaining service life</li>
+</ul>
+<p>The analysis will allow a user to select which fields to use for the information above, with the exception of "Year Built" and "Gross Floor Area": the canonical SEED fields "Year Built" and "Gross Floor Area" are automatically used to capture this information.</p>
+<h3 id="running-the-analysis_4">Running the Analysis<a class="headerlink" href="#running-the-analysis_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>From the inventory page, select the properties in the table that you want to run the analysis on</p>
+</li>
+<li>
+<p>From the Actions dropdown menu, select "Run an Analysis"</p>
+</li>
+<li>
+<p>In the Run an Analysis modal, enter the name of the analysis and select "Building Upgrade Recommendation" as the type</p>
+</li>
+<li>
+<p>Once the type is selected, the modal will expand with options to set the configurable thresholds for the workflow. Fill out these values and click 'Create Analysis'
+  <img alt="Analysis Configuration Modal" class="seed-img-sm" src="../images/upgrade_rec_analysis.webp" /></p>
+</li>
+<li>
+<p>The analysis will be created and a link will appear in the top right corner to take you directly to the analysis page. You can also access the Analyses from the "Analysis" left navigation menu.
+  <img alt="Analysis Configuration Modal" class="seed-img-sm" src="../images/view_analysis.webp" /></p>
+</li>
+<li>
+<p>On the analysis page you can see details about the analysis, a list of properties that were run, and links to see individual results.</p>
+</li>
+<li>
+<p>On the individual property analysis results page, you can see similar information related to the configuration details and results.
+  <img alt="Analysis Detail Page" class="seed-img" src="../images/analysis_details.webp" /></p>
+</li>
+<li>
+<p>This analysis adds the field 'Building Upgrade Recommendation' to the analysis.
+  <img alt="Analysis Fields on Inventory List Page" class="seed-img" src="../images/analysis_fields.webp" /></p>
+</li>
+</ol>
+<p>The values entered in this field can be used to prioritize your buildings list. (For example, by filtering the inventory list by 'Deep Energy Retrofit' and labeling the resulting list of buildings with a particular label.) As shown in the diagram above, the possible values for this field are:</p>
+<ul>
+<li>Deep Energy Retrofit</li>
+<li>Equipment Replacement</li>
+<li>Re-tuning</li>
+<li>No DER Project Recommended</li>
+<li>Missing Data</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

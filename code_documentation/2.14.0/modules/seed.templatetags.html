@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Templatetags Package &mdash; SEED Platform 2.14.0 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Test Helpers Package" href="seed.test_helpers.html" />
+    <link rel="prev" title="Management Package" href="seed.management.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                2.14.0
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data.html">Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data_importer.html">Data Importer Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.landing.html">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.html">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.managers.html">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.public.html">Public Package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seed.html">SEED Package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seed.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.management.html">Management Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Templatetags Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#inheritance">Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.decorators">Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.search">Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.tasks">Tasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.token_generators">Token Generator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.urls">URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.utils">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.serializers.html">Serializers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.urls.html">URLs Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.utils.html">Utilities Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.views.html">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+
+          <li><a href="../modules.html">Modules</a> &raquo;</li>
+
+          <li><a href="seed.html">SEED Package</a> &raquo;</li>
+
+      <li>Templatetags Package</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="templatetags-package">
+<h1>Templatetags Package<a class="headerlink" href="#templatetags-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.templatetags.breadcrumbs">
+<span id="breadcrumbs"></span><h2>Breadcrumbs<a class="headerlink" href="#module-seed.templatetags.breadcrumbs" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.BreadcrumbNode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.templatetags.breadcrumbs.</span></span><span class="sig-name descname"><span class="pre">BreadcrumbNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars</span></em>, <em class="sig-param"><span class="pre">render_func=&lt;function</span> <span class="pre">create_crumb&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.BreadcrumbNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.template.base.Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.BreadcrumbNode.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.BreadcrumbNode.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the node rendered as a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.UrlBreadcrumbNode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.templatetags.breadcrumbs.</span></span><span class="sig-name descname"><span class="pre">UrlBreadcrumbNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">title</span></em>, <em class="sig-param"><span class="pre">url_node</span></em>, <em class="sig-param"><span class="pre">render_func=&lt;function</span> <span class="pre">create_crumb&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.UrlBreadcrumbNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.template.base.Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.UrlBreadcrumbNode.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.UrlBreadcrumbNode.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the node rendered as a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.breadcrumb">
+<span class="sig-prename descclassname"><span class="pre">seed.templatetags.breadcrumbs.</span></span><span class="sig-name descname"><span class="pre">breadcrumb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.breadcrumb" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Section author: Andriy Drozdyuk</em></p>
+<p>Renders the breadcrumb.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="s2">&quot;Title of breadcrumb&quot;</span> <span class="n">url_var</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="n">context_var</span>  <span class="n">url_var</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="s2">&quot;Just the title&quot;</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="n">just_context_var</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">First</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">crumb</span>
+<span class="n">Second</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">url</span> <span class="n">variable</span> <span class="n">to</span> <span class="n">link</span> <span class="n">to</span><span class="p">,</span> <span class="n">produced</span> <span class="n">by</span> <span class="n">url</span> <span class="n">tag</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="p">:</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">url</span> <span class="s2">&quot;person_detail&quot;</span> <span class="nb">object</span><span class="o">.</span><span class="n">id</span> <span class="k">as</span> <span class="n">person_url</span> <span class="o">%</span><span class="p">}</span>
+    <span class="n">then</span><span class="p">:</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="n">person</span><span class="o">.</span><span class="n">name</span> <span class="n">person_url</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.breadcrumb_root">
+<span class="sig-prename descclassname"><span class="pre">seed.templatetags.breadcrumbs.</span></span><span class="sig-name descname"><span class="pre">breadcrumb_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.breadcrumb_root" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Section author: Andriy Drozdyuk</em></p>
+<p>Renders the breadcrumb.</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="s2">&quot;Title of breadcrumb&quot;</span> <span class="n">url_var</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="n">context_var</span>  <span class="n">url_var</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="s2">&quot;Just the title&quot;</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="n">just_context_var</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">First</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">crumb</span><span class="p">,</span>
+<span class="n">Second</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">url</span> <span class="n">variable</span> <span class="n">to</span> <span class="n">link</span> <span class="n">to</span><span class="p">,</span> <span class="n">produced</span> <span class="n">by</span> <span class="n">url</span> <span class="n">tag</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="p">:</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">url</span> <span class="s2">&quot;person_detail/&quot;</span> <span class="nb">object</span><span class="o">.</span><span class="n">id</span> <span class="k">as</span> <span class="n">person_url</span> <span class="o">%</span><span class="p">}</span>
+    <span class="n">then</span><span class="p">:</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="n">person</span><span class="o">.</span><span class="n">name</span> <span class="n">person_url</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.breadcrumb_url">
+<span class="sig-prename descclassname"><span class="pre">seed.templatetags.breadcrumbs.</span></span><span class="sig-name descname"><span class="pre">breadcrumb_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.breadcrumb_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as breadcrumb but instead of url context variable takes in all the
+arguments URL tag takes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="s2">&quot;Title of breadcrumb&quot;</span> <span class="n">person_detail</span> <span class="n">person</span><span class="o">.</span><span class="n">id</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="n">person</span><span class="o">.</span><span class="n">name</span> <span class="n">person_detail</span> <span class="n">person</span><span class="o">.</span><span class="n">id</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.breadcrumb_url_root">
+<span class="sig-prename descclassname"><span class="pre">seed.templatetags.breadcrumbs.</span></span><span class="sig-name descname"><span class="pre">breadcrumb_url_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.breadcrumb_url_root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as breadcrumb but instead of url context variable takes in all the
+arguments URL tag takes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="s2">&quot;Title of breadcrumb&quot;</span> <span class="n">person_detail</span> <span class="n">person</span><span class="o">.</span><span class="n">id</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">breadcrumb</span> <span class="n">person</span><span class="o">.</span><span class="n">name</span> <span class="n">person_detail</span> <span class="n">person</span><span class="o">.</span><span class="n">id</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.create_crumb">
+<span class="sig-prename descclassname"><span class="pre">seed.templatetags.breadcrumbs.</span></span><span class="sig-name descname"><span class="pre">create_crumb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.create_crumb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.templatetags.breadcrumbs.create_crumb_first">
+<span class="sig-prename descclassname"><span class="pre">seed.templatetags.breadcrumbs.</span></span><span class="sig-name descname"><span class="pre">create_crumb_first</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.templatetags.breadcrumbs.create_crumb_first" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+        <a href="seed.test_helpers.html" class="btn btn-neutral float-right" title="Test Helpers Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+        <a href="seed.management.html" class="btn btn-neutral float-left" title="Management Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>
