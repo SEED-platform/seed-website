@@ -67,7 +67,7 @@ Insights can be used to compare metrics for building portfolios or individual bu
     Because Insights is used to look at trends over time, it is necessary to import data over time in different cycles
     ![](images/insights_configuration_01.png)
 
-    - Import metrics for each building as well as targets for those metrics
+    - Import metrics for each building as well as targets for those metrics (e.g., Site EUI)
     - Define "derived fields" to calculate target "deltas" if that is useful
 
     ![](images/insights_configuration_02.png)
