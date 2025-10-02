@@ -1,4 +1,4 @@
-The Standard Energy Efficiency Data Platform (SEED) Platform is an open-source software application designed to manage building performance data, such as energy consumption and carbon emissions (as required by a benchmarking ordinance or Building Performance Standard), which can be costly and time consuming for states, local governments and other organizations. SEED is a flexible and cost-effective platform to improve the quality and availability of data to demonstrate the economic and environmental benefits of building energy efficiency, to implement programs, and to target investment activity. SEED helps users combine data from multiple sources, clean and validate it, and generate queries and reports. SEED can be used directly as a web platform, but it can also be used as a backend to other solutions.
+The Standard Energy Efficiency Data Platform (SEED) Platform is an open-source software application designed to manage building performance data, such as energy consumption (as required by a benchmarking ordinance, for example), which can be costly and time consuming for states, local governments and other organizations. SEED is a flexible and cost-effective platform to improve the quality and availability of data to demonstrate the economic and environmental benefits of building energy efficiency, to implement programs, and to target investment activity. SEED helps users combine data from multiple sources, clean and validate it, and generate queries and reports. SEED can be used directly as a web platform, but it can also be used as a backend to other solutions.
 
 As of December 2023, these are the cities who either have benchmarking or Building Performance Standards that are also using SEED to help with those ordinances
 
@@ -40,8 +40,8 @@ Many communities, jurisdictions and cities are managing their data for these ord
 
     * Check the data quality based on used defined rules
     * Sort, filter and label building records
-    * Run analyses on the building data, such as calculating the CO2 emissions and the Energy Use Intensity (EUI)
-    * Set future targets for CO2 emissions and EUI values to plan how to reach net zero by a certain time period
+    * Run analyses on the building data, such as calculating the Energy Use Intensity (EUI)
+    * Set future targets and plan how to reach your goals by a certain time period
     * View the progress reaching those targets, either at the building level or the portfolio level
     * View a map of the building locations
 

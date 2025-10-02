@@ -3,11 +3,10 @@ Insights can be used to compare metrics for building portfolios or individual bu
 ??? note "General Overview"
     ## General Overview
 
-    Insights, accessed from the left navigation bar, allows comparison of metrics, such as Energy or Greenhouse Gas Emissions, over time.
+    Insights, accessed from the left navigation bar, allows comparison of metrics over time.
 
     ![](images/navButton_insights.png)
 
-    This can be useful for implementing Building Performance Standards to reach zero energy or emissions goals by a certain date.
 
     Insights allows users to:
 
@@ -68,7 +67,7 @@ Insights can be used to compare metrics for building portfolios or individual bu
     Because Insights is used to look at trends over time, it is necessary to import data over time in different cycles
     ![](images/insights_configuration_01.png)
 
-    - Import metrics (ie, Site EUI or GHG emissions) for each building as well as targets for those metrics
+    - Import metrics for each building as well as targets for those metrics
     - Define "derived fields" to calculate target "deltas" if that is useful
 
     ![](images/insights_configuration_02.png)
