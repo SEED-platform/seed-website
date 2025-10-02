@@ -311,7 +311,7 @@ After the building data has been imported into SEED, it can be viewed from the I
 ??? note "**Cross-Cycles**"
     ## Cross-Cycles
 
-    The Cross-Cycle view allows comparison of each field across the cycles, for example to show trends in Site EUI or emissions.
+    The Cross-Cycle view allows comparison of each field across the cycles, for example to show trends in Site EUI.
 
     ![alt_text](images/inventory_property_detail_crosscycles.png)
 

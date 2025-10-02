@@ -521,23 +521,23 @@ Meter data associated with a building, both monthly and other time intervals, ca
 
     From the Inventory List view, Property Tab, click on the **i** (info) icon to see the Property Detail view.
 
-    - **Step 1:** Click the **Upload GreenButton Data** button
+    - **Step 1:** Click the **Upload Green Button Data** button
     - **Step 2:** Select the appropriate Dataset name
-    - **Step 3:** Click the **Upload File** button, browse to the desired GreenButton XML file
+    - **Step 3:** Click the **Upload File** button, browse to the desired Green Button XML file
     - **Step 4:** Click the **Open** button
 
-    ![alt_text](images/data_meter_GB_import-01.png "GreenButton Monthly Meter Data Import 1")
+    ![alt_text](images/data_meter_GB_import-01.png "Green Button Monthly Meter Data Import 1")
 
-    - **Step 5:** SEED displays a summary of the GreenButton data
+    - **Step 5:** SEED displays a summary of the Green Button data
         - Click **Confirm** to continue the file upload
         - Click **Dismiss** to cancel the file upload
-    - **Step 6:** The GreenButton file is uploaded
+    - **Step 6:** The Green Button file is uploaded
     - **Step 7:** The results of the file upload are displayed, showing the meter readings that have been uploaded
     - **Step 8:** Click the **Complete and Refresh Page** button to complete the upload
-    - **Step 9:** The GreenButton data is added to the Meter view in the Property Detail
-        - **GB** is added as a prefix to the meter number for the GreenButton data
+    - **Step 9:** The Green Button data is added to the Meter view in the Property Detail
+        - **GB** is added as a prefix to the meter number for the Green Button data
 
-    ![alt_text](images/data_meter_GB_import-02.png "GreenButton Monthly Meter Data Import 2")
+    ![alt_text](images/data_meter_GB_import-02.png "Green Button Monthly Meter Data Import 2")
 
 ## **Display Units for Meter Data**
 
