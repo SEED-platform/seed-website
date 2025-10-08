@@ -6,18 +6,18 @@ There are several analyses that can be run on properties.  Expand the sections b
     There are currently several different types of Analyses available in SEED:
 
     - **BSyncr**
-    - Makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program
-    - Algorithms are based on methods in this Github repository
-      [NMECR Github Repo](https://github.com/kW-Labs/nmecr)
+        - Makes a Building Sync file from the property data in SEED to be used with the NMEC (Normalized Metered Energy Consumption) program
+        - Algorithms are based on methods in this Github repository
+          [NMECR Github Repo](https://github.com/kW-Labs/nmecr)
     - **BETTER**
-    - Runs a BETTER analysis from the property data in SEED
-      [BETTER web Tool](https://better.lbl.gov/)
+        - Runs a BETTER analysis from the property data in SEED
+          [BETTER web Tool](https://better.lbl.gov/)
     - **EUI**
-    - Calculates the EUI of a property based on the meter data and the gross floor area
-    - **Average Annual CO2**
-    - Calculates the CO2 emissions of a property based on the meter data and the eGRID region (which is based on the location of the property)
+        - Calculates the EUI of a property based on the meter data and the gross floor area
+       <!--  - **Average Annual CO2**
+        - Calculates the CO2 emissions of a property based on the meter data and the eGRID region (which is based on the location of the property) -->
     - **Element Statistics**
-    - Provides various aggregations of the available Elements in a property
+        - Provides various aggregations of the available Elements in a property
 
     ## Generating an Analysis
 
@@ -224,7 +224,7 @@ There are several analyses that can be run on properties.  Expand the sections b
 
     ![](images/analyses_EUI_viewing_analysis_03.png)
 
-??? note "Average Annual CO2 Analysis"
+<!-- ??? note "Average Annual CO2 Analysis"
     ## Average Annual CO2 Analysis
 
     ### Data Import
@@ -264,7 +264,7 @@ There are several analyses that can be run on properties.  Expand the sections b
     In the Property List view, the fields “Average Annual CO2” and “Average Annual CO2 Coverage” contain the CO2 results in the Inventory Property List View.
 
     ![](images/analyses_co2_viewing_analysis_03.png)
-
+ -->
 ??? note "Element Statistics Analysis"
     ## Element Statistics Analysis
 
