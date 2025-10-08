@@ -14,8 +14,10 @@ There are several analyses that can be run on properties.  Expand the sections b
           [BETTER web Tool](https://better.lbl.gov/)
     - **EUI**
         - Calculates the EUI of a property based on the meter data and the gross floor area
-       <!--  - **Average Annual CO2**
-        - Calculates the CO2 emissions of a property based on the meter data and the eGRID region (which is based on the location of the property) -->
+            
+            <!-- **Average Annual CO2**
+                - Calculates the CO2 emissions of a property based on the meter data and the eGRID region (which is based on the location of the property) 
+            -->
     - **Element Statistics**
         - Provides various aggregations of the available Elements in a property
 
