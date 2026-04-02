@@ -1,6 +1,6 @@
 # Technical Allies
 
-SEED Platform Technical Allies are private companies and other entities that are officially recognized for their significant contributions to the [SEED Platform Collaborative](http://energy.gov/eere/buildings/seed-platform-collaborative). The Technical Ally categories are: Hosting Provider, Software Contributor, and App Developer. More information about these categories and the current qualifying Technical Allies are provided below. Note that Technical Allies must meet the approval criteria annually and execute the SEED Platform trademark [sublicense](resources/SEED_LBNL_sample_license.pdf) in order to maintain their official SEED Platform Technical Ally status. The Technical Allies listed below have met all the approval criteria within the last year; click on their logo to find out more about the services they offer.
+SEED Platform Technical Allies are private companies and other entities that are officially recognized for their significant contributions to the [SEED Platform Collaborative](https://www.energy.gov/cmei/buildings/seed-platform-collaborative). The Technical Ally categories are: Hosting Provider, Software Contributor, and App Developer. More information about these categories and the current qualifying Technical Allies in each category are provided below. Note that Technical Allies must meet the approval criteria annually and execute the SEED Platform trademark [sublicense](resources/SEED_LBNL_sample_license.pdf) in order to maintain their official SEED Platform Technical Ally status. The organizations listed in the three sections below have met all the approval criteria within the last year; click on their logo to find out more about the services they offer.
 
 ## Hosting Providers
 
@@ -9,24 +9,24 @@ Please see the [Hosting Provider Requirements](hosting_requirements.md) for more
 
 <div class="row">
   <div class="column">
-   <img src="../images/Earth Advantage HZ_logo-small.png" /><br/>
-   <center>
-    Earth Advantage <br/>
-    <a href="https://www.earthadvantage.org/">earthadvantage.org</a><br/><br/>
+    <div style="flex: 100%; text-align: center;">
+      <img src="../images/Earth Advantage HZ_logo-small.png" /><br/>
+      Earth Advantage <br/>
+      <a href="https://www.earthadvantage.org/">earthadvantage.org</a><br/><br/>
 
-  Contact: Erik Cathcart <br/>
-  <a href="mailto:ecathcart@earthadvantage.org">ecathcart@earthadvantage.org</a>
- </center>
+      Contact: Erik Cathcart <br/>
+      <a href="mailto:ecathcart@earthadvantage.org">ecathcart@earthadvantage.org</a>
+    </div>
   </div>
   <div class="column">
-   <img src="../images/ClearlyEnergy.png" /><br/>
-   <center>
-    Clearly Energy <br/>
-  <a href="https://www.clearlyenergy.com/">www.clearlyenergy.com</a><br/><br/>
+    <div style="flex: 100%; text-align: center;">
+      <img src="../images/ClearlyEnergy.png" /><br/>
+      Clearly Energy <br/>
+      <a href="https://clearlyenergy.com/">clearlyenergy.com</a><br/><br/>
 
-  Contact: Veronique Bugnion <br/>
-  <a href="mailto:vbugnion@clearlyenergy.com">vbugnion@clearlyenergy.com</a>
- </center>
+      Contact: Veronique Bugnion <br/>
+      <a href="mailto:vbugnion@clearlyenergy.com">vbugnion@clearlyenergy.com</a>
+    </div>
   </div>
 </div>
 
@@ -37,18 +37,18 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
 
 <div class="row">
   <div class="column">
-   <center>
-   <img src="../images/ClearlyEnergy.png" /><br/><br/>
-   <img src="../images/logo_nrel_c.jpg" /><br/><br/>
-   <img src="../images/psd-logo1.png" /><br/>
-   </center>
+    <div style="flex: 100%; text-align: center;">
+      <img src="../images/ClearlyEnergy.png" /><br/><br/>
+      <img src="../images/logo_nlr_c.png" /><br/><br/>
+      <img src="../images/psd-logo1.png" /><br/>
+    </div>
   </div>
   <div class="column">
-   <center>
-   <img src="../images/Earth Advantage HZ_logo-small.png" /><br/><br/>
-   <img src="../images/mcq_int_logo.png" /><br/><br/>
-   <img src="../images/OPEN-sm-small200.png" /><br/>
-   </center>
+    <div style="flex: 100%; text-align: center;">
+      <img src="../images/Earth Advantage HZ_logo-small.png" /><br/><br/><br/>
+      <img src="../images/mcq_int_logo.png" /><br/><br/>
+      <img src="../images/OPEN-sm-small200.png" /><br/>
+    </div>
   </div>
 </div>
 
@@ -59,12 +59,25 @@ Please see the [App Developer Requirements](app_developer_requirements.md) for m
 
 <div class="row">
   <div class="column">
-    <center>
-    <br/><img src="../images/ClearlyEnergy.png" alt="clearly energy logo"/><br/>
-    </center>
+    <div style="flex: 100%; text-align: center;">
+      <br/><img src="../images/ClearlyEnergy.png" alt="clearly energy logo"/><br/>
+    </div>
   </div>
   <div class="column">
-    <center>
-    <img src="../images/beam_logo.png" width="30%" alt="beam logo" /><br/>
+    <div style="flex: 100%; text-align: center;">
+      <br/><img src="../images/beam_logo.png" width="30%" alt="beam logo" /><br/>
+    </div>
+  </div>
+</div>
+
+## Supporting Tools
+
+These external services support SEED Platform operations.
+
+<div class="row">
+  <div style="flex: 100%; text-align: center;">
+    <a href="https://lokalise.com/">
+      <img src="../images/lokalise.svg" alt="Lokalise logo" width="200" />
+    </a>
   </div>
 </div>

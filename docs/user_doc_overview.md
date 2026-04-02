@@ -52,7 +52,7 @@ Many communities, jurisdictions and cities are managing their data for these ord
 
     SEED is an [open source web based platform](https://github.com/SEED-platform/seed) that can be deployed as is, or it can be used as the base for additional functionality. SEED provides both a browser-based interface for users to upload and manage their building data, as well as a full set of APIs that app developers can use to access these same data management functions.
 
-    SEED is funded by the U.S. Department of Energy and supported by the National Renewable Energy Laboratory (NREL), Lawrence Berkeley National Laboratory (LBNL), and the third party software contributors shown below.
+    SEED is funded by the U.S. Department of Energy and supported by the National Laboratory of the Rockies (NLR), Lawrence Berkeley National Laboratory (LBNL), and the third party software contributors shown below.
 
     ![alt_text](images/ThirdPartyContributors.png "Third Party Contributors"){:.seed-img}
 
