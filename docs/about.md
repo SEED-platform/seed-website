@@ -34,7 +34,7 @@ DOE and the National Laboratories agree to provide:
 
 #### Data Privacy Policy
 
-You, and your company or organization (the PROVIDER) have agreed to upload and provide PROPRIETARY DATA, including energy efficiency data, building data, and building energy performance data to the Standard Energy Efficiency Data (SEED™) Platform database that the U.S. Department of Energy (the Government) and Alliance for Sustainable Energy, LLC (“Alliance”) the manager and operator of the National Renewable Energy Laboratory (“NREL”) (the RECIPIENT) have created and provide for use for registered users.
+You, and your company or organization (the PROVIDER) have agreed to upload and provide PROPRIETARY DATA, including energy efficiency data, building data, and building energy performance data to the Standard Energy Efficiency Data (SEED™) Platform database that the U.S. Department of Energy (the Government) and Alliance for Energy Innovation, LLC (“Alliance”) the manager and operator of the National Laboratory of the Rockies (“NLR”) (the RECIPIENT) have created and provide for use for registered users.
 
 PROPRIETARY DATA is defined as follows:
 
@@ -44,7 +44,7 @@ PROPRIETARY DATA is defined as follows:
 
 (c) information that is not customarily released to the public; and/or
 
-(d) information whose disclosure to the public could result in financial harm to the PROVIDER, to owners of buildings whose information is contained in the  PROPRIETARY DATA, or to other stakeholders.
+(d) information whose disclosure to the public could result in financial harm to the PROVIDER, to owners of buildings whose information is contained in the PROPRIETARY DATA, or to other stakeholders.
 
 In order to upload PROPRIETARY DATA, you will be required to create an account and provide the RECIPIENT with a username, password, and email address. You are solely responsible for maintaining the confidentiality of the password and username you provided during the registration process and are fully responsible for all activities that occur under your password or account.
 
@@ -58,11 +58,11 @@ By providing the PROPRIETARY DATA, PROVIDER agrees to the following:
 
 - RECIPIENT may use, view, or duplicate the PROPRIETARY DATA and may share the PROPRIETARY DATA with support services contractors within the scope of their contracts. RECIPIENT may share the PROPRIETARY DATA to other DOE National Laboratories participating in the SEED Platform project, under the restriction that (i) the PROPRIETARY DATA be retained in confidence and not be further disclosed, (ii) the PROPRIETARY DATA will be destroyed when the DOE National Laboratory’s participation in the SEED Platform has ended.
 
-Please [contact us](contact.md) if you have any questions about this privacy policy. Any data uploaded to National Lab hosted SEED instances or shared with NREL/LBNL is proprietary and not to be shared.
+Please [contact us](contact.md) if you have any questions about this privacy policy. Any data uploaded to National Lab hosted SEED instances or shared with NLR/LBNL is proprietary and not to be shared.
 
 #### Data Security
 
-The National Renewable Energy Laboratory and Lawrence Berkeley National Laboratory (LBNL) have implemented a number of software and security controls to ensure the security of data stored in the SEED Platform&trade; software.
+The National Laboratory of the Rockies (NLR) and Lawrence Berkeley National Laboratory (LBNL) have implemented a number of software and security controls to ensure the security of data stored in the SEED Platform&trade; software.
 
 SEED Platform&trade; is secured behind the Amazon Web Services (AWS) firewall, and other security measures are in place as well. For more information about specific security protocols, please contact us using the information found on the [contact page](contact.md).
 
@@ -80,10 +80,10 @@ There are three hosting options:
 2. Self-hosting on the cloud (e.g. Amazon, Google Compute)
 3. Paying a hosting provider. Several companies offer SEED as a hosted solution:
 
-    - [ClearlyEnergy](https://www.clearlyenergy.com/)
-    - [Earth Advantage](https://www.earthadvantage.org/creating-change/home-energy-score.html)
+    - [ClearlyEnergy](https://clearlyenergy.com/)
+    - [Earth Advantage](https://www.earthadvantage.org/)
     - [Open](https://opentech.eco/)
-    - [PSD Consulting](http://psdconsulting.com)
+    - [PSD Consulting](https://psdconsulting.com/)
 
 4. DOE/National Lab-Hosted Instance
 

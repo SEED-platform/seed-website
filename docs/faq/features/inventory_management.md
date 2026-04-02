@@ -6,7 +6,7 @@ Different inventory management and analysis features in SEED are based on the re
 
 <!-- ![! Mapping Diagram](../../images/mapping_diagram.png) -->
 <a href="../../../images/mapping_diagram.png" target="_blank"><img src="../../../images/mapping_diagram.png"></a>
-<center><span style="font-size:0.85em;"> click to expand image</span></center>
+<div style="flex: 100%; text-align: center;"><span style="font-size:0.85em;"> click to expand image</span></div>
 
 * **Mapping** refers to the process of mapping newly imported data fields to the known database column names in order to create a record.
 

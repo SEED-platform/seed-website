@@ -7,7 +7,7 @@ To get started with SEED, you need to log in with you account credentials, and t
 
     The first thing to do is to log in to SEED with your user email and password. These are assigned to you by the SEED administrator.
 
-    To see the NREL Data Terms for SEED, click the "View/Hide Terms" link
+    To see the NLR Data Terms for SEED, click the "View/Hide Terms" link
 
     ![](images/login_withTerms.png)
 
