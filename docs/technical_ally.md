@@ -39,7 +39,7 @@ Please see the [SEED Platform Contribution Policy](https://github.com/SEED-platf
   <div class="column">
     <div style="flex: 100%; text-align: center;">
       <img src="../images/ClearlyEnergy.png" /><br/><br/>
-      <img src="../images/logo_nlr_c.png" /><br/><br/>
+      <img src="../images/nlr-logo-horizontal.svg" style="width:70%" /><br/><br/>
       <img src="../images/psd-logo1.png" /><br/>
     </div>
   </div>
