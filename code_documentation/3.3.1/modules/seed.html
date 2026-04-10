@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEED Package &mdash; SEED Platform 3.3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+
+
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9ac01507"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Management Package" href="seed.management.html" />
+    <link rel="prev" title="Public Package" href="seed.public.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+          <a href="../index.html" class="icon icon-home">
+            SEED Platform
+          </a>
+              <div class="version">
+                3.3.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matching.html">Matching</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.cleansing.html">Data Quality Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data.html">Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data_importer.html">Data Importer Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.landing.html">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.html">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.mappings.html">seed.lib.mappings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.merging.html">seed.lib.merging package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.managers.html">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.public.html">Public Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SEED Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.management.html">Management Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.templatetags.html">Templatetags Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#inheritance">Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.decorators">Decorators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#seed.decorators.DRFEndpointMixin"><code class="docutils literal notranslate"><span class="pre">DRFEndpointMixin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.decorators.ajax_request"><code class="docutils literal notranslate"><span class="pre">ajax_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.decorators.decorator_to_mixin"><code class="docutils literal notranslate"><span class="pre">decorator_to_mixin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.decorators.get_prog_key"><code class="docutils literal notranslate"><span class="pre">get_prog_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.decorators.lock_and_track"><code class="docutils literal notranslate"><span class="pre">lock_and_track()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.decorators.require_organization_id"><code class="docutils literal notranslate"><span class="pre">require_organization_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.decorators.require_organization_membership"><code class="docutils literal notranslate"><span class="pre">require_organization_membership()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.search">Search</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.build_shared_buildings_orgs"><code class="docutils literal notranslate"><span class="pre">build_shared_buildings_orgs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.create_inventory_queryset"><code class="docutils literal notranslate"><span class="pre">create_inventory_queryset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.get_inventory_fieldnames"><code class="docutils literal notranslate"><span class="pre">get_inventory_fieldnames()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.get_orgs_w_public_fields"><code class="docutils literal notranslate"><span class="pre">get_orgs_w_public_fields()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.inventory_search_filter_sort"><code class="docutils literal notranslate"><span class="pre">inventory_search_filter_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.parse_body"><code class="docutils literal notranslate"><span class="pre">parse_body()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.process_search_params"><code class="docutils literal notranslate"><span class="pre">process_search_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.search_inventory"><code class="docutils literal notranslate"><span class="pre">search_inventory()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.search_properties"><code class="docutils literal notranslate"><span class="pre">search_properties()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.search.search_taxlots"><code class="docutils literal notranslate"><span class="pre">search_taxlots()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.tasks">Tasks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#seed.tasks.invite_new_user_to_seed"><code class="docutils literal notranslate"><span class="pre">invite_new_user_to_seed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seed.tasks.send_salesforce_error_log"><code class="docutils literal notranslate"><span class="pre">send_salesforce_error_log()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.token_generators">Token Generator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#seed.token_generators.SignupTokenGenerator"><code class="docutils literal notranslate"><span class="pre">SignupTokenGenerator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.utils">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.serializers.html">Serializers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.urls.html">URLs Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.utils.html">Utilities Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.views.html">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../modules.html">Modules</a></li>
+      <li class="breadcrumb-item active">SEED Package</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="seed-package">
+<h1>SEED Package<a class="headerlink" href="#seed-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="seed.features.html">Features Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.management.html">Management Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.management.html#subpackages">Subpackages</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.management.html#module-seed.management">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.mappings.html">Mapping Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html#seed-mappings-mapper-module">seed.mappings.mapper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html#seed-mappings-seed-mappings-module">seed.mappings.seed_mappings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.templatetags.html">Templatetags Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.templatetags.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.templatetags.html#module-seed.templatetags.breadcrumbs">Breadcrumbs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.BreadcrumbNode"><code class="docutils literal notranslate"><span class="pre">BreadcrumbNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.BreadcrumbNode.render"><code class="docutils literal notranslate"><span class="pre">BreadcrumbNode.render()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.UrlBreadcrumbNode"><code class="docutils literal notranslate"><span class="pre">UrlBreadcrumbNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.UrlBreadcrumbNode.render"><code class="docutils literal notranslate"><span class="pre">UrlBreadcrumbNode.render()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.breadcrumb"><code class="docutils literal notranslate"><span class="pre">breadcrumb()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.breadcrumb_root"><code class="docutils literal notranslate"><span class="pre">breadcrumb_root()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.breadcrumb_url"><code class="docutils literal notranslate"><span class="pre">breadcrumb_url()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.breadcrumb_url_root"><code class="docutils literal notranslate"><span class="pre">breadcrumb_url_root()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.create_crumb"><code class="docutils literal notranslate"><span class="pre">create_crumb()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.templatetags.html#seed.templatetags.breadcrumbs.create_crumb_first"><code class="docutils literal notranslate"><span class="pre">create_crumb_first()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.test_helpers.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.test_helpers.factory.html">Test Helper Factor Package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.factory.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="seed.test_helpers.factory.lib.html">Test Helper Factory Lib Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.lib.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.lib.html#chomsky">Chomsky</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.factory.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.factory.html#helpers">Helpers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.test_helpers.html#module-seed.test_helpers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seed.tests.html">Tests Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="seed.test_helpers.factory.html">Test Helper Factor Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="seed.test_helpers.factory.lib.html">Test Helper Factory Lib Package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="seed.test_helpers.factory.lib.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="seed.test_helpers.factory.lib.html#chomsky">Chomsky</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="seed.test_helpers.factory.html#helpers">Helpers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html#module-seed.test_helpers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.functional.html">Tests (Functional) Package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.functional.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.functional.html#base">Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.functional.html#page">Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.functional.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.test_admin_views">Admin Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.setUp"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.test_add_org"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.test_add_org()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.test_add_org_dupe"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.test_add_org_dupe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.test_add_owner_existing_org_to_non_root"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.test_add_owner_existing_org_to_non_root()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.test_add_user_existing_org"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.test_add_user_existing_org()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.test_add_user_new_org"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.test_add_user_new_org()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.test_add_user_no_org"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.test_add_user_no_org()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.test_signup_process"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.test_signup_process()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_admin_views.AdminViewsTest.test_signup_process_force_lowercase_email"><code class="docutils literal notranslate"><span class="pre">AdminViewsTest.test_signup_process_force_lowercase_email()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.test_decorators">Decorators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests"><code class="docutils literal notranslate"><span class="pre">ClassDecoratorTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_dict"><code class="docutils literal notranslate"><span class="pre">ClassDecoratorTests.test_ajax_request_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_dict_status_error"><code class="docutils literal notranslate"><span class="pre">ClassDecoratorTests.test_ajax_request_dict_status_error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_dict_status_false"><code class="docutils literal notranslate"><span class="pre">ClassDecoratorTests.test_ajax_request_dict_status_false()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_format_type"><code class="docutils literal notranslate"><span class="pre">ClassDecoratorTests.test_ajax_request_format_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_no_org_id"><code class="docutils literal notranslate"><span class="pre">ClassDecoratorTests.test_require_organization_id_no_org_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_org_id"><code class="docutils literal notranslate"><span class="pre">ClassDecoratorTests.test_require_organization_id_org_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_org_id_not_int"><code class="docutils literal notranslate"><span class="pre">ClassDecoratorTests.test_require_organization_id_org_id_not_int()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.RequireOrganizationIDTests"><code class="docutils literal notranslate"><span class="pre">RequireOrganizationIDTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.RequireOrganizationIDTests.setUp"><code class="docutils literal notranslate"><span class="pre">RequireOrganizationIDTests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_fail_no_key"><code class="docutils literal notranslate"><span class="pre">RequireOrganizationIDTests.test_require_organization_id_fail_no_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_fail_not_numeric"><code class="docutils literal notranslate"><span class="pre">RequireOrganizationIDTests.test_require_organization_id_fail_not_numeric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_success_integer"><code class="docutils literal notranslate"><span class="pre">RequireOrganizationIDTests.test_require_organization_id_success_integer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_success_string"><code class="docutils literal notranslate"><span class="pre">RequireOrganizationIDTests.test_require_organization_id_success_string()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators"><code class="docutils literal notranslate"><span class="pre">TestDecorators</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.locked"><code class="docutils literal notranslate"><span class="pre">TestDecorators.locked</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.pk"><code class="docutils literal notranslate"><span class="pre">TestDecorators.pk</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.setUp"><code class="docutils literal notranslate"><span class="pre">TestDecorators.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.test_get_prog_key"><code class="docutils literal notranslate"><span class="pre">TestDecorators.test_get_prog_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.test_increment_cache"><code class="docutils literal notranslate"><span class="pre">TestDecorators.test_increment_cache()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.test_locking"><code class="docutils literal notranslate"><span class="pre">TestDecorators.test_locking()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.test_locking_w_exception"><code class="docutils literal notranslate"><span class="pre">TestDecorators.test_locking_w_exception()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.test_progress"><code class="docutils literal notranslate"><span class="pre">TestDecorators.test_progress()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestDecorators.unlocked"><code class="docutils literal notranslate"><span class="pre">TestDecorators.unlocked</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_decorators.TestError"><code class="docutils literal notranslate"><span class="pre">TestError</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#exporters">Exporters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.test_tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_tasks.TestTasks"><code class="docutils literal notranslate"><span class="pre">TestTasks</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_tasks.TestTasks.setUp"><code class="docutils literal notranslate"><span class="pre">TestTasks.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_tasks.TestTasks.test_delete_organization"><code class="docutils literal notranslate"><span class="pre">TestTasks.test_delete_organization()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_tasks.TestTasks.test_rehash_query_or_structure"><code class="docutils literal notranslate"><span class="pre">TestTasks.test_rehash_query_or_structure()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.test_views">Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.DatasetPermissionsTests"><code class="docutils literal notranslate"><span class="pre">DatasetPermissionsTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.DatasetPermissionsTests.setUp"><code class="docutils literal notranslate"><span class="pre">DatasetPermissionsTests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.DatasetPermissionsTests.test_dataset_count"><code class="docutils literal notranslate"><span class="pre">DatasetPermissionsTests.test_dataset_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.DatasetPermissionsTests.test_dataset_create"><code class="docutils literal notranslate"><span class="pre">DatasetPermissionsTests.test_dataset_create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.DatasetPermissionsTests.test_dataset_destroy"><code class="docutils literal notranslate"><span class="pre">DatasetPermissionsTests.test_dataset_destroy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.DatasetPermissionsTests.test_dataset_list"><code class="docutils literal notranslate"><span class="pre">DatasetPermissionsTests.test_dataset_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.DatasetPermissionsTests.test_dataset_retrieve"><code class="docutils literal notranslate"><span class="pre">DatasetPermissionsTests.test_dataset_retrieve()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.DatasetPermissionsTests.test_dataset_update"><code class="docutils literal notranslate"><span class="pre">DatasetPermissionsTests.test_dataset_update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.GetDatasetsViewsTests"><code class="docutils literal notranslate"><span class="pre">GetDatasetsViewsTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.GetDatasetsViewsTests.setUp"><code class="docutils literal notranslate"><span class="pre">GetDatasetsViewsTests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.GetDatasetsViewsTests.test_delete_dataset"><code class="docutils literal notranslate"><span class="pre">GetDatasetsViewsTests.test_delete_dataset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.GetDatasetsViewsTests.test_get_dataset"><code class="docutils literal notranslate"><span class="pre">GetDatasetsViewsTests.test_get_dataset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets"><code class="docutils literal notranslate"><span class="pre">GetDatasetsViewsTests.test_get_datasets()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets_count"><code class="docutils literal notranslate"><span class="pre">GetDatasetsViewsTests.test_get_datasets_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets_count_invalid"><code class="docutils literal notranslate"><span class="pre">GetDatasetsViewsTests.test_get_datasets_count_invalid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.GetDatasetsViewsTests.test_update_dataset"><code class="docutils literal notranslate"><span class="pre">GetDatasetsViewsTests.test_update_dataset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.ImportFileViewsTests"><code class="docutils literal notranslate"><span class="pre">ImportFileViewsTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.ImportFileViewsTests.setUp"><code class="docutils literal notranslate"><span class="pre">ImportFileViewsTests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.ImportFileViewsTests.test_delete_file"><code class="docutils literal notranslate"><span class="pre">ImportFileViewsTests.test_delete_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.ImportFileViewsTests.test_get_import_file"><code class="docutils literal notranslate"><span class="pre">ImportFileViewsTests.test_get_import_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.ImportFileViewsTests.test_get_matching_and_geocoding_results"><code class="docutils literal notranslate"><span class="pre">ImportFileViewsTests.test_get_matching_and_geocoding_results()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.setUp"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_cycles"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_cycles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_cycle_id"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_cycle_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_empty_page"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_empty_page()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_page_not_an_integer"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_page_not_an_integer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_pint_fields"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_pint_fields()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_profile_id"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_profile_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_property_extra_data"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_property_extra_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_select_all"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_select_all()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_taxlot_extra_data"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_taxlot_extra_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_with_taxlots"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_with_taxlots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_with_taxlots_with_footprints"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_with_taxlots_with_footprints()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_properties_wrong_query_params"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_properties_wrong_query_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_property"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_property()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_property_columns"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_property_columns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_property_multiple_taxlots"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_property_multiple_taxlots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlot"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlot_columns"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlot_columns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlots"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlots_empty_page"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlots_empty_page()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlots_extra_data"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlots_extra_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlots_multiple_taxlots"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlots_multiple_taxlots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlots_no_cycle_id"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlots_no_cycle_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlots_page_not_an_integer"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlots_page_not_an_integer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_get_taxlots_profile_id"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_get_taxlots_profile_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_postoffice"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_postoffice()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.InventoryViewTests.test_update_pint_fields_with_modified_display_settings"><code class="docutils literal notranslate"><span class="pre">InventoryViewTests.test_update_pint_fields_with_modified_display_settings()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.MainViewTests"><code class="docutils literal notranslate"><span class="pre">MainViewTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.MainViewTests.setUp"><code class="docutils literal notranslate"><span class="pre">MainViewTests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.MainViewTests.test_home"><code class="docutils literal notranslate"><span class="pre">MainViewTests.test_home()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews"><code class="docutils literal notranslate"><span class="pre">TestMCMViews</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.assert_expected_mappings"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.assert_expected_mappings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.expected_mappings"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.expected_mappings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.raw_columns_expected"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.raw_columns_expected</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.setUp"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.test_create_dataset"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.test_create_dataset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.test_get_column_mapping_suggestions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions_pm_file"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.test_get_column_mapping_suggestions_pm_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions_with_columns"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.test_get_column_mapping_suggestions_with_columns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.test_get_raw_column_names"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.test_get_raw_column_names()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.test_progress"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.test_progress()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.test_save_column_mappings"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.test_save_column_mappings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.test_views.TestMCMViews.test_save_column_mappings_idempotent"><code class="docutils literal notranslate"><span class="pre">TestMCMViews.test_save_column_mappings_idempotent()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#tests">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html#module-seed.tests.util">Utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.util.AccessLevelBaseTestCase"><code class="docutils literal notranslate"><span class="pre">AccessLevelBaseTestCase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.AccessLevelBaseTestCase.login_as_child_member"><code class="docutils literal notranslate"><span class="pre">AccessLevelBaseTestCase.login_as_child_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.AccessLevelBaseTestCase.login_as_root_member"><code class="docutils literal notranslate"><span class="pre">AccessLevelBaseTestCase.login_as_root_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.AccessLevelBaseTestCase.login_as_root_owner"><code class="docutils literal notranslate"><span class="pre">AccessLevelBaseTestCase.login_as_root_owner()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.AccessLevelBaseTestCase.setUp"><code class="docutils literal notranslate"><span class="pre">AccessLevelBaseTestCase.setUp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.util.AssertDictSubsetMixin"><code class="docutils literal notranslate"><span class="pre">AssertDictSubsetMixin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.AssertDictSubsetMixin.assertDictContainsSubset"><code class="docutils literal notranslate"><span class="pre">AssertDictSubsetMixin.assertDictContainsSubset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.util.DataMappingBaseTestCase"><code class="docutils literal notranslate"><span class="pre">DataMappingBaseTestCase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.DataMappingBaseTestCase.create_import_file"><code class="docutils literal notranslate"><span class="pre">DataMappingBaseTestCase.create_import_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.DataMappingBaseTestCase.set_up"><code class="docutils literal notranslate"><span class="pre">DataMappingBaseTestCase.set_up()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.util.DeleteModelsTestCase"><code class="docutils literal notranslate"><span class="pre">DeleteModelsTestCase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.DeleteModelsTestCase.setUp"><code class="docutils literal notranslate"><span class="pre">DeleteModelsTestCase.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.DeleteModelsTestCase.tearDown"><code class="docutils literal notranslate"><span class="pre">DeleteModelsTestCase.tearDown()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeClient"><code class="docutils literal notranslate"><span class="pre">FakeClient</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeClient.get"><code class="docutils literal notranslate"><span class="pre">FakeClient.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeClient.post"><code class="docutils literal notranslate"><span class="pre">FakeClient.post()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeRequest"><code class="docutils literal notranslate"><span class="pre">FakeRequest</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeRequest.GET"><code class="docutils literal notranslate"><span class="pre">FakeRequest.GET</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeRequest.META"><code class="docutils literal notranslate"><span class="pre">FakeRequest.META</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeRequest.POST"><code class="docutils literal notranslate"><span class="pre">FakeRequest.POST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeRequest.body"><code class="docutils literal notranslate"><span class="pre">FakeRequest.body</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.tests.html#seed.tests.util.FakeRequest.path"><code class="docutils literal notranslate"><span class="pre">FakeRequest.path</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="inheritance">
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Link to this heading"></a></h2>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-seed.decorators">
+<span id="decorators"></span><h2>Decorators<a class="headerlink" href="#module-seed.decorators" title="Link to this heading"></a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/LICENSE.md">https://github.com/SEED-platform/seed/blob/main/LICENSE.md</a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.decorators.DRFEndpointMixin">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">DRFEndpointMixin</span></span><a class="headerlink" href="#seed.decorators.DRFEndpointMixin" title="Link to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Mixin</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.ajax_request">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">ajax_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.ajax_request" title="Link to this definition"></a></dt>
+<dd><p>Copied from django-annoying, with a small modification. Now we also check for ‘status’ or
+‘success’ keys and slash return correct status codes</p>
+<p>If view returned serializable dict, returns response in a format requested
+by HTTP_ACCEPT header. Defaults to JSON if none requested or match.</p>
+<p>Currently supports JSON or YAML (if installed), but can easily be extended.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@ajax_request</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">news</span> <span class="o">=</span> <span class="n">News</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">news_titles</span> <span class="o">=</span> <span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">title</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">news</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;news_titles&quot;</span><span class="p">:</span> <span class="n">news_titles</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.decorator_to_mixin">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">decorator_to_mixin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decorator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.decorator_to_mixin" title="Link to this definition"></a></dt>
+<dd><p>Converts a decorator written for a function view into a mixin for a class-based view.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LoginRequiredMixin</span> <span class="o">=</span> <span class="n">decorator_to_mixin</span><span class="p">(</span><span class="n">login_required</span><span class="p">)</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyView</span><span class="p">(</span><span class="n">LoginRequiredMixin</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SomeView</span><span class="p">(</span><span class="n">decorator_to_mixin</span><span class="p">(</span><span class="n">some_decorator</span><span class="p">),</span> <span class="n">decorator_to_mixin</span><span class="p">(</span><span class="n">something_else</span><span class="p">)):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.get_prog_key">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">get_prog_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">import_file_pk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.get_prog_key" title="Link to this definition"></a></dt>
+<dd><p>Return the progress key for the cache</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.lock_and_track">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">lock_and_track</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.lock_and_track" title="Link to this definition"></a></dt>
+<dd><p>Decorator to lock tasks to single executor and provide progress url.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.require_organization_id">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">require_organization_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.require_organization_id" title="Link to this definition"></a></dt>
+<dd><p>Validate that organization_id is in the GET params and it’s an int.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.decorators.require_organization_membership">
+<span class="sig-prename descclassname"><span class="pre">seed.decorators.</span></span><span class="sig-name descname"><span class="pre">require_organization_membership</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.decorators.require_organization_membership" title="Link to this definition"></a></dt>
+<dd><p>Validate that the organization_id passed in GET is valid for request user.</p>
+</dd></dl>
+
+</section>
+<section id="factory">
+<h2>Factory<a class="headerlink" href="#factory" title="Link to this heading"></a></h2>
+</section>
+<section id="module-seed.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-seed.models" title="Link to this heading"></a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/LICENSE.md">https://github.com/SEED-platform/seed/blob/main/LICENSE.md</a></p>
+</section>
+<section id="module-seed.search">
+<span id="search"></span><h2>Search<a class="headerlink" href="#module-seed.search" title="Link to this heading"></a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/LICENSE.md">https://github.com/SEED-platform/seed/blob/main/LICENSE.md</a></p>
+<p>Search methods pertaining to buildings.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.build_shared_buildings_orgs">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">build_shared_buildings_orgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orgs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.build_shared_buildings_orgs" title="Link to this definition"></a></dt>
+<dd><p>returns a list of sibling and parent orgs</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.create_inventory_queryset">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">create_inventory_queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orgs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_orgs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.create_inventory_queryset" title="Link to this definition"></a></dt>
+<dd><p>creates a queryset of properties or taxlots within orgs.
+If <code class="docutils literal notranslate"><span class="pre">other_orgs</span></code>, properties/taxlots in both orgs and other_orgs
+will be represented in the queryset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inventory_type</strong> – property or taxlot.</p></li>
+<li><p><strong>orgs</strong> – queryset of Organization inst.</p></li>
+<li><p><strong>exclude</strong> – django query exclude dict.</p></li>
+<li><p><strong>order_by</strong> – django query order_by str.</p></li>
+<li><p><strong>other_orgs</strong> – list of other orgs to <code class="docutils literal notranslate"><span class="pre">or</span></code> the query</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.get_inventory_fieldnames">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">get_inventory_fieldnames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.get_inventory_fieldnames" title="Link to this definition"></a></dt>
+<dd><p>returns a list of field names that will be searched against</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.get_orgs_w_public_fields">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">get_orgs_w_public_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.get_orgs_w_public_fields" title="Link to this definition"></a></dt>
+<dd><p>returns a list of orgs that have publicly shared fields</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.inventory_search_filter_sort">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">inventory_search_filter_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.inventory_search_filter_sort" title="Link to this definition"></a></dt>
+<dd><p>Given a parsed set of params, perform the search, filter, and sort for
+Properties or Taxlots</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.parse_body">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">parse_body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.parse_body" title="Link to this definition"></a></dt>
+<dd><p>parses the request body for search params, q, etc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – django wsgi request object</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;exclude&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">exclude</span> <span class="nb">dict</span> <span class="k">for</span> <span class="n">django</span> <span class="n">queryset</span>
+    <span class="s1">&#39;order_by&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">query</span> <span class="n">order_by</span><span class="p">,</span> <span class="n">defaults</span> <span class="n">to</span> <span class="s1">&#39;tax_lot_id&#39;</span>
+    <span class="s1">&#39;sort_reverse&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">ASC</span><span class="p">,</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">DSC</span>
+    <span class="s1">&#39;page&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">pagination</span> <span class="n">page</span>
+    <span class="s1">&#39;number_per_page&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number</span> <span class="n">per</span> <span class="n">pagination</span> <span class="n">page</span>
+    <span class="s1">&#39;show_shared_buildings&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">whether</span> <span class="n">to</span> <span class="n">search</span> <span class="n">across</span> <span class="nb">all</span> <span class="n">user</span><span class="s1">&#39;s orgs</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="k">global</span> <span class="n">search</span> <span class="n">param</span>
+    <span class="s1">&#39;other_search_params&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">filter</span> <span class="n">params</span>
+    <span class="s1">&#39;project_id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">project</span> <span class="nb">id</span> <span class="k">if</span> <span class="n">exists</span> <span class="ow">in</span> <span class="n">body</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.process_search_params">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">process_search_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_api_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.process_search_params" title="Link to this definition"></a></dt>
+<dd><p>Given a python representation of a search query, process it into the
+internal format that is used for searching, filtering, sorting, and pagination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> – a python object representing the search query</p></li>
+<li><p><strong>user</strong> – the user this search is for</p></li>
+<li><p><strong>is_api_request</strong> – bool, boolean whether this search is being done as an api request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;exclude&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">exclude</span> <span class="nb">dict</span> <span class="k">for</span> <span class="n">django</span> <span class="n">queryset</span>
+    <span class="s1">&#39;order_by&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">query</span> <span class="n">order_by</span><span class="p">,</span> <span class="n">defaults</span> <span class="n">to</span> <span class="s1">&#39;tax_lot_id&#39;</span>
+    <span class="s1">&#39;sort_reverse&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">ASC</span><span class="p">,</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">DSC</span>
+    <span class="s1">&#39;page&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">pagination</span> <span class="n">page</span>
+    <span class="s1">&#39;number_per_page&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number</span> <span class="n">per</span> <span class="n">pagination</span> <span class="n">page</span>
+    <span class="s1">&#39;show_shared_buildings&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">whether</span> <span class="n">to</span> <span class="n">search</span> <span class="n">across</span> <span class="nb">all</span> <span class="n">user</span><span class="s1">&#39;s orgs</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="k">global</span> <span class="n">search</span> <span class="n">param</span>
+    <span class="s1">&#39;other_search_params&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">filter</span> <span class="n">params</span>
+    <span class="s1">&#39;project_id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">project</span> <span class="nb">id</span> <span class="k">if</span> <span class="n">exists</span> <span class="ow">in</span> <span class="n">body</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.search_inventory">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">search_inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.search_inventory" title="Link to this definition"></a></dt>
+<dd><p>returns a queryset for matching Taxlot(View)/Property(View)
+:param str or unicode q: search string
+:param list fieldnames: list of  model fieldnames
+:param queryset: optional queryset to filter from
+:returns: :queryset: queryset of matching buildings</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.search_properties">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">search_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.search_properties" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.search.search_taxlots">
+<span class="sig-prename descclassname"><span class="pre">seed.search.</span></span><span class="sig-name descname"><span class="pre">search_taxlots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.search.search_taxlots" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-seed.tasks">
+<span id="tasks"></span><h2>Tasks<a class="headerlink" href="#module-seed.tasks" title="Link to this heading"></a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/LICENSE.md">https://github.com/SEED-platform/seed/blob/main/LICENSE.md</a></p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.tasks.invite_new_user_to_seed">
+<span class="sig-prename descclassname"><span class="pre">seed.tasks.</span></span><span class="sig-name descname"><span class="pre">invite_new_user_to_seed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_pk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tasks.invite_new_user_to_seed" title="Link to this definition"></a></dt>
+<dd><p>Send invitation email to newly created user from the landing page.
+NOTE: this function is only used on the landing page because the user has not been assigned an organization
+domain – The domain name of the running seed instance
+email_address – The address to send the invitation to
+token – generated by Django’s default_token_generator
+user_pk – primary key for this user record
+first_name – First name of the new user
+new_user</p>
+<p>Returns: nothing</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.tasks.send_salesforce_error_log">
+<span class="sig-prename descclassname"><span class="pre">seed.tasks.</span></span><span class="sig-name descname"><span class="pre">send_salesforce_error_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_pk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tasks.send_salesforce_error_log" title="Link to this definition"></a></dt>
+<dd><p>send salesforce error log to logging email when errors are encountered during scheduled sync</p>
+</dd></dl>
+
+</section>
+<section id="module-seed.token_generators">
+<span id="token-generator"></span><h2>Token Generator<a class="headerlink" href="#module-seed.token_generators" title="Link to this heading"></a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/LICENSE.md">https://github.com/SEED-platform/seed/blob/main/LICENSE.md</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Aleck Landgraf</p>
+</dd>
+</dl>
+<p>token_generator.py - taken from django core master branch</p>
+<p>needed a token check that would not expire after three days for sending a
+signup email</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.token_generators.SignupTokenGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">seed.token_generators.</span></span><span class="sig-name descname"><span class="pre">SignupTokenGenerator</span></span><a class="headerlink" href="#seed.token_generators.SignupTokenGenerator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Strategy object used to generate and check tokens for the password
+reset mechanism.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.token_generators.SignupTokenGenerator.check_token">
+<span class="sig-name descname"><span class="pre">check_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_expires</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.token_generators.SignupTokenGenerator.check_token" title="Link to this definition"></a></dt>
+<dd><p>Check that a password reset token is correct for a given user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.token_generators.SignupTokenGenerator.make_token">
+<span class="sig-name descname"><span class="pre">make_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.token_generators.SignupTokenGenerator.make_token" title="Link to this definition"></a></dt>
+<dd><p>Returns a token that can be used once to do a password reset
+for the given user.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-seed.utils">
+<span id="utils"></span><h2>Utils<a class="headerlink" href="#module-seed.utils" title="Link to this heading"></a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/LICENSE.md">https://github.com/SEED-platform/seed/blob/main/LICENSE.md</a></p>
+</section>
+<section id="module-seed.views">
+<span id="views"></span><h2>Views<a class="headerlink" href="#module-seed.views" title="Link to this heading"></a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/LICENSE.md">https://github.com/SEED-platform/seed/blob/main/LICENSE.md</a></p>
+</section>
+<section id="module-seed">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seed" title="Link to this heading"></a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/LICENSE.md">https://github.com/SEED-platform/seed/blob/main/LICENSE.md</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seed.public.html" class="btn btn-neutral float-left" title="Public Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seed.management.html" class="btn btn-neutral float-right" title="Management Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, 2025, Alliance for Sustainable Energy, LLC, and other contributors..</p>
+  </div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

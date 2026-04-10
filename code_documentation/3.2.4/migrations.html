@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Migrations &mdash; SEED Platform 3.2.4 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+
+
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=b31cc1e0"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Translating SEED" href="translation.html" />
+    <link rel="prev" title="Developer Resources" href="developer_resources.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+          <a href="index.html" class="icon icon-home">
+            SEED Platform
+          </a>
+              <div class="version">
+                3.2.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matching.html">Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developer_resources.html">Developer Resources</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Migrations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#version-develop">Version Develop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-3-2-4">Version 3.2.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-3-2-3">Version 3.2.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-3-2-2">Version 3.2.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-3-2-1">Version 3.2.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-3-2-0">Version 3.2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-3-1-0">Version 3.1.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-3-0-0">Version 3.0.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-3-0-0-beta-0">Version 3.0.0-beta.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-22-0">Version 2.22.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-21-0">Version 2.21.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-20-1">Version 2.20.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-20-0">Version 2.20.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-19-0">Version 2.19.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-18-1">Version 2.18.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-18-0">Version 2.18.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-17-4">Version 2.17.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-17-3">Version 2.17.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-17-2">Version 2.17.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-17-1">Version 2.17.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-17-0">Version 2.17.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-16-0">Version 2.16.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-15-2">Version 2.15.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-15-1">Version 2.15.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-15-0">Version 2.15.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-14-0">Version 2.14.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-13-0">Version 2.13.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-12-0-2-12-4">Version 2.12.0 - 2.12.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-11-0">Version 2.11.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-10-0">Version 2.10.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-7-3-to-2-9-0">Version 2.7.3 to 2.9.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-7-2">Version 2.7.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-7-1">Version 2.7.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-7-0">Version 2.7.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-6-1">Version 2.6.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-6-0">Version 2.6.0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#docker-based-deployment">Docker-based Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#max-osx">Max OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-5-2">Version 2.5.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-5-1">Version 2.5.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-2-5-0">Version 2.5.0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Docker-based Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#development">Development</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="translation.html">Translating SEED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#general-notes">General Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#django-notes">Django Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#nginx-notes">NGINX Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#angularjs-integration-notes">AngularJS Integration Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#logging">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#bedes-compliance-and-managing-columns">BEDES Compliance and Managing Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#resetting-the-database">Resetting the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#restoring-a-database-dump">Restoring a Database Dump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#migrating-the-database">Migrating the Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#building-documentation">Building Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#contribution-instructions-best-practices">Contribution Instructions / Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="developer_resources.html#release-instructions">Release Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="developer_resources.html">Developer Resources</a></li>
+      <li class="breadcrumb-item active">Migrations</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="migrations">
+<h1>Migrations<a class="headerlink" href="#migrations" title="Link to this heading"></a></h1>
+<p>Django handles the migration of the database very well; however, there are various changes to SEED that may require some custom (manual) migrations. The migration documentation includes the required changes based on deployment and development for each release.</p>
+<section id="version-develop">
+<h2>Version Develop<a class="headerlink" href="#version-develop" title="Link to this heading"></a></h2>
+<p>In order to support Redis passwords, the configuration of the Redis/Celery settings changed a bit.
+You will need to add the following to your local_untracked.py configuration file. If you are using
+Docker then you will not need to do this.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CELERY_RESULT_BACKEND</span> <span class="o">=</span> <span class="n">CELERY_BROKER_URL</span>
+</pre></div>
+</div>
+<p>If you are using a password, then in your local_untracked.py configuration, add the password to
+the CELERY_BROKER_URL. Your final configuration should look like the following in your
+local_untracked.py file</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://:password@127.0.0.1:6379/1&#39;</span>
+<span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;django_redis.cache.RedisCache&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="n">CELERY_BROKER_URL</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">CELERY_RESULT_BACKEND</span> <span class="o">=</span> <span class="n">CELERY_BROKER_URL</span>
+<span class="n">CELERY_TASK_DEFAULT_QUEUE</span> <span class="o">=</span> <span class="s1">&#39;seed-local&#39;</span>
+<span class="n">CELERY_TASK_QUEUES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Queue</span><span class="p">(</span>
+        <span class="n">CELERY_TASK_DEFAULT_QUEUE</span><span class="p">,</span>
+        <span class="n">Exchange</span><span class="p">(</span><span class="n">CELERY_TASK_DEFAULT_QUEUE</span><span class="p">),</span>
+        <span class="n">routing_key</span><span class="o">=</span><span class="n">CELERY_TASK_DEFAULT_QUEUE</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="version-3-2-4">
+<h2>Version 3.2.4<a class="headerlink" href="#version-3-2-4" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-3-2-3">
+<h2>Version 3.2.3<a class="headerlink" href="#version-3-2-3" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-3-2-2">
+<h2>Version 3.2.2<a class="headerlink" href="#version-3-2-2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-3-2-1">
+<h2>Version 3.2.1<a class="headerlink" href="#version-3-2-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-3-2-0">
+<h2>Version 3.2.0<a class="headerlink" href="#version-3-2-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-3-1-0">
+<h2>Version 3.1.0<a class="headerlink" href="#version-3-1-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-3-0-0">
+<h2>Version 3.0.0<a class="headerlink" href="#version-3-0-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-3-0-0-beta-0">
+<h2>Version 3.0.0-beta.0<a class="headerlink" href="#version-3-0-0-beta-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-22-0">
+<h2>Version 2.22.0<a class="headerlink" href="#version-2-22-0" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+<li><dl>
+<dt>There is a Redis dependency update in this release that requires users and deployments to modify their settings’ <code class="docutils literal notranslate"><span class="pre">CACHES</span></code> config.</dt><dd><ol class="arabic simple">
+<li><p>Update your dependencies with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements/base.txt</span></code></p></li>
+<li><p>Update the CACHES BACKEND property to <code class="docutils literal notranslate"><span class="pre">django_redis.cache.RedisCache</span></code></p></li>
+<li><p>Update the CACHES LOCATION property to match the redis-py native URL notation for connection strings, including the redis protocol and database number. e.g. <code class="docutils literal notranslate"><span class="pre">redis://localhost:6379/1</span></code></p></li>
+</ol>
+<p>Since the CELERY_BROKER_URL setting must also be in the same format, it may be helpful to configure that setting first and then reference it in the caches LOCATION parameter.</p>
+</dd>
+</dl>
+</li>
+<li><p>See the <a class="reference external" href="https://github.com/SEED-platform/seed/pull/4376#issue-1972716522">PR for an example migration</a>.</p></li>
+</ul>
+</section>
+<section id="version-2-21-0">
+<h2>Version 2.21.0<a class="headerlink" href="#version-2-21-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-20-1">
+<h2>Version 2.20.1<a class="headerlink" href="#version-2-20-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-20-0">
+<h2>Version 2.20.0<a class="headerlink" href="#version-2-20-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+<li><p>There is a single long running migration related to importing census tract disadvantaged community data. This migration should take around 7 minutes to complete.</p></li>
+</ul>
+</section>
+<section id="version-2-19-0">
+<h2>Version 2.19.0<a class="headerlink" href="#version-2-19-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Run <cite>./manage.py migrate</cite>.</p></li>
+<li><dl class="simple">
+<dt>There is a new migration in this release that requires column names to be unique across <cite>organization</cite>, <cite>table_name</cite>, and <cite>is_extra_data</cite>. This migration will fail if there are duplicate column names. If you have duplicate column names, you will need to manually fix them in your database before running the migration. The following steps will help you identify and fix the duplicate column names:</dt><dd><ul>
+<li><p>Check the organization age to gauge the impact of the change. If it is a deprecated org, impact of the change will be low. Often this issue arose in older organizations when units were not part of the columns. The old mapping columns were not upserts with the units, so typically the columns impacted are the ones with units.</p></li>
+<li><p>Query the <cite>seed_column</cite> table for the organization and column name displayed on the screen (e.g., <cite>organization_id = 300 and column_name = ‘Source EUI (kBtu/ft2)’</cite>). If there is no <cite>table_name</cite> set, it is likely an import file column name and can easily be cleaned up without causing issues. In such cases, there will be two rows, and you want to keep the one with the <cite>units_pint</cite> column set.</p></li>
+<li><p>More complex columns may require deleting or updating the <cite>column_id</cite> in the <cite>seed_columnmapping_*</cite> tables. If there is a foreign key constraint with <cite>seed_columnmapping_*</cite>, take note of the ID you want to remove and the ID you want it to be replaced with (preferably keep the one with units_pint).</p></li>
+<li><dl class="simple">
+<dt>If the constraint is on <cite>seed_columnmapping_column_raw</cite>:</dt><dd><ul>
+<li><p>The field should be an import file column (i.e., no <cite>table_name</cite> item). Query for the old column in <cite>seed_columnmapping_column_raw</cite> (e.g., <cite>column_name = &lt;old_id&gt;</cite>).</p></li>
+<li><p>Replace the old ID with the new one. If it errors because it already exists, then the row can be deleted.</p></li>
+<li><p>Return to the <cite>seed_column</cite> table and remove the old ID.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>If the constraint is on <cite>seed_columnmapping_column_mapped</cite>:</dt><dd><ul>
+<li><p>The mapped column should have a <cite>table_name</cite> in the field. If not, it is likely an older organization.</p></li>
+<li><p>If there is no <cite>table_name</cite>, remove the row from the <cite>seed_columnmapping_column_mapped</cite> table.</p></li>
+<li><p>Return to the <cite>seed_column</cite> table and remove the old ID.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="version-2-18-1">
+<h2>Version 2.18.1<a class="headerlink" href="#version-2-18-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-18-0">
+<h2>Version 2.18.0<a class="headerlink" href="#version-2-18-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-17-4">
+<h2>Version 2.17.4<a class="headerlink" href="#version-2-17-4" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-17-3">
+<h2>Version 2.17.3<a class="headerlink" href="#version-2-17-3" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-17-2">
+<h2>Version 2.17.2<a class="headerlink" href="#version-2-17-2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-17-1">
+<h2>Version 2.17.1<a class="headerlink" href="#version-2-17-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-17-0">
+<h2>Version 2.17.0<a class="headerlink" href="#version-2-17-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-16-0">
+<h2>Version 2.16.0<a class="headerlink" href="#version-2-16-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-15-2">
+<h2>Version 2.15.2<a class="headerlink" href="#version-2-15-2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no migrations needed for this version.</p></li>
+</ul>
+</section>
+<section id="version-2-15-1">
+<h2>Version 2.15.1<a class="headerlink" href="#version-2-15-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no migrations needed for this version.</p></li>
+</ul>
+</section>
+<section id="version-2-15-0">
+<h2>Version 2.15.0<a class="headerlink" href="#version-2-15-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-14-0">
+<h2>Version 2.14.0<a class="headerlink" href="#version-2-14-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-13-0">
+<h2>Version 2.13.0<a class="headerlink" href="#version-2-13-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-12-0-2-12-4">
+<h2>Version 2.12.0 - 2.12.4<a class="headerlink" href="#version-2-12-0-2-12-4" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-11-0">
+<h2>Version 2.11.0<a class="headerlink" href="#version-2-11-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-10-0">
+<h2>Version 2.10.0<a class="headerlink" href="#version-2-10-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-7-3-to-2-9-0">
+<h2>Version 2.7.3 to 2.9.0<a class="headerlink" href="#version-2-7-3-to-2-9-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The migrations should work without additional support. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-7-2">
+<h2>Version 2.7.2<a class="headerlink" href="#version-2-7-2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The migrations should work without additional support. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>. There are no manual migrations needed.</p></li>
+<li><p>Note the <strong>Important Note</strong> in Version 2.7.1 migration below which may require the need to run a “fake” migration</p></li>
+</ul>
+</section>
+<section id="version-2-7-1">
+<h2>Version 2.7.1<a class="headerlink" href="#version-2-7-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no special migrations needed for this version. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+<p><strong>Important Note:</strong></p>
+<p>If upgrading from <cite>&lt; 2.7.0</cite> to <cite>&gt;= 2.7.1</cite> you may encounter a failed migration with <code class="docutils literal notranslate"><span class="pre">0118_match_merge_link_all_orgs</span></code>.  This is expected if the database is several versions behind, and it effectively reorders migration 118 to run after all other migrations have completed to prepare your database to recognize properties and taxlots across multiple cycles.  Run the following code manually to fully migrate:</p>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span> <span class="pre">--fake</span> <span class="pre">seed</span> <span class="pre">0118_match_merge_link_all_orgs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">shell</span></code></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">seed.lib.superperms.orgs.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Organization</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seed.utils.match</span><span class="w"> </span><span class="kn">import</span> <span class="n">whole_org_match_merge_link</span>
+
+<span class="k">for</span> <span class="n">org</span> <span class="ow">in</span> <span class="n">Organization</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+    <span class="n">whole_org_match_merge_link</span><span class="p">(</span><span class="n">org</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;PropertyState&#39;</span><span class="p">)</span>
+    <span class="n">whole_org_match_merge_link</span><span class="p">(</span><span class="n">org</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;TaxLotState&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="version-2-7-0">
+<h2>Version 2.7.0<a class="headerlink" href="#version-2-7-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>This migration will run a match/merge/pair/link method upon migration. Make sure to run the migration manually and not inside of the docker container using the ./deploy.sh script.</p></li>
+<li><p>Make sure to backup the database before performing the migration.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>.</p></li>
+</ul>
+</section>
+<section id="version-2-6-1">
+<h2>Version 2.6.1<a class="headerlink" href="#version-2-6-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The migrations should work without additional support. Simply run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>. There are no manual migrations needed for the 2.6.1 release.</p></li>
+</ul>
+</section>
+<section id="version-2-6-0">
+<h2>Version 2.6.0<a class="headerlink" href="#version-2-6-0" title="Link to this heading"></a></h2>
+<p>Version 2.6.0 includes support for meters and time series data storage. In order to use this release
+you must first install <a class="reference external" href="https://docs.timescale.com/v1.2/getting-started">TimescaleDB</a>.</p>
+<section id="docker-based-deployment">
+<h3>Docker-based Deployment<a class="headerlink" href="#docker-based-deployment" title="Link to this heading"></a></h3>
+<p>Docker-based deployments shouldn’t require running any additional commands for installation. The
+timescaledb installation will happen automatically when updating the postgres container. Also,
+the installation of the extension occurs in a Django migration.</p>
+</section>
+<section id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo add-apt-repository ppa:timescale/timescaledb-ppa</span>
+<span class="go">sudo apt update</span>
+<span class="go">sudo apt install timescaledb-postgresql-10</span>
+<span class="go">sudo timescaledb-tune</span>
+<span class="go">sudo service postgresql restart</span>
+</pre></div>
+</div>
+</section>
+<section id="max-osx">
+<h3>Max OSX<a class="headerlink" href="#max-osx" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew tap timescale/tap</span>
+<span class="go">brew install timescaledb</span>
+<span class="go">/usr/local/bin/timescaledb_move.sh</span>
+<span class="go">timescaledb-tune</span>
+<span class="go">brew services restart postgresql</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="version-2-5-2">
+<h2>Version 2.5.2<a class="headerlink" href="#version-2-5-2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>There are no manual migrations that are needed. The <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code> command may take awhile to run since the migration requires the recalculation of all the normalized addresses to parse bldg correct and to cast the result as a string and not a bytestring.</p></li>
+</ul>
+</section>
+<section id="version-2-5-1">
+<h2>Version 2.5.1<a class="headerlink" href="#version-2-5-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The migrations should work by simply running <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code>. There are no manual migrations needed for the 2.5.1 release.</p></li>
+</ul>
+</section>
+<section id="version-2-5-0">
+<h2>Version 2.5.0<a class="headerlink" href="#version-2-5-0" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Docker-based Deployment<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Add the MapQuest API key to your organization.</p></li>
+<li><p>On deployment, the error below is indicative that you need to install the extensions in the postgres database. Run <cite>docker exec &lt;postgres_container_id&gt; update-postgis.sh</cite>.</p>
+<blockquote>
+<div><p>django.db.utils.OperationalError: could not open extension control file “/usr/share/postgresql/11/extension/postgis.control”: No such file or directory</p>
+</div></blockquote>
+</li>
+<li><p>If you are using a copied version of the docker-compose.yml file, then you need to change <cite>127.0.0.1:5000/postgres</cite> to <cite>127.0.0.1:5000/postgres-seed</cite></p></li>
+</ul>
+</section>
+<section id="development">
+<h3>Development<a class="headerlink" href="#development" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Delete</strong> your bower directory <cite>rm -rf seed/static/vendors</cite>.</p></li>
+<li><p><strong>Delete</strong> your css directory <cite>rm -rf seed/static/seed/css</cite>.</p></li>
+<li><p><strong>Remove</strong> these lines from <cite>local_untracked.py</cite> if you have them.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DEFAULT_FILE_STORAGE</span> <span class="o">=</span> <span class="s1">&#39;django.core.files.storage.FileSystemStorage&#39;</span>
+<span class="n">STATICFILES_STORAGE</span> <span class="o">=</span> <span class="n">DEFAULT_FILE_STORAGE</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Run <cite>pip3 install -r requirements/local.txt</cite>.</p></li>
+<li><p>Run <cite>npm install</cite> from root checkout of SEED.</p></li>
+<li><p>If testing geocoding, then sign up for as a <a class="reference external" href="https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register">MapQuest Developer</a> and create a new <a class="reference external" href="https://developer.mapquest.com/user/me/apps">MapQuest Key</a>.</p></li>
+<li><p>Add the key to the organization that you are using in development.</p></li>
+<li><p><strong>Update</strong> your DATABASES engine to be <cite>django.contrib.gis.db.backends.postgis</cite></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.contrib.gis.db.backends.postgis&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;seeddb&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;seeduser&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;seedpass&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">migrate</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="developer_resources.html" class="btn btn-neutral float-left" title="Developer Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="translation.html" class="btn btn-neutral float-right" title="Translating SEED" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017, 2025, Alliance for Sustainable Energy, LLC, and other contributors..</p>
+  </div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

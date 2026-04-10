@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>seed.lib.merging package &mdash; SEED Platform 2.16.0 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                2.16.0
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+
+      <li>seed.lib.merging package</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="seed-lib-merging-package">
+<h1>seed.lib.merging package<a class="headerlink" href="#seed-lib-merging-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.lib.merging.merging">
+<span id="seed-lib-merging-merging-module"></span><h2>seed.lib.merging.merging module<a class="headerlink" href="#module-seed.lib.merging.merging" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author Dan Gunter &lt;<a class="reference external" href="mailto:dkgunter&#37;&#52;&#48;lbl&#46;gov">dkgunter<span>&#64;</span>lbl<span>&#46;</span>gov</a>&gt;</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.merging.merging.get_attrs_with_mapping">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.merging.merging.</span></span><span class="sig-name descname"><span class="pre">get_attrs_with_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_set_buildings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.merging.merging.get_attrs_with_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of attributes from each data_set_building.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_set_buildings</strong> – list, instances to merge.</p></li>
+<li><p><strong>mapping</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict: possible attributes keyed on attr name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.merging.merging.get_propertystate_attrs">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.merging.merging.</span></span><span class="sig-name descname"><span class="pre">get_propertystate_attrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_set_buildings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.merging.merging.get_propertystate_attrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.merging.merging.get_state_attrs">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.merging.merging.</span></span><span class="sig-name descname"><span class="pre">get_state_attrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.merging.merging.get_state_attrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of state attributes. This does not include any of the extra data columns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.merging.merging.get_state_to_state_tuple">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.merging.merging.</span></span><span class="sig-name descname"><span class="pre">get_state_to_state_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inventory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.merging.merging.get_state_to_state_tuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of the database fields based on the inventory type</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.merging.merging.get_taxlotstate_attrs">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.merging.merging.</span></span><span class="sig-name descname"><span class="pre">get_taxlotstate_attrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_set_buildings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.merging.merging.get_taxlotstate_attrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.merging.merging.merge_state">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.merging.merging.</span></span><span class="sig-name descname"><span class="pre">merge_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">merged_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priorities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_merge_protection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.merging.merging.merge_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set attributes on our Canonical model, saving differences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>merged_state</strong> – PropertyState/TaxLotState model inst.</p></li>
+<li><p><strong>state1</strong> – PropertyState/TaxLotState model inst. Left parent.</p></li>
+<li><p><strong>state2</strong> – PropertyState/TaxLotState model inst. Right parent.</p></li>
+<li><p><strong>priorities</strong> – dict, column names with favor new or existing</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>inst(<code class="docutils literal notranslate"><span class="pre">merged_state</span></code>), updated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-seed.lib.merging">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seed.lib.merging" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

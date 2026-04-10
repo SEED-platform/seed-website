@@ -1,0 +1,1663 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../user_doc_settings/">
+      
+      
+        <link rel="next" href="../known_issues/">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Release Notes - SEED Platform&trade; Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%205h2V3h-2m0%2018h2v-2h-2M11%205h2V3h-2m8%202h2V3h-2m0%206h2V7h-2m0%2014h2v-2h-2m0-6h2v-2h-2m0%206h2v-2h-2M3%205h2V3H3m0%206h2V7H3m0%206h2v-2H3m0%206h2v-2H3m0%206h2v-2H3m8%202h2v-2h-2m-4%202h2v-2H7M7%205h2V3H7z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-L4813JJ6GP"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-L4813JJ6GP",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-L4813JJ6GP",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  <!-- extend base theme with custom content here -->
+  <!-- DAP -->
+  <script id="_fed_an_ua_tag" async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE
+  &subagency=EERE"></script>
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SEED Platform&amp;trade; Documentation" class="md-header__button md-logo" aria-label="SEED Platform&trade; Documentation" data-md-component="logo">
+      
+  <img src="../images/icon-city.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SEED Platform&trade; Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SEED-platform/seed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SEED Platform&amp;trade; Documentation" class="md-nav__button md-logo" aria-label="SEED Platform&trade; Documentation" data-md-component="logo">
+      
+  <img src="../images/icon-city.svg" alt="logo">
+
+    </a>
+    SEED Platform&trade; Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SEED-platform/seed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_data_import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Importing Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    View Building Inventory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Insights
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_analyses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analyses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organization Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../known_issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known Issues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hosting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../technical_ally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SEED Technical Allies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosting_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hosting Provider Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_hosting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Self-Hosting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app_developer_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/geocoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Geocoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/inventory_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventory Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Miscellaneous
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/industry_involvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Industry Involvement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer_resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Developer Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
+<p>In addition to the <a href="https://github.com/SEED-platform/seed/releases">GitHub release notes</a> page, this page provides more details on the changes made in each version of SEED-Platform by version number.</p>
+<p>If you have any questions about releases or changes to the program, please contact us using one of the methods on the <a href="../contact/">contacts page</a>.</p>
+<details class="note">
+<summary><strong>Version 2.20.1</strong></summary>
+<h2 id="version-2201">Version 2.20.1<a class="headerlink" href="#version-2201" title="Permanent link">&para;</a></h2>
+<p>The full release history can be found on the SEED Github Repository</p>
+<ul>
+<li>
+<p><a href="https://github.com/SEED-platform/seed/releases/tag/v2.20.0">https://github.com/SEED-platform/seed/releases/tag/v2.20.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/SEED-platform/seed/releases/tag/v2.20.1">https://github.com/SEED-platform/seed/releases/tag/v2.20.1 (patch release)</a></p>
+</li>
+</ul>
+<h2 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">&para;</a></h2>
+<h3 id="inventory">Inventory<a class="headerlink" href="#inventory" title="Permanent link">&para;</a></h3>
+<p><strong>Property Detail</strong></p>
+<ul>
+<li>
+<p><strong>Audit Template:</strong> It is now possible to upload and download a BuildingSync or Audit Template file</p>
+<p><img alt="" src="../images/inventory_property_auditTemplate.png" /></p>
+</li>
+</ul>
+<h3 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A change was made to that now <strong>it is not possible to delete matching field criteria after importing data, so the matching fields must be set in Column Settings before importing data</strong></li>
+<li>New matching fields can be ADDED, but existing matching fields can not be DELETED.</li>
+<li><strong>Address line 1</strong> is no longer a default matching field</li>
+</ul>
+<h3 id="analyses">Analyses<a class="headerlink" href="#analyses" title="Permanent link">&para;</a></h3>
+<p><strong>Property Detail:</strong> Analyses can now be run from the Property Detail page, using the Analyses link</p>
+<p><img alt="" src="../images/analyses_propDetail.png" /></p>
+<p><strong>Property List:</strong> Analyses are now associated with the cycles they were simulated in, so the results can be viewed by cycle</p>
+<p><strong>BETTER:</strong> it is now possible to specify what meter data to be used in the analyses</p>
+<ul>
+<li>
+<p><strong>A specific cycle</strong></p>
+<p><img alt="" src="../images/BETTER_cycle.png" /></p>
+</li>
+<li>
+<p><strong>A range of dates</strong></p>
+<p><img alt="" src="../images/BETTER_cycle_dateRange.png" /></p>
+</li>
+<li>
+<p><strong>All the meter data</strong></p>
+<p><img alt="" src="../images/BETTER_cycle_allMeterData.png" /></p>
+</li>
+</ul>
+<h2 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">&para;</a></h2>
+<h3 id="data_1">Data<a class="headerlink" href="#data_1" title="Permanent link">&para;</a></h3>
+<h4 id="batch-import-of-audit-template-files">Batch Import of Audit Template Files<a class="headerlink" href="#batch-import-of-audit-template-files" title="Permanent link">&para;</a></h4>
+<p>It is now possible to import properties directly from an Audit Template record</p>
+<ul>
+<li>
+<p><strong>Organization / Settings:</strong></p>
+</li>
+<li>
+<p>Input the information about the Audit Template account under the Audit Template option in Organizations/Settings</p>
+</li>
+<li>
+<p>The Audit Template Documentation, linked from that Organizations/Settings screen, will explain how to get the Organization Token.</p>
+<p><img alt="" src="../images/AT_import_org_settings.png" /></p>
+</li>
+<li>
+<p><strong>Data</strong></p>
+</li>
+<li>
+<p>When adding data, there is an option to "Import Audit Template Buildings"</p>
+</li>
+<li>
+<p>Based on the values input in Organization/Settings for Audit Template, the appropriate buildings will be displayed and can be selected for import</p>
+<p><img alt="" src="../images/AT_import_data.png" /></p>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary><strong>Version 2.19.0</strong></summary>
+<h2 id="version-2190">Version 2.19.0<a class="headerlink" href="#version-2190" title="Permanent link">&para;</a></h2>
+<h2 id="updates_1">Updates<a class="headerlink" href="#updates_1" title="Permanent link">&para;</a></h2>
+<h3 id="insights">Insights<a class="headerlink" href="#insights" title="Permanent link">&para;</a></h3>
+<p><strong>Default Reports</strong></p>
+<ul>
+<li>
+<p>The reports that used to be accessed from the Inventory List view are now in Insights</p>
+<p><img alt="" src="../images/insights_default_reports-1000.png" /></p>
+</li>
+<li>
+<p>The export from those reports now includes the matching fields</p>
+<p><img alt="" src="../images/insights_default_reports_export.png" /></p>
+</li>
+</ul>
+<p><strong>Program Overview</strong></p>
+<ul>
+<li>Clicking on the Program Overview column goes to the Property Insights graphs</li>
+<li>
+<p>Percentages are displayed for Compliant and Non-Compliant sections of the graphs</p>
+<p><img alt="" src="../images/insights_overview2insights.png" /></p>
+</li>
+</ul>
+<p><strong>Property Insights</strong></p>
+<ul>
+<li>
+<p>A column for the X and Y axis have been added in the table below the graph that lists all the properties</p>
+<p><img alt="" src="../images/insights_propertyInsights_XY.png" /></p>
+</li>
+</ul>
+<h3 id="salesforce">Salesforce<a class="headerlink" href="#salesforce" title="Permanent link">&para;</a></h3>
+<p><strong>Scheduled Daily Update:</strong> The "Sync Salesforce" button that used to be in the Organizations/Salesforce setup has been removed because of timeout issues.</p>
+<p><img alt="" src="../images/org_settings_Salesforce_syncbutton.png" /></p>
+<h2 id="new-features_1">New Features<a class="headerlink" href="#new-features_1" title="Permanent link">&para;</a></h2>
+<h3 id="about-terms-of-service">About / Terms of Service<a class="headerlink" href="#about-terms-of-service" title="Permanent link">&para;</a></h3>
+<p>The About screen now has a link to a "Terms of Service"</p>
+<p><img alt="" src="../images/about_termsOfService.png" /></p>
+<h3 id="data-import">Data Import<a class="headerlink" href="#data-import" title="Permanent link">&para;</a></h3>
+<p><strong>Multiple Cycle Upload:</strong></p>
+<p>The Data Import dialog box now has an option for importing data across multiple cycles</p>
+<ul>
+<li><strong>Year Ending:</strong> SEED uses the <strong>Year Ending</strong> field to determine the cycle that the record belongs to</li>
+<li>If any record does not have a <strong>Year Ending</strong> field, SEED will automatically assign it to the "Default Cycle" specified int he data import dialog box</li>
+<li>
+<p><strong>Cycles:</strong> Cycles for the <strong>Year Ending</strong> definitions need to be pre-defined</p>
+<p><img alt="" src="../images/data_import_multiCycle.png" /></p>
+</li>
+</ul>
+<p>Once the data is imported, <strong>Cross Cycles</strong> (Inventory List view) will show how the records were assigned to different cycles</p>
+<p><img alt="" src="../images/inventory_property_crossCycle.png" /></p>
+<p>The Inventory List view Cross Cycle results show for each property, which cycle the property was imported into.</p>
+<ul>
+<li><strong>Property ID 2045373:</strong> Based on the Year Ending field, there is one record for this building in all four cycles</li>
+<li>
+<p><strong>Property ID 2045374:</strong> This record did not have data in the Year Ending field so it was imported into the Default Cycle of 2021 Calendar Year</p>
+<p><img alt="" src="../images/inventory_property_crossCycle_results.png" /></p>
+</li>
+</ul>
+<h3 id="inventory_1">Inventory<a class="headerlink" href="#inventory_1" title="Permanent link">&para;</a></h3>
+<p><strong>UBID Support:</strong></p>
+<p>It is now possible to have multiple UBID values defined for a property, and to select the one that most accurately represents the building footprint</p>
+<p><img alt="" src="../images/inventory_property_detail_UBID-1.png" /></p>
+<p>The UBID marked "Preferred" will be displayed with the SEED Map as an underlay.</p>
+<p><img alt="" src="../images/inventory_property_detail_UBID-2.png" /></p>
+<p>The UBID centroid and bounding box for the "Preferred" UBID will also be displayed in the Inventory List Map view</p>
+<p><img alt="" src="../images/inventory_property_detail_UBID-3.png" /></p>
+<p><strong>Geocoding Fields Added:</strong></p>
+<p>If a property is geocoded, the new Geocoding fields are now added to the Property</p>
+<p><img alt="" src="../images/inventory_property_geocoding_fields.png" /></p>
+</details>
+<details class="note">
+<summary><strong>Version 2.18.0</strong></summary>
+<h2 id="version-2180">Version 2.18.0<a class="headerlink" href="#version-2180" title="Permanent link">&para;</a></h2>
+<h2 id="updates_2">Updates<a class="headerlink" href="#updates_2" title="Permanent link">&para;</a></h2>
+<h3 id="inventory_2">Inventory<a class="headerlink" href="#inventory_2" title="Permanent link">&para;</a></h3>
+<p><strong>Analyses / EUI:</strong> It is now possible to select all the meter data, a date range, or a cycle for this analysis</p>
+<p><img alt="" src="../images/EUI_meterdata_options.png" /></p>
+<h3 id="insights_1">Insights<a class="headerlink" href="#insights_1" title="Permanent link">&para;</a></h3>
+<p><strong>Program Setup:</strong> Select Cycles instead of start and end dates</p>
+<p><img alt="" src="../images/insights_program_setup_cycles.png" /></p>
+<h2 id="known-issues">Known Issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h2>
+<h3 id="inventory_3">Inventory<a class="headerlink" href="#inventory_3" title="Permanent link">&para;</a></h3>
+<p><strong>List View:</strong> In the Property tab, it is not possible to sort on Tax Lot fields, and vice versa</p>
+<p><img alt="" src="../images/inventory_property_noTaxLotSort.png" /></p>
+<h2 id="new-features_2">New Features<a class="headerlink" href="#new-features_2" title="Permanent link">&para;</a></h2>
+<h3 id="inventory_4">Inventory<a class="headerlink" href="#inventory_4" title="Permanent link">&para;</a></h3>
+<p><strong>List View</strong></p>
+<ul>
+<li><strong>Salesforce:</strong> It is now possible to run Salesforce from the Actions menu on selected properties</li>
+</ul>
+<p><img alt="" src="../images/inventory_property_list_Salesforce.png" /></p>
+<ul>
+<li><strong>Export GeoJSON:</strong> Meter data has been added to the GeoJSON file that is exported from SEED</li>
+</ul>
+<p><img alt="" src="../images/inventory_property_export_geoJSON_meters.png" /></p>
+<p><strong>Detail View</strong></p>
+<ul>
+<li><strong>Salesforce:</strong> It is now possible to run Salesforce on individual properties from the Inventory Property Detail view</li>
+</ul>
+<p><img alt="" src="../images/inventory_property_detail_Salesforce.png" /></p>
+<ul>
+<li><strong>Timeline:</strong> This feature allows viewing actions, such as importing Audit Template records, over time</li>
+</ul>
+<p><img alt="" src="../images/inventory_property_detail_timeline-1.png" /></p>
+<p>There is a row in the Timeline for ever event
+  Events added to the Timeline are</p>
+<ul>
+<li>New Notes (added manually)</li>
+<li>New Analyses</li>
+<li>New Audit Template or BuildingSync file upload</li>
+</ul>
+<p>Clicking the Timeline link for a property will show all the actions across cycles</p>
+<p><img alt="" src="../images/inventory_property_detail_timeline-1.png" /></p>
+<p>Click the Expand All button to see the details of each event</p>
+<p><img alt="" src="../images/inventory_property_detail_timeline-2.png" />
+  <img alt="" src="../images/inventory_property_detail_timeline-3.png" />
+  <img alt="" src="../images/inventory_property_detail_timeline-4.png" />
+  <img alt="" src="../images/inventory_property_detail_timeline-5.png" /></p>
+<p><strong>Audit Template Import:</strong> Audit Template and BuildingSync files can be imported in the Inventory Property Detail view</p>
+<p><img alt="" src="../images/inventory_property_detail_auditTemplateImport.png" /></p>
+<p><strong>Audit Template Delete Scenarios:</strong> Audit Template Scenarios can be deleted in the Inventory Property Detail view</p>
+<p><img alt="" src="../images/inventory_property_detail_auditTemplate_delete_scenario.png" /></p>
+<h3 id="insights_2">Insights<a class="headerlink" href="#insights_2" title="Permanent link">&para;</a></h3>
+<p><strong>Property Insights</strong></p>
+<p>Labels can now be added to properties displayed in Property Insights</p>
+<p><img alt="" src="../images/insights_propertyInsights_add_labels.png" /></p>
+<h3 id="organizations-settings">Organizations / Settings<a class="headerlink" href="#organizations-settings" title="Permanent link">&para;</a></h3>
+<p><strong>Salesforce</strong></p>
+<p>Salesforce can now be configured within SEED in Organizations / Settings / Salesforce</p>
+<p><img alt="" src="../images/org_settings_Salesforce-1.png" />
+<img alt="" src="../images/org_settings_Salesforce-2.png" />
+<img alt="" src="../images/org_settings_Salesforce-3.png" />
+<img alt="" src="../images/org_settings_Salesforce-4.png" />
+<img alt="" src="../images/org_settings_Salesforce-5.png" /></p>
+</details>
+<details class="note">
+<summary><strong>Version 2.17.2</strong></summary>
+<h2 id="version-2172">Version 2.17.2<a class="headerlink" href="#version-2172" title="Permanent link">&para;</a></h2>
+<h2 id="-release-notes-v2172">- <a href="../resources/SEED%20Platform%20V2_17_2%20Release%20Notes.pdf">Release Notes v2.17.2</a><a class="headerlink" href="#-release-notes-v2172" title="Permanent link">&para;</a></h2>
+<h2 id="updates_3">Updates<a class="headerlink" href="#updates_3" title="Permanent link">&para;</a></h2>
+<h3 id="inventory_5">Inventory<a class="headerlink" href="#inventory_5" title="Permanent link">&para;</a></h3>
+</details>
+<details class="note">
+<summary><strong>Version 2.5.0</strong></summary>
+<h2 id="version-250">Version 2.5.0<a class="headerlink" href="#version-250" title="Permanent link">&para;</a></h2>
+<h3 id="data-import_1">Data Import<a class="headerlink" href="#data-import_1" title="Permanent link">&para;</a></h3>
+<h4 id="new-features_3">New Features<a class="headerlink" href="#new-features_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Upload a GeoJSON File:</strong> This option allows importing a file with GIS location data in the GeoJSON format</li>
+</ul>
+<p><img alt="Upload GeoJSON image v2.5.0" src="../images/release_notes/UploadGeoJSON.png" /></p>
+<ul>
+<li>
+<p><strong>Performance improvements:</strong> In general, importing files should be much faster, even for cases with many thousand records.</p>
+</li>
+<li>
+<p><strong>Upload BuildingSync Data:</strong> Updated the import to BuildingSync Version 1.0</p>
+</li>
+</ul>
+<h3 id="mapping-and-matching">Mapping and Matching<a class="headerlink" href="#mapping-and-matching" title="Permanent link">&para;</a></h3>
+<h4 id="new-features_4">New Features<a class="headerlink" href="#new-features_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>ULID added as a matching field:</strong> Unique Land ID (ULID) has been added as a matching field for Tax Lot data. This is comparable to the Unique Building ID (UBID) matching field for Property data</li>
+</ul>
+<p><img alt="matching fields image v2.5.0" src="../images/release_notes/UBID-ULID-Matching.png" /></p>
+</details>
+<details class="note">
+<summary><strong>Version 2.4.0</strong></summary>
+<h2 id="version-240">Version 2.4.0<a class="headerlink" href="#version-240" title="Permanent link">&para;</a></h2>
+<h3 id="data-import_2">Data Import<a class="headerlink" href="#data-import_2" title="Permanent link">&para;</a></h3>
+<h4 id="changes">Changes<a class="headerlink" href="#changes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Import Portfolio Manager Data:</strong> This option allows users to log into their ENERGY STAR&reg; Portfolio Manager&reg; account and specify the Custom Report Template from which to download data</p>
+</li>
+<li>
+<p><strong>Upload BuildingSync Data:</strong> A BuildingSync file is an XML file with building information in it, which is generated by several programs, including DOE's Asset Score. SEED can now import some variations of that XML file.</p>
+</li>
+</ul>
+<p><img alt="Data Upload image v2.4.0" src="../images/release_notes/Data-Upload.png" /></p>
+<ul>
+<li>
+<p><strong>File importing improvements:</strong> General improvements for handling files with carriage returns, blank lines, unusual characters</p>
+</li>
+<li>
+<p><strong>Performance improvements:</strong> In general, importing files should be much faster, even for cases with many thousand records.</p>
+</li>
+</ul>
+<h4 id="known-issues_1">Known Issues<a class="headerlink" href="#known-issues_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Upload BuildingSync Data:</strong> The program doesn't currently support all possible variations on a BuildingSync file.</li>
+</ul>
+<h3 id="mapping-and-matching_1">Mapping and Matching<a class="headerlink" href="#mapping-and-matching_1" title="Permanent link">&para;</a></h3>
+<h4 id="new-features_5">New Features<a class="headerlink" href="#new-features_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Column Settings (under Organizations):</strong>  It is now possible to change the field mapping of existing data in the organization, as well "Merge Protection" which prevents specific fields (that may have been edited by hand) to be overwritten by newly imported data. For more details, see Organizations below.</p>
+</li>
+<li>
+<p><strong>Column Mappings (under Organizations):</strong> It is now possible to change the default mappings for data to be imported. For more details, see Organizations below.</p>
+</li>
+</ul>
+<h4 id="changes_1">Changes<a class="headerlink" href="#changes_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Performance Improvements:</strong> Matching should generally be faster than in previous versions</li>
+</ul>
+<h3 id="inventory-list-view">Inventory List View<a class="headerlink" href="#inventory-list-view" title="Permanent link">&para;</a></h3>
+<h4 id="changes_2">Changes<a class="headerlink" href="#changes_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Performance Improvements:</strong> Loading the inventory list has been very time-consuming, particularly with large datasets or large numbers of columns. This has been improved drastically.</li>
+</ul>
+<h3 id="list-settings">List Settings<a class="headerlink" href="#list-settings" title="Permanent link">&para;</a></h3>
+<h4 id="bug-fix">Bug Fix<a class="headerlink" href="#bug-fix" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Field order maintained on save:</strong> In previous versions, when saving the List Settings after a change, the program would reverse the field order while still in List Settings view (although not in the actual view the settings controlled). This has been fixed in this version.</li>
+</ul>
+<h3 id="organizations">Organizations<a class="headerlink" href="#organizations" title="Permanent link">&para;</a></h3>
+<h4 id="new-features_6">New Features<a class="headerlink" href="#new-features_6" title="Permanent link">&para;</a></h4>
+<p>There are two new options in the Organization section of the program: Column Settings and Column Mappings</p>
+<p><img alt="New Organization Options v2.4.0" src="../images/release_notes/NewOrgOptions.png" /></p>
+<ul>
+<li><strong>Column Settings:</strong> This is a new screen which allows users 1) change the display name of a column that already exists in the database, and 2) specify what fields should be protected from having new data replace existing data.</li>
+</ul>
+<p><img alt="Column Settings v2.4.0" src="../images/release_notes/ColumnSettings.png" /></p>
+<ul>
+<li><strong>Column Mappings:</strong> This screen shows the stored default mappings for files that have been previously imported, which is the default mapping for these fields when new files are imported in the future.  If problems are found in the mappings here, the bad mappings should be deleted so that when new files with these fields are imported, those same mapping mistakes will not be made again. Changing the mappings here does not affect existing data, it only affects the default mapping settings for data that will be imported in the future.</li>
+</ul>
+<p><img alt="Column Mappings v2.4.0" src="../images/release_notes/ColumnMappings.png" /></p>
+</details>
+<details class="note">
+<summary><strong>Version 2.0.0</strong></summary>
+<h2 id="version-200">Version 2.0.0<a class="headerlink" href="#version-200" title="Permanent link">&para;</a></h2>
+<h3 id="data-model">Data Model<a class="headerlink" href="#data-model" title="Permanent link">&para;</a></h3>
+<h4 id="changes_3">Changes<a class="headerlink" href="#changes_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The data is now stored in two table structures, one for Tax Lot/Parcel information, one for Property/Building Information</p>
+</li>
+<li>
+<p>Each record in those tables is associated with a time period called a Cycle, which can correspond to a benchmarking compliance cycle.</p>
+</li>
+</ul>
+<h3 id="navigation-bar">Navigation Bar<a class="headerlink" href="#navigation-bar" title="Permanent link">&para;</a></h3>
+<h4 id="changes_4">Changes<a class="headerlink" href="#changes_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Projects:</strong> disabled for the current release because we want to work with users to make sure we have a feature that solves user needs, which the previous iteration of Projects may not have.</p>
+</li>
+<li>
+<p><strong>Inventory:</strong> BUILDINGS is now INVENTORY, because the program is now storing and displaying data from the perspective of Tax Lot/Parcel and Property/Building.</p>
+</li>
+<li>
+<p><strong>API Documentation:</strong> added an implementation of the Swagger API framework to display the program API structure for developers.</p>
+</li>
+<li>
+<p><strong>Log Out:</strong> moved Log Out to the last option of the Navigation bar from an option in the user account, which makes it more straightforward to log out of the program</p>
+</li>
+</ul>
+<p><img alt="Menu image v2.0.0" src="../images/release_notes/menu.png" /></p>
+<h3 id="data-import_3">Data Import<a class="headerlink" href="#data-import_3" title="Permanent link">&para;</a></h3>
+<h4 id="changes_5">Changes<a class="headerlink" href="#changes_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Specify Time Period/Cycle:</strong> Each time a file is imported, it must be associated with a Time Period/Cycle.</li>
+</ul>
+<p><img alt="data import images v2.0.0" src="../images/release_notes/data_import.png" /></p>
+<h4 id="known-issues_2">Known Issues<a class="headerlink" href="#known-issues_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Green Button Data:</strong> Green Button Data upload is disabled. This feature is being reworked.</li>
+</ul>
+<h3 id="mapping">Mapping<a class="headerlink" href="#mapping" title="Permanent link">&para;</a></h3>
+<h4 id="changes_6">Changes<a class="headerlink" href="#changes_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Assign fields to Property / Tax Lot:</strong> The new data model requires that during field mapping, each field be assigned to either the Property or the Tax Lot table.</li>
+</ul>
+<p><img alt="mapping image v2.0.0" src="../images/release_notes/mapping.png" /></p>
+<ul>
+<li><strong>Matching field names:</strong> The Matching field name <strong>Tax Lot ID</strong> is now called <strong>Jurisdiction Tax Lot ID</strong>. The other Matching field names remain the same (<strong>Custom ID 1</strong>, <strong>PM Property ID</strong> and <strong>Address Line 1</strong>)</li>
+</ul>
+<h4 id="known-issues_3">Known Issues<a class="headerlink" href="#known-issues_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Display of mapping list is very slow when there are many fields (<a href="https://github.com/SEED-platform/seed/issues/1215">1215</a>):</strong> In some cases, such as a Portfolio Manager file with 250 fields, the program can take over a minute to display values from the pulldown list in the Mapping field, or to let you type in a field.</li>
+</ul>
+<h3 id="mapping-review-screen">Mapping Review Screen<a class="headerlink" href="#mapping-review-screen" title="Permanent link">&para;</a></h3>
+<h4 id="changes_7">Changes<a class="headerlink" href="#changes_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Tabs for each table:</strong> There are now tabs for the Property and Tax Lot fields and records, depending on how the data is mapped.</p>
+</li>
+<li>
+<p><strong>All the data is loaded:</strong> it is possible to scroll through all the records in the import file being reviewed</p>
+</li>
+</ul>
+<p><img alt="mapping review images v2.0.0" src="../images/release_notes/mapping_review.png" /></p>
+<h4 id="known-issues_4">Known Issues<a class="headerlink" href="#known-issues_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Mapped field names sometimes not shown properly:</strong> In some cases, the actual “field name” may be displayed in the column header, such as in the case below property_type, rather than the “display name” which in this case should be Property Type. However, if there is data in the field, then the program has been able to put the data into the table.</li>
+</ul>
+<p><img alt="improper mapped field names images v2.0.0" src="../images/release_notes/known_issues_2_0.png" /></p>
+<ul>
+<li><strong>Property Tab when only Tax Lot data is mapped:</strong> If Jurisdiction Tax Lot ID is mapped, there will be a View by Property tab showing just that field, when no fields were mapped to the Property table.  This is currently there by design but can be confusing.</li>
+</ul>
+<p><img alt="property tab v2.0.0 image" src="../images/release_notes/property_tab_2_0.png" /></p>
+<h3 id="matching">Matching<a class="headerlink" href="#matching" title="Permanent link">&para;</a></h3>
+<h4 id="changes_8">Changes<a class="headerlink" href="#changes_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Changes for New Data Model:</strong> Matching has changed due to the new data model. Based on how field are mapped to “matching” fields, the program first does a “merge” on records and data in the same table, and then “pairs” records between the Property and Tax Lot tables.</li>
+</ul>
+<h4 id="known-issues_5">Known Issues<a class="headerlink" href="#known-issues_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Program Hangs on 100% Complete (<a href="https://github.com/SEED-platform/seed/issues/1217">1217</a>):</strong> When the matching has finished, the 100% Complete dialog box remains, so it is necessary to click the Cancel button to remove it and then click on the Inventory Navigation bar to see the imported/matched records</li>
+</ul>
+<p><img alt="program hangs image v2.0.0" src="../images/release_notes/2_0_image1.png" /></p>
+<ul>
+<li><strong>Matching status dialog box does not reflect correct state of data (<a href="https://github.com/SEED-platform/seed/issues/1221">1221</a>):</strong> under some circumstances, when the program finishes matching, it presents a dialog box about the status of the matching. In this version, the information on that dialog is likely to be incorrect.</li>
+</ul>
+<p><img alt="matching status dialog image v2.0.0" src="../images/release_notes/2_0_image2.png" /></p>
+<ul>
+<li><strong>Program creates Property record even when only Tax Lot fields are mapped (<a href="https://github.com/SEED-platform/seed/issues/1219">1219</a>):</strong> under some circumstances when only matching a file to the Tax Lot table (for example if the Property tab was displayed in the Matching Review screen), the program will make an extraneous Property record that can be seen in the View by Property tab after the data has been matched.</li>
+</ul>
+<p>Sometimes this Property record is paired to a Tax Lot record, in which case if it is deleted, the Tax Lot record is also deleted</p>
+<p>If it is not paired to a Tax Lot record (ie, there is no “+” to the left of the record, or no value displaying in the Associated Building Tax Lot ID or Jurisdiction Tax Lot ID fields, the record can be safely deleted.</p>
+<p><img alt="matching status dialog image 2 v2.0.0" src="../images/release_notes/2_0_image3.png" /></p>
+<p>Click on the Checkmark column to the left of the record to select the record and then Delete Selected from the Actions pulldown list.</p>
+<p><img alt="matching status dialog image 3 v2.0.0" src="../images/release_notes/2_0_image4.png" /></p>
+<p>When you delete the record, the program will indicate whether it is going to delete <strong>1 property record</strong>, or <strong>1 property record AND 1 tax lot record</strong> (in which case you should not proceed with the delete)</p>
+<p><img alt="matching status dialog image 4 v2.0.0" src="../images/release_notes/2_0_image5.png" /></p>
+<ul>
+<li><strong>Hand Matching is not enabled:</strong> The ability to match and unmatch records “by hand”, i.e., override the automated matching done by the program (which existed in version 1.5), is not enabled in this version of the program.</li>
+</ul>
+<h3 id="inventory-list-view_1">Inventory List View<a class="headerlink" href="#inventory-list-view_1" title="Permanent link">&para;</a></h3>
+<h4 id="changes_9">Changes<a class="headerlink" href="#changes_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Rework of Buildings (now Inventory) screen: Due to the new data model, there have been significant changes to the main screen where imported data is viewed.
+See the V 2.0 Users Guide for a complete description of the new Inventory List and Detail views.</p>
+</li>
+<li>
+<p><strong>Tabs:</strong> There are two tabs, View by Property and View by Tax Lot</p>
+</li>
+<li><strong>Cycle:</strong> Each data view is associated with a Cycle</li>
+<li><strong>Page Title:</strong> Title of page is now either Properties or Tax Lots, depending on which tab is selected, and no longer contains the number of records</li>
+<li><strong>Number of records:</strong>  the number of records is moved from the page title to the right hand side of the tab, because each tab can have different records</li>
+<li><strong>Links at the top of the page:</strong></li>
+<li>Buildings link (in V 1.5) is now called either Tax Lots List or Properties List, depending on which tab (Property or Tax Lot) is selected</li>
+<li><strong>Labels:</strong> admin link moved to Organizations</li>
+<li><strong>All records displayed at once:</strong> the program no longer loads just 10 - 100 records at a time. When a tab is selected, the program loads the grid with all the appropriate records</li>
+<li><strong>Actions pulldown:</strong> the name for the pulldown list that was called <strong>Building Actions</strong> is now <strong>Actions</strong></li>
+<li><strong>Filter by label:</strong> Clicking inside this field only shows the labels that are assigned to records currently being viewed (rather than showing a list of all possible labels), based on the Cycle and Tab selected</li>
+<li><strong>Filter Input box:</strong> The value(s) entered into the filter boxes are applied immediately upon typing them; there no longer a need to press the <strong>Enter</strong> key to activate them, or click on an <strong>Update Filters</strong> button (in V 1.5)</li>
+<li><strong>Sorting:</strong> Sorting can be accomplished two different ways: 1) click the column header and it will do a simple ascending, descending or original sort; 2) click the arrow on the upper right of the column and it is possible to do hierarchical sorting (see the User Guidelines for more details)</li>
+<li><strong>Show all, Matched and Unmatched pulldown:</strong> This pulldown (in V 1.5) has been removed. The “+” column indicates whether there are records matched between the Property and Tax Lot tables</li>
+<li><strong>Info button to access Detail view:</strong> To see the detail view of a record, click on the “info” icon on the left side of the tab grid.</li>
+</ul>
+<p><img alt="inventory list change v2.0.0" src="../images/release_notes/2_0_image6.png" /></p>
+<h4 id="known-issues_6">Known Issues<a class="headerlink" href="#known-issues_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Actions pulldown:</strong> the Actions pulldown does not contain options for creating and adding to existing Projects, as Projects have not been implemented in this version.</p>
+</li>
+<li>
+<p><strong>Sorting alphanumeric fields does not work properly in all cases (<a href="https://github.com/SEED-platform/seed/issues/1218">1218</a>):</strong> There are some fields (generally defined as numeric) that the program is not sorting properly when the data is alphanumeric. One example is a Zip Code field that would generally have 5 digits, but in some cases may have 9 digits with a hyphen separating the 5 digit and 4 digit sections.</p>
+</li>
+<li>
+<p><strong>Some mapped data is not displaying in detail and list view (<a href="https://github.com/SEED-platform/seed/issues/1213">1213</a>):</strong> Under some circumstances, not all the mapped fields are displayed in the List or Detailed view, and are not available to select in the List Settings for either view. It is therefore important to check in both the Mapping Review screen and the final records in the Inventory lists (Property and Tax Lot) to make sure that all the fields in the original file are displayed. If they are not, it may be necessary to reimport the data and change either the mapping or the field names in the original file.</p>
+</li>
+<li>
+<p><strong>Slow display of records for large data sets (<a href="https://github.com/SEED-platform/seed/issues/1105">1105</a>):</strong> For organizations that have more than a few thousand records in either the Tax Lot or Property tables, the display of the records can take several seconds, because the program is loading all the records into the view. However, once the records are loaded, the actions in the view (filtering, sorting, etc) will be very responsive.</p>
+</li>
+<li>
+<p><strong>Deleting Records (<a href="https://github.com/SEED-platform/seed/issues/1214">1214</a>):</strong> Deleting records (from the Actions pulldown list) will delete associated Tax Lot and Property records. If this is not desired, it might be necessary to label the record in question for deletion but not actually delete it in this version of the program. Future versions may include the option to delete the record in question without deleting it’s paired record, and should include the feature to allow un-pairing of records (unmatching “by hand”), which would then allow deletion of the records without deleting the previously paired record.</p>
+</li>
+<li>
+<p><strong>Hide Column doesn't persist (<a href="https://github.com/SEED-platform/seed/issues/1220">1220</a>):</strong> The Hide Column feature doesn't persist the state of hidden columns when moving off the current view. When coming back to that view, the hidden column will no longer be hidden. The work around is to define which columns should be visible in the List view through the List Settings feature.</p>
+</li>
+</ul>
+<p><img alt="hide column doesn't persist v2.0.0" src="../images/release_notes/2_0_image7.png" /></p>
+<h3 id="inventory-detail-view">Inventory Detail View<a class="headerlink" href="#inventory-detail-view" title="Permanent link">&para;</a></h3>
+<h4 id="changes_10">Changes<a class="headerlink" href="#changes_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Default Detail view will not show all fields:</strong> The first time the Tax Lot or Property Detail view is accessed, not all the fields will be displayed. However, using the List Settings allows all the mapped fields to be selected for display (with the exceptions noted in <a href="https://github.com/SEED-platform/seed/issues/1213">1213</a>).</li>
+</ul>
+<h4 id="known-issues_7">Known Issues<a class="headerlink" href="#known-issues_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Import history not displayed (<a href="https://github.com/SEED-platform/seed/issues/1139">1139</a>) (but edit history is displayed):</strong> The import history for a given record is not being captured or displayed in the Detail view (this history was captured and displayed in V 1.5). However, when a record is edited in the Detail view, the program does keep the history.</li>
+</ul>
+<p><img alt="import history not displayed v2.0.0" src="../images/release_notes/2_0_image8.png" /></p>
+<h3 id="list-settings_1">List Settings<a class="headerlink" href="#list-settings_1" title="Permanent link">&para;</a></h3>
+<h4 id="changes_11">Changes<a class="headerlink" href="#changes_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Field Display status and order:</strong> In List Settings, the functions of selecting which fields to display and setting their order happens in the same screen and does not need to be saved. The last state of the fields is saved automatically.</p>
+</li>
+<li>
+<p><strong>Separate List Settings for Tax Lot and Property Detail view:</strong> The program allows a different List Settings “state” for Tax Lot and Property Detail views.</p>
+</li>
+</ul>
+<h4 id="known-issues_8">Known Issues<a class="headerlink" href="#known-issues_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Property and Tax Lot indicators are not always correct (<a href="https://github.com/SEED-platform/seed/issues/1170">1170</a>):</strong> In List Settings, the program attempts to indicate whether a field belongs to the Tax Lot or Property table. However, in come circumstances, those indicators are not correct. But these indicators are strictly informational and don't affect the display of the data if the fields are selected</li>
+</ul>
+<p><img alt="incorrect indicators v2.0.0" src="../images/release_notes/2_0_image9.png" /></p>
+<ul>
+<li><strong>Multiple fields with the same name (<a href="https://github.com/SEED-platform/seed/issues/1171">1171</a>):</strong> In List Settings, there may be multiple instances of the same field name, possibly with the wrong marker for which table it belongs to, with no indication which will contain data.</li>
+</ul>
+<p><img alt="multiple fields with same name v2.0.0" src="../images/release_notes/2_0_image10.png" /></p>
+<p>Generally, the first one in the list will be the one that will display data. However, if that isn't the case, the work around for this situation is to select all of the fields, go back to the list view, determine which one shows data, and from the list view, use the Hide Column option (accessed from the down arrow in the upper right of the field column) to hide the fields that do not have data.</p>
+<p><img alt="multiple fields with same name image 2 v2.0.0" src="../images/release_notes/2_0_image11.png" /></p>
+<h3 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
+<h4 id="changes_12">Changes<a class="headerlink" href="#changes_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Label Admin is under Organizations: The Label admin screen used to be in the Building list (which is now either Tax Lot or Property) but has been moved in this version to the Organizations view</li>
+</ul>
+<h3 id="organizations_1">Organizations<a class="headerlink" href="#organizations_1" title="Permanent link">&para;</a></h3>
+<h4 id="changes_13">Changes<a class="headerlink" href="#changes_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Cycles Admin link added:</strong> Cycles are defined in Organizations</p>
+</li>
+<li>
+<p><strong>Labels Admin link moved:</strong> The Labels admin link is moved from the old Building list to Organizations</p>
+</li>
+</ul>
+<p><img alt="labels admin link moved v2.0.0" src="../images/release_notes/2_0_image12.png" /></p>
+<h4 id="known-issues_9">Known Issues<a class="headerlink" href="#known-issues_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Cycles:</strong> There is currently not an option to delete existing cycles</li>
+</ul>
+<h3 id="api-documentation">API Documentation<a class="headerlink" href="#api-documentation" title="Permanent link">&para;</a></h3>
+<h4 id="changes_14">Changes<a class="headerlink" href="#changes_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>API Documentation in navigation bar: This version has a new option in the main Navigation bar called API DOCUMENTATION, which will display a Swagger API platform which shows how each API is used in the program as well as having the option to test API functionality</li>
+</ul>
+<p><img alt="swagger documentation screenshot v2.0.0" src="../images/release_notes/2_0_image13.png" /></p>
+<h3 id="administration-superuser">Administration (Superuser)<a class="headerlink" href="#administration-superuser" title="Permanent link">&para;</a></h3>
+<h4 id="changes_15">Changes<a class="headerlink" href="#changes_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Admin screen:</strong> The list of organizations under the admin screen now shows the Parent ID if there are suborganizations, as well as the internal database organization ID, the date the organization was created, and the Property and Tax Lot record count by Cycle.</li>
+</ul>
+<h4 id="known-issues_10">Known Issues<a class="headerlink" href="#known-issues_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>User account without an organization (<a href="https://github.com/SEED-platform/seed/issues/1024">1024</a>):</strong> The program will allow a superuser to create a user account without an organization, so make sure that all the fields are properly defined, including the organization, when creating new users.</li>
+</ul>
+<h4 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Performance enhancements:</strong> It is much faster to view the organizations in the program, as well as to delete records from organizations.</li>
+</ul>
+</details>
+<details class="note">
+<summary><strong>Version 1.5.0</strong></summary>
+<h2 id="version-150">Version 1.5.0<a class="headerlink" href="#version-150" title="Permanent link">&para;</a></h2>
+<h3 id="labels_1">Labels<a class="headerlink" href="#labels_1" title="Permanent link">&para;</a></h3>
+<h4 id="bug-fixes_1">Bug Fixes<a class="headerlink" href="#bug-fixes_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>When adding labels from the Building List, the program generates the list of labels even with large data sets, including selecting records from multiple pages.</p>
+</li>
+<li>
+<p>When you click on the Building Detail view, the program keeps the "filter by label" status at the Building List level.</p>
+</li>
+</ul>
+<h3 id="data-import_4">Data Import<a class="headerlink" href="#data-import_4" title="Permanent link">&para;</a></h3>
+<h4 id="bug-fixes_2">Bug Fixes<a class="headerlink" href="#bug-fixes_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Program now handles many unusual characters in Excel files, such as bullets, new lines, etc.</p>
+</li>
+<li>
+<p>There have been improvements when importing large files with thousands of records.</p>
+</li>
+</ul>
+<h3 id="building-list">Building List<a class="headerlink" href="#building-list" title="Permanent link">&para;</a></h3>
+<h4 id="bug-fixes_3">Bug Fixes<a class="headerlink" href="#bug-fixes_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Program stays on the Building List page where you started when returning from Building Detail. If you are on page 10 in the Building List and go to the Building Detail view for one of the records on that page, when you come back to the Building List, you are still on page 10. The program used to put you back on page 1.</p>
+</li>
+<li>
+<p>A single quote (such as apostrophe) no longer causes the building search function to crash</p>
+</li>
+<li>
+<p>Filtering on the date fields should now work for Mozilla Firefox and Microsoft Internet Explorer. For those two browsers, the date format needs to be "2014-12-31".</p>
+</li>
+</ul>
+<h3 id="building-detail">Building Detail<a class="headerlink" href="#building-detail" title="Permanent link">&para;</a></h3>
+<h4 id="bug-fixes_4">Bug Fixes<a class="headerlink" href="#bug-fixes_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The field order is no alphabetical by default</li>
+</ul>
+<h4 id="enhancements">Enhancements<a class="headerlink" href="#enhancements" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The program now allows resizing of the columns.</p>
+</li>
+<li>
+<p>Clicking on a field shows the entire contents of the field in a call out.</p>
+</li>
+</ul>
+<h3 id="mapping_1">Mapping<a class="headerlink" href="#mapping_1" title="Permanent link">&para;</a></h3>
+<h4 id="bug-fixes_5">Bug Fixes<a class="headerlink" href="#bug-fixes_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The program shows all the mapped fields in the Mapping screen, including those in the extra_data JSON blob field.</li>
+</ul>
+<h3 id="projects">Projects<a class="headerlink" href="#projects" title="Permanent link">&para;</a></h3>
+<h4 id="bug-fixes_6">Bug Fixes<a class="headerlink" href="#bug-fixes_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Exporting records from Projects has been fixed</li>
+</ul>
+<h3 id="behind-the-scenes">Behind the Scenes<a class="headerlink" href="#behind-the-scenes" title="Permanent link">&para;</a></h3>
+<h4 id="bug-fixes_7">Bug Fixes<a class="headerlink" href="#bug-fixes_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Many code cleanup changes have been made which allows for more efficient development</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
