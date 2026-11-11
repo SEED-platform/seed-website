@@ -1,0 +1,964 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tests Package &mdash; SEED Platform 2.17.2 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Serializers Package" href="seed.serializers.html" />
+    <link rel="prev" title="Test Helper Factory Lib Package" href="seed.test_helpers.factory.lib.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                2.17.2
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data.html">Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data_importer.html">Data Importer Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.landing.html">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.html">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.managers.html">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.public.html">Public Package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seed.html">SEED Package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seed.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.management.html">Management Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.templatetags.html">Templatetags Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tests Package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#inheritance">Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.decorators">Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#factory">Factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.search">Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.tasks">Tasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.token_generators">Token Generator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.urls">URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.utils">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed.views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seed.html#module-seed">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.serializers.html">Serializers Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tests Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.tests.test_admin_views">Admin Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.tests.test_decorators">Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exporters">Exporters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.tests.test_tasks">Tasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.tests.test_views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.tests.tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.tests.util">Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.urls.html">URLs Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.utils.html">Utilities Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.views.html">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+
+          <li><a href="../modules.html">Modules</a> &raquo;</li>
+
+          <li><a href="seed.html">SEED Package</a> &raquo;</li>
+
+      <li>Tests Package</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="tests-package">
+<h1>Tests Package<a class="headerlink" href="#tests-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="seed.test_helpers.html">Test Helpers Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seed.test_helpers.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.test_helpers.html#module-seed.test_helpers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="module-seed.tests.test_admin_views">
+<span id="admin-views"></span><h2>Admin Views<a class="headerlink" href="#module-seed.tests.test_admin_views" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_admin_views.</span></span><span class="sig-name descname"><span class="pre">AdminViewsTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest.test_add_org">
+<span class="sig-name descname"><span class="pre">test_add_org</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest.test_add_org" title="Permalink to this definition">¶</a></dt>
+<dd><p>Happy path test for creating a new org.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest.test_add_org_dupe">
+<span class="sig-name descname"><span class="pre">test_add_org_dupe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest.test_add_org_dupe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trying to create an org with a dupe name fails.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest.test_add_user_existing_org">
+<span class="sig-name descname"><span class="pre">test_add_user_existing_org</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest.test_add_user_existing_org" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test creating a new user, adding them to an existing org
+in the process.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest.test_add_user_new_org">
+<span class="sig-name descname"><span class="pre">test_add_user_new_org</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest.test_add_user_new_org" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new user and a new org at the same time.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest.test_add_user_no_org">
+<span class="sig-name descname"><span class="pre">test_add_user_no_org</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest.test_add_user_no_org" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should not be able to create a new user without either
+selecting or creating an org at the same time.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest.test_signup_process">
+<span class="sig-name descname"><span class="pre">test_signup_process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest.test_signup_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulates the entire new user signup process, from initial
+account creation by an admin to receiving the signup email
+to confirming the account and setting a password.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_admin_views.AdminViewsTest.test_signup_process_force_lowercase_email">
+<span class="sig-name descname"><span class="pre">test_signup_process_force_lowercase_email</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_admin_views.AdminViewsTest.test_signup_process_force_lowercase_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulates the signup and login forcing login username to lowercase</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-seed.tests.test_decorators">
+<span id="decorators"></span><h2>Decorators<a class="headerlink" href="#module-seed.tests.test_decorators" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.ClassDecoratorTests">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_decorators.</span></span><span class="sig-name descname"><span class="pre">ClassDecoratorTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.ClassDecoratorTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_dict">
+<span class="sig-name descname"><span class="pre">test_ajax_request_class_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_dict_status_error">
+<span class="sig-name descname"><span class="pre">test_ajax_request_class_dict_status_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_dict_status_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_dict_status_false">
+<span class="sig-name descname"><span class="pre">test_ajax_request_class_dict_status_false</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_dict_status_false" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_format_type">
+<span class="sig-name descname"><span class="pre">test_ajax_request_class_format_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.ClassDecoratorTests.test_ajax_request_class_format_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_class_no_org_id">
+<span class="sig-name descname"><span class="pre">test_require_organization_id_class_no_org_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_class_no_org_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_class_org_id">
+<span class="sig-name descname"><span class="pre">test_require_organization_id_class_org_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_class_org_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_class_org_id_not_int">
+<span class="sig-name descname"><span class="pre">test_require_organization_id_class_org_id_not_int</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.ClassDecoratorTests.test_require_organization_id_class_org_id_not_int" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.RequireOrganizationIDTests">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_decorators.</span></span><span class="sig-name descname"><span class="pre">RequireOrganizationIDTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.RequireOrganizationIDTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.RequireOrganizationIDTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.RequireOrganizationIDTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_fail_no_key">
+<span class="sig-name descname"><span class="pre">test_require_organization_id_fail_no_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_fail_no_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_fail_not_numeric">
+<span class="sig-name descname"><span class="pre">test_require_organization_id_fail_not_numeric</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_fail_not_numeric" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_success_integer">
+<span class="sig-name descname"><span class="pre">test_require_organization_id_success_integer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_success_integer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_success_string">
+<span class="sig-name descname"><span class="pre">test_require_organization_id_success_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.RequireOrganizationIDTests.test_require_organization_id_success_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_decorators.</span></span><span class="sig-name descname"><span class="pre">TestDecorators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests for locking tasks and reporting progress.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.locked">
+<span class="sig-name descname"><span class="pre">locked</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.locked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><em class="property"> <span class="pre">=</span> <span class="pre">34</span></em><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.pk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.test_get_prog_key">
+<span class="sig-name descname"><span class="pre">test_get_prog_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.test_get_prog_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>We format our cache key properly.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.test_increment_cache">
+<span class="sig-name descname"><span class="pre">test_increment_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.test_increment_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sum our progress by increments properly.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.test_locking">
+<span class="sig-name descname"><span class="pre">test_locking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.test_locking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure we indicate we’re locked if and only if we’re inside the function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.test_locking_w_exception">
+<span class="sig-name descname"><span class="pre">test_locking_w_exception</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.test_locking_w_exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure we release our lock if we have had an exception.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.test_progress">
+<span class="sig-name descname"><span class="pre">test_progress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.test_progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>When a task finishes, it increments the progress counter properly.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestDecorators.unlocked">
+<span class="sig-name descname"><span class="pre">unlocked</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#seed.tests.test_decorators.TestDecorators.unlocked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seed.tests.test_decorators.TestException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_decorators.</span></span><span class="sig-name descname"><span class="pre">TestException</span></span><a class="headerlink" href="#seed.tests.test_decorators.TestException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</section>
+<section id="exporters">
+<h2>Exporters<a class="headerlink" href="#exporters" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.tests.test_tasks">
+<span id="tasks"></span><h2>Tasks<a class="headerlink" href="#module-seed.tests.test_tasks" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_tasks.TestTasks">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_tasks.</span></span><span class="sig-name descname"><span class="pre">TestTasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_tasks.TestTasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests for dealing with SEED related tasks.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_tasks.TestTasks.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_tasks.TestTasks.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_tasks.TestTasks.test_delete_organization">
+<span class="sig-name descname"><span class="pre">test_delete_organization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_tasks.TestTasks.test_delete_organization" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-seed.tests.test_views">
+<span id="views"></span><h2>Views<a class="headerlink" href="#module-seed.tests.test_views" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_views.GetDatasetsViewsTests">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">GetDatasetsViewsTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.GetDatasetsViewsTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.GetDatasetsViewsTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.GetDatasetsViewsTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.GetDatasetsViewsTests.test_delete_dataset">
+<span class="sig-name descname"><span class="pre">test_delete_dataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.GetDatasetsViewsTests.test_delete_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.GetDatasetsViewsTests.test_get_dataset">
+<span class="sig-name descname"><span class="pre">test_get_dataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.GetDatasetsViewsTests.test_get_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets">
+<span class="sig-name descname"><span class="pre">test_get_datasets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets_count">
+<span class="sig-name descname"><span class="pre">test_get_datasets_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets_count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets_count_invalid">
+<span class="sig-name descname"><span class="pre">test_get_datasets_count_invalid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.GetDatasetsViewsTests.test_get_datasets_count_invalid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.GetDatasetsViewsTests.test_update_dataset">
+<span class="sig-name descname"><span class="pre">test_update_dataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.GetDatasetsViewsTests.test_update_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_views.ImportFileViewsTests">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">ImportFileViewsTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.ImportFileViewsTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.ImportFileViewsTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.ImportFileViewsTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.ImportFileViewsTests.test_delete_file">
+<span class="sig-name descname"><span class="pre">test_delete_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.ImportFileViewsTests.test_delete_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.ImportFileViewsTests.test_get_import_file">
+<span class="sig-name descname"><span class="pre">test_get_import_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.ImportFileViewsTests.test_get_import_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.ImportFileViewsTests.test_get_matching_and_geocoding_results">
+<span class="sig-name descname"><span class="pre">test_get_matching_and_geocoding_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.ImportFileViewsTests.test_get_matching_and_geocoding_results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">InventoryViewTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seed.tests.util.AssertDictSubsetMixin" title="seed.tests.util.AssertDictSubsetMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.tests.util.AssertDictSubsetMixin</span></code></a>, <a class="reference internal" href="#seed.tests.util.DeleteModelsTestCase" title="seed.tests.util.DeleteModelsTestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.tests.util.DeleteModelsTestCase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_cycles">
+<span class="sig-name descname"><span class="pre">test_get_cycles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_cycles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties">
+<span class="sig-name descname"><span class="pre">test_get_properties</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_cycle_id">
+<span class="sig-name descname"><span class="pre">test_get_properties_cycle_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_cycle_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_empty_page">
+<span class="sig-name descname"><span class="pre">test_get_properties_empty_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_empty_page" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_page_not_an_integer">
+<span class="sig-name descname"><span class="pre">test_get_properties_page_not_an_integer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_page_not_an_integer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_pint_fields">
+<span class="sig-name descname"><span class="pre">test_get_properties_pint_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_pint_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_profile_id">
+<span class="sig-name descname"><span class="pre">test_get_properties_profile_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_profile_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_property_extra_data">
+<span class="sig-name descname"><span class="pre">test_get_properties_property_extra_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_property_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_select_all">
+<span class="sig-name descname"><span class="pre">test_get_properties_select_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_select_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_taxlot_extra_data">
+<span class="sig-name descname"><span class="pre">test_get_properties_taxlot_extra_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_taxlot_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_with_taxlots">
+<span class="sig-name descname"><span class="pre">test_get_properties_with_taxlots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_with_taxlots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_with_taxlots_with_footprints">
+<span class="sig-name descname"><span class="pre">test_get_properties_with_taxlots_with_footprints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_with_taxlots_with_footprints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_properties_wrong_query_params">
+<span class="sig-name descname"><span class="pre">test_get_properties_wrong_query_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_properties_wrong_query_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_property">
+<span class="sig-name descname"><span class="pre">test_get_property</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_property" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_property_columns">
+<span class="sig-name descname"><span class="pre">test_get_property_columns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_property_columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_property_multiple_taxlots">
+<span class="sig-name descname"><span class="pre">test_get_property_multiple_taxlots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_property_multiple_taxlots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlot">
+<span class="sig-name descname"><span class="pre">test_get_taxlot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlot_columns">
+<span class="sig-name descname"><span class="pre">test_get_taxlot_columns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlot_columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlots">
+<span class="sig-name descname"><span class="pre">test_get_taxlots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlots_empty_page">
+<span class="sig-name descname"><span class="pre">test_get_taxlots_empty_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlots_empty_page" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlots_extra_data">
+<span class="sig-name descname"><span class="pre">test_get_taxlots_extra_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlots_extra_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlots_multiple_taxlots">
+<span class="sig-name descname"><span class="pre">test_get_taxlots_multiple_taxlots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlots_multiple_taxlots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlots_no_cycle_id">
+<span class="sig-name descname"><span class="pre">test_get_taxlots_no_cycle_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlots_no_cycle_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlots_page_not_an_integer">
+<span class="sig-name descname"><span class="pre">test_get_taxlots_page_not_an_integer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlots_page_not_an_integer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_get_taxlots_profile_id">
+<span class="sig-name descname"><span class="pre">test_get_taxlots_profile_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_get_taxlots_profile_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_postoffice">
+<span class="sig-name descname"><span class="pre">test_postoffice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_postoffice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.InventoryViewTests.test_update_pint_fields_with_modified_display_settings">
+<span class="sig-name descname"><span class="pre">test_update_pint_fields_with_modified_display_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.InventoryViewTests.test_update_pint_fields_with_modified_display_settings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_views.MainViewTests">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">MainViewTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.MainViewTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.MainViewTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.MainViewTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.MainViewTests.test_home">
+<span class="sig-name descname"><span class="pre">test_home</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.MainViewTests.test_home" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">TestMCMViews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.assert_expected_mappings">
+<span class="sig-name descname"><span class="pre">assert_expected_mappings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.assert_expected_mappings" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each k,v pair of form column_name: [dest_col, confidence]
+in actual, assert that expected contains the same column_name
+and dest_col mapping.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.expected_mappings">
+<span class="sig-name descname"><span class="pre">expected_mappings</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'address':</span> <span class="pre">['owner_address',</span> <span class="pre">70],</span> <span class="pre">'building</span> <span class="pre">id':</span> <span class="pre">['Building</span> <span class="pre">air</span> <span class="pre">leakage',</span> <span class="pre">64],</span> <span class="pre">'name':</span> <span class="pre">['Name</span> <span class="pre">of</span> <span class="pre">Audit</span> <span class="pre">Certification</span> <span class="pre">Holder',</span> <span class="pre">47],</span> <span class="pre">'year</span> <span class="pre">built':</span> <span class="pre">['year_built',</span> <span class="pre">50]}</span></em><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.expected_mappings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.raw_columns_expected">
+<span class="sig-name descname"><span class="pre">raw_columns_expected</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'raw_columns':</span> <span class="pre">['name',</span> <span class="pre">'address',</span> <span class="pre">'year</span> <span class="pre">built',</span> <span class="pre">'building</span> <span class="pre">id'],</span> <span class="pre">'status':</span> <span class="pre">'success'}</span></em><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.raw_columns_expected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.test_create_dataset">
+<span class="sig-name descname"><span class="pre">test_create_dataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.test_create_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests the create_dataset view, allows duplicate dataset names</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions">
+<span class="sig-name descname"><span class="pre">test_get_column_mapping_suggestions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions_pm_file">
+<span class="sig-name descname"><span class="pre">test_get_column_mapping_suggestions_pm_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions_pm_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions_with_columns">
+<span class="sig-name descname"><span class="pre">test_get_column_mapping_suggestions_with_columns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.test_get_column_mapping_suggestions_with_columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.test_get_raw_column_names">
+<span class="sig-name descname"><span class="pre">test_get_raw_column_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.test_get_raw_column_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Good case for <code class="docutils literal notranslate"><span class="pre">get_raw_column_names</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.test_progress">
+<span class="sig-name descname"><span class="pre">test_progress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.test_progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure we retrieve data from cache properly.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.test_save_column_mappings">
+<span class="sig-name descname"><span class="pre">test_save_column_mappings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.test_save_column_mappings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.test_views.TestMCMViews.test_save_column_mappings_idempotent">
+<span class="sig-name descname"><span class="pre">test_save_column_mappings_idempotent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.test_views.TestMCMViews.test_save_column_mappings_idempotent" title="Permalink to this definition">¶</a></dt>
+<dd><p>We need to make successive calls to save_column_mappings.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-seed.tests.tests">
+<span id="tests"></span><h2>Tests<a class="headerlink" href="#module-seed.tests.tests" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.tests.ComplianceTestCase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.tests.</span></span><span class="sig-name descname"><span class="pre">ComplianceTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.tests.ComplianceTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.tests.ComplianceTestCase.test_basic_compliance_creation">
+<span class="sig-name descname"><span class="pre">test_basic_compliance_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.tests.ComplianceTestCase.test_basic_compliance_creation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.tests.ProjectTestCase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.tests.</span></span><span class="sig-name descname"><span class="pre">ProjectTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.tests.ProjectTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.tests.ProjectTestCase.test_basic_project_creation">
+<span class="sig-name descname"><span class="pre">test_basic_project_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.tests.ProjectTestCase.test_basic_project_creation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-seed.tests.util">
+<span id="utils"></span><h2>Utils<a class="headerlink" href="#module-seed.tests.util" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.util.AssertDictSubsetMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.util.</span></span><span class="sig-name descname"><span class="pre">AssertDictSubsetMixin</span></span><a class="headerlink" href="#seed.tests.util.AssertDictSubsetMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.util.AssertDictSubsetMixin.assertDictContainsSubset">
+<span class="sig-name descname"><span class="pre">assertDictContainsSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dictionary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.AssertDictSubsetMixin.assertDictContainsSubset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether dictionary is a superset of subset</p>
+<p>This is a necessary polyfill b/c assertDictContainsSubset was deprecated
+and I believe it’s much more readable compared to the implementation below</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.util.DataMappingBaseTestCase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.util.</span></span><span class="sig-name descname"><span class="pre">DataMappingBaseTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.DataMappingBaseTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#seed.tests.util.DeleteModelsTestCase" title="seed.tests.util.DeleteModelsTestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.tests.util.DeleteModelsTestCase</span></code></a></p>
+<p>Base Test Case Class to handle data import</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.util.DataMappingBaseTestCase.create_import_file">
+<span class="sig-name descname"><span class="pre">create_import_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">org</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.DataMappingBaseTestCase.create_import_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.util.DataMappingBaseTestCase.set_up">
+<span class="sig-name descname"><span class="pre">set_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">import_file_source_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.DataMappingBaseTestCase.set_up" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.util.DeleteModelsTestCase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.util.</span></span><span class="sig-name descname"><span class="pre">DeleteModelsTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.DeleteModelsTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.util.DeleteModelsTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.DeleteModelsTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.util.DeleteModelsTestCase.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.DeleteModelsTestCase.tearDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.util.FakeClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.util.</span></span><span class="sig-name descname"><span class="pre">FakeClient</span></span><a class="headerlink" href="#seed.tests.util.FakeClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An extremely light-weight test client.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.util.FakeClient.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.FakeClient.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.tests.util.FakeClient.post">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.FakeClient.post" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.tests.util.FakeRequest">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.tests.util.</span></span><span class="sig-name descname"><span class="pre">FakeRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'POST'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.tests.util.FakeRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A simple request stub.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.util.FakeRequest.GET">
+<span class="sig-name descname"><span class="pre">GET</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#seed.tests.util.FakeRequest.GET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.util.FakeRequest.META">
+<span class="sig-name descname"><span class="pre">META</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'REMOTE_ADDR':</span> <span class="pre">'127.0.0.1'}</span></em><a class="headerlink" href="#seed.tests.util.FakeRequest.META" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.util.FakeRequest.POST">
+<span class="sig-name descname"><span class="pre">POST</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#seed.tests.util.FakeRequest.POST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.util.FakeRequest.body">
+<span class="sig-name descname"><span class="pre">body</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#seed.tests.util.FakeRequest.body" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.tests.util.FakeRequest.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'fake_login_path'</span></em><a class="headerlink" href="#seed.tests.util.FakeRequest.path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+        <a href="seed.serializers.html" class="btn btn-neutral float-right" title="Serializers Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+        <a href="seed.test_helpers.factory.lib.html" class="btn btn-neutral float-left" title="Test Helper Factory Lib Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

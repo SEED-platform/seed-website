@@ -1,0 +1,1518 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../user_doc_getting_started/">
+      
+      
+        <link rel="next" href="../user_doc_inventory/">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Importing Data - SEED Platform&trade; Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%205h2V3h-2m0%2018h2v-2h-2M11%205h2V3h-2m8%202h2V3h-2m0%206h2V7h-2m0%2014h2v-2h-2m0-6h2v-2h-2m0%206h2v-2h-2M3%205h2V3H3m0%206h2V7H3m0%206h2v-2H3m0%206h2v-2H3m0%206h2v-2H3m8%202h2v-2h-2m-4%202h2v-2H7M7%205h2V3H7z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-L4813JJ6GP"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-L4813JJ6GP",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-L4813JJ6GP",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  <!-- extend base theme with custom content here -->
+  <!-- DAP -->
+  <script id="_fed_an_ua_tag" async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE
+  &subagency=EERE"></script>
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SEED Platform&amp;trade; Documentation" class="md-header__button md-logo" aria-label="SEED Platform&trade; Documentation" data-md-component="logo">
+      
+  <img src="../images/icon-city.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SEED Platform&trade; Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Importing Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SEED-platform/seed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SEED Platform&amp;trade; Documentation" class="md-nav__button md-logo" aria-label="SEED Platform&trade; Documentation" data-md-component="logo">
+      
+  <img src="../images/icon-city.svg" alt="logo">
+
+    </a>
+    SEED Platform&trade; Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SEED-platform/seed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Importing Data
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    View Building Inventory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Insights
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_analyses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analyses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_doc_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organization Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../known_issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Known Issues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hosting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../technical_ally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SEED Technical Allies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosting_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hosting Provider Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_hosting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Self-Hosting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app_developer_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/geocoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Geocoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/inventory_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventory Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/features/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Miscellaneous
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/industry_involvement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Industry Involvement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer_resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Developer Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Importing Data</h1>
+
+<h2 id="import-data"><strong>Import Data</strong><a class="headerlink" href="#import-data" title="Permanent link">&para;</a></h2>
+<p>SEED is primarily a data management platform, and importing the data is
+a critical component to understand.</p>
+<details class="note">
+<summary><strong>Overview</strong></summary>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>SEED can import data from many different sources, for example:</p>
+<h3 id="building-property-data">Building / Property Data<a class="headerlink" href="#building-property-data" title="Permanent link">&para;</a></h3>
+<p>Building and property lists can sometimes be difficult to create. There
+are a few different sources of data that may help, which can be imported
+into SEED in the form of spreadsheets with one line per building, such
+as:</p>
+<ul>
+<li>Tax assessor lists</li>
+<li>Real estate data</li>
+</ul>
+<h3 id="benchmarking-data">Benchmarking data<a class="headerlink" href="#benchmarking-data" title="Permanent link">&para;</a></h3>
+<p>One of the primary sources of building information for benchmarking and
+Building Performance Standards (BPS) ordinances is data entered by
+building owners into ENERGY STAR&reg; Portfolio Manager&reg; which is then shared
+with jurisdictions who are determining compliance with the ordinances.</p>
+<p>SEED can import data from spreadsheets downloaded from ENERGY STAR
+Portfolio Manager and then imported into SEED. It is also possible to
+log into an ENERGY STAR Portfolio Manager account directly from SEED and
+specify a "Custom Report Template" to be imported.</p>
+<h3 id="match-data-from-different-sources">Match data from different sources<a class="headerlink" href="#match-data-from-different-sources" title="Permanent link">&para;</a></h3>
+<p>One of the strengths of SEED is that data for a specific building or
+property can be imported from multiple sources and then matched and
+merged within SEED so that all the information related to that building
+is collected in one platform.</p>
+<p>In order for the data from different sources to be merged together,
+there must be one or more "matching" fields that are in all the data.
+These fields are identified during the data import "Mapping" step, which
+will be discussed in the next section. These matching fields typically
+include:</p>
+<ul>
+<li>Tax Assessor Parcel ID</li>
+<li>Custom Building ID</li>
+<li>ENERGY STAR Portfolio Manager ID</li>
+<li>Unique Building ID (UBID)</li>
+</ul>
+<h3 id="handle-data-with-different-types-of-relationships">Handle data with different types of relationships<a class="headerlink" href="#handle-data-with-different-types-of-relationships" title="Permanent link">&para;</a></h3>
+<p>In addition to matching and merging data for the same building or
+property, SEED can establish a relationship between a Tax Assessor
+Parcel and the buildings or properties associated with that parcel.
+Establishing this relationship is optional, but if Tax Assessor Parcel
+data is used to begin the creation of a building or property list, or
+the parcel / building relationship is desired, SEED can accomplish this
+during the mapping process, as long as there is both a tax parcel ID and
+a building or property ID in the data being imported.</p>
+<p>The image below shows the possibilities of tax parcel and building
+relationships:</p>
+<ul>
+<li>Case A: A one to one relationship, ie, one building on one parcel</li>
+<li>Case B: Multiple buildings on one parcel</li>
+<li>Case C: One building on multiple parcels</li>
+<li>Case D: Multiple buildings on multiple parcels, such as a campus
+    &gt; scenario</li>
+</ul>
+<p><img alt="alt_text" src="../images/data_property_taxlot_relationship_1000.png" title="Property-Tax Lot Relationship" /></p>
+<p>The SEED data model establishes the relationship between the tax parcels
+and buildings as shown in the simplified diagram below. In the main
+Inventory list view, there are two tabs, one for Property and one for
+Tax Lot.</p>
+<p><img alt="alt_text" src="../images/Tax%20Lot%20Property%20db%20relationship_900.png" title="Tax Lot Property database relationship" /></p>
+<h3 id="maintain-data-based-on-compliance-year">Maintain data based on compliance year<a class="headerlink" href="#maintain-data-based-on-compliance-year" title="Permanent link">&para;</a></h3>
+<p>Data is imported into SEED by "cycles", which are generally defined on a
+calendar basis, to keep track of the annual compliance of buildings.
+There are several features in SEED which allow importing, viewing, and
+analyzing the status of buildings across cycles.</p>
+<h3 id="data-import-workflow">Data import workflow<a class="headerlink" href="#data-import-workflow" title="Permanent link">&para;</a></h3>
+<p>The first three steps in the diagram below shows the workflow when
+importing data into SEED</p>
+<p><img alt="alt_text" src="../images/Import%20Data%20Workflow_300.png" title="Import Data Workflow" /></p>
+</details>
+<h2 id="before-importing-data"><strong>Before importing data</strong><a class="headerlink" href="#before-importing-data" title="Permanent link">&para;</a></h2>
+<p>There are a few steps that should be completed before importing data, in
+order to have a smooth process.</p>
+<ul>
+<li>Define cycles</li>
+<li>Define Matching fields</li>
+</ul>
+<details class="note">
+<summary><strong>Cycles</strong></summary>
+<h2 id="cycles">Cycles<a class="headerlink" href="#cycles" title="Permanent link">&para;</a></h2>
+<h3 id="define-cycles-in-organizations-cycles">Define Cycles in Organizations / Cycles<a class="headerlink" href="#define-cycles-in-organizations-cycles" title="Permanent link">&para;</a></h3>
+<p>It is important to create the appropriate cycle to import the data into.
+SEED has one "default" cycle that can be used as is, or edited to suit
+the first data import. It is also possible to make as many cycles as
+needed to import the data.</p>
+<p><img alt="alt_text" src="../images/Cycle%20create%2001.png" title="Create Cycle Step 1" /></p>
+<p><img alt="alt_text" src="../images/Cycle%20create%2002.png" title="Create Cycle Step 2" /></p>
+<h3 id="data-files-with-multiple-years-of-data"><strong>Data files with multiple years of data</strong><a class="headerlink" href="#data-files-with-multiple-years-of-data" title="Permanent link">&para;</a></h3>
+<p>If a file is to be imported with multiple cycles (years) of data in it,
+the appropriate cycles need to be defined before importing the data. For
+example, if there is data from 2019, 2020 and 2021 in one file, and that
+data is to be associated with the cycle for each year, a cycle for each
+of those years needs to be defined. SEED uses a field called "Year
+Ending" to determined the cycle. This is a default field that is in ENERGY STAR Portfolio
+Manager data, but could be added to other data if needed.</p>
+<p><img alt="alt_text" src="../images/Multi%20cycle%20upload%2001.png" title="Multi Cycle Upload Step 1" /></p>
+<p>Make sure that a cycle is defined for each year of data in the data
+file.</p>
+<p><img alt="alt_text" src="../images/Multi%20cycle%20upload%2002.png" title="Multi Cycle Upload Step 2" /></p>
+</details>
+<details class="note">
+<summary><strong>Matching Fields</strong></summary>
+<h2 id="matching-fields">Matching Fields<a class="headerlink" href="#matching-fields" title="Permanent link">&para;</a></h2>
+<h3 id="define-matching-fields-in-organizations-column-settings">Define Matching fields in Organizations / Column Settings<a class="headerlink" href="#define-matching-fields-in-organizations-column-settings" title="Permanent link">&para;</a></h3>
+<p>In order to map the fields properly when importing data, it is important
+to define the fields that will be the "matching" fields across data
+files.</p>
+<p>The matching fields are defined in Organizations / Column Settings.
+There is a column called "MATCH CRITERIA", and the fields that are
+matching fields should be checked. There can be just one field defined,
+or multiple fields. Standard fields for matching are the PM Property ID
+field from ENERGY STAR Portfolio Manager, and/or the Custom ID 1 field,
+which can represent any unique building ID.</p>
+<p>The Column Description field can be edited to represent a more
+descriptive name. For example, if the matching field is Custom ID 1,
+that Column Description could be changed to "City X Building ID".</p>
+<p>Default matching fields for <strong>Properties</strong> include:</p>
+<ul>
+<li>PM Property ID (ENERGY STAR Portfolio ID)</li>
+<li>Custom ID 1 (A custom ID for each building)</li>
+<li>UBID (Unique Building ID, generated according to a specific algorithm)</li>
+</ul>
+<p>Default matching fields for <strong>Tax Lots</strong> include:</p>
+<ul>
+<li>Jurisdiction Tax Lot ID</li>
+</ul>
+<p><strong>Although additional matching fields can be selected, note that matching fields cannot be unselected once data is imported. Therefore, it is important to review your matching field criteria prior to importing data for the first time.</strong> The addition of a matching field will trigger a round of matching and merging of records, similar to the process that occurs during data import.</p>
+<p><img alt="alt_text" src="../images/Column%20Settings%20Matching%20Fields.png" title="Column Settings Matching Fields" /></p>
+<p>Once the cycles are properly defined and the matching fields are set, it
+is time to import the data</p>
+</details>
+<h2 id="import-data-general"><strong>Import data - General</strong><a class="headerlink" href="#import-data-general" title="Permanent link">&para;</a></h2>
+<p>The first few steps for importing Property and Tax Parcel data are the same</p>
+<details class="note">
+<summary><strong>Overview</strong></summary>
+<h2 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">&para;</a></h2>
+<p>There are a few different ways to start importing data. You can click
+the DATA navigation button on the left side of the screen, or you can
+click on the "Upload your Buildings List" button on the main SEED
+Platform screen.</p>
+<p><img alt="alt_text" src="../images/Data%20Upload%2001.png" title="Data Upload Step 1" /></p>
+</details>
+<details class="note">
+<summary><strong>Create a Data Set</strong></summary>
+<h2 id="create-a-data-set">Create a Data Set<a class="headerlink" href="#create-a-data-set" title="Permanent link">&para;</a></h2>
+<p>The DATA navigation button on the left side of the application will
+display the screen shown below, where a new data set can be created. The
+Data Set Name can be any text that describes the data set that is being
+created. There will potentially be multiple files imported in a data
+set.</p>
+<p><img alt="alt_text" src="../images/Data%20Upload%2002.png" title="Data Upload Step 2" /></p>
+<p>Clicking the "Create Data Set" button will open the screen shown below,
+which has several options for what type of data to upload, as well as
+how to upload it.</p>
+<p>The first step is to assign this data upload to a cycle -- the pull
+down list will show all the cycles that are defined. It is also possible
+to define a new cycle by clicking the "Manage available cycles" link
+under the Cycle pulldown. And if the file being imported has multiple
+years defined (based on a field called "Year Ending") the "Multiple
+Cycle Upload" box can be checked.</p>
+<p><img alt="alt_text" src="../images/Data%20-%20File%20Import%20Options.png" title="Data - File Import Options" /></p>
+</details>
+<details class="note">
+<summary><strong>Upload a Spreadsheet</strong></summary>
+<h2 id="upload-a-spreadsheet">Upload a Spreadsheet<a class="headerlink" href="#upload-a-spreadsheet" title="Permanent link">&para;</a></h2>
+<p>The first option in the list of upload options is "Upload a
+Spreadsheet".</p>
+<p>This option assumes that the spreadsheet will have one record per
+property or tax parcel. This spreadsheet can contain both property /
+building and tax parcel information, or it can be just one or the other.</p>
+<p>Here is an example of a spreadsheet representing a list of tax parcels
+that have buildings on them. Each row represents a tax parcel.</p>
+<p><img alt="alt_text" src="../images/Tax%20Lot%20spreadsheet.png" title="Tax Lot spreadsheet" /></p>
+<p>Here is an example spreadsheet of building information from ENERGY STAR
+Portfolio Manager for the same buildings. In this case, each row
+represents an individual building, and each row has the tax parcel ID
+associated with the building.</p>
+<p><img alt="alt_text" src="../images/ESPM%20Spreadsheet.png" title="ESPM Spreadsheet" /></p>
+<p>When these two spreadsheets are imported into SEED, the relationship
+between the tax lots and buildings can be established in the mapping
+step.</p>
+</details>
+<h2 id="import-tax-parcel-data"><strong>Import Tax Parcel Data</strong><a class="headerlink" href="#import-tax-parcel-data" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><strong>Upload a Spreadsheet</strong></summary>
+<h2 id="upload-a-spreadsheet_1">Upload a Spreadsheet<a class="headerlink" href="#upload-a-spreadsheet_1" title="Permanent link">&para;</a></h2>
+<p>First, import the tax parcel spreadsheet into the data set by clicking
+the Upload a Spreadsheet button, navigating to the file to be imported,
+and as the file is imported, messages will appear to show the progress
+of the upload.</p>
+<p><img alt="alt_text" src="../images/Tax%20Lot%20upload%2001.png" title="Tax Lot upload Step 1" /></p>
+<p>This message appears when the file has completed the first upload step.
+Click the "Continue to data mapping" button to move to the next step.</p>
+<p><img alt="alt_text" src="../images/Tax%20Lot%20upload%2002.png" title="Tax Lot upload Step 2" /></p>
+</details>
+<details class="note">
+<summary><strong>Map the Fields</strong></summary>
+<h2 id="map-the-fields">Map the Fields<a class="headerlink" href="#map-the-fields" title="Permanent link">&para;</a></h2>
+<p>The Mapping screen will now appear, and the fields in the uploaded file
+need to be mapped to the appropriate SEED fields.</p>
+<p>If this is the first file being imported, the easiest way to start the
+mapping is to click the "Copy Data File Headers directly to SEED
+headers" which copies the fields from the right hand side (the fields in
+the uploaded file) to the SEED Mapped Fields on the left side.</p>
+<p>Select "Tax Lot" for the "Set all fields to" pulldown list</p>
+<p>Change the field called "Parcel Number" to the matching field
+"Jurisdiction Tax Lot ID".</p>
+<p><img alt="alt_text" src="../images/Tax%20Lot%20Mapping%2001.png" title="Tax Lot Mapping Step 1" /></p>
+<p><img alt="alt_text" src="../images/Tax%20Lot%20mapping%20matching%20field.png" title="Tax Lot mapping matching field" /></p>
+<p>Save the final mapping to a "Column Mapping Profile name, to save the
+mappings for another file of the same structure.</p>
+<p><img alt="alt_text" src="../images/Colum%20Mapping%20Profile.png" title="Colum Mapping Profile Step 1" /></p>
+<p>This creates a Column Mapping profile that can be used again for another
+file with the same fields.</p>
+<p><img alt="alt_text" src="../images/Column%20Mapping%20profile%2002.png" title="Column Mapping profile Step 2" /></p>
+<p>Then click the Map Your Data button to go to the Mapping Review screen.</p>
+<p><img alt="alt_text" src="../images/Map%20You%20Data%20button.png" title="Map You Data button" /></p>
+</details>
+<details class="note">
+<summary><strong>Review the Mapped Data</strong></summary>
+<h2 id="review-the-mapped-data">Review the Mapped Data<a class="headerlink" href="#review-the-mapped-data" title="Permanent link">&para;</a></h2>
+<p>In the Mapping Review screen all the records will be displayed, with the
+new field mapping. If there is anything that needs to be changed, click
+the Back to Mapping button and the mapping can be changed as needed.</p>
+<p><img alt="alt_text" src="../images/Tax%20Lot%20Mapping%20Review.png" title="Tax Lot Mapping Review" /></p>
+</details>
+<details class="note">
+<summary><strong>Save Field Mappings and View the Results in the Inventory List View</strong></summary>
+<h2 id="save-field-mappings-and-view-the-results-in-the-inventory-list-view">Save Field Mappings and View the Results in the Inventory List View<a class="headerlink" href="#save-field-mappings-and-view-the-results-in-the-inventory-list-view" title="Permanent link">&para;</a></h2>
+<p>Click the Save Mappings button to complete the data upload process; a
+confirmation screen will be displayed. Click the Confirm mappings</p>
+<p><img alt="alt_text" src="../images/Mapping%20confirmation.png" title="Mapping confirmation" /></p>
+<p>A progress bar will be displayed.</p>
+<p><img alt="alt_text" src="../images/Matching%20progress%2001.png" title="Matching progress 01" /></p>
+<p>When the matching is complete, a summary of what was imported will be
+displayed.</p>
+<p><img alt="alt_text" src="../images/Tax%20Lot%20upload%20results.png" title="Tax Lot upload results" /></p>
+<p>Click the View my Properties to go to the Inventory list to see the
+uploaded data.</p>
+<p>To see the Tax Lot data, click on the Tax Lot tab
+<img alt="alt_text" src="../images/Tax%20Lot%20Inventory%20List%20Tab.png" title="Tax Lot Inventory List Tab" /></p>
+</details>
+<h2 id="import-energy-star-portfolio-manager-data"><strong>Import ENERGY STAR&reg; Portfolio Manager&reg; Data</strong><a class="headerlink" href="#import-energy-star-portfolio-manager-data" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><strong>Import Options</strong></summary>
+<h2 id="import-options">Import Options<a class="headerlink" href="#import-options" title="Permanent link">&para;</a></h2>
+<p>There are two methods for importing ENERGY STAR Portfolio Manager Data</p>
+<ul>
+<li><strong>Option 1:</strong> Download a spreadsheet from the ENERGY STAR Portfolio Manager application and import that spreadsheet into SEED, in the same manner as any spreadsheet.</li>
+<li><strong>Option 2:</strong> Log in to the ENERGY STAR Portfolio Manager account from SEED and specify the Custom Report Template to upload into SEED. This eliminates the need to use the spreadsheet option.</li>
+</ul>
+<p><img alt="alt_text" src="../images/ESPM%20Import%20Options.png" title="ESPM Import Options" /></p>
+</details>
+<details class="note">
+<summary><strong>Option 1: Upload an ENERGY STAR Portfolio Manager Spreadsheet</strong></summary>
+<h2 id="option-1-upload-an-energy-star-portfolio-manager-spreadsheet">Option 1: Upload an ENERGY STAR Portfolio Manager Spreadsheet<a class="headerlink" href="#option-1-upload-an-energy-star-portfolio-manager-spreadsheet" title="Permanent link">&para;</a></h2>
+<p>After uploading the tax lot spreadsheet, the next step might be to load the ENERGY STAR Portfolio Manager spreadsheet for the buildings associated with the tax lots already imported.</p>
+<p>ENERGY STAR Portfolio Manager data can also be imported by itself, without having imported tax lot data.</p>
+<p>The same steps are followed as any other spreadsheet:</p>
+<ul>
+<li>In the same Data Set, click the <strong>Add more data files</strong> link</li>
+</ul>
+<p><img alt="alt_text" src="../images/ESPM%20Add%20Data%20File.png" title="ESPM Add Data File" /></p>
+<ul>
+<li>Make sure the same cycle is selected, then click the Upload a Spreadsheet button.</li>
+</ul>
+<p><img alt="alt_text" src="../images/ESPM%20Upload%20a%20Spreadsheet.png" title="ESPM Upload a Spreadsheet" /></p>
+<ul>
+<li>Browse to the appropriate file</li>
+</ul>
+</details>
+<details class="note">
+<summary><strong>Option 2: Import ENERGY STAR Portfolio Manager Building Data</strong></summary>
+<h2 id="option-2-import-energy-star-portfolio-manager-building-data">Option 2: Import ENERGY STAR Portfolio Manager Building Data<a class="headerlink" href="#option-2-import-energy-star-portfolio-manager-building-data" title="Permanent link">&para;</a></h2>
+<p>It is possible to log directly into an ENERGY STAR Portfolio Manager account and specify the Custom Report Template to import. With this option, SEED will automatically regenerate the Custom Report Template in the ENERGY STAR Portfolio Manager account, and then download the data to SEED.</p>
+<ul>
+<li>Make sure to select the correct Cycle</li>
+<li>Click the "Import Portfolio Manager Data" from the Import screen</li>
+</ul>
+<p><img alt="alt_text" src="../images/ESPM_Import_login.png" title="ESPM Import login" /></p>
+<ul>
+<li>Input the Username and Password into the appropriate fields</li>
+<li>Click the "Get Report Templates" button, which will cause all the Custom Report Templates for that account to be displayed.</li>
+<li>Select the desired Custom Report Template</li>
+<li>Click the "Submit" button</li>
+</ul>
+<p><img alt="alt_text" src="../images/ESPM_Import_login-02.png" title="ESPM Import login 2" /></p>
+</details>
+<details class="note">
+<summary><strong>Map the Fields</strong></summary>
+<h2 id="map-the-fields_1">Map the Fields<a class="headerlink" href="#map-the-fields_1" title="Permanent link">&para;</a></h2>
+<p>In the Mapping screen
+- Copy the Data File headers to the SEED headers
+- Set the INVENTORY TYPE to Property for all fields except "Parcel ID"
+- Set the INVENTORY TYPE to Tax Lot for the "Parcel ID" field, and change the SEED Header mapping to the Tax Lot matching field "Jurisdiction Tax Lot ID". This will establish the relationship between the <strong>PM Property ID</strong> Matching field and the <strong>Jurisdiction Tax Lot</strong> field for each record
+- Save the final mapping to a new Column Mapping Profile
+- Click Map Your data to go to the Mapping Review screen</p>
+<p><img alt="alt_text" src="../images/ESPM%20Mapping.png" title="ESPM Mapping" /></p>
+<p>Mapping the Parcel ID to the Tax Lot table and the PM Property ID to the Property table results in records where the data from each can be viewed together.</p>
+<p><img alt="alt_text" src="../images/Data-MappingTax-Property%20Fields.png" title="Data-MappingTax-Property Fields" /></p>
+</details>
+<details class="note">
+<summary><strong>Review the Mapped Data and View the Results in the Inventory List View</strong></summary>
+<h2 id="review-the-mapped-data-and-view-the-results-in-the-inventory-list-view">Review the Mapped Data and View the Results in the Inventory List View<a class="headerlink" href="#review-the-mapped-data-and-view-the-results-in-the-inventory-list-view" title="Permanent link">&para;</a></h2>
+<p>The Mapping Review screen will show the records mapped to the Properties table and the records mapped to the Tax Lot table
+<img alt="alt_text" src="../images/ESPM%20Mapping%20Review.png" title="ESPM Mapping Review" /></p>
+<p>Click Save Mappings to finish the record mapping and matching process</p>
+<p>The progress bar will be displayed</p>
+<p><img alt="alt_text" src="../images/ESPM%20Matching%20progress%20bar.png" title="ESPM Matching progress bar" /></p>
+<p>The results of the matching and merging will be displayed</p>
+<p><img alt="alt_text" src="../images/ESPM%20Matching%20Results.png" title="ESPM Matching Results" /></p>
+<p>Click the View my properties button to view the imported data in the Inventory List View</p>
+<p><img alt="alt_text" src="../images/Inventory%20List%20Merged%20Tax%20Lot%20Properties.png" title="Inventory List Merged Tax Lot Properties" /></p>
+</details>
+<h2 id="import-meter-data-general"><strong>Import Meter Data - General</strong><a class="headerlink" href="#import-meter-data-general" title="Permanent link">&para;</a></h2>
+<p>Meter data associated with a building, both monthly and other time intervals, can be imported into SEED, either at the time of the regular building data import if the data is in the same file, or as a separate import</p>
+<details class="note">
+<summary><strong>Import Options</strong></summary>
+<h2 id="import-options_1">Import Options<a class="headerlink" href="#import-options_1" title="Permanent link">&para;</a></h2>
+<p>There are two type of meter data that can be imported into SEED.</p>
+<ul>
+<li><strong>ENERGY STAR Portfolio Manager Monthly Data Spreadsheet</strong><ul>
+<li>Monthly meter data can be exported from ENERGY STAR Portfolio Manager, and then imported into SEED</li>
+<li>This monthly meter data can be in two different formats depending on how it was reported (and exported)<ul>
+<li>Meter data is in columns by meter</li>
+<li>Meter data is in rows by meter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Green Button XML Interval Data</strong><ul>
+<li>Imported in the Property Detail Meter page</li>
+</ul>
+</li>
+</ul>
+<p>Multiple meters per building</p>
+<ul>
+<li>A building can have multiple meters from different sources and fuel types, which will be imported as separate meters into SEED if the data if formatted properly</li>
+</ul>
+<h2 id="import-energy-star-portfolio-manager-meter-data"><strong>Import ENERGY STAR Portfolio Manager Meter Data</strong><a class="headerlink" href="#import-energy-star-portfolio-manager-meter-data" title="Permanent link">&para;</a></h2>
+</details>
+<details class="note">
+<summary><strong>Overview</strong></summary>
+<h2 id="overview_2">Overview<a class="headerlink" href="#overview_2" title="Permanent link">&para;</a></h2>
+<p>The two options for how meter data can be exported from ENERGY STAR Portfolio Manager are that the data is formatted either with:</p>
+<ul>
+<li>Meter data in columns</li>
+<li>Meter data in rows</li>
+</ul>
+<h3 id="meter-data-in-columns">Meter data in columns<a class="headerlink" href="#meter-data-in-columns" title="Permanent link">&para;</a></h3>
+<p>In the screenshot below, the meter data is formatted so that the meter data is in columns</p>
+<p>There are <strong>two</strong> tabs:</p>
+<ul>
+<li><strong>Information and Metrics:</strong> The first tab has basic property information, including the Portfolio Manager Property ID (mapped to <strong>PM Property ID</strong> in SEED)</li>
+<li><strong>Monthly Usage:</strong> The second tab contains the monthly meter data, with a column for the Portfolio Manager Property ID (so that the meter can be matched to the property in the first tab), the month, and then a column for each of the meter data types, which are generally Natural Gas and Electricity, but can be other types depending on what was entered into ENERGY STAR Portfolio Manager for the building.</li>
+</ul>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_column.png" title="ESPM Monthly Meter Data in Columns" /></p>
+<h3 id="meter-data-in-rows">Meter data in rows<a class="headerlink" href="#meter-data-in-rows" title="Permanent link">&para;</a></h3>
+<p>In the screenshot below, the meter data is formatted so that the meter data is in rows</p>
+<p>There are <strong>three</strong> tabs:</p>
+<ul>
+<li><strong>Properties:</strong> The first tab has basic property information, including the Portfolio Manager Property ID (mapped to <strong>PM Property ID</strong> in SEED)</li>
+<li><strong>Meters:</strong> The second tab contains a row for each meter; in the example below, there are two meters, one for Natural Gas and one for Electricity from the grid, each with it's own unique ID to tie it to the monthly data in the <strong>Meter Entries</strong> tab.</li>
+<li><strong>Meter Entries:</strong> The third tab has a row for each month of data for each meter, with a field for **PM Property ID" to tie the row back to the building, and a field for ** Portfolio Manager Meter ID" to tie the row back to the meter entry in the second tab.</li>
+</ul>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_row.png" title="ESPM Monthly Meter Data in Rows" /></p>
+</details>
+<details class="note">
+<summary><strong>Import the Meter Data</strong></summary>
+<h2 id="import-the-meter-data">Import the Meter Data<a class="headerlink" href="#import-the-meter-data" title="Permanent link">&para;</a></h2>
+<p>Importing an ENERGY STAR Portfolio Manager file that contains a tab for Properties and one or more tabs for meter data (see examples above) can be completed in one step, or the meter data can be imported in a separate step if desired.</p>
+<p><strong>Step 1:</strong> Import the data as you would any other file, using the <strong>Upload a Spreadsheet</strong> option.</p>
+<p><strong>Step 2:</strong> After the building data (the first tab in the file) has been imported, an option will appear to import <strong>Meter Data</strong>. Click on that button</p>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_import-01.png" title="ESPM Monthly Meter Data Import step 1-2" /></p>
+<p><strong>Step 3:</strong> After uploading the file, SEED will present a summary of the data that will be uploaded for each property</p>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_import-02.png" title="ESPM Monthly Meter Data Import step 1-2" /></p>
+<p><strong>Step 4:</strong> Click the <strong>Confirm</strong> button, and SEED will upload the data and present the imported results.</p>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_import-03.png" title="ESPM Monthly Meter Data Import step 1-2" /></p>
+</details>
+<details class="note">
+<summary><strong>View the Imported Meter Data</strong></summary>
+<h2 id="view-the-imported-meter-data">View the Imported Meter Data<a class="headerlink" href="#view-the-imported-meter-data" title="Permanent link">&para;</a></h2>
+<p>To see the imported meter data:</p>
+<ul>
+<li>Go to the <strong>Inventory</strong> view, <strong>View by Property tab</strong></li>
+<li>The <strong>Lightning bolt</strong> icon to the left of a property record indicates there is meter data associated with the property</li>
+<li>Select the appropriate <strong>Cycle</strong></li>
+</ul>
+<p>There are two ways to see the meter data</p>
+<ul>
+<li><strong>Option 1:</strong> Click the <strong>i</strong> (Info) icon to get to the <strong>Property Detail</strong> view, then click the <strong>Meters</strong> link at the center top of the page</li>
+<li><strong>Option 2:</strong> Click the <strong>Lightning bolt</strong> icon to go directly to the **Meters" view for that property</li>
+</ul>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_view-01.png" title="ESPM Monthly Meter Data View 1" /></p>
+<p><strong>Meters</strong>: The Meters section at the top of the page shows one row for each type of meter data (actual usage, cost, etc), including the Meter ID as well as the type of data represented</p>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_view-02.png" title="ESPM Monthly Meter Data View 2" /></p>
+<p><strong>Readings</strong>: The Readings section of the page shows the individual meter readings for each meter</p>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_view-04.png" title="ESPM Monthly Meter Data View 4" /></p>
+<p><strong>Interval Setting:</strong> SEED will show all the data if the <strong>Interval</strong> is set to <strong>Exact</strong>.</p>
+<p>The <strong>Interval</strong> options allow viewing the data exactly as imported, as well as aggregated by <strong>month</strong> or <strong>year</strong>.</p>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_view-03.png" title="ESPM Monthly Meter Data View 3" /></p>
+<p><img alt="alt_text" src="../images/data_meter_ESPM_view-05.png" title="ESPM Monthly Meter Data View 5" /></p>
+</details>
+<h2 id="import-green-button-xml-meter-data"><strong>Import Green Button XML Meter Data</strong><a class="headerlink" href="#import-green-button-xml-meter-data" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><strong>Upload Green Button data from Inventory Property Detail</strong></summary>
+<h2 id="upload-green-button-data-from-inventory-property-detail">Upload Green Button data from Inventory Property Detail<a class="headerlink" href="#upload-green-button-data-from-inventory-property-detail" title="Permanent link">&para;</a></h2>
+<p>From the Inventory List view, Property Tab, click on the <strong>i</strong> (info) icon to see the Property Detail view.</p>
+<ul>
+<li><strong>Step 1:</strong> Click the <strong>Upload Green Button Data</strong> button</li>
+<li><strong>Step 2:</strong> Select the appropriate Dataset name</li>
+<li><strong>Step 3:</strong> Click the <strong>Upload File</strong> button, browse to the desired Green Button XML file</li>
+<li><strong>Step 4:</strong> Click the <strong>Open</strong> button</li>
+</ul>
+<p><img alt="alt_text" src="../images/data_meter_GB_import-01.png" title="Green Button Monthly Meter Data Import 1" /></p>
+<ul>
+<li><strong>Step 5:</strong> SEED displays a summary of the Green Button data<ul>
+<li>Click <strong>Confirm</strong> to continue the file upload</li>
+<li>Click <strong>Dismiss</strong> to cancel the file upload</li>
+</ul>
+</li>
+<li><strong>Step 6:</strong> The Green Button file is uploaded</li>
+<li><strong>Step 7:</strong> The results of the file upload are displayed, showing the meter readings that have been uploaded</li>
+<li><strong>Step 8:</strong> Click the <strong>Complete and Refresh Page</strong> button to complete the upload</li>
+<li><strong>Step 9:</strong> The Green Button data is added to the Meter view in the Property Detail<ul>
+<li><strong>GB</strong> is added as a prefix to the meter number for the Green Button data</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt_text" src="../images/data_meter_GB_import-02.png" title="Green Button Monthly Meter Data Import 2" /></p>
+</details>
+<h2 id="display-units-for-meter-data"><strong>Display Units for Meter Data</strong><a class="headerlink" href="#display-units-for-meter-data" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary><strong>Units Set in Organization / Settings</strong></summary>
+<h2 id="units-set-in-organization-settings">Units Set in Organization / Settings<a class="headerlink" href="#units-set-in-organization-settings" title="Permanent link">&para;</a></h2>
+<p>The units for the data in the Inventory / Property Detail Meter view are controlled in the Organization / Settings view</p>
+<p><img alt="alt_text" src="../images/data_meter_displaysettings.png" title="Meter Data Display Settings" /></p>
+</details>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

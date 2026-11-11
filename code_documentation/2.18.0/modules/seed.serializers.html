@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Serializers Package &mdash; SEED Platform 2.18.0 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="URLs Package" href="seed.urls.html" />
+    <link rel="prev" title="Tests (Functional) Package" href="seed.tests.functional.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                2.18.0
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matching.html">Matching</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.cleansing.html">Data Quality Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data.html">Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data_importer.html">Data Importer Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.landing.html">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.html">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.mappings.html">seed.lib.mappings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.merging.html">seed.lib.merging package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.managers.html">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.public.html">Public Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.html">SEED Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Serializers Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.serializers.celery">Serializers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.serializers.labels">Labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.serializers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.urls.html">URLs Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.utils.html">Utilities Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.views.html">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+
+          <li><a href="../modules.html">Modules</a> &raquo;</li>
+
+      <li>Serializers Package</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="serializers-package">
+<h1>Serializers Package<a class="headerlink" href="#serializers-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.serializers.celery">
+<span id="serializers"></span><h2>Serializers<a class="headerlink" href="#module-seed.serializers.celery" title="Permalink to this headline">¶</a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/seed-platform/seed/main/LICENSE.md">https://github.com/seed-platform/seed/main/LICENSE.md</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.serializers.celery.CeleryDatetimeSerializer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.serializers.celery.</span></span><span class="sig-name descname"><span class="pre">CeleryDatetimeSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensure_ascii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.serializers.celery.CeleryDatetimeSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">json.encoder.JSONEncoder</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.serializers.celery.CeleryDatetimeSerializer.default">
+<span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.serializers.celery.CeleryDatetimeSerializer.default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement this method in a subclass such that it returns
+a serializable object for <code class="docutils literal notranslate"><span class="pre">o</span></code>, or calls the base implementation
+(to raise a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>).</p>
+<p>For example, to support arbitrary iterators, you could
+implement default like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">iterable</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+    <span class="c1"># Let the base class default method raise the TypeError</span>
+    <span class="k">return</span> <span class="n">JSONEncoder</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.serializers.celery.CeleryDatetimeSerializer.seed_decoder">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">seed_decoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.serializers.celery.CeleryDatetimeSerializer.seed_decoder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.serializers.celery.CeleryDatetimeSerializer.seed_dumps">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">seed_dumps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.serializers.celery.CeleryDatetimeSerializer.seed_dumps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.serializers.celery.CeleryDatetimeSerializer.seed_loads">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">seed_loads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.serializers.celery.CeleryDatetimeSerializer.seed_loads" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-seed.serializers.labels">
+<span id="labels"></span><h2>Labels<a class="headerlink" href="#module-seed.serializers.labels" title="Permalink to this headline">¶</a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/seed-platform/seed/main/LICENSE.md">https://github.com/seed-platform/seed/main/LICENSE.md</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.serializers.labels.LabelSerializer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.serializers.labels.</span></span><span class="sig-name descname"><span class="pre">LabelSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.serializers.labels.LabelSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.ModelSerializer</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.serializers.labels.LabelSerializer.Meta">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#seed.serializers.labels.LabelSerializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.serializers.labels.LabelSerializer.Meta.extra_kwargs">
+<span class="sig-name descname"><span class="pre">extra_kwargs</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'super_organization':</span> <span class="pre">{'write_only':</span> <span class="pre">True}}</span></em><a class="headerlink" href="#seed.serializers.labels.LabelSerializer.Meta.extra_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.serializers.labels.LabelSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"> <span class="pre">=</span> <span class="pre">('id',</span> <span class="pre">'name',</span> <span class="pre">'color',</span> <span class="pre">'organization_id',</span> <span class="pre">'super_organization',</span> <span class="pre">'is_applied',</span> <span class="pre">'show_in_list')</span></em><a class="headerlink" href="#seed.serializers.labels.LabelSerializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.serializers.labels.LabelSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#seed.serializers.labels.LabelSerializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="seed.models.html#seed.models.models.StatusLabel" title="seed.models.models.StatusLabel"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.models.models.StatusLabel</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.serializers.labels.LabelSerializer.get_is_applied">
+<span class="sig-name descname"><span class="pre">get_is_applied</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.serializers.labels.LabelSerializer.get_is_applied" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.serializers.labels.LabelSerializer.to_representation">
+<span class="sig-name descname"><span class="pre">to_representation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.serializers.labels.LabelSerializer.to_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object instance -&gt; Dict of primitive datatypes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-seed.serializers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seed.serializers" title="Permalink to this headline">¶</a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/seed-platform/seed/main/LICENSE.md">https://github.com/seed-platform/seed/main/LICENSE.md</a></p>
+</section>
+</section>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+        <a href="seed.urls.html" class="btn btn-neutral float-right" title="URLs Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+        <a href="seed.tests.functional.html" class="btn btn-neutral float-left" title="Tests (Functional) Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, 2023, Alliance for Sustainable Energy, LLC, and other contributors.
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

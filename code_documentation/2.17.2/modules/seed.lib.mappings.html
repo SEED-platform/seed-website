@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>seed.lib.mappings package &mdash; SEED Platform 2.17.2 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                2.17.2
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+
+      <li>seed.lib.mappings package</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="seed-lib-mappings-package">
+<h1>seed.lib.mappings package<a class="headerlink" href="#seed-lib-mappings-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.lib.mappings.mapper">
+<span id="seed-lib-mappings-mapper-module"></span><h2>seed.lib.mappings.mapper module<a class="headerlink" href="#module-seed.lib.mappings.mapper" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author Dan Gunter &lt;<a class="reference external" href="mailto:dkgunter&#37;&#52;&#48;lbl&#46;gov">dkgunter<span>&#64;</span>lbl<span>&#46;</span>gov</a>&gt;</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapper.create_column_regexes">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.mappings.mapper.</span></span><span class="sig-name descname"><span class="pre">create_column_regexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_columns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapper.create_column_regexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take the columns in the format below and sanitize the keys and add
+in the regex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raw_data</strong> – list of strings (columns names from imported file)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapper.get_pm_mapping">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.mappings.mapper.</span></span><span class="sig-name descname"><span class="pre">get_pm_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_duplicates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapper.get_pm_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return Portfolio Manager (PM) mapping for a given version of PM and the given
+list of column names.</p>
+<p>The method will take the raw_columns (from the CSV/XLSX file) and attempt to normalize the
+column names so that they can be mapped to the data in the pm-mapping.json[‘from_field’].</p>
+</dd></dl>
+
+</section>
+<section id="module-seed.lib.mappings.mapping_columns">
+<span id="seed-lib-mappings-mapping-columns-module"></span><h2>seed.lib.mappings.mapping_columns module<a class="headerlink" href="#module-seed.lib.mappings.mapping_columns" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author Nicholas Long &lt;<a class="reference external" href="mailto:nicholas&#46;long&#37;&#52;&#48;nrel&#46;gov">nicholas<span>&#46;</span>long<span>&#64;</span>nrel<span>&#46;</span>gov</a>&gt;</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.MappingColumns">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.lib.mappings.mapping_columns.</span></span><span class="sig-name descname"><span class="pre">MappingColumns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mappings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.MappingColumns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class handles the probabilistic mapping of unknown columns to defined fields. This
+is mainly used in the build_column_mapping API endpoint.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.MappingColumns.add_mappings">
+<span class="sig-name descname"><span class="pre">add_mappings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mappings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous_mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.MappingColumns.add_mappings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add mappings to the data structure for later processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_column</strong> – list of strings</p></li>
+<li><p><strong>mappings</strong> – list of tuples of potential mappings and confidences</p></li>
+<li><p><strong>previous_mapping</strong> – boolean, if true these these mappings will take precedence</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Bool, whether or not the mapping was added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.MappingColumns.apply_threshold">
+<span class="sig-name descname"><span class="pre">apply_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.MappingColumns.apply_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove mapping suggestions that do not meet the defined threshold</p>
+<p>This method is forced as part of the workflow for now, but could easily be made as a
+separate call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> – int, min value to be greater than or equal to.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.MappingColumns.duplicates">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">duplicates</span></span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.MappingColumns.duplicates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check for duplicate initial mapping results. Duplicates exist if the first suggested mapping
+for two different raw_columns are the same. The example below would be one of those cases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of raw col</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.MappingColumns.final_mappings">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">final_mappings</span></span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.MappingColumns.final_mappings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the final mappings in a format that can be used downstream from this method
+{</p>
+<blockquote>
+<div><p>“raw_column_1”: (‘table’, ‘db_column_1’, confidence),
+“raw_column_2”: (‘table’, ‘db_column_1’, confidence),</p>
+</div></blockquote>
+<p>}</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.MappingColumns.first_suggested_mapping">
+<span class="sig-name descname"><span class="pre">first_suggested_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.MappingColumns.first_suggested_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grab the first suggested mapping for a raw column</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raw_column</strong> – String</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>tuple of the mapping (‘table’, ‘field’, confidence), or ()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.MappingColumns.resolve_duplicate">
+<span class="sig-name descname"><span class="pre">resolve_duplicate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dup_map_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_columns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.MappingColumns.resolve_duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>If there are duplicates, that is two raw_columns are trying to map to the same suggested
+column, then select the next available one on the duplicate column. The one with the highest
+confidence will ‘win’ the duplicate battle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dup_map_field</strong> – String, name of the field that is a duplicate</p></li>
+<li><p><strong>raw_columns</strong> – list, raw columns that mapped to the same result</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.MappingColumns.set_initial_mapping_cmp">
+<span class="sig-name descname"><span class="pre">set_initial_mapping_cmp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.MappingColumns.set_initial_mapping_cmp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the initial_mapping_cmp helper item in the self.data hash. This is used to detect
+if there are any duplicates. The initial mapping cmp will be the first match in the list
+(i.e., the one with the highest confidence).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raw_column</strong> – String, name of the raw column to set the initial_mapping_cmp</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.lib.mappings.mapping_columns.sort_duplicates">
+<span class="sig-prename descclassname"><span class="pre">seed.lib.mappings.mapping_columns.</span></span><span class="sig-name descname"><span class="pre">sort_duplicates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.lib.mappings.mapping_columns.sort_duplicates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom sort for the duplicate hash to decide which raw column will get the mapping suggestion
+based on the confidence.</p>
+</dd></dl>
+
+</section>
+<section id="seed-lib-mappings-mapping-data-module">
+<h2>seed.lib.mappings.mapping_data module<a class="headerlink" href="#seed-lib-mappings-mapping-data-module" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="seed-lib-mappings-test-mapper-module">
+<h2>seed.lib.mappings.test_mapper module<a class="headerlink" href="#seed-lib-mappings-test-mapper-module" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="seed-lib-mappings-test-mapping-columns-module">
+<h2>seed.lib.mappings.test_mapping_columns module<a class="headerlink" href="#seed-lib-mappings-test-mapping-columns-module" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="seed-lib-mappings-test-mapping-data-module">
+<h2>seed.lib.mappings.test_mapping_data module<a class="headerlink" href="#seed-lib-mappings-test-mapping-data-module" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.lib.mappings">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seed.lib.mappings" title="Permalink to this headline">¶</a></h2>
+<p>:copyright (c) 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Department of Energy) and contributors. All rights reserved.
+:author</p>
+</section>
+</section>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

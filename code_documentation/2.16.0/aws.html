@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AWS Setup &mdash; SEED Platform 2.16.0 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="General Linux Setup" href="linux.html" />
+    <link rel="prev" title="Deployment Guide" href="deployment.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="index.html" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                2.16.0
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="deployment.html">Deployment Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">AWS Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#amazon-web-services-aws-dependencies">Amazon Web Services (AWS) Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python-dependencies">Python Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#javascript-dependencies">JavaScript Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#database-configuration">Database Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cache-and-message-broker">Cache and Message Broker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-celery-the-background-task-worker">Running Celery the Background Task Worker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">General Linux Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker Deployment on AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kubernetes_deployment.html">Kubernetes Deployment Guide with Helm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#migrations">Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="index.html">Docs</a> &raquo;</li>
+
+          <li><a href="deployment.html">Deployment Guide</a> &raquo;</li>
+
+      <li>AWS Setup</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="aws-setup">
+<h1>AWS Setup<a class="headerlink" href="#aws-setup" title="Permalink to this headline">¶</a></h1>
+<p>Amazon Web Services (<a class="reference external" href="http://aws.amazon.com/">AWS</a>) provides the preferred hosting for the SEED Platform.</p>
+<p><strong>seed</strong> is a <a class="reference external" href="https://www.djangoproject.com/">Django Project</a> and Django’s documentation is an excellent place for general
+understanding of this project’s layout.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Ubuntu server 18.04 LTS</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These instructions have not been updated for Ubuntu 18.04. It is recommended to use Docker-based deployments.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get upgrade</span>
+<span class="go">sudo apt-get install -y libpq-dev python-dev python-pip libatlas-base-dev \</span>
+<span class="go">gfortran build-essential g++ npm libxml2-dev libxslt1-dev git mercurial \</span>
+<span class="go">libssl-dev libffi-dev curl uwsgi-core uwsgi-plugin-python</span>
+</pre></div>
+</div>
+<p>PostgreSQL and Redis are not included in the above commands. For a quick installation on AWS it
+is okay to install PostgreSQL and Redis locally on the AWS instance. If a more permanent and
+scalable solution, it is recommended to use AWS’s hosted Redis (ElastiCache) and PostgreSQL service.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>postgresql <code class="docutils literal notranslate"><span class="pre">&gt;=9.4</span></code> is required to support <a class="reference external" href="https://www.postgresql.org/docs/9.4/datatype-json.html">JSON Type</a></p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>To install PostgreSQL and Redis locally
+<span class="go">sudo apt-get install redis-server</span>
+<span class="go">sudo apt-get install postgresql postgresql-contrib</span>
+</pre></div>
+</div>
+<section id="amazon-web-services-aws-dependencies">
+<h3>Amazon Web Services (AWS) Dependencies<a class="headerlink" href="#amazon-web-services-aws-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>The following AWS services can be used for <strong>SEED</strong> but are not required:</p>
+<ul class="simple">
+<li><p>RDS (PostgreSQL &gt;=9.4)</p></li>
+<li><p>ElastiCache (redis)</p></li>
+<li><p>SES</p></li>
+</ul>
+</section>
+</section>
+<section id="python-dependencies">
+<h2>Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Clone the <strong>SEED</strong> repository from <strong>github</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git clone git@github.com:SEED-platform/seed.git
+</pre></div>
+</div>
+<p>enter the repo and install the python dependencies from <a class="reference external" href="https://github.com/SEED-platform/seed/blob/main/requirements/aws.txt">requirements</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> seed
+<span class="gp">$ </span>sudo pip install -r requirements/aws.txt
+</pre></div>
+</div>
+</section>
+<section id="javascript-dependencies">
+<h2>JavaScript Dependencies<a class="headerlink" href="#javascript-dependencies" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">npm</span></code> is required to install the JS dependencies.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt-get install build-essential
+<span class="gp">$ </span>sudo apt-get install curl
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>npm install
+</pre></div>
+</div>
+</section>
+<section id="database-configuration">
+<h2>Database Configuration<a class="headerlink" href="#database-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Copy the <code class="docutils literal notranslate"><span class="pre">local_untracked.py.dist</span></code> file in the <code class="docutils literal notranslate"><span class="pre">config/settings</span></code> directory to
+<code class="docutils literal notranslate"><span class="pre">config/settings/local_untracked.py</span></code>, and add a <code class="docutils literal notranslate"><span class="pre">DATABASES</span></code> configuration with your database username,
+password, host, and port. Your database configuration can point to an AWS RDS instance or a PostgreSQL 9.4 database
+instance you have manually installed within your infrastructure.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Database</span>
+<span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span><span class="s1">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;seed&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the above database configuration, <code class="docutils literal notranslate"><span class="pre">seed</span></code> is the database name, this
+is arbitrary and any valid name can be used as long as the database exists.</p>
+</div>
+<p>create the database within the postgres <code class="docutils literal notranslate"><span class="pre">psql</span></code> shell:</p>
+<div class="highlight-psql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">seed</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or from the command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">createdb seed</span>
+</pre></div>
+</div>
+<p>create the database tables and migrations:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python manage.py syncdb</span>
+<span class="go">python manage.py migrate</span>
+</pre></div>
+</div>
+<p>create a superuser to access the system</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python manage.py create_default_user --username<span class="o">=</span>demo@example.com --organization<span class="o">=</span>example --password<span class="o">=</span>demo123
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every user must be tied to an organization, visit <code class="docutils literal notranslate"><span class="pre">/app/#/profile/admin</span></code>
+as the superuser to create parent organizations and add users to them.</p>
+</div>
+</section>
+<section id="cache-and-message-broker">
+<h2>Cache and Message Broker<a class="headerlink" href="#cache-and-message-broker" title="Permalink to this headline">¶</a></h2>
+<p>The SEED project relies on <a class="reference external" href="http://redis.io/">redis</a> for both cache and message brokering, and
+is available as an AWS <a class="reference external" href="https://aws.amazon.com/elasticache/">ElastiCache</a> service.
+<code class="docutils literal notranslate"><span class="pre">local_untracked.py</span></code> should be updated with the <code class="docutils literal notranslate"><span class="pre">CACHES</span></code> and <code class="docutils literal notranslate"><span class="pre">CELERY_BROKER_URL</span></code>
+settings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;redis_cache.cache.RedisCache&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;LOCATION&#39;</span><span class="p">:</span> <span class="s2">&quot;seed-core-cache.ntmprk.0001.usw2.cache.amazonaws.com:6379&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;DB&#39;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
+        <span class="s1">&#39;TIMEOUT&#39;</span><span class="p">:</span> <span class="mi">300</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://seed-core-cache.ntmprk.0001.usw2.cache.amazonaws.com:6379/1&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="running-celery-the-background-task-worker">
+<h2>Running Celery the Background Task Worker<a class="headerlink" href="#running-celery-the-background-task-worker" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.celeryproject.org/">Celery</a> is used for background tasks (saving data, matching, creating
+projects, etc) and must be connected to the message broker queue. From the
+project directory, <code class="docutils literal notranslate"><span class="pre">celery</span></code> can be started:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">celery -A seed worker -l INFO -c 2 -B --events --max-tasks-per-child 1000</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+        <a href="linux.html" class="btn btn-neutral float-right" title="General Linux Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+        <a href="deployment.html" class="btn btn-neutral float-left" title="Deployment Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2022, The Regents of the University of California, through Lawrence Berkeley National Laboratory
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

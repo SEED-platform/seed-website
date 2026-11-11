@@ -1,0 +1,1245 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Data Quality Package &mdash; SEED Platform 2.18.0 documentation</title>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Package" href="seed.data.html" />
+    <link rel="prev" title="Configuration" href="config.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+            <a href="../index.html" class="icon icon-home"> SEED Platform
+
+
+
+          </a>
+
+
+
+
+              <div class="version">
+                2.18.0
+              </div>
+
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+
+
+
+
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_quality.html">Data Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matching.html">Matching</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Quality Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#inheritance">Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.models.data_quality">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-seed.views.data_quality">Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data.html">Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.data_importer.html">Data Importer Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.features.html">Features Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.landing.html">Landing Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.html">Library Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.mappings.html">seed.lib.mappings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.lib.merging.html">seed.lib.merging package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.mappings.html">Mapping Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.managers.html">Managers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.public.html">Public Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.html">SEED Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.serializers.html">Serializers Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.tests.html">Tests Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.urls.html">URLs Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.utils.html">Utilities Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seed.views.html">Views Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_resources.html">Developer Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" aria-label="top navigation">
+
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SEED Platform</a>
+
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+
+          <li><a href="../modules.html">Modules</a> &raquo;</li>
+
+      <li>Data Quality Package</li>
+
+
+      <li class="wy-breadcrumbs-aside">
+
+
+
+      </li>
+
+  </ul>
+
+
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="data-quality-package">
+<h1>Data Quality Package<a class="headerlink" href="#data-quality-package" title="Permalink to this headline">¶</a></h1>
+<section id="inheritance">
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.models.data_quality">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-seed.models.data_quality" title="Permalink to this headline">¶</a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/seed-platform/seed/main/LICENSE.md">https://github.com/seed-platform/seed/main/LICENSE.md</a></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="seed.models.data_quality.ComparisonError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seed.models.data_quality.</span></span><span class="sig-name descname"><span class="pre">ComparisonError</span></span><a class="headerlink" href="#seed.models.data_quality.ComparisonError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.models.data_quality.</span></span><span class="sig-name descname"><span class="pre">DataQualityCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Object that stores the high level configuration per organization of the DataQualityCheck</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.REQUIRED_FIELDS">
+<span class="sig-name descname"><span class="pre">REQUIRED_FIELDS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'PropertyState':</span> <span class="pre">['address_line_1',</span> <span class="pre">'custom_id_1',</span> <span class="pre">'pm_property_id'],</span> <span class="pre">'TaxLotState':</span> <span class="pre">['address_line_1',</span> <span class="pre">'custom_id_1',</span> <span class="pre">'jurisdiction_tax_lot_id']}</span></em><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.REQUIRED_FIELDS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_invalid_geometry_entry_provided">
+<span class="sig-name descname"><span class="pre">add_invalid_geometry_entry_provided</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_invalid_geometry_entry_provided" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_comparison_error">
+<span class="sig-name descname"><span class="pre">add_result_comparison_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule_check</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_comparison_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_dimension_error">
+<span class="sig-name descname"><span class="pre">add_result_dimension_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_dimension_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_is_null">
+<span class="sig-name descname"><span class="pre">add_result_is_null</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_is_null" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_max_error">
+<span class="sig-name descname"><span class="pre">add_result_max_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule_max</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_max_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_min_error">
+<span class="sig-name descname"><span class="pre">add_result_min_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule_min</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_min_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_missing_and_none">
+<span class="sig-name descname"><span class="pre">add_result_missing_and_none</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_missing_and_none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_missing_req">
+<span class="sig-name descname"><span class="pre">add_result_missing_req</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_missing_req" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_string_error">
+<span class="sig-name descname"><span class="pre">add_result_string_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_string_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_result_type_error">
+<span class="sig-name descname"><span class="pre">add_result_type_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_result_type_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_rule">
+<span class="sig-name descname"><span class="pre">add_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new rule to the Data Quality Checks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rule</strong> – dict to be added as a new rule</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.add_rule_if_new">
+<span class="sig-name descname"><span class="pre">add_rule_if_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.add_rule_if_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new rule to the Data Quality Checks only if rule does not exist</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rule</strong> – dict to be added as a new rule</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.cache_key">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">cache_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.cache_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Static method to return the location of the data_quality results from redis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> – Import file primary key</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.check_data">
+<span class="sig-name descname"><span class="pre">check_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.check_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send in data as a queryset from the Property/Taxlot ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>record_type</strong> – one of PropertyState | TaxLotState</p></li>
+<li><p><strong>rows</strong> – rows of data to be checked for data quality</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.get_fieldnames">
+<span class="sig-name descname"><span class="pre">get_fieldnames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.get_fieldnames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get fieldnames to apply to results.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.initialize_cache">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">initialize_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.initialize_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the cache for storing the results. This is called before the
+celery tasks are chunked up.</p>
+<p>The cache_key is different than the identifier. The cache_key is where all the results are
+to be stored for the data quality checks, the identifier, is the random number (or specified
+value that is used to identifier both the progress and the data storage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> – Identifier for cache, if None, then creates a random one</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list, [cache_key and the identifier]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.initialize_rules">
+<span class="sig-name descname"><span class="pre">initialize_rules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.initialize_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the default rules for a DataQualityCheck object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.organization">
+<span class="sig-name descname"><span class="pre">organization</span></span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.organization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.organization_id">
+<span class="sig-name descname"><span class="pre">organization_id</span></span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.organization_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.remove_all_rules">
+<span class="sig-name descname"><span class="pre">remove_all_rules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.remove_all_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all the rules associated with this DataQualityCheck instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.remove_status_label">
+<span class="sig-name descname"><span class="pre">remove_status_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linked_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.remove_status_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove label because it did not match any of the range exceptions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label_class</strong> – statuslabel object, either property label or taxlot label</p></li>
+<li><p><strong>rule</strong> – rule object</p></li>
+<li><p><strong>linked_id</strong> – id of propertystate or taxlotstate object</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>boolean, if labeled was applied</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.reset_all_rules">
+<span class="sig-name descname"><span class="pre">reset_all_rules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.reset_all_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all rules and reinitialize the default set of rules</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.reset_default_rules">
+<span class="sig-name descname"><span class="pre">reset_default_rules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.reset_default_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset only the default rules</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.reset_results">
+<span class="sig-name descname"><span class="pre">reset_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.reset_results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.retrieve">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">retrieve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organization_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.retrieve" title="Permalink to this definition">¶</a></dt>
+<dd><p>DataQualityCheck was previously a simple object but has been migrated to a django model.
+This method ensures that the data quality model will be backwards compatible.</p>
+<p>This is the preferred method to initialize a new object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>organization</strong> – instance of Organization</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>obj, DataQualityCheck</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.retrieve_result_by_address">
+<span class="sig-name descname"><span class="pre">retrieve_result_by_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.retrieve_result_by_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the results of the data quality checks for a specific address.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>address</strong> – string, address to find the result for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict, results of data quality check for specific building</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.retrieve_result_by_tax_lot_id">
+<span class="sig-name descname"><span class="pre">retrieve_result_by_tax_lot_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tax_lot_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.retrieve_result_by_tax_lot_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the results of the data quality checks by the jurisdiction ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tax_lot_id</strong> – string, jurisdiction tax lot id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict, results of data quality check for specific building</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.rules">
+<span class="sig-name descname"><span class="pre">rules</span></span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.save_to_cache">
+<span class="sig-name descname"><span class="pre">save_to_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.save_to_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the results to the cache database. The data in the cache are
+stored as a list of dictionaries. The data in this class are stored as
+a dict of dict. This is important to remember because the data from the
+cache cannot be simply loaded into the above structure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> – Import file primary key</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityCheck.update_status_label">
+<span class="sig-name descname"><span class="pre">update_status_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linked_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_to_results</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.DataQualityCheck.update_status_label" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label_class</strong> – statuslabel object, either propertyview label or taxlotview label</p></li>
+<li><p><strong>rule</strong> – rule object</p></li>
+<li><p><strong>linked_id</strong> – id of propertyview or taxlotview object</p></li>
+<li><p><strong>row_id</strong> – </p></li>
+<li><p><strong>add_to_results</strong> – bool</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>boolean, if labeled was applied</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seed.models.data_quality.DataQualityTypeCastError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seed.models.data_quality.</span></span><span class="sig-name descname"><span class="pre">DataQualityTypeCastError</span></span><a class="headerlink" href="#seed.models.data_quality.DataQualityTypeCastError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.models.data_quality.</span></span><span class="sig-name descname"><span class="pre">Rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>Rules for DataQualityCheck</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.DATA_TYPES">
+<span class="sig-name descname"><span class="pre">DATA_TYPES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[(0,</span> <span class="pre">'number'),</span> <span class="pre">(1,</span> <span class="pre">'string'),</span> <span class="pre">(2,</span> <span class="pre">'date'),</span> <span class="pre">(3,</span> <span class="pre">'year'),</span> <span class="pre">(4,</span> <span class="pre">'area'),</span> <span class="pre">(5,</span> <span class="pre">'eui')]</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.DATA_TYPES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.DEFAULT_RULES">
+<span class="sig-name descname"><span class="pre">DEFAULT_RULES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'address_line_1',</span> <span class="pre">'data_type':</span> <span class="pre">1,</span> <span class="pre">'not_null':</span> <span class="pre">True,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'not_null'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'pm_property_id',</span> <span class="pre">'data_type':</span> <span class="pre">1,</span> <span class="pre">'not_null':</span> <span class="pre">True,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'not_null'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'custom_id_1',</span> <span class="pre">'not_null':</span> <span class="pre">True,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'not_null'},</span> <span class="pre">{'table_name':</span> <span class="pre">'TaxLotState',</span> <span class="pre">'field':</span> <span class="pre">'jurisdiction_tax_lot_id',</span> <span class="pre">'not_null':</span> <span class="pre">True,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'not_null'},</span> <span class="pre">{'table_name':</span> <span class="pre">'TaxLotState',</span> <span class="pre">'field':</span> <span class="pre">'address_line_1',</span> <span class="pre">'data_type':</span> <span class="pre">1,</span> <span class="pre">'not_null':</span> <span class="pre">True,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'not_null'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'conditioned_floor_area',</span> <span class="pre">'data_type':</span> <span class="pre">4,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">0,</span> <span class="pre">'max':</span> <span class="pre">7000000,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'units':</span> <span class="pre">'ft**2',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'conditioned_floor_area',</span> <span class="pre">'data_type':</span> <span class="pre">4,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">100,</span> <span class="pre">'severity':</span> <span class="pre">1,</span> <span class="pre">'units':</span> <span class="pre">'ft**2',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'energy_score',</span> <span class="pre">'data_type':</span> <span class="pre">0,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">0,</span> <span class="pre">'max':</span> <span class="pre">100,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'energy_score',</span> <span class="pre">'data_type':</span> <span class="pre">0,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">10,</span> <span class="pre">'severity':</span> <span class="pre">1,</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'generation_date',</span> <span class="pre">'data_type':</span> <span class="pre">2,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">18890101,</span> <span class="pre">'max':</span> <span class="pre">20201231,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'gross_floor_area',</span> <span class="pre">'data_type':</span> <span class="pre">0,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">100,</span> <span class="pre">'max':</span> <span class="pre">7000000,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'units':</span> <span class="pre">'ft**2',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'occupied_floor_area',</span> <span class="pre">'data_type':</span> <span class="pre">0,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">100,</span> <span class="pre">'max':</span> <span class="pre">7000000,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'units':</span> <span class="pre">'ft**2',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'recent_sale_date',</span> <span class="pre">'data_type':</span> <span class="pre">2,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">18890101,</span> <span class="pre">'max':</span> <span class="pre">20201231,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'release_date',</span> <span class="pre">'data_type':</span> <span class="pre">2,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">18890101,</span> <span class="pre">'max':</span> <span class="pre">20201231,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'site_eui',</span> <span class="pre">'data_type':</span> <span class="pre">5,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">0,</span> <span class="pre">'max':</span> <span class="pre">1000,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'units':</span> <span class="pre">'kBtu/ft**2/year',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'site_eui',</span> <span class="pre">'data_type':</span> <span class="pre">5,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">10,</span> <span class="pre">'severity':</span> <span class="pre">1,</span> <span class="pre">'units':</span> <span class="pre">'kBtu/ft**2/year',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'site_eui_weather_normalized',</span> <span class="pre">'data_type':</span> <span class="pre">5,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">0,</span> <span class="pre">'max':</span> <span class="pre">1000,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'units':</span> <span class="pre">'kBtu/ft**2/year',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'source_eui',</span> <span class="pre">'data_type':</span> <span class="pre">5,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">0,</span> <span class="pre">'max':</span> <span class="pre">1000,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'units':</span> <span class="pre">'kBtu/ft**2/year',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'source_eui',</span> <span class="pre">'data_type':</span> <span class="pre">5,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">10,</span> <span class="pre">'severity':</span> <span class="pre">1,</span> <span class="pre">'units':</span> <span class="pre">'kBtu/ft**2/year',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'source_eui_weather_normalized',</span> <span class="pre">'data_type':</span> <span class="pre">5,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">10,</span> <span class="pre">'max':</span> <span class="pre">1000,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'units':</span> <span class="pre">'kBtu/ft**2/year',</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'year_built',</span> <span class="pre">'data_type':</span> <span class="pre">3,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">1700,</span> <span class="pre">'max':</span> <span class="pre">2019,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'range'},</span> <span class="pre">{'table_name':</span> <span class="pre">'PropertyState',</span> <span class="pre">'field':</span> <span class="pre">'year_ending',</span> <span class="pre">'data_type':</span> <span class="pre">2,</span> <span class="pre">'rule_type':</span> <span class="pre">0,</span> <span class="pre">'min':</span> <span class="pre">18890101,</span> <span class="pre">'max':</span> <span class="pre">20201231,</span> <span class="pre">'severity':</span> <span class="pre">0,</span> <span class="pre">'condition':</span> <span class="pre">'range'}]</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.DEFAULT_RULES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.RULE_EXCLUDE">
+<span class="sig-name descname"><span class="pre">RULE_EXCLUDE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'exclude'</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.RULE_EXCLUDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.RULE_INCLUDE">
+<span class="sig-name descname"><span class="pre">RULE_INCLUDE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'include'</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.RULE_INCLUDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.RULE_NOT_NULL">
+<span class="sig-name descname"><span class="pre">RULE_NOT_NULL</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'not_null'</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.RULE_NOT_NULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.RULE_RANGE">
+<span class="sig-name descname"><span class="pre">RULE_RANGE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'range'</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.RULE_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.RULE_REQUIRED">
+<span class="sig-name descname"><span class="pre">RULE_REQUIRED</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'required'</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.RULE_REQUIRED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.RULE_TYPE">
+<span class="sig-name descname"><span class="pre">RULE_TYPE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[(0,</span> <span class="pre">'default'),</span> <span class="pre">(1,</span> <span class="pre">'custom')]</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.RULE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.RULE_TYPE_CUSTOM">
+<span class="sig-name descname"><span class="pre">RULE_TYPE_CUSTOM</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.RULE_TYPE_CUSTOM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.RULE_TYPE_DEFAULT">
+<span class="sig-name descname"><span class="pre">RULE_TYPE_DEFAULT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.RULE_TYPE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.SEVERITY">
+<span class="sig-name descname"><span class="pre">SEVERITY</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[(0,</span> <span class="pre">'error'),</span> <span class="pre">(1,</span> <span class="pre">'warning'),</span> <span class="pre">(2,</span> <span class="pre">'valid')]</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.SEVERITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.SEVERITY_ERROR">
+<span class="sig-name descname"><span class="pre">SEVERITY_ERROR</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.SEVERITY_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.SEVERITY_VALID">
+<span class="sig-name descname"><span class="pre">SEVERITY_VALID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.SEVERITY_VALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.SEVERITY_WARNING">
+<span class="sig-name descname"><span class="pre">SEVERITY_WARNING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.SEVERITY_WARNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.TYPE_AREA">
+<span class="sig-name descname"><span class="pre">TYPE_AREA</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.TYPE_AREA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.TYPE_DATE">
+<span class="sig-name descname"><span class="pre">TYPE_DATE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.TYPE_DATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.TYPE_EUI">
+<span class="sig-name descname"><span class="pre">TYPE_EUI</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.TYPE_EUI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.TYPE_NUMBER">
+<span class="sig-name descname"><span class="pre">TYPE_NUMBER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.TYPE_NUMBER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.TYPE_STRING">
+<span class="sig-name descname"><span class="pre">TYPE_STRING</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.TYPE_STRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.TYPE_YEAR">
+<span class="sig-name descname"><span class="pre">TYPE_YEAR</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.TYPE_YEAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.condition">
+<span class="sig-name descname"><span class="pre">condition</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.data_quality_check">
+<span class="sig-name descname"><span class="pre">data_quality_check</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.data_quality_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.data_quality_check_id">
+<span class="sig-name descname"><span class="pre">data_quality_check_id</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.data_quality_check_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.data_type">
+<span class="sig-name descname"><span class="pre">data_type</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.data_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.enabled">
+<span class="sig-name descname"><span class="pre">enabled</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.field">
+<span class="sig-name descname"><span class="pre">field</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.field" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.for_derived_column">
+<span class="sig-name descname"><span class="pre">for_derived_column</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.for_derived_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.format_strings">
+<span class="sig-name descname"><span class="pre">format_strings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule.format_strings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.get_data_type_display">
+<span class="sig-name descname"><span class="pre">get_data_type_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">field=&lt;django.db.models.fields.IntegerField:</span> <span class="pre">data_type&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule.get_data_type_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.get_rule_type_display">
+<span class="sig-name descname"><span class="pre">get_rule_type_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">field=&lt;django.db.models.fields.IntegerField:</span> <span class="pre">rule_type&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule.get_rule_type_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.get_severity_display">
+<span class="sig-name descname"><span class="pre">get_severity_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">field=&lt;django.db.models.fields.IntegerField:</span> <span class="pre">severity&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule.get_severity_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.max">
+<span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.maximum_valid">
+<span class="sig-name descname"><span class="pre">maximum_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule.maximum_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate that the value is not greater than the maximum specified by the rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – Value to validate rule against</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool, True is valid, False if the value is out of range</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.min">
+<span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.minimum_valid">
+<span class="sig-name descname"><span class="pre">minimum_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule.minimum_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate that the value is not less than the minimum specified by the rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – Value to validate rule against</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool, True is valid, False if the value is out of range</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.not_null">
+<span class="sig-name descname"><span class="pre">not_null</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.not_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#seed.models.data_quality.Rule.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.required">
+<span class="sig-name descname"><span class="pre">required</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.required" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.rule_type">
+<span class="sig-name descname"><span class="pre">rule_type</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.rule_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.severity">
+<span class="sig-name descname"><span class="pre">severity</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.severity" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.status_label">
+<span class="sig-name descname"><span class="pre">status_label</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.status_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.status_label_id">
+<span class="sig-name descname"><span class="pre">status_label_id</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.status_label_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.str_to_data_type">
+<span class="sig-name descname"><span class="pre">str_to_data_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule.str_to_data_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the check is coming from a field in the database then it will be typed correctly;
+however, for extra_data, the values are typically strings or unicode. Therefore, the
+values are typed before they are checked using the rule’s data type definition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – variant, value to type</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>typed value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.table_name">
+<span class="sig-name descname"><span class="pre">table_name</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.table_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.text_match">
+<span class="sig-name descname"><span class="pre">text_match</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.text_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.units">
+<span class="sig-name descname"><span class="pre">units</span></span><a class="headerlink" href="#seed.models.data_quality.Rule.units" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.models.data_quality.Rule.valid_text">
+<span class="sig-name descname"><span class="pre">valid_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.Rule.valid_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the rule matches the specified text. Text is matched by regex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – Value to validate rule against</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool, True is valid, False if the value does not match</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="seed.models.data_quality.UnitMismatchError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">seed.models.data_quality.</span></span><span class="sig-name descname"><span class="pre">UnitMismatchError</span></span><a class="headerlink" href="#seed.models.data_quality.UnitMismatchError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seed.models.data_quality.format_pint_violation">
+<span class="sig-prename descclassname"><span class="pre">seed.models.data_quality.</span></span><span class="sig-name descname"><span class="pre">format_pint_violation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.models.data_quality.format_pint_violation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format a pint min, max violation for human readability.</p>
+<p>:param rule
+:param source_value : Quantity - value to format into range
+:return (formatted_value, formatted_min, formatted_max) : (String, String, String)</p>
+</dd></dl>
+
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-seed.views.data_quality">
+<span id="views"></span><h2>Views<a class="headerlink" href="#module-seed.views.data_quality" title="Permalink to this headline">¶</a></h2>
+<p>SEED Platform (TM), Copyright (c) Alliance for Sustainable Energy, LLC, and other contributors.
+See also <a class="reference external" href="https://github.com/seed-platform/seed/main/LICENSE.md">https://github.com/seed-platform/seed/main/LICENSE.md</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.views.data_quality.DataQualityViews">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.views.data_quality.</span></span><span class="sig-name descname"><span class="pre">DataQualityViews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.DataQualityViews" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.viewsets.ViewSet</span></code>, <a class="reference internal" href="seed.utils.html#seed.utils.api.OrgMixin" title="seed.utils.api.OrgMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">seed.utils.api.OrgMixin</span></code></a></p>
+<p>Handles Data Quality API operations within Inventory backend.
+(1) Post, wait, get…
+(2) Respond with what changed</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.views.data_quality.DataQualityViews.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.DataQualityViews.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>This API endpoint will create a new cleansing operation process in the background,
+on potentially a subset of properties/taxlots, and return back a query key
+—
+parameters:</p>
+<blockquote>
+<div><ul>
+<li><p>name: organization_id
+description: Organization ID
+type: integer
+required: true
+paramType: query</p></li>
+<li><p>name: data_quality_ids
+description: An object containing IDs of the records to perform data quality checks on.</p>
+<blockquote>
+<div><p>Should contain two keys- property_state_ids and taxlot_state_ids, each of which is an array
+of appropriate IDs.</p>
+</div></blockquote>
+<p>required: true
+paramType: body</p>
+</li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>type:</dt><dd><dl class="simple">
+<dt>status:</dt><dd><p>type: string
+description: success or error
+required: true</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.views.data_quality.DataQualityViews.csv">
+<span class="sig-name descname"><span class="pre">csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.DataQualityViews.csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download a csv of the data quality checks by the pk which is the cache_key
+—
+parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: pk
+description: Import file ID or cache key
+required: true
+paramType: path</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.views.data_quality.DataQualityViews.data_quality_rules">
+<span class="sig-name descname"><span class="pre">data_quality_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.DataQualityViews.data_quality_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the data_quality rules for an org.
+—
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: organization_id
+description: Organization ID
+type: integer
+required: true
+paramType: query</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>type:</dt><dd><dl class="simple">
+<dt>status:</dt><dd><p>type: string
+required: true
+description: success or error</p>
+</dd>
+<dt>rules:</dt><dd><p>type: object
+required: true
+description: An object containing ‘properties’ and ‘taxlots’ arrays of rules</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.views.data_quality.DataQualityViews.reset_all_data_quality_rules">
+<span class="sig-name descname"><span class="pre">reset_all_data_quality_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.DataQualityViews.reset_all_data_quality_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets an organization’s data data_quality rules
+—
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: organization_id
+description: Organization ID
+type: integer
+required: true
+paramType: query</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>type:</dt><dd><dl class="simple">
+<dt>status:</dt><dd><p>type: string
+description: success or error
+required: true</p>
+</dd>
+<dt>in_range_checking:</dt><dd><p>type: array[string]
+required: true
+description: An array of in-range error rules</p>
+</dd>
+<dt>missing_matching_field:</dt><dd><p>type: array[string]
+required: true
+description: An array of fields to verify existence</p>
+</dd>
+<dt>missing_values:</dt><dd><p>type: array[string]
+required: true
+description: An array of fields to ignore missing values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.views.data_quality.DataQualityViews.reset_default_data_quality_rules">
+<span class="sig-name descname"><span class="pre">reset_default_data_quality_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.DataQualityViews.reset_default_data_quality_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets an organization’s data data_quality rules
+—
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: organization_id
+description: Organization ID
+type: integer
+required: true
+paramType: query</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>type:</dt><dd><dl class="simple">
+<dt>status:</dt><dd><p>type: string
+description: success or error
+required: true</p>
+</dd>
+<dt>in_range_checking:</dt><dd><p>type: array[string]
+required: true
+description: An array of in-range error rules</p>
+</dd>
+<dt>missing_matching_field:</dt><dd><p>type: array[string]
+required: true
+description: An array of fields to verify existence</p>
+</dd>
+<dt>missing_values:</dt><dd><p>type: array[string]
+required: true
+description: An array of fields to ignore missing values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.views.data_quality.DataQualityViews.results">
+<span class="sig-name descname"><span class="pre">results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.DataQualityViews.results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the result of the data quality based on the ID that was given during the
+creation of the data quality task. Note that it is not related to the object in the
+database, since the results are stored in redis!</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="seed.views.data_quality.DataQualityViews.save_data_quality_rules">
+<span class="sig-name descname"><span class="pre">save_data_quality_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.DataQualityViews.save_data_quality_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves an organization’s settings: name, query threshold, shared fields.
+The method passes in all the fields again, so it is okay to remove
+all the rules in the db, and just recreate them (albeit inefficient)
+—
+parameter_strategy: replace
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: organization_id
+description: Organization ID
+type: integer
+required: true
+paramType: query</p></li>
+<li><p>name: body
+description: JSON body containing organization rules information
+paramType: body
+pytype: RulesSerializer
+required: true</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>type:</dt><dd><dl class="simple">
+<dt>status:</dt><dd><p>type: string
+description: success or error
+required: true</p>
+</dd>
+<dt>message:</dt><dd><p>type: string
+description: error message, if any
+required: true</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.views.data_quality.RulesIntermediateSerializer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.views.data_quality.</span></span><span class="sig-name descname"><span class="pre">RulesIntermediateSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.RulesIntermediateSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.Serializer</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.views.data_quality.RulesSerializer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.views.data_quality.</span></span><span class="sig-name descname"><span class="pre">RulesSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.RulesSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.Serializer</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.views.data_quality.RulesSubSerializer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.views.data_quality.</span></span><span class="sig-name descname"><span class="pre">RulesSubSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.RulesSubSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.Serializer</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="seed.views.data_quality.RulesSubSerializerB">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">seed.views.data_quality.</span></span><span class="sig-name descname"><span class="pre">RulesSubSerializerB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seed.views.data_quality.RulesSubSerializerB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.Serializer</span></code></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+        <a href="seed.data.html" class="btn btn-neutral float-right" title="Data Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+        <a href="config.html" class="btn btn-neutral float-left" title="Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, 2023, Alliance for Sustainable Energy, LLC, and other contributors.
+
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+
+
+
+
+
+</body>
+</html>
